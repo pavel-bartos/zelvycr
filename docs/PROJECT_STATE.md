@@ -1,14 +1,13 @@
 # Želvy ČR (zelvycr-web) — Project State
 
-_Last updated: 2026-11-04 (Sprint 2 ověřen Pavlem, PR #3 čeká na merge)_
+_Last updated: 2026-11-04 (Sprint 3 uzavřen — PR #4 mergnut, ověřeno Pavlem na produkci)_
 
 ## Aktuální fáze
 
-**Fáze 5: Sprint 2 ověřen — PR #3 čeká na merge.**
-Sprint 1 je uzavřený (PR #1 a #2 mergnuty, detail v `docs/backlog-archive.md`). Sprint 2
-(TASK-009–012) je implementačně hotový a prošel manuálním ověřením Pavla. TASK-008 (fotopipeline)
-odloženo — hotlinky na zelvycr.cz zatím zůstávají. Merge PR #3 → Sprint 2 uzavřen.
-Souběžně čeká TASK-022 (podklady pro tři `[DOPLNIT]` na detailu zelenavé).
+**Fáze 5: Sprint 3 uzavřen — prototyp bez 404.**
+Sprinty 1–3 uzavřeny (PRs #1–#4 mergnuty, detaily v `docs/backlog-archive.md`). Všechny stránky
+z navigace a patičky existují. Obsah stránek důvěry je ze zadání; 13 článků Průvodce chovem
+jsou skeletony s `[DOPLNIT]` — Pavel doplňuje průběžně. Sprint 4 zatím nezahájen.
 
 **Režim práce:** Claude (šéf vývoje) píše backlog a dokumentaci do repa. Implementaci dělá
 Claude Code (včetně dokumentace sprintu na pokyn). Design policy je závazný zdroj pro vzhled.
@@ -22,7 +21,7 @@ Claude Code (včetně dokumentace sprintu na pokyn). Design policy je závazný 
 | 2 UX                 | ✅   | zadání, kap. 3–4                    | IA (6 položek menu), 25 stránek, specifikace sekcí po stránkách                        |
 | 3 Architektura       | ✅   | CLAUDE.md                           | Eleventy 3 + Nunjucks, statický výstup, GitHub Pages                                   |
 | 4 Roadmapa & backlog | ✅   | docs/04-roadmap.md, docs/backlog.md | Roadmapa hotová, Sprint 1 a 2 rozepsané                                                |
-| 5+ Implementace      | 🔵   | docs/backlog.md                     | Sprint 1 ✅ uzavřen · Sprint 2 🔵 aktivní                                              |
+| 5+ Implementace      | 🔵   | docs/backlog.md                     | Sprint 1–3 ✅ uzavřeny · Sprint 4 zatím nezahájen                                      |
 
 ## Klíčová rozhodnutí (append-only)
 
@@ -40,6 +39,8 @@ Claude Code (včetně dokumentace sprintu na pokyn). Design policy je závazný 
 - 2026-11-04: **Sprint 1 uzavřen.** PR #1 mergnut, TASK-007 schválen Pavlem. Zbývají `[DOPLNIT]` na detailu zelenavé (TASK-022), hotlinkované fotky (TASK-008) a odkazy na zatím nepostavené stránky (404).
 - 2026-11-04: **Push jde přes `gh` účet `pavel-bartos`:** Pavel spustil `gh auth setup-git`, git už nepoužívá klíčenku s účtem bez oprávnění. Claude Code při chybě 403 nic neobchází, zastaví se a řekne.
 - 2026-11-04: **Sprint 2 zahájen.** Detail Sprintu 1 přesunut do `docs/backlog-archive.md`, živý backlog drží aktivní sprint, upcoming a Done.
+- 2026-11-04: **Sprint 2 uzavřen.** PR #3 mergnut. Sprint 3 zahájen.
+- 2026-11-04: **Sprint 3 uzavřen.** PR #4 mergnut. Všechny stránky z navigace a patičky existují. Průvodce chovem: rozcestník + 13 article skeletonů. Obsah se ladí průběžně.
 - 2026-11-04: **Repo je veřejné** — zadání (interní klientský dokument) se proto do repa nevkládá; tasky nesou potřebný obsah v sobě. Doporučeno zvážit přepnutí na privátní.
 
 ## Otevřené otázky / TODO konzistence
