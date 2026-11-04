@@ -377,3 +377,17 @@ Odvozeno z komponent §3.1–§3.9 (§3.6 jako základ, §3.7 kroky, §3.9 FAQ).
 
 Zásada: nový prvek vychází z nejbližší existující komponenty (karty, boxy, CTA, tabulka),
 nezavádí nový vizuální jazyk a jeho pravidlo se dopíše do §3.
+
+### 7.4 Stránky Příslušenství a Terária na míru (TASK-011)
+
+**Příslušenství (`/prislusenstvi/`):** Pět kategorií jako samostatné `<section>` s `.rule`
+kicerem a H2 (44 px). Každá kategorie má `.box-chov` s radou chovatele (§7.1) a `.pris-produkty`
+seznam produktů. Nové třídy: `.pris-produkty` (list), `.pris-produkt` (řádek flex
+justify-between, hairline-oddělovač), `.pris-poznamka` (16 px, slabě). Produkty jsou
+ilustrační „Na dotaz" — datová struktura pro fázi e-shopu připravena v šabloně.
+Nový `tel:` odkaz dostane třídu `js-tel-pris`.
+
+**Terária na míru (`/terarium-na-miru/`):** Čtyři výhody jako `.kroky` (§3.7), nabídka jako
+`.tabulka` (§3.13) se sloupci Terárium / Rozměry (š × h × v) / Vybavení / Dostupnost / Cena,
+rada o velikosti v `.info-box` (§3; Příslušenství). Drobečková navigace jde přes
+Příslušenství (`/prislusenstvi/`). Nový `tel:` odkaz `js-tel-tera`.

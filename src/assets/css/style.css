@@ -550,6 +550,56 @@ dd {
   background: var(--barva-img-placeholder);
 }
 
+/* ---------- stránka příslušenství ---------- */
+
+.pris-kategorie__hlava {
+  margin-bottom: 24px;
+}
+
+.pris-kategorie__hlava h2 {
+  margin: 12px 0 0;
+  font-size: 44px;
+}
+
+.pris-kategorie__obsah {
+  max-width: 56ch;
+}
+
+.pris-produkty {
+  margin: 28px 0 16px;
+  padding: 0;
+  list-style: none;
+}
+
+.pris-produkt {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 24px;
+  padding: 12px 0;
+  border-top: 1px solid var(--barva-linka);
+}
+
+.pris-produkt:last-child {
+  border-bottom: 1px solid var(--barva-linka);
+}
+
+.pris-produkt__nazev {
+  font-weight: 600;
+}
+
+.pris-produkt__cena {
+  flex-shrink: 0;
+  font-size: 16px;
+  color: var(--barva-text-slaba);
+}
+
+.pris-poznamka {
+  margin: 16px 0 0;
+  font-size: 16px;
+  color: var(--barva-text-slaba);
+}
+
 /* ---------- stránka startovacích sad ---------- */
 
 .sady-varianty {
