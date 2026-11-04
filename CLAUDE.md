@@ -106,8 +106,17 @@ rozhodnuto 2026-11-04_
   jiných taskech sprintu, které na tom **nezávisí** a dají se posunout dál. Blokovaný task
   nech čekat, ale sprint se kvůli jednomu dotazu nezastavuje.
 
+## Spolupráce více agentů
+
+Na repu pracují souběžně tři agenti (šéf vývoje, Claude Code, copywriter). Pravidla, aby si
+nepřepisovali práci, jsou v **`CONTRIBUTING.md`** — přečti je. Ve zkratce: každý má svůj
+pracovní strom, svůj jmenný prostor větví (Claude Code = `feat/*`, `fix/*`) a své soubory
+(Claude Code = `src/_includes/`, `src/assets/`, `*.njk`, `lib/`, konfig). Do `main` jen přes
+PR; do cizí větve ani cizího pracovního stromu nesahej.
+
 ## Dokumentace
 
+- Spolupráce agentů: `CONTRIBUTING.md`
 - Stav a rozhodnutí: `docs/PROJECT_STATE.md` · Backlog: `docs/backlog.md` · Roadmapa: `docs/04-roadmap.md`
 - **Design policy (závazná pro vzhled): `docs/design-policy.md`**
 - Proces a DoD: `docs/07-process.md` · Review rubrika: `docs/review-rubric.md`

@@ -41,3 +41,10 @@ _Povaha projektu: **nárazový** · rozhodnuto 2026-11-04_
 | Soulad dokumentace s realitou                         | při uzavření sprintu                                                   |
 
 Žádné scheduled tasky — projekt se používá nárazově, cron by jen šuměl.
+
+## Spolupráce více agentů
+
+Na repu pracují souběžně tři agenti (šéf vývoje, Claude Code, copywriter). Pravidla proti
+kolizím jsou v `CONTRIBUTING.md`: každý svůj pracovní strom, svůj jmenný prostor větví
+(`docs/*` · `feat/*`,`fix/*` · `content/*`), své soubory; `main` jen přes PR. Nikdo nesahá
+do cizího pracovního stromu ani cizí větve.
