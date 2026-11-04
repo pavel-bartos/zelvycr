@@ -8,6 +8,12 @@
     {% if site.prototyp %}
     <meta name="robots" content="noindex, nofollow" />
     {% endif %}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&amp;family=Public+Sans:wght@400;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | url }}" />
   </head>
   <body>
@@ -15,7 +21,7 @@
     <p class="prototyp-pruh" role="status">
       Pracovní prototyp — obsah i ceny nejsou finální.
     </p>
-    {% endif %} {% include "partials/header.njk" %}
+    {% endif %} {% include "partials/akce-pruh.njk" %} {% include "partials/header.njk" %}
 
     <main id="obsah">{{ content | safe }}</main>
 

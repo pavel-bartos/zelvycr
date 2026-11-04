@@ -18,5 +18,6 @@
   },
   "cenaZelvyOd": 500,
   "cenaZelvyDo": 2500,
-  "prototyp": true
+  "prototyp": true,
+  "cenaSady": 5999
 }

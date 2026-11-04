@@ -14,18 +14,18 @@ a obsahu dřív, než se postaví zbývajících ~21 stránek.
 
 | ID       | Task                                                            | Size | Priority | Status |
 | -------- | --------------------------------------------------------------- | ---- | -------- | ------ |
-| TASK-002 | Design systém: tokeny, fonty a globální chrome podle varianty B | L    | Critical | ⬜     |
-| TASK-003 | Datový model druhů (`src/_data/druhy.json`)                     | S    | High     | ⬜     |
-| TASK-004 | Úvodní stránka podle 4.1 + varianty B                           | L    | High     | ⬜     |
-| TASK-005 | Stránka „Želvy na prodej" podle 4.2 + varianty B                | L    | High     | ⬜     |
-| TASK-006 | Šablona detailu druhu + stránka „Želva zelenavá" podle 4.3      | L    | High     | ⬜     |
+| TASK-002 | Design systém: tokeny, fonty a globální chrome podle varianty B | L    | Critical | 🔵     |
+| TASK-003 | Datový model druhů (`src/_data/druhy.json`)                     | S    | High     | 🔵     |
+| TASK-004 | Úvodní stránka podle 4.1 + varianty B                           | L    | High     | 🔵     |
+| TASK-005 | Stránka „Želvy na prodej" podle 4.2 + varianty B                | L    | High     | 🔵     |
+| TASK-006 | Šablona detailu druhu + stránka „Želva zelenavá" podle 4.3      | L    | High     | 🔵     |
 | TASK-007 | Lokální ověření Sprintu 1                                       | S    | High     | ⬜     |
 
 ---
 
 ### TASK-002: Design systém — tokeny, fonty a globální chrome podle varianty B
 
-**Size:** L (3–5 h) · **Status:** ⬜ Pending · **Priority:** Critical
+**Size:** L (3–5 h) · **Status:** 🔵 Implementováno na `feat/design-system`, čeká na revizi diffu a TASK-007 · **Priority:** Critical
 **Goal:** Nahradit neutrální kostru vizuálním jazykem varianty B tak, aby každá další stránka
 už stavěla v cílovém vzhledu.
 
@@ -65,7 +65,7 @@ už stavěla v cílovém vzhledu.
 
 ### TASK-003: Datový model druhů (`src/_data/druhy.json`)
 
-**Size:** S (1–2 h) · **Status:** ⬜ Pending · **Priority:** High
+**Size:** S (1–2 h) · **Status:** 🔵 Implementováno na `feat/design-system`, čeká na revizi · **Priority:** High
 **Goal:** Jedno místo s daty 6 druhů, ze kterého čerpá úvod, „Želvy na prodej" i detaily.
 
 **Acceptance criteria:**
@@ -104,7 +104,7 @@ už stavěla v cílovém vzhledu.
 
 ### TASK-004: Úvodní stránka podle 4.1 + varianty B
 
-**Size:** L (4–6 h) · **Status:** ⬜ Pending · **Priority:** High
+**Size:** L (4–6 h) · **Status:** 🔵 Implementováno na `feat/design-system`, čeká na revizi · **Priority:** High
 **Goal:** Hotová úvodní stránka ve variantě B — do 10 sekund vysvětlí, kdo jsme, a pošle
 k výběru želvy nebo k telefonu.
 
@@ -136,7 +136,7 @@ k výběru želvy nebo k telefonu.
 
 ### TASK-005: Stránka „Želvy na prodej" podle 4.2 + varianty B
 
-**Size:** L (4–6 h) · **Status:** ⬜ Pending · **Priority:** High
+**Size:** L (4–6 h) · **Status:** 🔵 Implementováno na `feat/design-system`, čeká na revizi · **Priority:** High
 **Goal:** Rozcestník druhů s porovnávací tabulkou, který pomůže vybrat a dovede k telefonu
 nebo na detail druhu.
 
@@ -164,7 +164,7 @@ nebo na detail druhu.
 
 ### TASK-006: Šablona detailu druhu + stránka „Želva zelenavá" podle 4.3
 
-**Size:** L (4–6 h) · **Status:** ⬜ Pending · **Priority:** High
+**Size:** L (4–6 h) · **Status:** 🔵 Implementováno na `feat/design-system`, čeká na revizi a doplnění textů · **Priority:** High
 **Goal:** Jedna šablona detailu druhu (použitelná pro všech 6) + naplněná pro želvu zelenavou
 jako vzor ke schválení.
 

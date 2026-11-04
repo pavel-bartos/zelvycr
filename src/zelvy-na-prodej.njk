@@ -1,0 +1,178 @@
+---
+layout: layouts/base.njk
+title: Želvy na prodej – zelenavá, vroubená, žlutohnědá a další
+description: Suchozemské želvy z vlastního odchovu za 500–2 500 Kč. Porovnejte druhy podle velikosti a nároků, doklady CITES samozřejmostí.
+permalink: /zelvy-na-prodej/
+---
+
+{# 1 — Úvod stránky #}
+<section class="wrap strana-uvod">
+  <nav class="drobky" aria-label="Drobečková navigace">
+    <a href="{{ '/' | url }}">Úvod</a> <span aria-hidden="true">›</span> <span aria-current="page">Želvy na prodej</span>
+  </nav>
+  <div class="rule strana-uvod__obsah">
+    <div class="strana-uvod__text">
+      <div class="kick">{{ zelvyNaProdej.uvod.kicker }}</div>
+      <h1 class="disp">{{ zelvyNaProdej.uvod.nadpis }}</h1>
+      <p>{{ zelvyNaProdej.uvod.perex }}</p>
+      <a class="btn btn--tma js-tel-hero" href="tel:{{ site.telefon | telHref }}">{{ zelvyNaProdej.uvod.tlacitko }}</a>
+    </div>
+    <dl class="fakta">
+      <div class="fakta__polozka">
+        <dt>Cena</dt>
+        <dd class="disp fakta__cena">{{ site.cenaZelvyOd | rozpetiKc(site.cenaZelvyDo) }}</dd>
+      </div>
+      {% for f in zelvyNaProdej.uvod.fakta %}
+      <div class="fakta__polozka">
+        <dt>{{ f.popisek }}</dt>
+        <dd>{{ f.hodnota }}</dd>
+      </div>
+      {% endfor %}
+    </dl>
+  </div>
+  <nav class="jump" aria-label="Na této stránce">
+    <span>Na této stránce:</span>
+    <a href="#jak-vybrat">Jak vybrat</a>
+    <a href="#druhy">Druhy</a>
+    <a href="#porovnani">Porovnání</a>
+    <a href="#mladata">Mláďata</a>
+    <a href="#doklady">Doklady CITES</a>
+  </nav>
+</section>
+
+{# 2 — Jak vybrat #}
+<section id="jak-vybrat" class="sekce-plocha">
+  <div class="wrap sekce-plocha__obsah">
+    <div class="kick">01 — Jak vybrat</div>
+    <h2 class="disp sekce__h2">Tři věci, které rozhodují</h2>
+    <ol class="kroky kroky--rady">
+      {% for r in zelvyNaProdej.rady %}
+      <li class="kroky__krok rule">
+        <div class="disp kroky__cislo">{{ r.stitek }}</div>
+        <strong>{{ r.nadpis }}</strong>
+        <span>{{ r.text }}</span>
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>
+
+{# 3 — Druhy s dostupností #}
+<section id="druhy" class="wrap sekce sekce--druhy">
+  <div class="rule sekce__hlava">
+    <div class="sekce__titul">
+      <div class="kick">02 — Druhy</div>
+      <h2 class="disp">Šest druhů v nabídce</h2>
+      <p class="sekce__podtitulek">U každého druhu vidíte, jestli máme želvy právě k dispozici. Přesnou nabídku vám řekneme po telefonu.</p>
+    </div>
+    <div class="badge-legenda" aria-label="Význam štítků dostupnosti">
+      {% for klic, d in dostupnost %}<span class="badge {{ d.trida }}">{{ d.text }}</span>{% endfor %}
+    </div>
+  </div>
+  <div class="karty-druhu">
+    {% for d in druhy %}
+    {% set stav = dostupnost[d.dostupnost] %}
+    <a class="row" href="{{ ('/' + d.slug + '/') | url }}">
+      <img src="{{ d.foto }}" alt="{{ d.nazev }}" width="168" height="168" loading="lazy">
+      <div class="row__text">
+        <div>
+          <span class="badge {{ stav.trida }}">{{ stav.text }}</span>
+          <h3 class="disp">{{ d.nazev }}</h3>
+          <div class="row__latinsky">{{ d.latinsky }}</div>
+        </div>
+        {% if d.stitky.length %}
+        <ul class="stitky">
+          {% for s in d.stitky %}<li class="stitek">{{ s }}</li>{% endfor %}
+        </ul>
+        {% endif %}
+        <dl>
+          <dt>Velikost</dt><dd>{{ d.velikost }}</dd>
+          <dt>Chov</dt><dd>{{ d.chov }}</dd>
+          <dt>Cena</dt><dd>{{ site.cenaZelvyOd | rozpetiKc(site.cenaZelvyDo) }}</dd>
+        </dl>
+        <span class="row__vice">Detail druhu →</span>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+
+{# 4 — Porovnání druhů #}
+<section id="porovnani" class="wrap sekce">
+  <div class="kick">03 — Porovnání</div>
+  <h2 class="disp sekce__h2">Druhy vedle sebe</h2>
+  <div class="tabulka-obal" role="region" aria-label="Porovnání druhů, tabulku lze posouvat do stran" tabindex="0">
+    <table class="tabulka">
+      <caption>Velikosti jsou orientační, záleží na formě a pohlaví. Poradíme vám po telefonu.</caption>
+      <thead>
+        <tr>
+          <th scope="col">Druh</th>
+          <th scope="col">Velikost v dospělosti</th>
+          <th scope="col">Byt / zahrada</th>
+          <th scope="col">Zimuje</th>
+          <th scope="col">Povinná registrace</th>
+          <th scope="col">Poznámka</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for d in druhy %}
+        <tr>
+          <th scope="row">{{ d.nazev }}</th>
+          <td>{{ d.velikost }}</td>
+          <td>{{ d.chov }}</td>
+          <td>{{ d.zimuje }}</td>
+          <td>{{ d.registrace }}</td>
+          <td>{{ d.poznamka }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+
+{# 5 — Ročník mláďat #}
+<section id="mladata" class="sekce-tma">
+  <div class="wrap mladata">
+    <img src="https://www.zelvycr.cz/obrazky/dum/12.jpg" alt="Čerstvě vylíhlá mláďata želv" width="640" height="440" loading="lazy">
+    <div class="mladata__text">
+      <div class="kick kick--tma">04 — Mláďata</div>
+      <h2 class="disp">Letošní mláďata i odrostlejší želvy</h2>
+      <p>Nabízíme mláďata z letošního roku i starší, odrostlejší želvy. Pro venkovní chov doporučujeme odrostlejší zvíře, nejlépe už několikrát zimované.</p>
+      <div class="rocnik">
+        <span>Aktuální ročník mláďat</span>
+        <span class="disp">{{ zelvyNaProdej.rocnikMladat }}</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# 6 — Doklady CITES #}
+<section id="doklady" class="wrap sekce sekce--doklady">
+  <div class="info-box">
+    <div class="kick">05 — Doklady</div>
+    <h2 class="disp">Doklady CITES vyřídíme s vámi</h2>
+    <p>Želva zelenavá, vroubená a žlutohnědá podléhají povinné registraci CITES. Želva stepní, pardálí a kloubnatá registraci nevyžadují.</p>
+    <p class="info-box__tlumeny">Doklady i předvyplněný formulář dostanete od nás. Registraci vyřídíte zdarma poštou do 30 dnů. Čipované želvy se nemusí každoročně přefocovat.</p>
+    <a class="odkaz-sipka" href="{{ '/pruvodce-chovem/registrace-cites/' | url }}">Jak registrovat želvu krok za krokem →</a>
+  </div>
+</section>
+
+{# 7 — Vybavení #}
+<section class="sekce-plocha">
+  <div class="wrap sekce-plocha__obsah">
+    <div class="kick">06 — Vybavení</div>
+    <h2 class="disp sekce__h2">Nezapomeňte na vybavení</h2>
+    <div class="karty-vybaveni">
+      {% for v in zelvyNaProdej.vybaveni %}
+      <a class="karta-vybaveni" href="{{ v.url | url }}">
+        <img src="{{ v.foto }}" alt="{{ v.alt }}" width="640" height="360" loading="lazy">
+        <div class="rule karta-vybaveni__text">
+          <h3 class="disp">{{ v.nazev }}</h3>
+          <p>{{ v.text }}</p>
+          <span class="row__vice">{{ v.odkaz }}</span>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>

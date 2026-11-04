@@ -1,0 +1,21 @@
+{
+  "nabidka": [
+    { "nazev": "Želvy na prodej", "url": "/zelvy-na-prodej/" },
+    { "nazev": "Startovací sady", "url": "/startovaci-sady/" },
+    { "nazev": "Příslušenství", "url": "/prislusenstvi/" },
+    { "nazev": "Jak nakoupit", "url": "/jak-nakoupit/" },
+    { "nazev": "O nás", "url": "/o-nas/" }
+  ],
+  "pruvodce": [
+    { "nazev": "Je želva pro mě?", "url": "/pruvodce-chovem/je-zelva-pro-me/" },
+    { "nazev": "Chov v teráriu", "url": "/pruvodce-chovem/chov-v-terariu/" },
+    { "nazev": "Krmení", "url": "/pruvodce-chovem/krmeni/" },
+    { "nazev": "Zimování", "url": "/pruvodce-chovem/zimovani/" },
+    { "nazev": "Registrace CITES", "url": "/pruvodce-chovem/registrace-cites/" }
+  ],
+  "informace": [
+    { "nazev": "Reklamace a garance", "url": "/reklamace-a-garance/" },
+    { "nazev": "Ochrana osobních údajů", "url": "/ochrana-osobnich-udaju/" },
+    { "nazev": "Kontakty", "url": "/kontakty/" }
+  ]
+}

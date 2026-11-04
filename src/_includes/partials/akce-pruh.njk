@@ -1,0 +1,8 @@
+{% if akce.zapnuto %}
+<div class="akce-pruh" role="region" aria-label="Aktuální akce">
+  <div class="wrap akce-pruh__obsah">
+    <span><strong>{{ akce.nazev }}:</strong> {{ akce.text }}</span>
+    <a href="{{ akce.odkaz | url }}">Zobrazit akci →</a>
+  </div>
+</div>
+{% endif %}

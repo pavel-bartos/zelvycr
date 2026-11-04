@@ -1,0 +1,109 @@
+{
+  "hero": {
+    "foto": "https://www.zelvycr.cz/obrazky/zelvy/06.jpg",
+    "alt": "Suchozemská želva v trávě",
+    "kicker": "Rodinný chov · 45 let",
+    "nadpis": "Suchozemské želvy z rodinného chovu",
+    "perex": "45 let a dvě generace zkušeností. Zdravé želvy z vlastního odchovu, vybavení na míru a rada, kdykoli ji budete potřebovat."
+  },
+  "cisla": [
+    { "cislo": "45", "popisek": "let chovu" },
+    { "cislo": "2", "popisek": "generace rodiny Haltufových" },
+    { "cislo": "9", "popisek": "druhů želv v chovu" },
+    { "cislo": "1×", "popisek": "měsíčně rozvoz po celé ČR" }
+  ],
+  "vyber": {
+    "nadpis": "Jakou želvu si vybrat",
+    "podtitulek": "Každý druh dorůstá jinak velký a hodí se do jiných podmínek. Poradíme vám."
+  },
+  "sada": {
+    "nadpis": "Vše pro první želvu v jednom balíčku",
+    "polozky": [
+      "Želva z našeho chovu s doklady",
+      "Plně vybavené terárium 80 × 40 × 40 cm",
+      "Granule na celý rok",
+      "Rada do začátku i po nákupu"
+    ],
+    "foto": "https://www.zelvycr.cz/obrazky/teraria/01m.jpg",
+    "alt": "Plně vybavené terárium pro želvu"
+  },
+  "kroky": [
+    { "nadpis": "Zavolejte nám", "text": "Poradíme s výběrem druhu." },
+    { "nadpis": "Vyberete si", "text": "Želvu, vybavení nebo celou sadu." },
+    {
+      "nadpis": "Převezmete si ji",
+      "text": "Rozvoz po ČR, Záhornice nebo terarijní burza."
+    },
+    { "nadpis": "Doklady a rada", "text": "Doklady CITES a rada i po nákupu." }
+  ],
+  "rodina": {
+    "nadpis": "Chováme želvy už 45 let",
+    "odstavce": [
+      "Chov želv u nás začal před 45 lety a dnes ho vedou už dvě generace rodiny Haltufových. Z malého chovu se stal jeden z největších soukromých chovů suchozemských želv v Evropě.",
+      "Všechny želvy, které nabízíme, pocházejí z vlastního odchovu."
+    ],
+    "lide": [
+      {
+        "jmeno": "Jan Haltuf st.",
+        "role": "zakladatel chovu, poradce",
+        "foto": "https://www.zelvycr.cz/foto/foto1.jpg"
+      },
+      {
+        "jmeno": "Jiří Haltuf",
+        "role": "prodej a poradenství",
+        "foto": "https://www.zelvycr.cz/foto/jirka.jpg"
+      }
+    ]
+  },
+  "clanky": [
+    {
+      "nazev": "Je želva pro mě?",
+      "perex": "Co želva potřebuje, kolik místa a péče a jestli se hodí k dětem.",
+      "url": "/pruvodce-chovem/je-zelva-pro-me/",
+      "foto": "https://www.zelvycr.cz/obrazky/zelvy/03.jpg",
+      "alt": "Suchozemská želva v trávě"
+    },
+    {
+      "nazev": "Chov v teráriu",
+      "perex": "Teploty, světlo a substrát – jak zařídit terárium, aby želva prospívala.",
+      "url": "/pruvodce-chovem/chov-v-terariu/",
+      "foto": "https://www.zelvycr.cz/foto/terarium.jpg",
+      "alt": "Terárium pro suchozemskou želvu"
+    },
+    {
+      "nazev": "Zimování",
+      "perex": "Proč evropské druhy potřebují zimní klid a jak ho bezpečně připravit.",
+      "url": "/pruvodce-chovem/zimovani/",
+      "foto": "https://www.zelvycr.cz/obrazky/zahrada/19.jpg",
+      "alt": "Zimoviště želv"
+    }
+  ],
+  "faq": [
+    {
+      "otazka": "Kolik stojí želva?",
+      "odpoved": "Cena se pohybuje od 500 do 2 500 Kč podle druhu, formy a stáří. Záleží i na tom, kolik mláďat se daný rok vylíhne. Aktuální cenu vám řekneme po telefonu."
+    },
+    {
+      "otazka": "Jak velká želva bude?",
+      "odpoved": "Záleží na druhu: menší formy želvy zelenavé mají kolem 12–15 cm, želva vroubená dorůstá 30–35 cm.",
+      "odkaz": { "text": "Porovnání najdete u druhů.", "url": "/zelvy-na-prodej/" }
+    },
+    {
+      "otazka": "Potřebuji k želvě nějaké papíry?",
+      "odpoved": "Želva zelenavá, vroubená a žlutohnědá podléhají povinné registraci CITES. Doklady i předvyplněný formulář od nás dostanete, registraci do 30 dnů na krajském úřadě vyřídíte zdarma poštou.",
+      "odkaz": {
+        "text": "Návod k registraci",
+        "url": "/pruvodce-chovem/registrace-cites/"
+      }
+    },
+    {
+      "otazka": "Musí želva zimovat?",
+      "odpoved": "Evropské druhy potřebují každý rok období klidu. Jak na to, vysvětlujeme v průvodci a rádi poradíme i osobně.",
+      "odkaz": { "text": "Zimování v průvodci", "url": "/pruvodce-chovem/zimovani/" }
+    },
+    {
+      "otazka": "Dovezete mi želvu?",
+      "odpoved": "Ano, rozvážíme po celé ČR jednou měsíčně. Můžete si ji také vyzvednout v Záhornicích nebo na terarijní burze. Termín domluvíme po telefonu."
+    }
+  ]
+}

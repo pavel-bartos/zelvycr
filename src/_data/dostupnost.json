@@ -1,0 +1,5 @@
+{
+  "skladem": { "text": "Skladem", "trida": "badge--skladem" },
+  "na-dotaz": { "text": "Na dotaz", "trida": "badge--dotaz" },
+  "neni": { "text": "Momentálně není", "trida": "badge--neni" }
+}

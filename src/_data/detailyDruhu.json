@@ -1,0 +1,51 @@
+[
+  {
+    "slug": "zelva-zelenava",
+    "galerie": [
+      {
+        "foto": "https://www.zelvycr.cz/foto/foto4.jpg",
+        "alt": "Želva zelenavá z našeho chovu, fotografie 1 z 5"
+      },
+      {
+        "foto": "https://www.zelvycr.cz/foto/foto20.jpg",
+        "alt": "Želva zelenavá z našeho chovu, fotografie 2 z 5"
+      },
+      {
+        "foto": "https://www.zelvycr.cz/foto/foto8.jpg",
+        "alt": "Želva zelenavá z našeho chovu, fotografie 3 z 5"
+      },
+      {
+        "foto": "https://www.zelvycr.cz/foto/foto21.jpg",
+        "alt": "Želva zelenavá z našeho chovu, fotografie 4 z 5"
+      },
+      {
+        "foto": "https://www.zelvycr.cz/foto/pohlavi/T_hermanni.JPG",
+        "alt": "Želva zelenavá z našeho chovu, fotografie 5 z 5"
+      }
+    ],
+    "narocnost": "[DOPLNIT: náročnost chovu]",
+    "oDruhu": [
+      "[DOPLNIT: text „O druhu“ — odstavce o T. h. boettgeri a T. h. hermanni (velikosti forem, snůšky, vzácnost) z původní stránky Druhy želv; zachovat osobní postřehy chovatele]"
+    ],
+    "postrehChovatele": null,
+    "formy": [
+      {
+        "nazev": "T. h. boettgeri",
+        "popis": "[DOPLNIT: jedna věta o formě]"
+      },
+      {
+        "nazev": "T. h. hermanni – Toskánsko",
+        "popis": "Vzácnější, tmavší kresba, kolem 15 cm."
+      },
+      {
+        "nazev": "T. h. boettgeri Chalkidiki",
+        "popis": "Žlutá forma."
+      }
+    ],
+    "potreby": [
+      "Terárium minimálně 80 × 40 × 40 cm pro první roky, později 100–120 cm",
+      "UVB zářivka",
+      "Výhřevná bodovka"
+    ]
+  }
+]

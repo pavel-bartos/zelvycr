@@ -4,22 +4,195 @@ title: Želvy na prodej z rodinného chovu
 description: Suchozemské želvy z vlastního odchovu, 45 let a dvě generace zkušeností. Terária, vybavení, doklady CITES a rozvoz po celé ČR.
 ---
 
-<h1>Suchozemské želvy z rodinného chovu</h1>
+{# 1 — Hero #}
+<section class="hero">
+  <img class="hero__foto" src="{{ uvod.hero.foto }}" alt="{{ uvod.hero.alt }}" width="1600" height="680" fetchpriority="high">
+  <div class="wrap hero__panel-obal">
+    <div class="hero__panel">
+      <div class="kick kick--tma">{{ uvod.hero.kicker }}</div>
+      <h1 class="disp">{{ uvod.hero.nadpis }}</h1>
+      <p>{{ uvod.hero.perex }}</p>
+      <div class="hero__tlacitka">
+        <a class="btn btn--tel" href="#vyber">Vybrat želvu</a>
+        <a class="btn btn--obrys js-tel-hero" href="tel:{{ site.telefon | telHref }}">Zavolat {{ site.telefon }}</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-<p>
-  45 let a dvě generace zkušeností. Zdravé želvy z vlastního odchovu, vybavení na míru
-  a rada, kdykoli ji budete potřebovat.
-</p>
+{# 2 — Lišta důvěry #}
+<section class="wrap sekce sekce--lista" aria-label="Proč my">
+  <div class="rule stat-bar">
+    {% for c in uvod.cisla %}
+    <div class="stat-bar__polozka">
+      <div class="disp stat-bar__cislo">{{ c.cislo }}</div>
+      <div>{{ c.popisek }}</div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
 
-<p>
-  <a class="tlacitko" href="{{ '/zelvy-na-prodej/' | url }}">Vybrat želvu</a>
-  <a class="tlacitko tlacitko--tel js-tel-hero" href="tel:{{ site.telefon | telHref }}">
-    Zavolat {{ site.telefon }}
+{# 3 — Akce (jen v sezóně, řízeno data/akce.json) #}
+{% if akce.zapnuto %}
+<section class="akce-sekce" aria-labelledby="akce-nadpis">
+  <div class="wrap akce-sekce__obsah">
+    <div>
+      <div class="kick kick--tma">Akce · platí do {{ akce.platiDo | datumCZ }}</div>
+      <h2 id="akce-nadpis" class="disp">{{ akce.nazev }}</h2>
+      <p>{{ akce.text }}</p>
+    </div>
+    <a class="btn btn--tel" href="{{ akce.odkaz | url }}">Zobrazit akci</a>
+  </div>
+</section>
+{% endif %}
+
+{# 4 — Jakou želvu si vybrat #}
+<section id="vyber" class="wrap sekce">
+  <div class="rule sekce__hlava">
+    <div class="sekce__titul">
+      <div class="kick">01 — Výběr</div>
+      <h2 class="disp">{{ uvod.vyber.nadpis }}</h2>
+      <p class="sekce__podtitulek">{{ uvod.vyber.podtitulek }}</p>
+    </div>
+    <a class="odkaz-sipka" href="{{ '/zelvy-na-prodej/' | url }}">Porovnat všechny druhy →</a>
+  </div>
+  <div class="karty-druhu">
+    {% for d in druhy %}
+    <a class="row" href="{{ ('/' + d.slug + '/') | url }}">
+      <img src="{{ d.foto }}" alt="{{ d.nazev }}" width="168" height="168" loading="lazy">
+      <div class="row__text">
+        <div>
+          <h3 class="disp">{{ d.nazev }}</h3>
+          <div class="row__latinsky">{{ d.latinsky }}</div>
+        </div>
+        {% if d.stitky.length %}
+        <ul class="stitky">
+          {% for s in d.stitky %}<li class="stitek">{{ s }}</li>{% endfor %}
+        </ul>
+        {% endif %}
+        <dl>
+          <dt>Velikost</dt><dd>{{ d.velikost }}</dd>
+          <dt>Chov</dt><dd>{{ d.chov }}</dd>
+          <dt>Cena</dt><dd>{{ site.cenaZelvyOd | rozpetiKc(site.cenaZelvyDo) }}</dd>
+        </dl>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+
+{# 5 — Startovací sada #}
+<section class="sekce-plocha">
+  <div class="wrap sekce-plocha__obsah">
+    <div class="kick">02 — Vybavení</div>
+    <div class="sada">
+      <div class="sada__text">
+        <h2 class="disp">{{ uvod.sada.nadpis }}</h2>
+        <ul class="sada__polozky">
+          {% for p in uvod.sada.polozky %}<li class="sada__polozka">{{ p }}</li>{% endfor %}
+        </ul>
+        <div class="sada__cena-radek">
+          <div>
+            <div class="sada__cena-popisek">Startovací sada</div>
+            <div class="disp sada__cena">{{ site.cenaSady | kc }}</div>
+          </div>
+          <a class="btn btn--tma" href="{{ '/startovaci-sady/' | url }}">Prohlédnout sady</a>
+        </div>
+      </div>
+      <img class="sada__foto" src="{{ uvod.sada.foto }}" alt="{{ uvod.sada.alt }}" width="640" height="460" loading="lazy">
+    </div>
+  </div>
+</section>
+
+{# 6 — Jak u nás koupit #}
+<section class="wrap sekce sekce--siroka">
+  <div class="kick">03 — Nákup</div>
+  <h2 class="disp sekce__h2">Jak u nás koupit</h2>
+  <ol class="kroky">
+    {% for k in uvod.kroky %}
+    <li class="kroky__krok rule">
+      <div class="disp kroky__cislo">Krok {{ loop.index }}</div>
+      <strong>{{ k.nadpis }}</strong>
+      <span>{{ k.text }}</span>
+    </li>
+    {% endfor %}
+  </ol>
+  <p class="sekce__odkaz"><a class="odkaz-sipka" href="{{ '/jak-nakoupit/' | url }}">Jak nakoupit →</a></p>
+</section>
+
+{# 7 — Rodina #}
+<section class="sekce-tma">
+  <div class="wrap sekce-tma__obsah">
+    <div class="kick kick--tma">04 — Rodina</div>
+    <div class="rodina">
+      <div class="rodina__text">
+        <h2 class="disp">{{ uvod.rodina.nadpis }}</h2>
+        {% for o in uvod.rodina.odstavce %}<p>{{ o }}</p>{% endfor %}
+        <a class="btn btn--obrys" href="{{ '/o-nas/' | url }}">Více o nás</a>
+      </div>
+      <div class="rodina__lide">
+        {% for l in uvod.rodina.lide %}
+        <figure>
+          <img src="{{ l.foto }}" alt="{{ l.jmeno }}" width="300" height="400" loading="lazy">
+          <figcaption><strong>{{ l.jmeno }}</strong><br><span>{{ l.role }}</span></figcaption>
+        </figure>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{# 8 — Recenze (skryté, dokud nejsou skutečné recenze; data/recenze.json) #}
+{% if recenze.length %}
+<section class="wrap sekce" aria-labelledby="recenze-nadpis">
+  <div class="kick">Recenze</div>
+  <h2 id="recenze-nadpis" class="disp sekce__h2">Co říkají zákazníci</h2>
+  <div class="recenze">
+    {% for r in recenze %}
+    <figure class="recenze__polozka rule">
+      <blockquote>{{ r.text }}</blockquote>
+      <figcaption><strong>{{ r.jmeno }}</strong>, {{ r.mesto }}</figcaption>
+    </figure>
+    {% endfor %}
+  </div>
+  <p class="recenze__pozn">Zobrazujeme recenze z Google od zákazníků, kteří u nás nakoupili; neupravujeme je.</p>
+</section>
+{% endif %}
+
+{# 9 — Z průvodce chovem #}
+<section class="wrap sekce sekce--pruvodce">
+  <div class="rule sekce__hlava">
+    <div class="sekce__titul">
+      <div class="kick">05 — Průvodce</div>
+      <h2 class="disp">Než si želvu pořídíte</h2>
+    </div>
+    <a class="odkaz-sipka" href="{{ '/pruvodce-chovem/' | url }}">Celý průvodce chovem →</a>
+  </div>
+  {% for c in uvod.clanky %}
+  <a class="row row--clanek" href="{{ c.url | url }}">
+    <img src="{{ c.foto }}" alt="{{ c.alt }}" width="240" height="135" loading="lazy">
+    <div class="row__text">
+      <h3 class="disp">{{ c.nazev }}</h3>
+      <p>{{ c.perex }}</p>
+    </div>
   </a>
-</p>
+  {% endfor %}
+</section>
 
-<p>
-  <strong>Pozn. k prototypu:</strong> tahle stránka je kostra z vibe-init. Obsah podle
-  kapitoly 4.1 zadání (hero, lišta důvěry, karty druhů, startovací sada, 4 kroky nákupu,
-  rodinný chov, články, FAQ) se doplňuje v implementačních sprintech.
-</p>
+{# 10 — Časté otázky #}
+<section class="wrap sekce sekce--faq">
+  <div class="faq">
+    <div class="faq__titul">
+      <div class="kick">06 — Otázky</div>
+      <h2 class="disp">Časté otázky</h2>
+    </div>
+    <div class="faq__seznam">
+      {% for f in uvod.faq %}
+      <details name="faq"{% if loop.first %} open{% endif %}>
+        <summary>{{ f.otazka }}</summary>
+        <p>{{ f.odpoved }}{% if f.odkaz %} <a href="{{ f.odkaz.url | url }}">{{ f.odkaz.text }}</a>{% endif %}</p>
+      </details>
+      {% endfor %}
+    </div>
+  </div>
+</section>

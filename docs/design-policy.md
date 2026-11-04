@@ -183,6 +183,10 @@ vpravo H3 (displej 30px, váha 600) + latinský název kurzívou slabě + `<dl>`
 (Velikost / Chov / Cena). Hover: podtržení H3. `dl` je grid `auto 1fr`, `dt` slabá barva,
 `dd` váha 600.
 
+**Štítky druhu `.stitek`** (Byt / Zahrada / Začátečník, doplněno v TASK-004 podle zadání 4.1): malé
+pilulky odvozené z badge — `background: var(--barva-plocha-neutr); color: var(--barva-text-tlumena);`
+14px, váha 700, `--radius-badge`. Jsou pod názvem druhu, před `<dl>`. Barvou nenesou informaci, vždy mají text.
+
 **Varianta karta článku:** stejná `.row`, širší fotka 240×135 (poměr 16:9), H3 + jednořádkový
 perex. Používá se v „Z průvodce chovem".
 
@@ -307,12 +311,53 @@ chyba.** Číslo vždy ve tvaru `tel:+420774579582`, zobrazené „774 579 582".
 
 ---
 
-## 7. Co policy zatím neřeší (doplní se při tvorbě dané stránky)
+## 7. Doplněná pravidla pro konkrétní stránky
+
+### 7.1 Detail druhu (TASK-006)
+
+Šablona pro 6 stránek `/zelva-…/` (zadání 4.3). Vychází z existujících komponent, nový vizuální
+jazyk nezavádí. Pořadí sekcí shora dolů:
+
+1. **Hlavička druhu `.druh-hlavicka`** — drobečky, pod nimi `.rule` a dva sloupce (flex,
+   zalamovací): vlevo **galerie**, vpravo **panel**.
+   - **Galerie `.galerie`:** jedna velká fotka (poměr 4 : 3, `object-fit: cover`, podklad
+     `--barva-img-placeholder`) + řada 2–4 náhledů (čtverec, ~96 px, hairline rámeček). Každý
+     náhled je odkaz na fotku v plné velikosti — **bez JavaScriptu a bez lightboxu** (policy §5).
+     Všechny fotky mají česky popisný `alt`.
+   - **Panel `.druh-panel`:** `.badge` dostupnosti → H1 (displej, 56 px, váha 800) s českým
+     názvem, latinský název kurzívou slabě (jako ve `.row`) → jednovětné shrnutí (perex 20 px,
+     `--barva-text-tlumena`) → `.stitky` (Byt / Zahrada / Začátečník) → řádek ceny v komponentě
+     `.fakta` (popisek „Cena“, hodnota displejem 40 px: „500–2 500 Kč podle formy a stáří“) →
+     tlačítka: `.btn--tel` „Zavolat a domluvit nákup“ (`js-tel-hero`) a `.btn--tma` „Startovací
+     sada“ (odkaz na sady).
+2. **V kostce `.v-kostce`** — `.rule` 2 px, kicker „01 — V kostce“, H2 56 px, pod tím `<dl>`
+   v gridu `auto 1fr`: řádky odděleny hairline 1 px, `dt` slabá barva 16 px, `dd` váha 600.
+   Řádky: velikost (samci/samice), vhodný chov, zimování, povinná registrace, náročnost.
+   Chybí-li údaj, `[DOPLNIT]` — nikdy netipovat.
+3. **O druhu `.druh-text`** — kicker „02 — O druhu“, H2 56 px, text max 40 em, 18 px,
+   odstavce `--barva-text-tlumena`. Osobní postřehy chovatele se zvýrazní boxem
+   `.box-chov` (viz níže).
+4. **Formy, které chováme `.formy`** — kicker, H2, seznam položek oddělených hairline:
+   název formy (displej 30 px, váha 600, latinský název kurzívou) + jedna věta (`--barva-text-tlumena`).
+5. **Co bude potřebovat `.druh-potreby`** — světlá plocha `--barva-plocha` (jako startovací
+   sada §3.6): vlevo odrážky (3–4, hairline položky jako `.sada__polozka`), vpravo karta
+   s odkazem na Startovací sady (`.karta-vybaveni`).
+6. **Související články** — 3× `.row--clanek` (§3.5).
+7. **Další druhy** — 3× `.row` (§3.5), bez aktuálně zobrazeného druhu.
+8. **Závěrečné CTA** — partial `.cta-pruh` (§3.10).
+
+**Box `.box-chov`** („Z našeho chovu“, později „Rada chovatele“ u článků): `border-left: 4px solid
+var(--barva-zelena)`, `background: var(--barva-plocha)`, padding 24 px, kicker mono olivově nad
+textem. Bez zaoblení a stínu. Odvozeno z `.info-box` (CITES) a `.sekce-plocha`.
+
+Mobil: galerie i panel pod sebou (galerie první), H1 `clamp(2.25rem, 10vw, 3.5rem)`, náhledy
+v jedné řadě (zalamují), sekce svislý rytmus jako ostatní (56 px).
+
+### 7.2 Co policy zatím neřeší (doplní se při tvorbě dané stránky)
 
 Varianta B ukazuje úvod a „Želvy na prodej". Následující vznikne odvozením z komponent výše
 a **doplní se sem** při tvorbě dané stránky (ne potichu v kódu):
 
-- Šablona **detailu druhu** (galerie + panel, tabulka „V kostce", sekce „Co bude potřebovat").
 - Šablona **článku** (perex, boxy „V kostce / Rada chovatele / Z našeho chovu", obsah s kotvami).
 - **Galerie** (mřížka, lightbox/odkaz na plnou velikost).
 - Stránky **Startovací sady**, **Příslušenství**, **Jak nakoupit**, **O nás**, **Kontakt**.
