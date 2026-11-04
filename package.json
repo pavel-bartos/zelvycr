@@ -1,0 +1,26 @@
+{
+  "name": "zelvycr-web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Statický prototyp webu zelvycr.cz — Želvy ČR, rodinný chov suchozemských želv",
+  "scripts": {
+    "dev": "eleventy --serve",
+    "build": "eleventy",
+    "build:pages": "eleventy",
+    "clean": "rm -rf dist",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "eslint": "^9.0.0",
+    "globals": "^15.0.0",
+    "prettier": "^3.3.0",
+    "vitest": "^2.0.0"
+  }
+}

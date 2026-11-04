@@ -1,0 +1,7 @@
+dist/
+node_modules/
+package-lock.json
+
+# Nunjucks: prettier nemá parser pro {% %} a rozbil by řídicí bloky.
+# Šablony formátuj ručně.
+*.njk

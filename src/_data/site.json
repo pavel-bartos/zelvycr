@@ -1,0 +1,22 @@
+{
+  "nazev": "Želvy ČR",
+  "popis": "Rodinný chov suchozemských želv — 45 let a dvě generace zkušeností",
+  "jazyk": "cs",
+  "url": "https://www.zelvycr.cz",
+  "telefon": "774 579 582",
+  "kontakt": {
+    "osoba": "Jiří Haltuf",
+    "role": "prodej a poradenství",
+    "odberneMisto": "Na Sádkách 174, 289 03 Záhornice",
+    "chov": "Nepolisy 174, 503 63"
+  },
+  "firma": {
+    "jmeno": "Jan Haltuf",
+    "adresa": "Nepolisy 174, 503 63",
+    "ico": "48633119",
+    "zivnostenskyUrad": "MÚ Nový Bydžov, ev. č. 360203-3756-00"
+  },
+  "cenaZelvyOd": 500,
+  "cenaZelvyDo": 2500,
+  "prototyp": true
+}

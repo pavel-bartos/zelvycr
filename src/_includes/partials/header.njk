@@ -1,0 +1,16 @@
+<header class="hlavicka">
+  <a class="preskocit" href="#obsah">Přeskočit na obsah</a>
+  <a class="logo" href="{{ '/' | url }}">{{ site.nazev }}</a>
+  <nav class="menu" aria-label="Hlavní navigace">
+    <ul>
+      {% for polozka in navigace %}
+        <li>
+          <a href="{{ polozka.url | url }}"{% if page.url == polozka.url %} aria-current="page"{% endif %}>{{ polozka.nazev }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+  <a class="tlacitko tlacitko--tel js-tel-hlavicka" href="tel:{{ site.telefon | telHref }}">
+    Zavolat {{ site.telefon }}
+  </a>
+</header>

@@ -1,0 +1,41 @@
+{
+  "_comment": "Zkopíruj na .claude/settings.local.json a doplň. Soubor je gitignored a platí jen pro tvůj stroj. Doplňuje globální bezpečnostní baseline v ~/.claude/, nenahrazuje ji.",
+  "autoMode": {
+    "environment": {
+      "repo": "DOPLNIT owner/zelvycr-web",
+      "deployUrl": "DOPLNIT https://<owner>.github.io/<repo>/",
+      "localhost": "http://localhost:8080",
+      "envFiles": "projekt žádné secrets nemá; .env* je gitignored a nemá vznikat",
+      "citlivaData": "žádná — statický web bez backendu, bez osobních údajů návštěvníků"
+    }
+  },
+  "permissions": {
+    "allow": [
+      "Bash(npm run lint)",
+      "Bash(npm run format:check)",
+      "Bash(npm test)",
+      "Bash(npm run build)",
+      "Bash(npm ci)",
+      "Bash(git status)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
+    ],
+    "ask": [
+      "Bash(gh pr create:*)",
+      "Bash(gh pr merge:*)",
+      "Bash(npm install:*)",
+      "Bash(git push:*)"
+    ],
+    "deny": [
+      "Bash(git push --force:*)",
+      "Bash(git reset --hard:*)",
+      "Bash(rm -rf:*)",
+      "Bash(curl:*)",
+      "Bash(sudo:*)",
+      "Read(.env)",
+      "Read(.env.*)"
+    ]
+  }
+}

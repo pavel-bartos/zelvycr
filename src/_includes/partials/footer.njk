@@ -1,0 +1,29 @@
+<footer class="paticka">
+  <div class="paticka__sloupec">
+    <h2>Kontakt</h2>
+    <p>
+      <a class="js-tel-paticka" href="tel:{{ site.telefon | telHref }}">{{ site.telefon }}</a><br>
+      {{ site.kontakt.osoba }} — {{ site.kontakt.role }}
+    </p>
+    <p>
+      Odběrné místo: {{ site.kontakt.odberneMisto }}<br>
+      Chov: {{ site.kontakt.chov }}
+    </p>
+  </div>
+  <div class="paticka__sloupec">
+    <h2>Web</h2>
+    <ul>
+      {% for polozka in navigace %}
+        <li><a href="{{ polozka.url | url }}">{{ polozka.nazev }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="paticka__sloupec">
+    <h2>Provozovatel</h2>
+    <p>
+      {{ site.firma.jmeno }}, {{ site.firma.adresa }}<br>
+      IČO {{ site.firma.ico }}<br>
+      Zapsáno: {{ site.firma.zivnostenskyUrad }}
+    </p>
+  </div>
+</footer>

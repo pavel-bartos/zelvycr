@@ -1,0 +1,8 @@
+[
+  { "nazev": "Želvy na prodej", "url": "/zelvy-na-prodej/" },
+  { "nazev": "Startovací sady", "url": "/startovaci-sady/" },
+  { "nazev": "Příslušenství", "url": "/prislusenstvi/" },
+  { "nazev": "Průvodce chovem", "url": "/pruvodce-chovem/" },
+  { "nazev": "Jak nakoupit", "url": "/jak-nakoupit/" },
+  { "nazev": "O nás", "url": "/o-nas/" }
+]

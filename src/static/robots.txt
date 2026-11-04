@@ -1,0 +1,3 @@
+# Pracovní prototyp — nechceme ho ve vyhledávačích.
+User-agent: *
+Disallow: /

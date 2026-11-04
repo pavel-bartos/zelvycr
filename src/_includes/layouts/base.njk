@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="{{ site.jazyk }}">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ title }}{% if title %} | {% endif %}{{ site.nazev }}</title>
+    <meta name="description" content="{{ description or site.popis }}" />
+    {% if site.prototyp %}
+    <meta name="robots" content="noindex, nofollow" />
+    {% endif %}
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | url }}" />
+  </head>
+  <body>
+    {% if site.prototyp %}
+    <p class="prototyp-pruh" role="status">
+      Pracovní prototyp — obsah i ceny nejsou finální.
+    </p>
+    {% endif %} {% include "partials/header.njk" %}
+
+    <main id="obsah">{{ content | safe }}</main>
+
+    {% include "partials/cta.njk" %} {% include "partials/footer.njk" %} {% include
+    "partials/sticky-call.njk" %}
+  </body>
+</html>

@@ -1,0 +1,24 @@
+# závislosti a build
+node_modules/
+dist/
+.cache/
+
+# secrets — nikdy necommitovat
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+id_rsa*
+.npmrc
+
+# lokální nastavení Claude Code — per-stroj, nikdy do gitu (viz vibe-secure).
+# Repo si nesmí samo udělovat důvěru; cestující dokumentace patří do CLAUDE.md.
+.claude/settings.local.json
+
+# OS a editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
