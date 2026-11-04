@@ -1,0 +1,48 @@
+---
+layout: layouts/base.njk
+title: Garance zdraví a reklamace | Želvy ČR
+description: Na zdraví želvy platí 6týdenní zákonná lhůta. Kdyby se cokoli dělo, zavolejte nám jako prvním – vždy se domluvíme.
+permalink: /reklamace-a-garance/
+---
+
+{# 1 — Hlavička #}
+<section class="wrap strana-uvod">
+  <nav class="drobky" aria-label="Drobečková navigace">
+    <a href="{{ '/' | url }}">Úvod</a> <span aria-hidden="true">›</span>
+    <span aria-current="page">Reklamace a garance</span>
+  </nav>
+  <div class="rule">
+    <div class="kick">Vaše jistota</div>
+    <h1 class="disp">Garance zdraví a reklamace</h1>
+  </div>
+</section>
+
+{# 2 — Podmínky #}
+<section class="wrap sekce">
+  <div class="clanek-telo">
+    <p>Na zdraví zvířete platí ze zákona 6týdenní lhůta.</p>
+
+    <p>Když se v této době objeví zdravotní problém, zavolejte nám prosím jako prvním. Želvy jsou specifické a ne každý veterinář s nimi má zkušenosti.</p>
+
+    <p>V případě úhynu se nejčastěji domluvíme na náhradě nebo slevě na další želvu. Druhou možností je pitva na Státní veterinární správě nebo jiné akreditované instituci – prokáže-li vadu na straně chovatele, dáme vám novou želvu a uhradíme náklady na pitvu.</p>
+
+    <p>Vždy se snažíme o rozumnou domluvu.</p>
+  </div>
+
+  <div class="sekce--mezera">
+    <a class="btn btn--tel js-tel-reklamace" href="tel:{{ site.telefon | telHref }}">
+      {% include "partials/ikona-tel.njk" %}
+      Zavolat {{ site.kontakt.osoba }}
+    </a>
+  </div>
+</section>
+
+{# 3 — Obchodní podmínky #}
+<section class="wrap sekce">
+  <div class="info-box">
+    <div class="kick">Obchodní podmínky</div>
+    <p class="info-box__tlumeny">Obchodní podmínky pro tento web nejsou v tuto chvíli potřeba — web je prezentační a prodej probíhá telefonicky. Podmínky budou k dispozici po spuštění e-shopu.</p>
+  </div>
+</section>
+
+{% include "partials/cta.njk" %}

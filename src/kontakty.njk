@@ -1,0 +1,101 @@
+---
+layout: layouts/base.njk
+title: Kontakt – Želvy ČR, Jiří Haltuf, tel. 774 579 582
+description: Kontaktujte Jiřího Haltufa pro nákup suchozemské želvy nebo příslušenství. Odběr v Záhornicích nebo rozvoz po celé ČR.
+permalink: /kontakty/
+---
+
+{# 1 — Hlavička #}
+<section class="wrap strana-uvod">
+  <nav class="drobky" aria-label="Drobečková navigace">
+    <a href="{{ '/' | url }}">Úvod</a> <span aria-hidden="true">›</span>
+    <span aria-current="page">Kontakt</span>
+  </nav>
+  <div class="rule">
+    <div class="kick">Kontaktujte nás</div>
+    <h1 class="disp">Kontakt</h1>
+  </div>
+</section>
+
+{# 2 — Hlavní kontakt #}
+<section class="wrap sekce">
+  <div class="kontakt-hlavni rule">
+    <div class="kontakt-hlavni__foto">
+      <img src="https://www.zelvycr.cz/foto/jirka.jpg" alt="[DOPLNIT – portrét Jiřího Haltufa]" width="160" height="160" loading="lazy">
+    </div>
+    <div class="kontakt-hlavni__info">
+      <h2 class="disp">Jiří Haltuf</h2>
+      <p class="kick" style="font-size:1rem">Prodej a poradenství</p>
+      <p class="kontakt-tel">
+        <a class="js-tel-kontakt" href="tel:{{ site.telefon | telHref }}">+420 {{ site.telefon }}</a>
+      </p>
+      <p>Nejrychleji se domluvíme po telefonu. Když to nezvedneme, ozveme se zpět.</p>
+      <a class="btn btn--tel js-tel-kontakt" href="tel:{{ site.telefon | telHref }}">
+        {% include "partials/ikona-tel.njk" %}
+        Zavolat
+      </a>
+    </div>
+  </div>
+</section>
+
+{# 3 — Místa #}
+<section class="wrap sekce">
+  <div class="kick">01 — Kde nás najdete</div>
+  <h2 class="disp sekce__h2">Místa</h2>
+  <div class="kontakt-mista">
+
+    <div class="kontakt-misto rule">
+      <h3>Odběrní místo</h3>
+      <address>
+        Na Sádkách 174<br>
+        289 03 Záhornice
+      </address>
+      <p class="kontakt-misto__poznamka">Po předchozí domluvě</p>
+      <p><a href="https://mapy.cz/s/jovekokohu">Zobrazit na mapě →</a></p>
+    </div>
+
+    <div class="kontakt-misto rule">
+      <h3>Chov</h3>
+      <address>
+        Nepolisy 174<br>
+        503 63 (u Chlumce nad Cidlinou)
+      </address>
+      <p><a href="https://mapy.cz/s/fosolatepa">Zobrazit na mapě →</a></p>
+    </div>
+
+  </div>
+</section>
+
+{# 4 — Burzy #}
+<section class="wrap sekce">
+  <div class="kick">02 — Terarijní burzy</div>
+  <h2 class="disp sekce__h2">Burzy</h2>
+  <p>Potkáte nás na terarijních burzách. Nejbližší termíny:</p>
+  <p class="info-box__tlumeny"><em>[DOPLNIT – klient doplňuje průběžně]</em></p>
+</section>
+
+{# 5 — Fakturační údaje #}
+<section class="wrap sekce">
+  <div class="kick">03 — Identifikační údaje</div>
+  <h2 class="disp sekce__h2">Fakturační údaje</h2>
+  <dl class="kontakt-fakturace">
+    <div class="kontakt-fakturace__radek">
+      <dt>Jméno</dt>
+      <dd>{{ site.firma.jmeno }}</dd>
+    </div>
+    <div class="kontakt-fakturace__radek">
+      <dt>Adresa</dt>
+      <dd>{{ site.firma.adresa }}</dd>
+    </div>
+    <div class="kontakt-fakturace__radek">
+      <dt>IČO</dt>
+      <dd>{{ site.firma.ico }}</dd>
+    </div>
+    <div class="kontakt-fakturace__radek">
+      <dt>Živnostenský úřad</dt>
+      <dd>{{ site.firma.zivnostenskyUrad }}</dd>
+    </div>
+  </dl>
+</section>
+
+{% include "partials/cta.njk" %}
