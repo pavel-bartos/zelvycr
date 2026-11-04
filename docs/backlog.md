@@ -101,7 +101,6 @@ design-policy.md.
 | TASK-019 | SEO: sitemap, kanonické adresy, Open Graph, JSON-LD (8.3)                                                        | M    | Medium   | ⬜     |
 | TASK-020 | Měření bez cookies + události `click_tel` (8.3/5.5)                                                              | S    | Medium   | ⬜     |
 | TASK-008 | Fotopipeline: self-hostované WebP obrázky místo hotlinků na zelvycr.cz                                           | M    | Medium   | ⏸️     |
-| TASK-021 | Branch protection na `main` (Pavel; GitHub Pages už zapnuté)                                                     | S    | High     | ⬜     |
 | TASK-022 | Doplnit `[DOPLNIT]` na detailu zelenavé: náročnost, text „O druhu", věta u T. h. boettgeri (podklady dodá Pavel) | S    | Medium   | ⬜     |
 
 ### TASK-008: Fotopipeline — self-hostované optimalizované obrázky
@@ -137,6 +136,7 @@ webu nebo manuální stažení). Než to půjde otevřít, Pavel dodá fotky neb
 | TASK-015 | Reklamace a garance + Ochrana osobních údajů                                         | 2026-11-04 |
 | TASK-016 | Průvodce chovem: rozcestník + 13 article skeletonů                                   | 2026-11-04 |
 | TASK-023 | Ověření Sprintu 3 (Pavel, produkce)                                                  | 2026-11-04 |
+| TASK-021 | Branch protection na `main` (ruleset: PR + status check + block force push)          | 2026-11-04 |
 
 ## Future / Deferred
 
