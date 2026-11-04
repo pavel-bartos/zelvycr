@@ -36,8 +36,12 @@ Veškerou implementaci dělá Claude Code. Design policy je závazný zdroj prav
 - 2026-11-04: **Režim práce:** Claude píše jen backlog a docs (ne kód), implementaci dělá Claude Code.
 - 2026-11-04: **Design = schválená varianta B** (mockupy úvod + Želvy na prodej), kodifikovaná do `docs/design-policy.md`. Webdesigner se nezapojuje — policy stačí jako zdroj pravdy.
 - 2026-11-04: **Sprint 1 = užší výřez + design-first:** nejdřív design systém, pak úvod, Želvy na prodej a jeden detail druhu (zelenavá). Schválení designu na výřezu před stavbou zbylých stránek.
+- 2026-11-04: **Sprint 2 připraven** (nezahájen): kompletní katalog a fotky — zbylých 5 druhů, startovací sady, příslušenství, terária na míru, fotopipeline. Stránky důvěry a průvodce chovem jsou Sprint 3+.
+- 2026-11-04: **Repo je veřejné** — zadání (interní klientský dokument) se proto do repa nevkládá; tasky nesou potřebný obsah v sobě. Doporučeno zvážit přepnutí na privátní.
 
 ## Otevřené otázky / TODO konzistence
+
+- [ ] **Veřejné vs. privátní repo** — teď veřejné; u klientského projektu zvážit privátní (pak lze vložit zadání jako zdroj pravdy)
 
 - [ ] Název a owner repozitáře na GitHubu → promítnout do README a ověřit pathPrefix v deploy workflow
 - [ ] Fotky: jak je dostat ze starého webu do repa (velikost, formát, pojmenování podle obsahu)
