@@ -738,6 +738,370 @@ details p {
   color: var(--barva-text-tlumena);
 }
 
+/* ---------- úvod podstránky, drobečky, „na této stránce“ ---------- */
+
+.strana-uvod {
+  padding-block: 24px 64px;
+}
+
+.drobky {
+  margin-bottom: 40px;
+  font-size: 15px;
+  color: var(--barva-text-slaba);
+}
+
+.drobky a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--barva-text-slaba);
+}
+
+.strana-uvod__obsah {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+  padding-top: 28px;
+}
+
+.strana-uvod__text {
+  flex: 2 1 560px;
+  min-width: 0;
+}
+
+.strana-uvod__text .kick {
+  margin-bottom: 18px;
+}
+
+.strana-uvod h1 {
+  margin: 0 0 28px;
+  font-size: 96px;
+}
+
+.strana-uvod__text p {
+  max-width: 34em;
+  margin: 0 0 32px;
+  font-size: 21px;
+  color: var(--barva-text-tlumena);
+}
+
+.fakta {
+  display: block;
+  flex: 1 1 320px;
+  align-self: flex-end;
+  min-width: 0;
+  margin: 0;
+}
+
+.fakta__polozka {
+  padding: 16px 0;
+  border-top: 1px solid var(--barva-linka-silna);
+}
+
+.fakta__polozka:last-child {
+  border-bottom: 1px solid var(--barva-linka-silna);
+}
+
+.fakta dt {
+  font-size: 15px;
+  color: var(--barva-text-slaba);
+}
+
+.fakta dd {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.fakta dd.fakta__cena {
+  margin-top: 6px;
+  font-size: 40px;
+}
+
+.jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 28px;
+  margin-top: 48px;
+  font-size: 17px;
+}
+
+.jump span,
+.jump a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+.jump span {
+  color: var(--barva-text-slaba);
+}
+
+.jump a {
+  border-bottom: 2px solid var(--barva-zelena-svetla);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.jump a:hover {
+  border-color: var(--barva-zelena);
+}
+
+/* ---------- badge dostupnosti ---------- */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 10px;
+  padding: 3px 10px;
+  border-radius: var(--radius-badge);
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.badge::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentcolor;
+}
+
+.badge--skladem {
+  background: var(--badge-skladem-bg);
+  color: var(--badge-skladem-text);
+}
+
+.badge--dotaz {
+  background: var(--badge-dotaz-bg);
+  color: var(--badge-dotaz-text);
+}
+
+.badge--neni {
+  background: var(--badge-neni-bg);
+  color: var(--badge-neni-text);
+}
+
+.badge-legenda {
+  display: flex;
+  flex-wrap: wrap;
+  align-self: flex-end;
+  gap: 8px 16px;
+}
+
+.badge-legenda .badge {
+  margin-bottom: 0;
+}
+
+.sekce--druhy {
+  padding-block: 88px;
+}
+
+.row__vice {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--barva-zelena);
+}
+
+/* ---------- porovnávací tabulka ---------- */
+
+.tabulka-obal {
+  overflow-x: auto;
+}
+
+.tabulka {
+  width: 100%;
+  min-width: 980px;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+
+.tabulka th,
+.tabulka td {
+  padding: 14px 16px 14px 0;
+  text-align: left;
+  vertical-align: top;
+}
+
+.tabulka thead th {
+  border-bottom: 2px solid var(--barva-linka-silna);
+  vertical-align: bottom;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--barva-text-slaba);
+}
+
+.tabulka tbody th,
+.tabulka tbody td {
+  border-bottom: 1px solid var(--barva-linka);
+}
+
+.tabulka tbody th {
+  font-weight: 700;
+}
+
+.tabulka caption {
+  padding-top: 16px;
+  caption-side: bottom;
+  text-align: left;
+  font-size: 15px;
+  color: var(--barva-text-slaba);
+}
+
+/* ---------- mláďata ---------- */
+
+.mladata {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 56px;
+  padding-block: 88px;
+}
+
+.mladata img {
+  flex: 1 1 480px;
+  display: block;
+  min-width: 0;
+  height: 440px;
+  object-fit: cover;
+  background: var(--barva-img-placeholder);
+}
+
+.mladata__text {
+  flex: 1 1 440px;
+  min-width: 0;
+}
+
+.mladata .kick {
+  margin-bottom: 14px;
+}
+
+.mladata h2 {
+  margin: 0 0 24px;
+  font-size: 56px;
+  color: var(--barva-papir);
+}
+
+.mladata p {
+  margin: 0 0 28px;
+  font-size: 20px;
+  color: var(--barva-text-na-tme);
+}
+
+.rocnik {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 16px;
+  padding: 14px 0;
+  border-block: 1px solid var(--barva-papir);
+}
+
+.rocnik span:first-child {
+  font-size: 16px;
+  color: var(--barva-text-na-tme-slaba);
+}
+
+.rocnik .disp {
+  font-size: 36px;
+  color: var(--barva-papir);
+}
+
+/* ---------- info box (CITES) ---------- */
+
+.sekce--doklady {
+  padding-block: 88px;
+}
+
+.info-box {
+  padding: 40px;
+  border: 2px solid var(--barva-linka-silna);
+}
+
+.info-box .kick {
+  margin-bottom: 14px;
+}
+
+.info-box h2 {
+  margin: 0 0 18px;
+  font-size: 40px;
+}
+
+.info-box p {
+  max-width: 40em;
+  margin: 0 0 14px;
+}
+
+.info-box .info-box__tlumeny {
+  margin-bottom: 22px;
+  color: var(--barva-text-tlumena);
+}
+
+/* ---------- karty vybavení ---------- */
+
+.karty-vybaveni {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
+  gap: 32px;
+}
+
+.karta-vybaveni {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.karta-vybaveni:hover {
+  color: inherit;
+}
+
+.karta-vybaveni:hover h3 {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+.karta-vybaveni img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: var(--barva-img-placeholder);
+}
+
+.karta-vybaveni__text {
+  padding-top: 16px;
+}
+
+.karta-vybaveni h3 {
+  margin: 0 0 8px;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.karta-vybaveni p {
+  margin: 0 0 12px;
+  color: var(--barva-text-tlumena);
+}
+
+.kroky--rady {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 0 40px;
+}
+
+.kroky--rady strong {
+  line-height: 1.35;
+}
+
+.kroky--rady span {
+  display: block;
+  margin-top: 8px;
+}
+
 /* ---------- oznamovací pruhy ---------- */
 
 .prototyp-pruh {
@@ -1074,6 +1438,40 @@ details p {
   }
 
   .akce-sekce h2 {
+    font-size: clamp(1.75rem, 8vw, 2.125rem);
+  }
+
+  .strana-uvod h1 {
+    font-size: clamp(2.5rem, 14vw, 3.5rem);
+  }
+
+  .strana-uvod__text p {
+    font-size: 18px;
+  }
+
+  .sekce--druhy,
+  .sekce--doklady {
+    padding-block: 56px;
+  }
+
+  .mladata {
+    gap: 32px;
+    padding-block: 56px;
+  }
+
+  .mladata img {
+    height: 240px;
+  }
+
+  .mladata h2 {
+    font-size: clamp(2rem, 9vw, 2.125rem);
+  }
+
+  .info-box {
+    padding: 24px;
+  }
+
+  .info-box h2 {
     font-size: clamp(1.75rem, 8vw, 2.125rem);
   }
 

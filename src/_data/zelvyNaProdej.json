@@ -1,0 +1,48 @@
+{
+  "rocnikMladat": 2026,
+  "uvod": {
+    "kicker": "Vlastní odchov",
+    "nadpis": "Želvy na prodej",
+    "perex": "Všechny želvy pocházejí z našeho vlastního odchovu. Cena se pohybuje od 500 do 2 500 Kč podle druhu, formy a stáří – záleží i na tom, kolik mláďat se daný rok vylíhne.",
+    "tlacitko": "Zavolat a zjistit dostupnost",
+    "fakta": [
+      { "popisek": "Původ", "hodnota": "Vlastní odchov, žádné importy" },
+      { "popisek": "Předání", "hodnota": "Rozvoz po ČR, Záhornice, burzy" }
+    ]
+  },
+  "rady": [
+    {
+      "stitek": "Velikost",
+      "nadpis": "Rozhodující je velikost v dospělosti",
+      "text": "Mládě se vejde do dlaně, ale některé druhy dorůstají přes 30 cm."
+    },
+    {
+      "stitek": "Prostor",
+      "nadpis": "Zvažte, zda máte jen byt, nebo i zahradu",
+      "text": "Některé druhy jsou spokojené v teráriu, jiné potřebují venkovní výběh."
+    },
+    {
+      "stitek": "Pohlaví",
+      "nadpis": "Na jednu želvu na zahradu se hodí spíš samec",
+      "text": "Bývá kontaktnější."
+    }
+  ],
+  "vybaveni": [
+    {
+      "nazev": "Startovací sady",
+      "url": "/startovaci-sady/",
+      "foto": "https://www.zelvycr.cz/obrazky/teraria/02m.jpg",
+      "alt": "Vybavené terárium pro želvu",
+      "text": "Želva s doklady, plně vybavené terárium a granule na celý rok. Od 5 999 Kč.",
+      "odkaz": "Prohlédnout sady →"
+    },
+    {
+      "nazev": "Příslušenství",
+      "url": "/prislusenstvi/",
+      "foto": "https://www.zelvycr.cz/obrazky/teraria/vybaveni.jpg",
+      "alt": "Vybavení terária pro želvu",
+      "text": "Terária, UVB osvětlení, krmivo, substráty, misky a domečky – jen to, co sami používáme v chovu.",
+      "odkaz": "Vybrat příslušenství →"
+    }
+  ]
+}
