@@ -1,0 +1,18 @@
+# Kontrola faktů — články průvodce
+
+Většina článků je přepis ze starého webu (fakta se neměnila). Níže jen to, co je nové,
+sporné nebo chybí.
+
+| Článek | Údaj | Zdroj | Otázka pro klienta |
+| --- | --- | --- | --- |
+| Je želva pro mě? | Dožití „desítky let, u zelenavé běžně přes 50 let" | chybí | Jaký údaj o dožití uvést? Doložíte z praxe, nebo odborným zdrojem? Zatím `[DOPLNIT]`. |
+| Zimování | Teplota zimoviště | starý web uvádí 3–6 °C (z výběhu) i 5–6 °C (z terária) | **Jaká je jednotná teplota zimoviště?** Teplota, kde chyba ublíží zvířeti — proto čeká na vás. Zatím `[DOPLNIT]`. |
+| Zimování | Mláďata první zimu nezimovat, utlumit po Novém roce (15–17 °C, únor–duben) | starý web | Platí? |
+| Útlum | Noční teplota k útlumu 15–17 °C | starý web | Platí? |
+| Chov v teráriu | Den 22–25 °C, pod bodovkou 30–35 °C, noc ~20 °C | starý web | Platí? |
+| Světlo a teplo | UVB do 15 cm od trubice; pod bodovkou 33–35 °C | starý web | Platí? |
+| Světlo a teplo | „UVB umožňuje tvořit vitamín D3, bez kterého nevstřebá vápník" | **obecná znalost** (na starém webu není) | Necháváme tuto větu? (Je to standardní fakt o plazech.) |
+| Krmení | Seznam vhodných/nevhodných rostlin | starý web | Souhlasí celý seznam? |
+| Velikost a růst | „Odchovali jsme přes sto želv do dospělosti" | starý web, Velikost/růst | Platí pořád? (Totéž číslo na stránce O nás.) |
+| Registrace CITES | Údaj „175 smluvních stran" | starý web | **Vypustili jsme** jako neověřený (zadání 4.9). Chcete číslo uvést a potvrdit, nebo nechat vypuštěné? |
+| Registrace CITES | Lhůta 30 dnů, registrace zdarma | starý web | Platí? |
