@@ -21,7 +21,7 @@ Detail Sprintu 1: `docs/backlog-archive.md`._
 | ID       | Task                                                                       | Size | Priority | Status |
 | -------- | -------------------------------------------------------------------------- | ---- | -------- | ------ |
 | TASK-009 | Zbylých 5 detailů druhů (vroubená, žlutohnědá, stepní, pardálí, kloubnatá) | M    | High     | ✅     |
-| TASK-010 | Startovací sady (/startovaci-sady/)                                        | M    | Medium   | ⬜     |
+| TASK-010 | Startovací sady (/startovaci-sady/)                                        | M    | Medium   | ✅     |
 | TASK-011 | Příslušenství (/prislusenstvi/) + Terária na míru (/terarium-na-miru/)     | L    | Medium   | ⬜     |
 | TASK-012 | Lokální ověření Sprintu 2                                                  | S    | High     | ⬜     |
 
@@ -75,7 +75,7 @@ Detail Sprintu 1: `docs/backlog-archive.md`._
 
 ### TASK-010: Startovací sady (/startovaci-sady/)
 
-**Size:** M (3–4 h) · **Status:** ⬜ Pending · **Priority:** Medium
+**Size:** M (3–4 h) · **Status:** ✅ Done (2026-11-04) · **Priority:** Medium
 **Goal:** Prodat kompletní balíček — nejvyšší hodnota objednávky, řeší obavu laika „co všechno
 potřebuju".
 
