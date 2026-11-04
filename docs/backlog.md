@@ -14,7 +14,7 @@ a obsahu dřív, než se postaví zbývajících ~21 stránek.
 
 | ID       | Task                                                            | Size | Priority | Status |
 | -------- | --------------------------------------------------------------- | ---- | -------- | ------ |
-| TASK-002 | Design systém: tokeny, fonty a globální chrome podle varianty B | L    | Critical | ⬜     |
+| TASK-002 | Design systém: tokeny, fonty a globální chrome podle varianty B | L    | Critical | 🔵     |
 | TASK-003 | Datový model druhů (`src/_data/druhy.json`)                     | S    | High     | ⬜     |
 | TASK-004 | Úvodní stránka podle 4.1 + varianty B                           | L    | High     | ⬜     |
 | TASK-005 | Stránka „Želvy na prodej" podle 4.2 + varianty B                | L    | High     | ⬜     |
@@ -25,7 +25,7 @@ a obsahu dřív, než se postaví zbývajících ~21 stránek.
 
 ### TASK-002: Design systém — tokeny, fonty a globální chrome podle varianty B
 
-**Size:** L (3–5 h) · **Status:** ⬜ Pending · **Priority:** Critical
+**Size:** L (3–5 h) · **Status:** 🔵 Implementováno na `feat/design-system`, čeká na revizi diffu a TASK-007 · **Priority:** Critical
 **Goal:** Nahradit neutrální kostru vizuálním jazykem varianty B tak, aby každá další stránka
 už stavěla v cílovém vzhledu.
 

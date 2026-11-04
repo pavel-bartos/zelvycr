@@ -3,5 +3,6 @@
   href="tel:{{ site.telefon | telHref }}"
   aria-label="Zavolat na číslo {{ site.telefon }}"
 >
+  {% include "partials/ikona-tel.njk" %}
   Zavolat {{ site.telefon }}
 </a>

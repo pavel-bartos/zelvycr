@@ -1,7 +1,15 @@
-<section class="cta-pruh">
-  <h2>{{ ctaNadpis or "Nevíte si rady s výběrem?" }}</h2>
-  <p>{{ ctaText or "Zavolejte Jiřímu Haltufovi — poradí vám zdarma a bez závazků." }}</p>
-  <a class="tlacitko tlacitko--tel js-tel-cta" href="tel:{{ site.telefon | telHref }}">
-    {{ site.telefon }}
-  </a>
+<section class="cta-pruh" aria-labelledby="cta-nadpis">
+  <div class="wrap cta-pruh__obsah">
+    <div class="cta-pruh__text">
+      <img src="https://www.zelvycr.cz/foto/jirka.jpg" alt="Jiří Haltuf" width="112" height="112" loading="lazy">
+      <div>
+        <h2 id="cta-nadpis" class="disp">{{ ctaNadpis or "Nevíte si rady s výběrem?" }}</h2>
+        <p>{{ ctaText or "Zavolejte Jiřímu Haltufovi – poradí vám zdarma a bez závazků." }}</p>
+      </div>
+    </div>
+    <a class="btn btn--tma btn--velke js-tel-cta" href="tel:{{ site.telefon | telHref }}">
+      {% include "partials/ikona-tel.njk" %}
+      {{ site.telefon }}
+    </a>
+  </div>
 </section>

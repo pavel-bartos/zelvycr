@@ -1,16 +1,21 @@
 <header class="hlavicka">
-  <a class="preskocit" href="#obsah">Přeskočit na obsah</a>
-  <a class="logo" href="{{ '/' | url }}">{{ site.nazev }}</a>
-  <nav class="menu" aria-label="Hlavní navigace">
-    <ul>
-      {% for polozka in navigace %}
-        <li>
-          <a href="{{ polozka.url | url }}"{% if page.url == polozka.url %} aria-current="page"{% endif %}>{{ polozka.nazev }}</a>
-        </li>
-      {% endfor %}
-    </ul>
-  </nav>
-  <a class="tlacitko tlacitko--tel js-tel-hlavicka" href="tel:{{ site.telefon | telHref }}">
-    Zavolat {{ site.telefon }}
-  </a>
+  <div class="wrap wrap--siroky hlavicka__obsah">
+    <a class="logo disp" href="{{ '/' | url }}">
+      <img src="{{ '/assets/img/logo/logo-haltuf-symbol-cerne-v2.svg' | url }}" alt="" width="64" height="48">
+      <span>{{ site.nazev }}<span class="logo__tecka">.</span></span>
+    </a>
+    <nav class="menu" aria-label="Hlavní navigace">
+      <ul>
+        {% for polozka in navigace %}
+          <li>
+            <a href="{{ polozka.url | url }}"{% if page.url == polozka.url %} aria-current="page"{% endif %}>{{ polozka.nazev }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+    <a class="btn btn--tel btn--hlavicka js-tel-hlavicka" href="tel:{{ site.telefon | telHref }}">
+      {% include "partials/ikona-tel.njk" %}
+      Zavolat {{ site.telefon }}
+    </a>
+  </div>
 </header>
