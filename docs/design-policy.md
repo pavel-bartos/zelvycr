@@ -360,7 +360,20 @@ a **doplní se sem** při tvorbě dané stránky (ne potichu v kódu):
 
 - Šablona **článku** (perex, boxy „V kostce / Rada chovatele / Z našeho chovu", obsah s kotvami).
 - **Galerie** (mřížka, lightbox/odkaz na plnou velikost).
-- Stránky **Startovací sady**, **Příslušenství**, **Jak nakoupit**, **O nás**, **Kontakt**.
+- Stránky **Příslušenství**, **Jak nakoupit**, **O nás**, **Kontakt**.
+
+### 7.3 Stránka Startovací sady (TASK-010)
+
+Odvozeno z komponent §3.1–§3.9 (§3.6 jako základ, §3.7 kroky, §3.9 FAQ). Nové třídy:
+
+- **`.sady-varianty`** — grid se dvěma kartami sad (`auto-fit, minmax(460px, 1fr)`);
+  každá karta `.sada-varianta` má `.rule` nahoře, název (displej 36 px), podtitulek,
+  `.sada__polozky` checklist, cenu a CTA tlačítko. Sekundární varianta (terárium bez
+  želvy) má `--sekundarni` modifikátor — menší cena (36 px) a `.btn--tma`.
+- **`.sady-obsah`** — grid pro obsah terária (auto-fit, `minmax(260px, 1fr)`), jinak
+  vizuálně totožný s `.sada__polozky`.
+- **`.sady-foto-teraria`** — `width: 100%`, `max-height: 420px`, `object-fit: cover`.
+- Nový `tel:` odkaz v sadách dostane třídu `js-tel-sady`.
 
 Zásada: nový prvek vychází z nejbližší existující komponenty (karty, boxy, CTA, tabulka),
 nezavádí nový vizuální jazyk a jeho pravidlo se dopíše do §3.

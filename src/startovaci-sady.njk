@@ -1,0 +1,174 @@
+---
+layout: layouts/base.njk
+title: Startovací sady pro vaši první želvu – kompletní vybavení
+description: Startovací sada pro suchozemskou želvu od chovatele s 45 lety zkušeností. Želva s doklady CITES, plně vybavené terárium a granule na celý rok – 5 999 Kč. Zavolejte.
+permalink: /startovaci-sady/
+---
+
+{# 1 — Hlavička stránky #}
+<section class="wrap strana-uvod">
+  <nav class="drobky" aria-label="Drobečková navigace">
+    <a href="{{ '/' | url }}">Úvod</a> <span aria-hidden="true">›</span>
+    <span aria-current="page">Startovací sady</span>
+  </nav>
+  <div class="rule strana-uvod__obsah">
+    <div class="strana-uvod__text">
+      <div class="kick">Pro první želvu</div>
+      <h1 class="disp">Startovací sady pro vaši první želvu</h1>
+      <p>Nemusíte nic shánět ani zkoumat. Sadu sestavujeme z vybavení, které máme ověřené ve vlastním chovu, a vše vám vysvětlíme při předání.</p>
+      <a class="btn btn--tel js-tel-hero" href="tel:{{ site.telefon | telHref }}">
+        {% include "partials/ikona-tel.njk" %}
+        Zavolat a objednat sadu
+      </a>
+    </div>
+    <dl class="fakta">
+      <div class="fakta__polozka">
+        <dt>Cena sady</dt>
+        <dd class="disp fakta__cena">{{ site.cenaSady | kc }}</dd>
+        <dd class="fakta__pozn">s želvou a doklady CITES</dd>
+      </div>
+      <div class="fakta__polozka">
+        <dt>Vybavení</dt>
+        <dd>Kompletní terárium ověřené v chovu</dd>
+      </div>
+      <div class="fakta__polozka">
+        <dt>Předání</dt>
+        <dd>Záhornice, burzy, rozvoz po ČR</dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+{# 2 — Dvě varianty sad #}
+<section class="wrap sekce">
+  <div class="rule sekce__hlava">
+    <div class="sekce__titul">
+      <div class="kick">01 — Varianty</div>
+      <h2 class="disp">Dvě možnosti podle toho, co potřebujete</h2>
+    </div>
+  </div>
+  <div class="sady-varianty">
+
+    <article class="sada-varianta rule">
+      <div class="sada-varianta__zahlavi">
+        <h3 class="disp">Startovací sada</h3>
+        <p class="sada-varianta__podtitulek">Pro toho, kdo kupuje želvu poprvé</p>
+      </div>
+      <ul class="sada__polozky">
+        <li class="sada__polozka">Želva vroubená nebo zelenavá s registrací a fotkou</li>
+        <li class="sada__polozka">Terárium 80 × 40 × 40 cm plně vybavené</li>
+        <li class="sada__polozka">Granule na celý rok</li>
+      </ul>
+      <div class="sada__cena-radek">
+        <span class="disp sada__cena">{{ site.cenaSady | kc }}</span>
+        <span class="sada__cena-popisek">vše v jedné ceně, žádné překvapení</span>
+      </div>
+      <a class="btn btn--tel js-tel-sady" href="tel:{{ site.telefon | telHref }}">
+        {% include "partials/ikona-tel.njk" %}
+        Objednat sadu
+      </a>
+    </article>
+
+    <article class="sada-varianta sada-varianta--sekundarni rule">
+      <div class="sada-varianta__zahlavi">
+        <h3 class="disp">Vybavené terárium bez želvy</h3>
+        <p class="sada-varianta__podtitulek">Pro toho, kdo już želvu má</p>
+      </div>
+      <ul class="sada__polozky">
+        <li class="sada__polozka">Terárium 80 × 40 × 40 cm plně vybavené</li>
+        <li class="sada__polozka">Totožné vybavení jako v plné sadě</li>
+      </ul>
+      <div class="sada__cena-radek">
+        <span class="disp sada__cena">Na dotaz</span>
+        <span class="sada__cena-popisek">zavolejte a domluvíme</span>
+      </div>
+      <a class="btn btn--tma js-tel-sady" href="tel:{{ site.telefon | telHref }}">
+        {% include "partials/ikona-tel.njk" %}
+        Zavolat
+      </a>
+    </article>
+
+  </div>
+</section>
+
+{# 3 — Co obsahuje terárium #}
+<section class="sekce-plocha">
+  <div class="wrap sekce-plocha__obsah">
+    <div class="kick">02 — Obsah terária</div>
+    <h2 class="disp sekce__h2">Co je součástí terária</h2>
+    <p class="sady-perex">Terárium 80 × 40 × 40 cm dodáváme plně vybavené. Vybavení je totožné s tím, co sami používáme v chovu.</p>
+    <ul class="sady-obsah">
+      <li class="sada__polozka">Substrát</li>
+      <li class="sada__polozka">Miska na vodu</li>
+      <li class="sada__polozka">Domeček</li>
+      <li class="sada__polozka">UVA a UVB žárovky s objímkou a krytkou</li>
+      <li class="sada__polozka">Kabely, roztrojka do zásuvky a časovač</li>
+      <li class="sada__polozka">Sépiová kost</li>
+      <li class="sada__polozka">Rostlinka</li>
+    </ul>
+    <img
+      src="{{ zelvyNaProdej.vybaveni[0].foto }}"
+      alt="{{ zelvyNaProdej.vybaveni[0].alt }}"
+      class="sady-foto-teraria"
+      width="1200"
+      height="675"
+      loading="lazy">
+  </div>
+</section>
+
+{# 4 — Proč sada od chovatele #}
+<section class="wrap sekce">
+  <div class="rule sekce__hlava">
+    <div class="sekce__titul">
+      <div class="kick">03 — Proč od nás</div>
+      <h2 class="disp">Proč sadu vzít od chovatele</h2>
+    </div>
+  </div>
+  <ol class="kroky">
+    <li class="kroky__krok rule">
+      <div class="disp kroky__cislo">01</div>
+      <strong>Terárium vyrobené pro želvy</strong>
+      <span>Sklo a kov s průduchy a správnou výškou pro UV žárovky — ne obecné terárium ze supermarketu.</span>
+    </li>
+    <li class="kroky__krok rule">
+      <div class="disp kroky__cislo">02</div>
+      <strong>Želva s doklady CITES</strong>
+      <span>Zelenavá a vroubená vyžadují registraci. Formulář a pokyny dostanete od nás, registrace je zdarma.</span>
+    </li>
+    <li class="kroky__krok rule">
+      <div class="disp kroky__cislo">03</div>
+      <strong>Rada i po nákupu</strong>
+      <span>Nejste na to sami. Volejte kdykoli — 45 let zkušeností je jen telefon od vás.</span>
+    </li>
+  </ol>
+</section>
+
+{# 5 — FAQ #}
+<section id="faq" class="wrap sekce sekce--faq">
+  <div class="faq">
+    <div class="faq__titul rule">
+      <div class="kick">04 — Časté otázky</div>
+      <h2 class="disp">Časté otázky</h2>
+    </div>
+    <div class="faq__seznam">
+      <details name="faq">
+        <summary>Jakou želvu v sadě dostanu?</summary>
+        <p>Do startovací sady vybíráme želvičky, které jsou vhodné pro začátečníky — nejčastěji
+        vroubená nebo zelenavá. Konkrétní druh a dostupnost upřesníme po telefonu. Vždy to bude
+        zvíře z vlastního odchovu s doklady CITES.</p>
+      </details>
+      <details name="faq">
+        <summary>Mohu si koupit jen terárium bez želvy?</summary>
+        <p>Ano. Nabízíme vybavené terárium 80 × 40 × 40 cm i bez želvy. Hodí se pro ty, kdo
+        už želvu mají a hledají vybavení ověřené z praxe. Cenu zjistíte telefonicky.</p>
+      </details>
+      <details name="faq">
+        <summary>Zahrnuje sada dopravu?</summary>
+        <p>Základní cena je za osobní vyzvednutí v Záhornici. Rozvoz po celé ČR domluvíme individuálně —
+        jednou měsíčně jezdíme po republice, nebo se domluvíme na burzách. Zavolejte a domluvíme podrobnosti.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+{% include "partials/cta.njk" %}
