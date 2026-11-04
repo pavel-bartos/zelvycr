@@ -1,12 +1,16 @@
 # Želvy ČR (zelvycr-web) — Backlog
 
-_Last updated: 2026-11-04 | Sprint: 1 (aktivní) · Sprint 2 (připraven)_
+_Last updated: 2026-11-04 | Sprint 1 uzavřen (PR #1 mergnut, TASK-007 schválen Pavlem) · Sprint 2 (připraven, nezahájen)_
 
 Backlog píše Claude (šéf vývoje), implementaci dělá Claude Code. Každý kódovací task má
 **Claude Code prompt** a odvolává se na `docs/design-policy.md` (vzhled) a zadání v Claude
 projektu (obsah). Fakta o želvách Claude Code **nevymýšlí** — konkrétní hodnoty jsou v tascích.
 
-## Current Sprint — Sprint 1: Vizuální základ a výřez stránek
+## Sprint 1 — Vizuální základ a výřez stránek (uzavřen 2026-11-04)
+
+> Uzavřeno: PR #1 (`feat/design-system`) mergnut do `main`, CI zelená. Zbývající `[DOPLNIT]`
+> na detailu zelenavé (náročnost chovu, text „O druhu", věta u T. h. boettgeri) a hotlinkované
+> fotky se přenášejí do dalších sprintů (viz Sprint 2 a Backlog).
 
 **Cíl sprintu:** Z neutrální kostry udělat vizuálně hotový web ve variantě B na užším výřezu
 stránek (úvod, Želvy na prodej, jeden detail druhu). Výstup slouží ke schválení designu
@@ -14,18 +18,18 @@ a obsahu dřív, než se postaví zbývajících ~21 stránek.
 
 | ID       | Task                                                            | Size | Priority | Status |
 | -------- | --------------------------------------------------------------- | ---- | -------- | ------ |
-| TASK-002 | Design systém: tokeny, fonty a globální chrome podle varianty B | L    | Critical | 🔵     |
-| TASK-003 | Datový model druhů (`src/_data/druhy.json`)                     | S    | High     | 🔵     |
-| TASK-004 | Úvodní stránka podle 4.1 + varianty B                           | L    | High     | 🔵     |
-| TASK-005 | Stránka „Želvy na prodej" podle 4.2 + varianty B                | L    | High     | 🔵     |
-| TASK-006 | Šablona detailu druhu + stránka „Želva zelenavá" podle 4.3      | L    | High     | 🔵     |
-| TASK-007 | Lokální ověření Sprintu 1                                       | S    | High     | ⬜     |
+| TASK-002 | Design systém: tokeny, fonty a globální chrome podle varianty B | L    | Critical | ✅     |
+| TASK-003 | Datový model druhů (`src/_data/druhy.json`)                     | S    | High     | ✅     |
+| TASK-004 | Úvodní stránka podle 4.1 + varianty B                           | L    | High     | ✅     |
+| TASK-005 | Stránka „Želvy na prodej" podle 4.2 + varianty B                | L    | High     | ✅     |
+| TASK-006 | Šablona detailu druhu + stránka „Želva zelenavá" podle 4.3      | L    | High     | ✅     |
+| TASK-007 | Lokální ověření Sprintu 1                                       | S    | High     | ✅     |
 
 ---
 
 ### TASK-002: Design systém — tokeny, fonty a globální chrome podle varianty B
 
-**Size:** L (3–5 h) · **Status:** 🔵 Implementováno na `feat/design-system`, čeká na revizi diffu a TASK-007 · **Priority:** Critical
+**Size:** L (3–5 h) · **Status:** ✅ Hotovo (PR #1) · **Priority:** Critical
 **Goal:** Nahradit neutrální kostru vizuálním jazykem varianty B tak, aby každá další stránka
 už stavěla v cílovém vzhledu.
 
@@ -65,7 +69,7 @@ už stavěla v cílovém vzhledu.
 
 ### TASK-003: Datový model druhů (`src/_data/druhy.json`)
 
-**Size:** S (1–2 h) · **Status:** 🔵 Implementováno na `feat/design-system`, čeká na revizi · **Priority:** High
+**Size:** S (1–2 h) · **Status:** ✅ Hotovo (PR #1) · **Priority:** High
 **Goal:** Jedno místo s daty 6 druhů, ze kterého čerpá úvod, „Želvy na prodej" i detaily.
 
 **Acceptance criteria:**
@@ -104,7 +108,7 @@ už stavěla v cílovém vzhledu.
 
 ### TASK-004: Úvodní stránka podle 4.1 + varianty B
 
-**Size:** L (4–6 h) · **Status:** 🔵 Implementováno na `feat/design-system`, čeká na revizi · **Priority:** High
+**Size:** L (4–6 h) · **Status:** ✅ Hotovo (PR #1) · **Priority:** High
 **Goal:** Hotová úvodní stránka ve variantě B — do 10 sekund vysvětlí, kdo jsme, a pošle
 k výběru želvy nebo k telefonu.
 
@@ -136,7 +140,7 @@ k výběru želvy nebo k telefonu.
 
 ### TASK-005: Stránka „Želvy na prodej" podle 4.2 + varianty B
 
-**Size:** L (4–6 h) · **Status:** 🔵 Implementováno na `feat/design-system`, čeká na revizi · **Priority:** High
+**Size:** L (4–6 h) · **Status:** ✅ Hotovo (PR #1) · **Priority:** High
 **Goal:** Rozcestník druhů s porovnávací tabulkou, který pomůže vybrat a dovede k telefonu
 nebo na detail druhu.
 
@@ -164,7 +168,7 @@ nebo na detail druhu.
 
 ### TASK-006: Šablona detailu druhu + stránka „Želva zelenavá" podle 4.3
 
-**Size:** L (4–6 h) · **Status:** 🔵 Implementováno na `feat/design-system`, čeká na revizi a doplnění textů · **Priority:** High
+**Size:** L (4–6 h) · **Status:** ✅ Hotovo (PR #1); zbývají `[DOPLNIT]` na detailu zelenavé · **Priority:** High
 **Goal:** Jedna šablona detailu druhu (použitelná pro všech 6) + naplněná pro želvu zelenavou
 jako vzor ke schválení.
 
@@ -199,7 +203,7 @@ sprintu.
 
 ### TASK-007: Lokální ověření Sprintu 1
 
-**Size:** S (30–60 min) · **Status:** ⬜ Pending · **Priority:** High
+**Size:** S (30–60 min) · **Status:** ✅ Hotovo — schváleno Pavlem · **Priority:** High
 **Goal:** Pavel na běžící aplikaci odklikne, že sprint splnil cíl, a teprve pak se merguje.
 
 **Jak spustit lokálně:**
@@ -445,17 +449,18 @@ teráií na míru. Datová struktura připravená pro e-shop fáze 2.
 Sprint 3+ — stránky důvěry, průvodce chovem a příprava na spuštění. Rozpracuje se přes
 `vibe-backlog`, až bude Sprint 2 schválený. (Očíslováno znovu při detailu Sprintu 2.)
 
-| ID       | Task                                                                            | Size | Priority | Status |
-| -------- | ------------------------------------------------------------------------------- | ---- | -------- | ------ |
-| TASK-013 | Jak nakoupit (/jak-nakoupit/) podle 4.10                                        | M    | High     | ⬜     |
-| TASK-014 | O nás (/o-nas/) podle 4.11 + Kontakt (/kontakty/) podle 4.13                    | M    | High     | ⬜     |
-| TASK-015 | Reklamace a garance (4.15) + Ochrana osobních údajů (web bez formulářů/cookies) | S    | Medium   | ⬜     |
-| TASK-016 | Průvodce chovem: rozcestník + 13 článků (4.7–4.9)                               | XL   | Medium   | ⬜     |
-| TASK-017 | Galerie (4.12)                                                                  | M    | Low      | ⬜     |
-| TASK-018 | Přesměrování 17 starých `.html` adres + kotvy `#6_x` (3.3)                      | M    | High     | ⬜     |
-| TASK-019 | SEO: sitemap, kanonické adresy, Open Graph, JSON-LD (8.3)                       | M    | Medium   | ⬜     |
-| TASK-020 | Měření bez cookies + události `click_tel` (8.3/5.5)                             | S    | Medium   | ⬜     |
-| TASK-021 | Zapnout GitHub Pages + branch protection na `main` (Pavel)                      | S    | High     | ⬜     |
+| ID       | Task                                                                                                             | Size | Priority | Status |
+| -------- | ---------------------------------------------------------------------------------------------------------------- | ---- | -------- | ------ |
+| TASK-013 | Jak nakoupit (/jak-nakoupit/) podle 4.10                                                                         | M    | High     | ⬜     |
+| TASK-014 | O nás (/o-nas/) podle 4.11 + Kontakt (/kontakty/) podle 4.13                                                     | M    | High     | ⬜     |
+| TASK-015 | Reklamace a garance (4.15) + Ochrana osobních údajů (web bez formulářů/cookies)                                  | S    | Medium   | ⬜     |
+| TASK-016 | Průvodce chovem: rozcestník + 13 článků (4.7–4.9)                                                                | XL   | Medium   | ⬜     |
+| TASK-017 | Galerie (4.12)                                                                                                   | M    | Low      | ⬜     |
+| TASK-018 | Přesměrování 17 starých `.html` adres + kotvy `#6_x` (3.3)                                                       | M    | High     | ⬜     |
+| TASK-019 | SEO: sitemap, kanonické adresy, Open Graph, JSON-LD (8.3)                                                        | M    | Medium   | ⬜     |
+| TASK-020 | Měření bez cookies + události `click_tel` (8.3/5.5)                                                              | S    | Medium   | ⬜     |
+| TASK-021 | Branch protection na `main` (Pavel; GitHub Pages už zapnuté)                                                     | S    | High     | ⬜     |
+| TASK-022 | Doplnit `[DOPLNIT]` na detailu zelenavé: náročnost, text „O druhu", věta u T. h. boettgeri (podklady dodá Pavel) | S    | Medium   | ⬜     |
 
 ## Done ✅
 
@@ -463,6 +468,12 @@ Sprint 3+ — stránky důvěry, průvodce chovem a příprava na spuštění. R
 | -------- | ------------------------------------------------------------------------------------ | ---------- |
 | TASK-000 | Scaffold vibe-process: Eleventy, CI, deploy na Pages, docs, bezpečnostní baseline    | 2026-11-04 |
 | TASK-001 | Design policy `docs/design-policy.md` z varianty B (tokeny, komponenty, přístupnost) | 2026-11-04 |
+| TASK-002 | Design systém: tokeny, fonty a globální chrome podle varianty B                      | 2026-11-04 |
+| TASK-003 | Datový model druhů (`src/_data/druhy.json`)                                          | 2026-11-04 |
+| TASK-004 | Úvodní stránka podle 4.1 + varianty B                                                | 2026-11-04 |
+| TASK-005 | Stránka „Želvy na prodej" podle 4.2 + varianty B                                     | 2026-11-04 |
+| TASK-006 | Šablona detailu druhu + stránka „Želva zelenavá" podle 4.3                           | 2026-11-04 |
+| TASK-007 | Lokální ověření Sprintu 1 (Pavel)                                                    | 2026-11-04 |
 
 ## Future / Deferred
 

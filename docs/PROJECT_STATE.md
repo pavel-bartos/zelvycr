@@ -1,17 +1,17 @@
 # Želvy ČR (zelvycr-web) — Project State
 
-_Last updated: 2026-11-04_
+_Last updated: 2026-11-04 (uzavření Sprintu 1)_
 
 ## Aktuální fáze
 
-**Fáze 5: Sprint 1 nadefinován, čeká se na implementaci (Claude Code).**
-Proces, Eleventy kostra, CI a deploy na GitHub Pages stojí. Repo je na GitHubu a napojené na
-Pavlův Mac. Schválená varianta B je kodifikovaná v `docs/design-policy.md`. Sprint 1 (vizuální
-základ + úvod + Želvy na prodej + detail druhu zelenavá) je rozepsaný v backlogu s AC a prompty
-pro Claude Code. Obsah a stránky se zatím nestavěly — to je náplň Sprintu 1.
+**Fáze 5: Sprint 1 uzavřen, Sprint 2 připraven (nezahájen).**
+Sprint 1 (design systém variant B, úvod, Želvy na prodej, detail druhu zelenavá) je hotový a
+mergnutý do `main` (PR #1, CI zelená), TASK-007 schválil Pavel. Web běží na GitHub Pages jako
+`noindex` prototyp. Dál se čeká na zahájení Sprintu 2 (fotopipeline, zbylých 5 druhů, sady,
+příslušenství, terária na míru) a na podklady pro tři `[DOPLNIT]` na detailu zelenavé (TASK-022).
 
-**Režim práce:** Claude (šéf vývoje) píše backlog a dokumentaci do repa, ale **nepíše kód**.
-Veškerou implementaci dělá Claude Code. Design policy je závazný zdroj pravdy pro vzhled.
+**Režim práce:** Claude (šéf vývoje) píše backlog a dokumentaci do repa. Implementaci dělá
+Claude Code (včetně dokumentace sprintu na pokyn). Design policy je závazný zdroj pravdy pro vzhled.
 
 ## Stav fází
 
@@ -21,8 +21,8 @@ Veškerou implementaci dělá Claude Code. Design policy je závazný zdroj prav
 | 1 PRD                | ✅   | zadání v Claude projektu „Zelvy CR" | Strategie, persony, cesta zákazníka, USP, KPI                                          |
 | 2 UX                 | ✅   | zadání, kap. 3–4                    | IA (6 položek menu), 25 stránek, specifikace sekcí po stránkách                        |
 | 3 Architektura       | ✅   | CLAUDE.md                           | Eleventy 3 + Nunjucks, statický výstup, GitHub Pages                                   |
-| 4 Roadmapa & backlog | ✅   | docs/04-roadmap.md, docs/backlog.md | Roadmapa hotová, Sprint 1 rozepsaný                                                    |
-| 5+ Implementace      | 🔵   | docs/backlog.md                     | sprint: 1 (čeká na Claude Code)                                                        |
+| 4 Roadmapa & backlog | ✅   | docs/04-roadmap.md, docs/backlog.md | Roadmapa hotová, Sprint 1 a 2 rozepsané                                                |
+| 5+ Implementace      | 🔵   | docs/backlog.md                     | Sprint 1 ✅ uzavřen · Sprint 2 připraven                                               |
 
 ## Klíčová rozhodnutí (append-only)
 
@@ -32,19 +32,21 @@ Veškerou implementaci dělá Claude Code. Design policy je závazný zdroj prav
 - 2026-11-04: **Prototyp je `noindex`** (meta + robots.txt), aby nekonkuroval běžícímu zelvycr.cz ve vyhledávání.
 - 2026-11-04: **Povaha projektu: nárazový** → CI continuous, preflight event-triggered před nasazením a před sezónou. Žádné crony.
 - 2026-11-04: Repozitář na GitHubu zakládá Pavel ručně; scaffold vznikl mimo něj a vkládá se jako první commit.
-- 2026-11-04: Repo **pavel-bartos/zelvycr** založeno, scaffold nahraný, lokální klon na Macu v „Dev projects/Zelvycr". Pages a branch protection zatím **nezapnuté** (deploy do té doby padá — nevadí).
+- 2026-11-04: Repo **pavel-bartos/zelvycr** založeno, scaffold nahraný, lokální klon na Macu v „Dev projects/Zelvycr". Pages a branch protection zatím **nezapnuté** (deploy do té doby padá — nevadí). _(Aktualizováno 2026-11-04: Pages jsou zapnuté, branch protection pořád chybí.)_
 - 2026-11-04: **Režim práce:** Claude píše jen backlog a docs (ne kód), implementaci dělá Claude Code.
 - 2026-11-04: **Design = schválená varianta B** (mockupy úvod + Želvy na prodej), kodifikovaná do `docs/design-policy.md`. Webdesigner se nezapojuje — policy stačí jako zdroj pravdy.
 - 2026-11-04: **Sprint 1 = užší výřez + design-first:** nejdřív design systém, pak úvod, Želvy na prodej a jeden detail druhu (zelenavá). Schválení designu na výřezu před stavbou zbylých stránek.
 - 2026-11-04: **Sprint 2 připraven** (nezahájen): kompletní katalog a fotky — zbylých 5 druhů, startovací sady, příslušenství, terária na míru, fotopipeline. Stránky důvěry a průvodce chovem jsou Sprint 3+.
+- 2026-11-04: **Sprint 1 uzavřen.** PR #1 mergnut, TASK-007 schválen Pavlem. Zbývají `[DOPLNIT]` na detailu zelenavé (TASK-022), hotlinkované fotky (TASK-008) a odkazy na zatím nepostavené stránky (404).
+- 2026-11-04: **Push jde přes `gh` účet `pavel-bartos`:** Pavel spustil `gh auth setup-git`, git už nepoužívá klíčenku s účtem bez oprávnění. Claude Code při chybě 403 nic neobchází, zastaví se a řekne.
 - 2026-11-04: **Repo je veřejné** — zadání (interní klientský dokument) se proto do repa nevkládá; tasky nesou potřebný obsah v sobě. Doporučeno zvážit přepnutí na privátní.
 
 ## Otevřené otázky / TODO konzistence
 
 - [ ] **Veřejné vs. privátní repo** — teď veřejné; u klientského projektu zvážit privátní (pak lze vložit zadání jako zdroj pravdy)
 
-- [ ] Název a owner repozitáře na GitHubu → promítnout do README a ověřit pathPrefix v deploy workflow
+- [x] Název a owner repozitáře na GitHubu → pavel-bartos/zelvycr, Pages běží (ověřeno nasazením)
 - [ ] Fotky: jak je dostat ze starého webu do repa (velikost, formát, pojmenování podle obsahu)
-- [ ] Rozsah prototypu — všech 25 stránek, nebo užší výběr pro schválení designu? (vstup do roadmapy)
+- [x] Rozsah prototypu — rozhodnuto: užší výřez ve Sprintu 1, zbytek ve Sprintech 2+
 - [ ] Texty pro želvu pardálí a kloubnatou zatím neexistují (zadání, kap. 4.3)
 - [ ] Údaje o druzích dohledané z internetu čekají na kontrolu klientem (zadání, otevřený bod 5)
