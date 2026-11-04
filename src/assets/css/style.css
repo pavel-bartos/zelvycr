@@ -2115,3 +2115,90 @@ details p {
     gap: 32px;
   }
 }
+
+/* ============================================================
+   Galerie (TASK-017 / Sprint 4)
+   ============================================================ */
+
+.galerie-stranka {
+  padding-block: 56px 88px;
+}
+
+.galerie-stranka__zahlavi {
+  padding-block: 32px 48px;
+}
+
+.galerie-stranka__perex {
+  font-size: 1.25rem;
+  color: var(--barva-text-tlumena);
+  max-width: 60ch;
+  margin-top: 12px;
+}
+
+/* Kategorie */
+.galerie-kategorie {
+  margin-top: 56px;
+}
+
+.galerie-kategorie__zahlavi {
+  padding-block: 24px 32px;
+}
+
+.galerie-kategorie__nazev {
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1;
+  margin-top: 8px;
+}
+
+/* Mřížka fotek */
+.galerie-mrizka {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 4px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.galerie-polozka {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--barva-img-placeholder);
+}
+
+.galerie-polozka a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.galerie-polozka img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.15s ease;
+}
+
+.galerie-polozka a:hover img,
+.galerie-polozka a:focus img {
+  opacity: 0.88;
+}
+
+.galerie-polozka a:focus {
+  outline: 2px solid var(--barva-zelena);
+  outline-offset: 2px;
+}
+
+/* Mobil — 2 sloupce */
+@media (max-width: 48rem) {
+  .galerie-mrizka {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3px;
+  }
+  .galerie-stranka {
+    padding-block: 32px 64px;
+  }
+}

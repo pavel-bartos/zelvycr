@@ -359,7 +359,6 @@ Varianta B ukazuje úvod a „Želvy na prodej". Následující vznikne odvozen�
 a **doplní se sem** při tvorbě dané stránky (ne potichu v kódu):
 
 - Šablona **článku** (perex, boxy „V kostce / Rada chovatele / Z našeho chovu", obsah s kotvami).
-- **Galerie** (mřížka, lightbox/odkaz na plnou velikost).
 - Stránky **Příslušenství**, **Jak nakoupit**, **O nás**, **Kontakt**.
 
 ### 7.3 Stránka Startovací sady (TASK-010)
@@ -423,3 +422,34 @@ každé `.kontakt-misto` s H3 a `<address>`. Fakturační údaje `.kontakt-faktu
 pak `.btn--tel` s třídou `js-tel-reklamace`. Bez `.kroky` (jsou to věty, ne nadpisy).
 
 **Ochrana osobních údajů (`/ochrana-osobnich-udaju/`):** Minimální stránka, text v `.clanek-telo`.
+
+### 7.6 Galerie (`/galerie/`) (TASK-017)
+
+Odvozeno z komponent §3; žádný JS lightbox (§5) — každá fotka je `<a href="…"><img …></a>`.
+
+**Struktura stránky:**
+
+1. Drobečky + `.rule` s H1 „Galerie" + krátký perex (`.galerie-stranka__perex`, 20 px, tlumeně).
+2. Za každou kategorii: `.galerie-kategorie` s `.rule` kickerem + H2 → `.galerie-mrizka` (mřížka fotek).
+3. Závěrečné CTA partial.
+
+**Nové třídy:**
+
+- **`.galerie-stranka`** — obal celé stránky (`.wrap`, `padding-block: 56px 88px`).
+- **`.galerie-kategorie`** — `<section>` pro jednu kategorii; `.rule` nahoře.
+- **`.galerie-kategorie__nazev`** — H2, displej, `clamp(1.75rem, 5vw, 2.5rem)`, váha 800.
+- **`.galerie-mrizka`** — `<ul>` bez odrážek, `display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 4px`.
+- **`.galerie-polozka`** — `<li>`, `aspect-ratio: 4/3; overflow: hidden; background: --barva-img-placeholder`.
+  Vnořený `<a>` je `display: block; width: 100%; height: 100%`. Fotka `object-fit: cover`.
+  Hover: `opacity: 0.88`. Focus: `outline: 2px solid --barva-zelena`.
+
+**Datová struktura (`src/_data/galerie.json`):** pole `kategorie` → každá: `id`, `nazev`, `kicker`, `fotky[]`.
+Každá fotka: `nahled` (URL náhledu), `plna` (URL plné velikosti), `alt` (popisný česky).
+
+**Pravidla:**
+
+- Alt texty vždy popisné — **nikdy** „fotografie N z M", nikdy prázdné (§4).
+- Fotky hotlinkují ze `zelvycr.cz` dokud TASK-008 (fotopipeline) není hotov.
+- Mobil: 2 sloupce (`repeat(2, 1fr)`), `gap: 3px`.
+- Galerie je v patičce pod Nabídka; v hlavní nav není (příliš položek).
+- `tel:` odkaz v CTA pruhu má třídu `js-tel-galerie` (TODO: přidat, až se bude přiřazovat vlastní CTA).

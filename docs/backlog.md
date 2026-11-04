@@ -1,85 +1,10 @@
 # Želvy ČR (zelvycr-web) — Backlog
 
-_Last updated: 2026-11-04 | Sprint: 4 aktivní (Galerie — technická kostra) · Sprinty 1–3 ✅ · archiv v `docs/backlog-archive.md`_
+_Last updated: 2026-11-05 | Sprint: 4 🔵 Galerie · detaily archivů v `docs/backlog-archive.md`_
 
 Backlog píše Claude (šéf vývoje), implementaci dělá Claude Code. Každý kódovací task má
 **Claude Code prompt** a odvolává se na `docs/design-policy.md` (vzhled) a zadání v Claude
 projektu (obsah). Fakta o želvách Claude Code **nevymýšlí** — konkrétní hodnoty jsou v tascích.
-
-## Current Sprint — Sprint 4: Galerie (technická kostra)
-
-**Cíl sprintu:** Postavit stránku Galerie jako data-driven mřížku s kategoriemi, zvětšením
-a lazy loadingem — připravenou tak, že finální fotky se jen „naládují" do dat, bez přestavby.
-Běží paralelně s přípravou obsahu; nezávisí na finálních textech.
-
-| ID       | Task                                                | Size | Priority | Status |
-| -------- | --------------------------------------------------- | ---- | -------- | ------ |
-| TASK-017 | Galerie (/galerie/) — technická kostra, data-driven | M    | Medium   | ⬜     |
-| TASK-024 | Lokální ověření Sprintu 4                           | S    | High     | ⬜     |
-
----
-
-### TASK-017: Galerie (/galerie/) — technická kostra, data-driven
-
-**Size:** M (3–4 h) · **Status:** ⬜ Pending · **Priority:** Medium
-**Goal:** Hotová stránka Galerie, do které se finální fotky jen doplní jako data.
-
-**Acceptance criteria:**
-
-- [ ] `/galerie/` čte seznam fotek z `src/_data/galerie.json` — položky
-      `{ soubor, kategorie, popis, alt }`. Přidání fotky = přidání položky + souboru, žádná
-      změna šablony.
-- [ ] Kategorie dle zadání 4.12: **Želvy · Mláďata a líheň · Zahrada a výběhy · Terária**.
-      Filtr/záložky jako progressive enhancement; **bez JS** musí fungovat aspoň nadpisy
-      kategorií s kotvami (přenositelnost, design-policy §5).
-- [ ] Responzivní mřížka, lazy loading, `width`/`height` u obrázků. Zvětšení po kliknutí:
-      baseline = odkaz na plnou velikost (funguje bez JS), lightbox volitelně jako
-      progressive enhancement.
-- [ ] Dočasně naplněno ~6–10 existujícími chovovými fotkami (ty, co web teď hotlinkuje ze
-      `zelvycr.cz`) jako výplň, s komentářem `[VÝPLŇ — finální výběr 40–60 fotek dodá Pavel]`.
-- [ ] Případné fotky „Období páření" mají neutrální popisek (zadání 4.12).
-- [ ] Design dle `docs/design-policy.md`, 360 px bez vodorovného posouvání, závěrečné CTA
-      „Vybrat želvu". Brány zelené.
-
-**Claude Code prompt:**
-
-> Postav stránku Galerie (`/galerie/`) jako data-driven: šablona čte `src/_data/galerie.json`
-> (položky `{soubor, kategorie, popis, alt}`) a vykreslí responzivní mřížku s kategoriemi
-> Želvy / Mláďata a líheň / Zahrada a výběhy / Terária. Bez JS musí fungovat aspoň kotvy na
-> kategorie a odkaz na plnou velikost obrázku; lightbox a filtr dělej jako progressive
-> enhancement. Naplň zatím 6–10 existujícími hotlinkovanými chovovými fotkami jako výplň
-> (komentář `[VÝPLŇ …]`). Dodrž `docs/design-policy.md` a přenositelnost do Shoptetu (§5).
-
-**Notes:** Finální kurátorský výběr 40–60 fotek a optimalizace na WebP (fotopipeline,
-TASK-008) jsou součást grafického sprintu. Tahle kostra na ně jen čeká.
-
----
-
-### TASK-024: Lokální ověření Sprintu 4
-
-**Size:** S (20–40 min) · **Status:** ⬜ Pending · **Priority:** High
-**Goal:** Pavel odklikne, že galerie technicky funguje a je připravená na fotky.
-
-**Jak spustit lokálně:**
-
-> `npm run dev` → otevřít `http://localhost:8080/galerie/`
-
-**Checklist k odkliknutí:**
-
-- [ ] Galerie zobrazuje mřížku fotek rozdělenou do 4 kategorií.
-- [ ] Kliknutí na fotku ji zvětší nebo otevře plnou velikost; funguje i s vypnutým JS.
-- [ ] Na 360 px žádný vodorovný posun; obrázky se načítají lazy.
-- [ ] Je zřejmé, že fotky jsou výplň (`[VÝPLŇ …]`) a finální se jen doplní do
-      `src/_data/galerie.json`.
-- [ ] Regrese: ostatní stránky fungují; build, lint, format:check a testy zelené.
-
-**Po odkliknutí:**
-
-> otevři PR z feature větve → zelená CI → merge PR.
-
-**Notes:** Manuální task pro Pavla.
-
----
 
 ## ✅ Sprint 3 — Stránky důvěry a Průvodce chovem (uzavřen 2026-11-04)
 
@@ -96,6 +21,75 @@ TASK-008) jsou součást grafického sprintu. Tahle kostra na ně jen čeká.
 | TASK-023 | Ověření Sprintu 3 (Pavel, produkce)                | S    | High     | ✅     |
 
 ---
+
+## 🔵 Sprint 4 — Galerie
+
+> **Cíl:** Stránka `/galerie/` existuje, zobrazuje fotky v responzivní mřížce s popisnými
+> alt texty a odkazem na plnou velikost (bez JS lightboxu).
+
+| ID       | Task                                | Size | Priority | Status |
+| -------- | ----------------------------------- | ---- | -------- | ------ |
+| TASK-017 | Galerie (/galerie/)                 | M    | Medium   | 🔵     |
+| TASK-024 | Ověření Sprintu 4 (Pavel, produkce) | S    | High     | ⬜     |
+
+### TASK-017: Galerie (/galerie/)
+
+**Size:** M (2–4 h) · **Status:** 🔵 In Progress · **Priority:** Medium
+**Goal:** Postavit stránku `/galerie/` s responzivní fotomřížkou, popisnými alt texty a odkazem
+na plnou velikost každé fotky — bez JS lightboxu (policy §5), přenositelné na Shoptet (§5).
+
+**Acceptance criteria:**
+
+- [ ] Stránka `/galerie/` existuje a je dostupná na produkci
+- [ ] Fotky jsou v responzivní CSS mřížce (min. 2 sloupce na tabletu, 3 na desktopu, 1 na mobilu)
+- [ ] Každá fotka má popisný `alt` text (ne „fotografie N z M", ne prázdný)
+- [ ] Každá fotka je odkaz na plnou velikost (`<a href="..."><img …></a>`) — bez JS lightboxu
+- [ ] Galerie je rozdělena do pojmenovaných kategorií (dle designu sekce — hairline + kicker)
+- [ ] Nový `tel:` odkaz v CTA pruhu má třídu `js-tel-galerie`
+- [ ] Stránka je v navigaci nebo patičce (dle `navigace.json`)
+- [ ] Lint + testy zelené + CI prošla
+- [ ] Revize diffu bez kritických nálezů
+
+**Claude Code prompt:**
+
+> Postav stránku `/galerie/` podle `docs/design-policy.md` §7.1 (nová sekce pro galerii) a TASK-017.
+> Data fotek v `src/_data/galerie.json` (vytvořit). Fotky hotlinkují ze starého webu (TASK-008 je
+> odložen). Bez JS lightboxu — každá fotka je `<a href="…"><img …></a>`. CSS třídy
+> `.galerie-stranka`, `.galerie-kategorie`, `.galerie-mrizka`, `.galerie-polozka` do `style.css`.
+> Specifikaci komponenty dopsat do `docs/design-policy.md` §7 (nová podsekce). Číslo telefonu
+> vždy z `site.json`. Nový `tel:` odkaz s třídou `js-tel-galerie`.
+
+**Notes:** Fotky jsou dočasné hotlinky ze `zelvycr.cz` — TASK-008 (fotopipeline) je ⏸️ Deferred.
+Výběr 40–60 nejlepších fotek je otevřený bod 8 zadání; zatím použít dostupné foto-URL z
+`detailyDruhu.json` a co najdeme na starém webu. Novou komponentu `.galerie-mrizka` zapiš do
+design-policy.md.
+
+---
+
+### TASK-024: Lokální ověření Sprintu 4 — Galerie
+
+**Size:** S (30–60 min) · **Status:** ⬜ Pending · **Priority:** High
+**Goal:** Uživatel na běžící aplikaci odklikne, že sprint splnil cíl, a teprve pak se nasazuje.
+
+**Jak spustit lokálně:**
+
+> `npm run dev`
+
+**Checklist k odkliknutí:**
+
+- [ ] Přejdi na `/galerie/` — stránka se načte bez chyby
+- [ ] Fotky jsou zobrazeny v mřížce (ne za sebou v řadě)
+- [ ] Každá fotka je klikatelná a otevírá plnou velikost (nový tab nebo totéž okno)
+- [ ] Alt texty jsou popisné — otevři DevTools, zkontroluj `alt` atribut u 2–3 fotek (nesmí být „fotografie N z M" ani prázdné)
+- [ ] Stránka vypadá rozumně na mobilu (zúži prohlížeč na 360 px) — 1 sloupec, žádné vodorovné posouvání
+- [ ] Regrese: úvodní stránka, detail zelenavé a Průvodce chovem fungují beze změny
+
+**Po odkliknutí všech bodů:**
+
+> otevři PR z feature větve (`git push -u origin feat/sprint-4-galerie` → `gh pr create`) →
+> počkej na zelenou CI → **merge PR** (ne přímý push do main; viz CLAUDE.md).
+
+**Notes:** Manuální task pro uživatele, ne pro Claude Code.
 
 ---
 

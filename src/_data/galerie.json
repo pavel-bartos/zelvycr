@@ -1,0 +1,631 @@
+{
+  "kategorie": [
+    {
+      "id": "zelvy",
+      "nazev": "Želvy z našeho chovu",
+      "kicker": "01 — Chov",
+      "fotky": [
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/01m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/01.jpg",
+          "alt": "Suchozemská želva z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/02m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/02.jpg",
+          "alt": "Suchozemské želvy z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/03m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/03.jpg",
+          "alt": "Suchozemské želvy z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/04m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/04.jpg",
+          "alt": "Pářící se suchozemské želvy"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/05m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/05.jpg",
+          "alt": "Suchozemské želvy z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/06m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/06.jpg",
+          "alt": "Suchozemská želva z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/07m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/07.jpg",
+          "alt": "Suchozemská želva z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/08m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/08.jpg",
+          "alt": "Suchozemské želvy z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/09m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/09.jpg",
+          "alt": "Pářící se suchozemské želvy"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/10m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/10.jpg",
+          "alt": "Suchozemské želvy z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/11m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/11.jpg",
+          "alt": "Suchozemská želva z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/12m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/12.jpg",
+          "alt": "Suchozemské želvy z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/13m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/13.jpg",
+          "alt": "Suchozemské želvy z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/14m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/14.jpg",
+          "alt": "Suchozemské želvy z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/15m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/15.jpg",
+          "alt": "Suchozemské želvy z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/16m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/16.jpg",
+          "alt": "Suchozemské želvy z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/17m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/17.jpg",
+          "alt": "Suchozemské želvy z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/18m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/18.jpg",
+          "alt": "Suchozemské želvy z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/19m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/19.jpg",
+          "alt": "Suchozemské želvy z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/20m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/20.jpg",
+          "alt": "Suchozemské želvy z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/21m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/21.jpg",
+          "alt": "Suchozemské želvy z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/22m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/22.jpg",
+          "alt": "Suchozemské želvy z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/23m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/23.jpg",
+          "alt": "Suchozemské želvy z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/24m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/24.jpg",
+          "alt": "Suchozemské želvy z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/25m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/25.jpg",
+          "alt": "Suchozemské želvy z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/26m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/26.jpg",
+          "alt": "Suchozemské želvy z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/27m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/27.jpg",
+          "alt": "Suchozemské želvy z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/28m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/28.jpg",
+          "alt": "Suchozemské želvy z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/29m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/29.jpg",
+          "alt": "Suchozemské želvy z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/30m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/30.jpg",
+          "alt": "Suchozemské želvy z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/31m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/31.jpg",
+          "alt": "Suchozemské želvy z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/32m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/32.jpg",
+          "alt": "Suchozemské želvy z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/33m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/33.jpg",
+          "alt": "Suchozemské želvy z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/34m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/34.jpg",
+          "alt": "Suchozemské želvy z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/35m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/35.jpg",
+          "alt": "Pářící se suchozemské želvy"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/36m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/36.jpg",
+          "alt": "Suchozemské želvy z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/37m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/37.jpg",
+          "alt": "Suchozemské želvy z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/38m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/38.jpg",
+          "alt": "Suchozemské želvy z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/39m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/39.jpg",
+          "alt": "Suchozemské želvy z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/40m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/40.jpg",
+          "alt": "Suchozemská želva z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/41m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/41.jpg",
+          "alt": "Suchozemské želvy z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/42m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/42.jpg",
+          "alt": "Suchozemské želvy z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/43m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/43.jpg",
+          "alt": "Suchozemská želva z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/44m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/44.jpg",
+          "alt": "Suchozemská želva z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/45m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/45.jpg",
+          "alt": "Suchozemské želvy z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/46m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/46.jpg",
+          "alt": "Suchozemská želva z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/47m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/47.jpg",
+          "alt": "Suchozemské želvy z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/48m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/48.jpg",
+          "alt": "Suchozemské želvy z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/49m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/49.jpg",
+          "alt": "Suchozemská želva z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/50m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/50.jpg",
+          "alt": "Suchozemská želva z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/51m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/51.jpg",
+          "alt": "Suchozemská želva z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/52m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/52.jpg",
+          "alt": "Suchozemské želvy z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/53m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/53.jpg",
+          "alt": "Suchozemské želvy z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/54m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/54.jpg",
+          "alt": "Suchozemské želvy z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/55m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/55.jpg",
+          "alt": "Suchozemské želvy z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/56m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/56.jpg",
+          "alt": "Suchozemské želvy z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/v1m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/v1.jpg",
+          "alt": "Suchozemská želva z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/v2m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/v2.jpg",
+          "alt": "Suchozemské želvy z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/v3m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/v3.jpg",
+          "alt": "Suchozemské želvy z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/v4m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/v4.jpg",
+          "alt": "Suchozemská želva z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/v5m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/v5.jpg",
+          "alt": "Suchozemské želvy z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/v6m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/v6.jpg",
+          "alt": "Suchozemské želvy z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/v7m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/v7.jpg",
+          "alt": "Suchozemské želvy z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/v8m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/v8.jpg",
+          "alt": "Suchozemské želvy z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/v9m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/v9.jpg",
+          "alt": "Suchozemská želva z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/v10m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/v10.jpg",
+          "alt": "Suchozemské želvy z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/v11m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/v11.jpg",
+          "alt": "Suchozemské želvy z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zelvy_min/v12m.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zelvy/v12.jpg",
+          "alt": "Suchozemské želvy z chovu Haltufových"
+        }
+      ]
+    },
+    {
+      "id": "teraria",
+      "nazev": "Terária a odchov",
+      "kicker": "02 — Odchov",
+      "fotky": [
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/dum_min/01.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/dum/01.jpg",
+          "alt": "Vnitřní terárium pro suchozemské želvy"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/dum_min/02.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/dum/02.jpg",
+          "alt": "Naše odchovné nádoby"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/dum_min/03.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/dum/03.jpg",
+          "alt": "Terárium pro suchozemské želvy"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/dum_min/04.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/dum/04.jpg",
+          "alt": "Terárium pro suchozemské želvy"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/dum_min/05.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/dum/05.jpg",
+          "alt": "Terárium pro suchozemské želvy"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/dum_min/06.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/dum/06.jpg",
+          "alt": "Líheň pro vajíčka suchozemských želv"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/dum_min/07.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/dum/07.jpg",
+          "alt": "Suchozemské želvy v teráriu"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/dum_min/08.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/dum/08.jpg",
+          "alt": "Plata plná vajec v období snůšek"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/dum_min/09.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/dum/09.jpg",
+          "alt": "Suchozemské želvy v teráriu"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/dum_min/10.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/dum/10.jpg",
+          "alt": "Terárium pro suchozemské želvy"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/dum_min/11.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/dum/11.jpg",
+          "alt": "Suchozemské želvy v teráriu"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/dum_min/12.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/dum/12.jpg",
+          "alt": "Čerstvě vylíhnuté suchozemské želvy"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/dum_min/13.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/dum/13.jpg",
+          "alt": "Čerstvě vylíhnuté suchozemské želvy"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/dum_min/14.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/dum/14.jpg",
+          "alt": "Mláďata želv v lavoru při koupání"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/dum_min/15.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/dum/15.jpg",
+          "alt": "Mláďata želv v lavoru při koupání"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/dum_min/16.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/dum/16.jpg",
+          "alt": "Suchozemská želva z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/dum_min/17.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/dum/17.jpg",
+          "alt": "Lavory s mláďaty suchozemských želv"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/dum_min/18.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/dum/18.jpg",
+          "alt": "Lavory s mláďaty suchozemských želv"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/dum_min/19.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/dum/19.jpg",
+          "alt": "Suchozemské želvy z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/dum_min/20.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/dum/20.jpg",
+          "alt": "Suchozemské želvy z chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/dum_min/21.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/dum/21.jpg",
+          "alt": "Čerstvě vylíhnutá suchozemská želva"
+        }
+      ]
+    },
+    {
+      "id": "zahrada",
+      "nazev": "Zahrady a výběhy",
+      "kicker": "03 — Zahrada",
+      "fotky": [
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zahrada_min/01.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zahrada/01.jpg",
+          "alt": "Blanička — místo v zahradě chovu"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zahrada_min/02.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zahrada/02.jpg",
+          "alt": "Suchozemské želvy ve venkovním výběhu"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zahrada_min/03.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zahrada/03.jpg",
+          "alt": "Suchozemské želvy ve venkovním výběhu"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zahrada_min/04.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zahrada/04.jpg",
+          "alt": "Suchozemské želvy ve venkovním výběhu"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zahrada_min/05.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zahrada/05.jpg",
+          "alt": "Venkovní výběhy pro suchozemské želvy"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zahrada_min/06.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zahrada/06.jpg",
+          "alt": "Zahradní výběh pro suchozemské želvy"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zahrada_min/07.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zahrada/07.jpg",
+          "alt": "Zahradní výběh pro suchozemské želvy"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zahrada_min/08.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zahrada/08.jpg",
+          "alt": "Zahradní výběh pro suchozemské želvy"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zahrada_min/09.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zahrada/09.jpg",
+          "alt": "Zahradní výběh pro suchozemské želvy"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zahrada_min/10.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zahrada/10.jpg",
+          "alt": "Zahradní výběh pro suchozemské želvy"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zahrada_min/11.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zahrada/11.jpg",
+          "alt": "Zahradní výběh pro suchozemské želvy"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zahrada_min/12.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zahrada/12.jpg",
+          "alt": "Zahradní výběh pro suchozemské želvy"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zahrada_min/13.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zahrada/13.jpg",
+          "alt": "Krmná rostlina pro suchozemské želvy"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zahrada_min/14.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zahrada/14.jpg",
+          "alt": "Zahradní výběh pro suchozemské želvy"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zahrada_min/15.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zahrada/15.jpg",
+          "alt": "Zahradní výběh pro suchozemské želvy"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zahrada_min/16.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zahrada/16.jpg",
+          "alt": "Bouda pro přezimování suchozemských želv"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zahrada_min/17.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zahrada/17.jpg",
+          "alt": "Bouda pro přezimování suchozemských želv"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zahrada_min/18.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zahrada/18.jpg",
+          "alt": "Suchozemské želvy ve venkovním výběhu"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zahrada_min/19.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zahrada/19.jpg",
+          "alt": "Zimoviště pro suchozemské želvy"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zahrada_min/20.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zahrada/20.jpg",
+          "alt": "Zahrádka v chovu Haltufových"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zahrada_min/21.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zahrada/21.jpg",
+          "alt": "Suchozemské želvy ve venkovním výběhu"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zahrada_min/22.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zahrada/22.jpg",
+          "alt": "Suchozemská želva po snůšce vajec"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zahrada_min/23.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zahrada/23.jpg",
+          "alt": "Suchozemské želvy ve venkovním výběhu"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zahrada_min/24.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zahrada/24.jpg",
+          "alt": "Suchozemské želvy ve venkovním výběhu"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zahrada_min/25.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zahrada/25.jpg",
+          "alt": "Zahradní výběh pro suchozemské želvy"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zahrada_min/26.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zahrada/26.jpg",
+          "alt": "Zahradní výběh pro suchozemské želvy"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zahrada_min/27.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zahrada/27.jpg",
+          "alt": "Skleník pro suchozemské želvy"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zahrada_min/28.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zahrada/28.jpg",
+          "alt": "Koupaliště pro suchozemské želvy"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zahrada_min/29.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zahrada/29.jpg",
+          "alt": "Zahradní výběh pro suchozemské želvy"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zahrada_min/30.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zahrada/30.jpg",
+          "alt": "Zahradní výběh pro suchozemské želvy"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zahrada_min/31.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zahrada/31.jpg",
+          "alt": "Suchozemská želva při snášení vajec"
+        },
+        {
+          "nahled": "https://www.zelvycr.cz/obrazky/zahrada_min/32.jpg",
+          "plna": "https://www.zelvycr.cz/obrazky/zahrada/32.jpg",
+          "alt": "Suchozemská želva při snášení vajec"
+        }
+      ]
+    }
+  ],
+  "_poznamka": "Starší fotky (miniatury/1–103): Pavel doplní výběr a popisky. Fotky hotlinkují ze zelvycr.cz — TASK-008 (self-host WebP) je odložen."
+}
