@@ -1,6 +1,6 @@
 # Želvy ČR (zelvycr-web) — Backlog
 
-_Last updated: 2026-11-05 | Sprint: 4 🔵 Galerie · detaily archivů v `docs/backlog-archive.md`_
+_Last updated: 2026-11-05 | Sprint: 4 🔵 Galerie (ověření) · detaily archivů v `docs/backlog-archive.md`_
 
 Backlog píše Claude (šéf vývoje), implementaci dělá Claude Code. Každý kódovací task má
 **Claude Code prompt** a odvolává se na `docs/design-policy.md` (vzhled) a zadání v Claude
@@ -29,12 +29,12 @@ projektu (obsah). Fakta o želvách Claude Code **nevymýšlí** — konkrétní
 
 | ID       | Task                                | Size | Priority | Status |
 | -------- | ----------------------------------- | ---- | -------- | ------ |
-| TASK-017 | Galerie (/galerie/)                 | M    | Medium   | 🔵     |
+| TASK-017 | Galerie (/galerie/)                 | M    | Medium   | ✅     |
 | TASK-024 | Ověření Sprintu 4 (Pavel, produkce) | S    | High     | ⬜     |
 
 ### TASK-017: Galerie (/galerie/)
 
-**Size:** M (2–4 h) · **Status:** 🔵 In Progress · **Priority:** Medium
+**Size:** M (2–4 h) · **Status:** ✅ Done · **Priority:** Medium
 **Goal:** Postavit stránku `/galerie/` s responzivní fotomřížkou, popisnými alt texty a odkazem
 na plnou velikost každé fotky — bez JS lightboxu (policy §5), přenositelné na Shoptet (§5).
 
