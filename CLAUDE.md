@@ -95,6 +95,17 @@ rozhodnuto 2026-11-04_
 - Commity stručně, prefix `feat:` / `fix:` / `docs:` / `chore:`.
 - Definition of Done: AC + format + lint + testy + zelená CI + revize diffu.
 
+## Práce ve sprintu
+
+- **Povolení seber dopředu a najednou.** Než se pustíš do práce na sprintu, projdi všechny
+  jeho tasky a zjisti, jaká povolení, přístupy a schválení ode mě budeš potřebovat (přístup
+  ke složce či službě, potvrzení nevratného kroku, instalace, nasazení, cokoli, co nejde
+  vrátit). Seber je do jednoho seznamu a dej mi je ke schválení **najednou na začátku** —
+  ne abys se doptával u každého tasku zvlášť uprostřed práce.
+- **Když čekáš, nestůj.** Jakmile čekáš na moje schválení nebo odpověď, pokračuj mezitím na
+  jiných taskech sprintu, které na tom **nezávisí** a dají se posunout dál. Blokovaný task
+  nech čekat, ale sprint se kvůli jednomu dotazu nezastavuje.
+
 ## Dokumentace
 
 - Stav a rozhodnutí: `docs/PROJECT_STATE.md` · Backlog: `docs/backlog.md` · Roadmapa: `docs/04-roadmap.md`
