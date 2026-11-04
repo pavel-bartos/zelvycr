@@ -27,7 +27,7 @@ permalink: "/{{ detail.slug }}/"
         <a class="galerie__hlavni" href="{{ g.foto }}">
           <img src="{{ g.foto }}" alt="{{ g.alt }}" width="800" height="600" fetchpriority="high">
         </a>
-        <ul class="galerie__nahledy">
+        {% if detail.galerie.length > 1 %}<ul class="galerie__nahledy">{% endif %}
         {% else %}
           <li>
             <a href="{{ g.foto }}">
@@ -35,7 +35,7 @@ permalink: "/{{ detail.slug }}/"
             </a>
           </li>
         {% endif %}
-        {% if loop.last %}</ul>{% endif %}
+        {% if loop.last and detail.galerie.length > 1 %}</ul>{% endif %}
       {% endfor %}
     </div>
     <div class="druh-panel">

@@ -1,0 +1,189 @@
+---
+layout: layouts/base.njk
+title: Příslušenství pro suchozemské želvy – osvětlení, krmivo, terária
+description: Prodáváme jen to, co sami používáme v chovu – UVB osvětlení, krmivo, substráty, misky a terária na míru. Poradíme po telefonu.
+permalink: /prislusenstvi/
+---
+
+{# 1 — Hlavička stránky #}
+<section class="wrap strana-uvod">
+  <nav class="drobky" aria-label="Drobečková navigace">
+    <a href="{{ '/' | url }}">Úvod</a> <span aria-hidden="true">›</span>
+    <span aria-current="page">Příslušenství</span>
+  </nav>
+  <div class="rule strana-uvod__obsah">
+    <div class="strana-uvod__text">
+      <div class="kick">Vybavení z praxe</div>
+      <h1 class="disp">Příslušenství pro chov želv</h1>
+      <p>Prodáváme jen to, co sami používáme v chovu. Pokud si nejste jistí, co vybrat, zavolejte – poradíme podle velikosti vaší želvy a terária.</p>
+      <a class="btn btn--tel js-tel-hero" href="tel:{{ site.telefon | telHref }}">
+        {% include "partials/ikona-tel.njk" %}
+        Zavolat a poradit se
+      </a>
+    </div>
+    <dl class="fakta">
+      <div class="fakta__polozka">
+        <dt>Vše</dt>
+        <dd>jen z vlastního chovu</dd>
+      </div>
+      <div class="fakta__polozka">
+        <dt>Objednávka</dt>
+        <dd>telefonicky nebo při předání</dd>
+      </div>
+      <div class="fakta__polozka">
+        <dt>Poradenství</dt>
+        <dd>zdarma, 45 let zkušeností</dd>
+      </div>
+    </dl>
+  </div>
+  <nav class="jump" aria-label="Na této stránce">
+    <span>Kategorie:</span>
+    <a href="#teraria">Terária</a>
+    <a href="#osvetleni">Osvětlení a elektro</a>
+    <a href="#krmivo">Krmivo a doplňky</a>
+    <a href="#substrat">Substráty</a>
+    <a href="#misky">Misky a domečky</a>
+  </nav>
+</section>
+
+{# 2 — Terária #}
+<section id="teraria" class="wrap sekce">
+  <div class="rule pris-kategorie__hlava">
+    <div class="kick">01 — Terária</div>
+    <h2 class="disp">Terária</h2>
+  </div>
+  <div class="pris-kategorie__obsah">
+    <p>Vyrábíme terária přímo pro chov suchozemských želv. Pro více informací o materiálech, rozměrech a ceně navštivte stránku Terária na míru.</p>
+    <a class="btn btn--tma" href="{{ '/terarium-na-miru/' | url }}">Terária na míru →</a>
+  </div>
+</section>
+
+{# 3 — Osvětlení a elektro #}
+<section id="osvetleni" class="wrap sekce">
+  <div class="rule pris-kategorie__hlava">
+    <div class="kick">02 — Osvětlení a elektro</div>
+    <h2 class="disp">Osvětlení a elektro</h2>
+  </div>
+  <div class="pris-kategorie__obsah">
+    <aside class="box-chov">
+      <div class="kick">Rada chovatele</div>
+      <p>UVB působí nejlépe do 15 cm od trubice. Obyčejné žárovky ani topné desky pod želvu nepatří.</p>
+    </aside>
+    <ul class="pris-produkty" aria-label="Ilustrační přehled produktů">
+      <li class="pris-produkt">
+        <span class="pris-produkt__nazev">UVB trubice 10.0</span>
+        <span class="pris-produkt__cena">Na dotaz</span>
+      </li>
+      <li class="pris-produkt">
+        <span class="pris-produkt__nazev">Objímka s krytkou</span>
+        <span class="pris-produkt__cena">Na dotaz</span>
+      </li>
+      <li class="pris-produkt">
+        <span class="pris-produkt__nazev">Výhřevná bodovka</span>
+        <span class="pris-produkt__cena">Na dotaz</span>
+      </li>
+      <li class="pris-produkt">
+        <span class="pris-produkt__nazev">Časovač zásuvkový</span>
+        <span class="pris-produkt__cena">Na dotaz</span>
+      </li>
+      <li class="pris-produkt">
+        <span class="pris-produkt__nazev">Roztrojka do zásuvky</span>
+        <span class="pris-produkt__cena">Na dotaz</span>
+      </li>
+    </ul>
+    <p class="pris-poznamka">Přesnou nabídku a ceny sdělíme po telefonu nebo při předání.</p>
+  </div>
+</section>
+
+{# 4 — Krmivo a doplňky #}
+<section id="krmivo" class="wrap sekce">
+  <div class="rule pris-kategorie__hlava">
+    <div class="kick">03 — Krmivo a doplňky</div>
+    <h2 class="disp">Krmivo a doplňky</h2>
+  </div>
+  <div class="pris-kategorie__obsah">
+    <aside class="box-chov">
+      <div class="kick">Rada chovatele</div>
+      <p>Dvakrát týdně posypte krmení vápníkem.</p>
+    </aside>
+    <ul class="pris-produkty" aria-label="Ilustrační přehled produktů">
+      <li class="pris-produkt">
+        <span class="pris-produkt__nazev">Granule pro suchozemské želvy</span>
+        <span class="pris-produkt__cena">Na dotaz</span>
+      </li>
+      <li class="pris-produkt">
+        <span class="pris-produkt__nazev">Vápník v prášku</span>
+        <span class="pris-produkt__cena">Na dotaz</span>
+      </li>
+      <li class="pris-produkt">
+        <span class="pris-produkt__nazev">Sépiová kost</span>
+        <span class="pris-produkt__cena">Na dotaz</span>
+      </li>
+      <li class="pris-produkt">
+        <span class="pris-produkt__nazev">Vitamínový doplněk</span>
+        <span class="pris-produkt__cena">Na dotaz</span>
+      </li>
+    </ul>
+    <p class="pris-poznamka">Přesnou nabídku a ceny sdělíme po telefonu nebo při předání.</p>
+  </div>
+</section>
+
+{# 5 — Substráty #}
+<section id="substrat" class="wrap sekce">
+  <div class="rule pris-kategorie__hlava">
+    <div class="kick">04 — Substráty</div>
+    <h2 class="disp">Substráty</h2>
+  </div>
+  <div class="pris-kategorie__obsah">
+    <aside class="box-chov">
+      <div class="kick">Rada chovatele</div>
+      <p>Substrát musí držet vlhkost – na noc ho navlhčete.</p>
+    </aside>
+    <ul class="pris-produkty" aria-label="Ilustrační přehled produktů">
+      <li class="pris-produkt">
+        <span class="pris-produkt__nazev">Kokosový substrát lisovaný</span>
+        <span class="pris-produkt__cena">Na dotaz</span>
+      </li>
+      <li class="pris-produkt">
+        <span class="pris-produkt__nazev">Rašelinová zemina</span>
+        <span class="pris-produkt__cena">Na dotaz</span>
+      </li>
+      <li class="pris-produkt">
+        <span class="pris-produkt__nazev">Písek hrubozrnný</span>
+        <span class="pris-produkt__cena">Na dotaz</span>
+      </li>
+    </ul>
+    <p class="pris-poznamka">Přesnou nabídku a ceny sdělíme po telefonu nebo při předání.</p>
+  </div>
+</section>
+
+{# 6 — Misky a domečky #}
+<section id="misky" class="wrap sekce">
+  <div class="rule pris-kategorie__hlava">
+    <div class="kick">05 — Misky a domečky</div>
+    <h2 class="disp">Misky a domečky</h2>
+  </div>
+  <div class="pris-kategorie__obsah">
+    <aside class="box-chov">
+      <div class="kick">Rada chovatele</div>
+      <p>Voda má sahat do třetiny krunýře.</p>
+    </aside>
+    <ul class="pris-produkty" aria-label="Ilustrační přehled produktů">
+      <li class="pris-produkt">
+        <span class="pris-produkt__nazev">Miska na vodu keramická</span>
+        <span class="pris-produkt__cena">Na dotaz</span>
+      </li>
+      <li class="pris-produkt">
+        <span class="pris-produkt__nazev">Domeček pro želvu</span>
+        <span class="pris-produkt__cena">Na dotaz</span>
+      </li>
+      <li class="pris-produkt">
+        <span class="pris-produkt__nazev">Miska na krmení</span>
+        <span class="pris-produkt__cena">Na dotaz</span>
+      </li>
+    </ul>
+    <p class="pris-poznamka">Přesnou nabídku a ceny sdělíme po telefonu nebo při předání.</p>
+  </div>
+</section>
+
+{% include "partials/cta.njk" %}
