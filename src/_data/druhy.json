@@ -1,0 +1,80 @@
+[
+  {
+    "slug": "zelva-zelenava",
+    "nazev": "Želva zelenavá",
+    "latinsky": "Testudo hermanni",
+    "velikost": "samci ~12 cm, samice ~15 cm; některé formy přes 25 cm",
+    "chov": "byt i zahrada",
+    "zimuje": "ano",
+    "registrace": "ano (CITES, EU příloha A)",
+    "stitky": ["Byt", "Zahrada", "Začátečník"],
+    "dostupnost": "na-dotaz",
+    "poznamka": "nejoblíbenější, menší formy vhodné do terária",
+    "foto": "https://www.zelvycr.cz/foto/foto4.jpg"
+  },
+  {
+    "slug": "zelva-vroubena",
+    "nazev": "Želva vroubená",
+    "latinsky": "Testudo marginata",
+    "velikost": "30–35 cm",
+    "chov": "hlavně zahrada",
+    "zimuje": "ano",
+    "registrace": "ano (CITES, EU příloha A)",
+    "stitky": ["Zahrada"],
+    "dostupnost": "na-dotaz",
+    "poznamka": "nezahrabává se, vhodná pro volný chov",
+    "foto": "https://www.zelvycr.cz/foto/foto5.jpg"
+  },
+  {
+    "slug": "zelva-zlutohneda",
+    "nazev": "Želva žlutohnědá",
+    "latinsky": "Testudo graeca",
+    "velikost": "15–40 cm podle formy",
+    "chov": "byt i zahrada",
+    "zimuje": "ano (podle původu)",
+    "registrace": "ano (CITES, EU příloha A)",
+    "stitky": ["Byt", "Zahrada"],
+    "dostupnost": "na-dotaz",
+    "poznamka": "velmi kontaktní, pamatuje si lidi",
+    "foto": "https://www.zelvycr.cz/foto/foto6.jpg"
+  },
+  {
+    "slug": "zelva-stepni",
+    "nazev": "Želva stepní",
+    "latinsky": "Testudo horsfieldii",
+    "velikost": "samci ~13–20 cm, samice až 25 cm",
+    "chov": "byt i zahrada, plot zapustit do země",
+    "zimuje": "ano, dlouhé období klidu",
+    "registrace": "ne (CITES, EU příloha B)",
+    "stitky": ["Byt", "Zahrada"],
+    "dostupnost": "na-dotaz",
+    "poznamka": "hrabe, ve skupině dominantnější",
+    "foto": "https://www.zelvycr.cz/foto/foto7.jpg"
+  },
+  {
+    "slug": "zelva-pardali",
+    "nazev": "Želva pardálí",
+    "latinsky": "Stigmochelys pardalis",
+    "velikost": "krunýř 30–50 cm, dospělí 13–20 kg",
+    "chov": "mládě terárium; dospělá velký vytápěný prostor + letní výběh",
+    "zimuje": "ne (africký druh)",
+    "registrace": "ne (CITES, EU příloha B)",
+    "stitky": [],
+    "dostupnost": "na-dotaz",
+    "poznamka": "velký druh — pro chovatele s prostorem",
+    "foto": "https://www.zelvycr.cz/foto/foto10.jpg"
+  },
+  {
+    "slug": "zelva-kloubnata",
+    "nazev": "Želva kloubnatá",
+    "latinsky": "Kinixys belliana",
+    "velikost": "krunýř do ~22 cm",
+    "chov": "terárium, v létě výběh",
+    "zimuje": "ne (africký druh)",
+    "registrace": "ne (CITES, EU příloha B)",
+    "stitky": [],
+    "dostupnost": "na-dotaz",
+    "poznamka": "všežravá, aktivní ráno a večer, kloub v krunýři",
+    "foto": "https://www.zelvycr.cz/foto/foto11.jpg"
+  }
+]

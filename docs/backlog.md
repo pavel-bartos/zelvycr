@@ -15,7 +15,7 @@ a obsahu dřív, než se postaví zbývajících ~21 stránek.
 | ID       | Task                                                            | Size | Priority | Status |
 | -------- | --------------------------------------------------------------- | ---- | -------- | ------ |
 | TASK-002 | Design systém: tokeny, fonty a globální chrome podle varianty B | L    | Critical | 🔵     |
-| TASK-003 | Datový model druhů (`src/_data/druhy.json`)                     | S    | High     | ⬜     |
+| TASK-003 | Datový model druhů (`src/_data/druhy.json`)                     | S    | High     | 🔵     |
 | TASK-004 | Úvodní stránka podle 4.1 + varianty B                           | L    | High     | ⬜     |
 | TASK-005 | Stránka „Želvy na prodej" podle 4.2 + varianty B                | L    | High     | ⬜     |
 | TASK-006 | Šablona detailu druhu + stránka „Želva zelenavá" podle 4.3      | L    | High     | ⬜     |
@@ -65,7 +65,7 @@ už stavěla v cílovém vzhledu.
 
 ### TASK-003: Datový model druhů (`src/_data/druhy.json`)
 
-**Size:** S (1–2 h) · **Status:** ⬜ Pending · **Priority:** High
+**Size:** S (1–2 h) · **Status:** 🔵 Implementováno na `feat/design-system`, čeká na revizi · **Priority:** High
 **Goal:** Jedno místo s daty 6 druhů, ze kterého čerpá úvod, „Želvy na prodej" i detaily.
 
 **Acceptance criteria:**
