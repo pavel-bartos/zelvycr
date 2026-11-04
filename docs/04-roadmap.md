@@ -2,24 +2,24 @@
 
 _Vize: Laik, který uvažuje o první suchozemské želvě, na webu během pár minut pochopí,
 jaký druh se mu hodí a co k němu potřebuje — a zavolá._
-_Poslední aktualizace: 2026-11-04_
+_Poslední aktualizace: 2026-11-04 (Sprint 1 ✅, Sprint 2 aktivní)_
 
 Roadmapa říká **co a proč**, backlog **jak**. Tenhle web je dočasný prototyp; konečné
 řešení vzniká souběžně na Shoptetu.
 
 ## 🟢 Now — Právě stavíme
 
-- **Kostra a vizuální směr** — layout, hlavička, patička, sticky „Zavolat", design tokeny.
-  _Proč:_ bez nich nejde ukázat ani jednu stránku a každá další se dělá dvakrát.
-- **Jádro nákupní cesty** — Želvy na prodej → detail druhu → Startovací sady.
-  _Proč:_ to je cesta, na jejímž konci je telefonát; zbytek webu ji jen podpírá.
+- **Kompletní katalog a fotky (Sprint 2)** — zbylých 5 druhů, Startovací sady, Příslušenství,
+  Terária na míru a vlastní optimalizované fotky místo hotlinků.
+  _Proč:_ dokončí nákupní cestu, na jejímž konci je telefonát; Sprint 1 postavil základ
+  (design systém, úvod, Želvy na prodej, detail zelenavé).
 
 ## 🟡 Next — Na řadě
 
-- **Úvodní stránka v plné podobě** — 11 sekcí ze zadání, včetně lišty důvěry a FAQ.
 - **Důvěra a nákup** — O nás, Jak nakoupit, Kontakt, Reklamace a garance.
   _Proč:_ čtvrtá a pátá fáze cesty zákazníka („Jsou spolehliví?", „Jak to probíhá?").
-- **Příslušenství a terária** — šíře sortimentu, příprava dat pro e-shop fáze 2.
+- **Doplnění textů** — tři `[DOPLNIT]` na detailu zelenavé (TASK-022).
+- **Provozní základ** — branch protection na `main` (TASK-021).
 
 ## 🔵 Later — Na výhledu
 
