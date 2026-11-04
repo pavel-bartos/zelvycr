@@ -1,0 +1,99 @@
+---
+layout: layouts/base.njk
+title: O nás – rodinný chov želv Haltufovi, 45 let
+description: Chov želv u nás začal před 45 lety a dnes ho vedou dvě generace rodiny Haltufových. Jeden z největších soukromých chovů suchozemských želv v Evropě.
+permalink: /o-nas/
+---
+
+{# 1 — Příběh #}
+<section class="wrap strana-uvod">
+  <nav class="drobky" aria-label="Drobečková navigace">
+    <a href="{{ '/' | url }}">Úvod</a> <span aria-hidden="true">›</span>
+    <span aria-current="page">O nás</span>
+  </nav>
+  <div class="rule strana-uvod__obsah">
+    <div class="strana-uvod__text">
+      <div class="kick">Rodinný chov</div>
+      <h1 class="disp">Rodinný chov želv už 45 let</h1>
+      <p>Chov želv u nás začal před 45 lety a dnes ho vedou už dvě generace rodiny Haltufových. Z malého chovu se stal jeden z největších soukromých chovů suchozemských želv v Evropě.</p>
+    </div>
+    <div class="o-nas-foto">
+      <img src="https://www.zelvycr.cz/miniatury/02.jpg" alt="[DOPLNIT – popis fotografie chovu]" width="480" height="360" loading="lazy">
+    </div>
+  </div>
+</section>
+
+{# 2 — Chov v číslech #}
+<section class="sekce-plocha">
+  <div class="wrap sekce-plocha__obsah">
+    <div class="kick">01 — Chov v číslech</div>
+    <div class="stat-bar">
+      <div class="stat-bar__polozka rule">
+        <div class="disp stat-bar__cislo">45</div>
+        <div class="stat-bar__popisek">let chovu</div>
+      </div>
+      <div class="stat-bar__polozka rule">
+        <div class="disp stat-bar__cislo">2</div>
+        <div class="stat-bar__popisek">generace rodiny Haltufových</div>
+      </div>
+      <div class="stat-bar__polozka rule">
+        <div class="disp stat-bar__cislo">9</div>
+        <div class="stat-bar__popisek">druhů suchozemských želv</div>
+      </div>
+      <div class="stat-bar__polozka rule">
+        <div class="disp stat-bar__cislo">100+</div>
+        <div class="stat-bar__popisek">želv odchovaných do dospělosti <em>[DOPLNIT: ověřit]</em></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# 3 — Kdo jsme #}
+<section class="wrap sekce">
+  <div class="kick">02 — Kdo jsme</div>
+  <h2 class="disp sekce__h2">Rodina za chovem</h2>
+  <div class="nas-tim">
+
+    <article class="karta-osoby rule">
+      <div class="karta-osoby__foto">
+        <img src="https://www.zelvycr.cz/foto/foto1.jpg" alt="[DOPLNIT – popis fotografie Jana Haltufa]" width="200" height="200" loading="lazy">
+      </div>
+      <div class="karta-osoby__info">
+        <h3 class="disp karta-osoby__jmeno">Jan Haltuf st.</h3>
+        <p class="karta-osoby__role">Zakladatel chovu, poradce</p>
+        <p>Chov suchozemských želv začal před 45 lety. Jan je zakladatelem jednoho z největších soukromých chovů v Evropě a dnes radí.</p>
+      </div>
+    </article>
+
+    <article class="karta-osoby rule">
+      <div class="karta-osoby__foto">
+        <img src="https://www.zelvycr.cz/foto/jirka.jpg" alt="[DOPLNIT – popis fotografie Jiřího Haltufa]" width="200" height="200" loading="lazy">
+      </div>
+      <div class="karta-osoby__info">
+        <h3 class="disp karta-osoby__jmeno">Jiří Haltuf</h3>
+        <p class="karta-osoby__role">Prodej v ČR i zahraničí</p>
+        <p>Jiří přebral štafetu od otce a dnes zajišťuje prodej po celé republice i do zahraničí. Volejte přímo jemu.</p>
+        <a class="btn btn--tel js-tel-onas" href="tel:{{ site.telefon | telHref }}">
+          {% include "partials/ikona-tel.njk" %}
+          Zavolat Jiřímu
+        </a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+{# 4 — Jak chováme #}
+<section class="wrap sekce">
+  <div class="kick">03 — Náš chov</div>
+  <h2 class="disp sekce__h2">Jak u nás želvy žijí</h2>
+  <p>Želvy u nás žijí ve venkovních výbězích, zimují v našich podmínkách a mláďata se líhnou v líhni. Prodáváme jen zvířata odchovaná v českém klimatu — ne importy ze zahraničí.</p>
+  <p class="text-tlumena">Fotky zázemí chovu — výběhy, bouda, zimoviště a líheň: <a href="{{ '/galerie/' | url }}">Galerie →</a></p>
+</section>
+
+{# 5 — Pro obchodníky #}
+<section class="wrap sekce">
+  <p class="info-box__tlumeny">Zajišťujeme i velkoobchodní a zahraniční prodej – kontaktujte Jiřího Haltufa.</p>
+</section>
+
+{% include "partials/cta.njk" %}

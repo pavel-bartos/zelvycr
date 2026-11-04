@@ -1,0 +1,40 @@
+---
+layout: layouts/base.njk
+---
+<article class="clanek">
+
+  {# 1 — Hlavička #}
+  <header class="wrap clanek-hlavicka">
+    <nav class="drobky" aria-label="Drobečková navigace">
+      <a href="{{ '/' | url }}">Úvod</a> <span aria-hidden="true">›</span>
+      <a href="{{ '/pruvodce-chovem/' | url }}">Průvodce chovem</a> <span aria-hidden="true">›</span>
+      <span aria-current="page">{{ title }}</span>
+    </nav>
+    <div class="rule clanek-hlavicka__obsah">
+      {% if skupinaKicker %}
+        <div class="kick">{{ skupinaKicker }}</div>
+      {% endif %}
+      <h1 class="disp">{{ title }}</h1>
+      {% if perex %}
+        <p class="clanek-perex">{{ perex }}</p>
+      {% endif %}
+      {% if casCteni %}
+        <p class="clanek-meta">Čas čtení: {{ casCteni }}</p>
+      {% endif %}
+    </div>
+  </header>
+
+  {# 2 — V kostce #}
+  <section class="wrap sekce">
+    <aside class="box-v-kostce">
+      <div class="kick">V kostce</div>
+      {{ vKostce | safe if vKostce else '<p>[DOPLNIT – klíčové body tohoto článku]</p>' | safe }}
+    </aside>
+  </section>
+
+  {# 3 — Tělo článku #}
+  <section class="wrap clanek-telo">
+    {{ content | safe }}
+  </section>
+
+</article>

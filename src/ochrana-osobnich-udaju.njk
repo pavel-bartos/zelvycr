@@ -1,0 +1,33 @@
+---
+layout: layouts/base.njk
+title: Ochrana osobních údajů | Želvy ČR
+description: Informace o zpracování osobních údajů na webu zelvycr.cz. Web nepoužívá cookies ani kontaktní formuláře.
+permalink: /ochrana-osobnich-udaju/
+---
+
+{# 1 — Hlavička #}
+<section class="wrap strana-uvod">
+  <nav class="drobky" aria-label="Drobečková navigace">
+    <a href="{{ '/' | url }}">Úvod</a> <span aria-hidden="true">›</span>
+    <span aria-current="page">Ochrana osobních údajů</span>
+  </nav>
+  <div class="rule">
+    <div class="kick">GDPR</div>
+    <h1 class="disp">Ochrana osobních údajů</h1>
+  </div>
+</section>
+
+{# 2 — Obsah #}
+<section class="wrap sekce">
+  <div class="clanek-telo">
+    <p>Web <strong>zelvycr.cz</strong> nepoužívá analytické ani marketingové cookies. Neobsahuje kontaktní formuláře ani jiné mechanismy, které by shromažďovaly osobní údaje návštěvníků.</p>
+
+    <p>Webový server automaticky zaznamenává standardní technické záznamy (IP adresa, čas přístupu, navštívené stránky). Tyto záznamy slouží výhradně k provozu a bezpečnosti serveru a nejsou sdíleny s třetími stranami.</p>
+
+    <p>Při telefonickém nákupu jsou nezbytné osobní údaje (jméno, kontakt, adresa pro doručení) zpracovávány jen v rozsahu nutném pro realizaci obchodu, v souladu s nařízením GDPR.</p>
+
+    <p>Správcem údajů je <strong>{{ site.firma.jmeno }}</strong>, {{ site.firma.adresa }}, IČO {{ site.firma.ico }}.</p>
+  </div>
+</section>
+
+{% include "partials/cta.njk" %}

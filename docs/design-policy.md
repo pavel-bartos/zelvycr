@@ -391,3 +391,35 @@ Nový `tel:` odkaz dostane třídu `js-tel-pris`.
 `.tabulka` (§3.13) se sloupci Terárium / Rozměry (š × h × v) / Vybavení / Dostupnost / Cena,
 rada o velikosti v `.info-box` (§3; Příslušenství). Drobečková navigace jde přes
 Příslušenství (`/prislusenstvi/`). Nový `tel:` odkaz `js-tel-tera`.
+
+### 7.5 Sprint 3 — stránky důvěry a Průvodce chovem (TASK-013–016)
+
+**Layout článku (`clanek.njk`):** Drobečky Úvod → Průvodce chovem → název článku, pak `.rule`
+s H1, perex (`clanek-perex`, 20 px, tlumeně), čas čtení (`clanek-meta`, 14 px, slabě). Pak
+`.box-v-kostce` (zelená levá linka 4 px, olivový kicker „V kostce", seznam 3–5 odrážek —
+stejný styl jako `.box-chov`). Tělo `.clanek-telo` (max-width `70ch`). Závěrečné CTA přes partial.
+
+**Průvodce chovem — rozcestník (`/pruvodce-chovem/`):** Zvýrazněná karta „Je želva pro mě?"
+(`.pruvodce-vyber`, světlá plocha, `.rule` nahoře). Čtyři skupiny v `.pruvodce-skupiny`
+(grid `auto-fit, minmax(300px, 1fr)`). Každá skupina `.clanek-skupina` má `.rule` s H3 a `.clanek-skupina__seznam`
+(list, hairline oddělovač). Položky jako `.row.row--clanek` (§3.5). `tel:` odkaz v CTA pruhu
+dostane třídu `js-tel-pruvodce`.
+
+**Jak nakoupit (`/jak-nakoupit/`):** Kroky `.kroky` (§3.7), způsoby předání jako `.predani-varianty`
+(grid `auto-fit, minmax(260px, 1fr)`), každá `.predani-varianta` s `.rule` nahoře a H3. CITES
+a garance v `.info-box`. FAQ `<details name="faq">`. `tel:` odkaz `js-tel-nakoupit`.
+
+**O nás (`/o-nas/`):** Příběh ve `.strana-uvod__obsah` s fotkou (`.o-nas-foto`). Čísla chovu
+jako `.stat-bar` (§3.4). Dvě osoby v `.nas-tim` (grid `auto-fit, minmax(320px, 1fr)`), každá
+karta `.karta-osoby` (flex, kulatá fotka 120 px, jméno displej 24 px, role mono olivově 14 px).
+`tel:` odkaz `js-tel-onas`.
+
+**Kontakty (`/kontakty/`):** Hlavní kontakt `.kontakt-hlavni` (flex, kulatá fotka 120 px,
+velké číslo telefonu displejem 32 px). Místa `.kontakt-mista` (grid `auto-fit, minmax(260px, 1fr)`),
+každé `.kontakt-misto` s H3 a `<address>`. Fakturační údaje `.kontakt-fakturace` (grid 2 sloupce
+160 px / 1fr). `tel:` odkaz `js-tel-kontakt`.
+
+**Reklamace a garance (`/reklamace-a-garance/`):** Čtyři odstavce textu ze zadání 4.15 v `.clanek-telo`,
+pak `.btn--tel` s třídou `js-tel-reklamace`. Bez `.kroky` (jsou to věty, ne nadpisy).
+
+**Ochrana osobních údajů (`/ochrana-osobnich-udaju/`):** Minimální stránka, text v `.clanek-telo`.

@@ -230,3 +230,53 @@ sprintu.
 **Notes:** Manuální task pro Pavla, ne pro Claude Code.
 
 ---
+
+## Sprint 2 — Kompletní katalog a fotky (uzavřen 2026-11-04)
+
+> Uzavřeno: PR #3 (`feat/sprint-2-katalog`) mergnut do `main`, CI zelená. Fotopipeline
+> (TASK-008) odložena — hotlinky na zelvycr.cz zatím nevadí. Pardálí a kloubnatá označeny
+> `[KE KONTROLE KLIENTEM]`. Sprint 2 ověřen Pavlem (TASK-012).
+
+**Cíl sprintu:** Dokončit vše, co si návštěvník může koupit — zbylých 5 druhů, startovací
+sady, příslušenství a terária na míru. Fotky zatím zůstávají hotlinkované na zelvycr.cz.
+
+| ID       | Task                                                                       | Size | Priority | Status |
+| -------- | -------------------------------------------------------------------------- | ---- | -------- | ------ |
+| TASK-009 | Zbylých 5 detailů druhů (vroubená, žlutohnědá, stepní, pardálí, kloubnatá) | M    | High     | ✅     |
+| TASK-010 | Startovací sady (/startovaci-sady/)                                        | M    | Medium   | ✅     |
+| TASK-011 | Příslušenství (/prislusenstvi/) + Terária na míru (/terarium-na-miru/)     | L    | Medium   | ✅     |
+| TASK-012 | Lokální ověření Sprintu 2                                                  | S    | High     | ✅     |
+
+---
+
+### TASK-009: Zbylých 5 detailů druhů
+
+**Size:** M (3–5 h) · **Status:** ✅ Done (2026-11-04) · **Priority:** High
+**Goal:** Doplnit detaily pro vroubenou, žlutohnědou, stepní, pardálí a kloubnatou.
+**Notes:** Pardálí a kloubnatá označeny `[KE KONTROLE KLIENTEM]`. Registrace CITES: zelenavá/vroubená/žlutohnědá = příloha A; stepní/pardálí/kloubnatá = příloha B.
+
+---
+
+### TASK-010: Startovací sady (/startovaci-sady/)
+
+**Size:** M (3–4 h) · **Status:** ✅ Done (2026-11-04) · **Priority:** Medium
+**Goal:** Prodat kompletní balíček — nejvyšší hodnota objednávky, řeší obavu laika.
+**Notes:** Cena sady 5 999 Kč v `site.cenaSady`, tel. třídy `js-tel-sady`.
+
+---
+
+### TASK-011: Příslušenství + Terária na míru
+
+**Size:** L (4–6 h) · **Status:** ✅ Done (2026-11-04) · **Priority:** Medium
+**Goal:** Ukázat šíři sortimentu s odborným doporučením a stránku terárií na míru.
+**Notes:** Rady chovatele doslovně ze zadání 4.5. Tel. třídy `js-tel-pris` / `js-tel-tera`.
+
+---
+
+### TASK-012: Lokální ověření Sprintu 2
+
+**Size:** S (30–60 min) · **Status:** ✅ Done (2026-11-04) · **Priority:** High
+**Goal:** Pavel na běžící aplikaci odklikl, že katalogová část sedí.
+**Notes:** Manuální task pro Pavla — ověřeno 2026-11-04.
+
+---

@@ -1,0 +1,155 @@
+---
+layout: layouts/base.njk
+title: Jak koupit želvu – rozvoz po ČR, odběr, doklady
+description: Zavolejte, vyberte želvu a vybavení, převezměte ji při rozvozu po ČR, v Záhornicích nebo na burze. Doklady CITES a 6týdenní garance.
+permalink: /jak-nakoupit/
+---
+
+{# 1 — Hlavička #}
+<section class="wrap strana-uvod">
+  <nav class="drobky" aria-label="Drobečková navigace">
+    <a href="{{ '/' | url }}">Úvod</a> <span aria-hidden="true">›</span>
+    <span aria-current="page">Jak nakoupit</span>
+  </nav>
+  <div class="rule strana-uvod__obsah">
+    <div class="strana-uvod__text">
+      <div class="kick">Nákup krok za krokem</div>
+      <h1 class="disp">Jak u nás koupit želvu</h1>
+      <p>Nákup je jednoduchý a vše domluvíme osobně po telefonu. Tady najdete, co vás čeká.</p>
+      <a class="btn btn--tel js-tel-hero" href="tel:{{ site.telefon | telHref }}">
+        {% include "partials/ikona-tel.njk" %}
+        Zavolat a začít
+      </a>
+    </div>
+    <dl class="fakta">
+      <div class="fakta__polozka">
+        <dt>Objednávka</dt>
+        <dd>telefonicky</dd>
+      </div>
+      <div class="fakta__polozka">
+        <dt>Předání</dt>
+        <dd>rozvoz, Záhornice nebo burza</dd>
+      </div>
+      <div class="fakta__polozka">
+        <dt>Garance zdraví</dt>
+        <dd>6 týdnů ze zákona</dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+{# 2 — 4 kroky #}
+<section class="sekce-plocha">
+  <div class="wrap sekce-plocha__obsah">
+    <div class="kick">01 — Postup</div>
+    <h2 class="disp sekce__h2">Čtyři kroky k vaší želvě</h2>
+    <ol class="kroky">
+      <li class="kroky__krok rule">
+        <div class="disp kroky__cislo">01</div>
+        <strong>Zavolejte</strong>
+        <span>Jiří Haltuf vám poradí s druhem a vybavením a řekne, co je právě k dispozici.</span>
+      </li>
+      <li class="kroky__krok rule">
+        <div class="disp kroky__cislo">02</div>
+        <strong>Domluvíme výběr</strong>
+        <span>Želva, terárium, příslušenství nebo celá sada.</span>
+      </li>
+      <li class="kroky__krok rule">
+        <div class="disp kroky__cislo">03</div>
+        <strong>Převezmete si ji</strong>
+        <span>Při rozvozu, v Záhornicích nebo na burze.</span>
+      </li>
+      <li class="kroky__krok rule">
+        <div class="disp kroky__cislo">04</div>
+        <strong>Dostanete doklady a radu</strong>
+        <span>Doklady CITES, předvyplněný formulář a návod, jak se o želvu starat.</span>
+      </li>
+    </ol>
+  </div>
+</section>
+
+{# 3 — Způsoby předání #}
+<section class="wrap sekce">
+  <div class="kick">02 — Předání</div>
+  <h2 class="disp sekce__h2">Kde si želvu vyzvednete</h2>
+  <div class="predani-varianty">
+
+    <div class="predani-varianta rule">
+      <h3>Rozvoz po ČR</h3>
+      <p>Jednou měsíčně rozvážíme želvy po celé republice. Termín a místo předání domluvíme po telefonu.</p>
+      <p class="predani-dopln"><em>Termín příštího rozvozu: [DOPLNIT – klient doplňuje průběžně]</em></p>
+    </div>
+
+    <div class="predani-varianta rule">
+      <h3>Odběr v Záhornicích</h3>
+      <address class="predani-adresa">
+        Na Sádkách 174<br>
+        289 03 Záhornice<br>
+        (po předchozí domluvě)
+      </address>
+      <p><a href="https://mapy.cz/s/jovekokohu" class="odkaz-mapa">Zobrazit na mapě →</a></p>
+      <a class="btn btn--tel js-tel-nakoupit" href="tel:{{ site.telefon | telHref }}">
+        {% include "partials/ikona-tel.njk" %}
+        Domluvit návštěvu
+      </a>
+    </div>
+
+    <div class="predani-varianta rule">
+      <h3>Terarijní burzy</h3>
+      <p>Potkáte nás na terarijních burzách. Želvu si můžete předem rezervovat a na burze jen vyzvednout.</p>
+      <p class="predani-dopln"><em>Nejbližší burzy: [DOPLNIT – klient doplňuje průběžně]</em></p>
+    </div>
+
+  </div>
+</section>
+
+{# 4 — Platba #}
+<section class="wrap sekce">
+  <p><strong>Způsob platby</strong> domluvíme individuálně po telefonu.</p>
+</section>
+
+{# 5 — CITES info box #}
+<section class="wrap sekce">
+  <div class="info-box">
+    <div class="kick">03 — Doklady CITES</div>
+    <h2 class="disp">Doklady dostanete od nás</h2>
+    <p>Ke každé želvě, která registraci podléhá, dostanete doklady a předvyplněný formulář. Registraci vyřídíte zdarma poštou do 30 dnů.</p>
+    <p><a href="{{ '/pruvodce-chovem/registrace-cites/' | url }}">Jak registraci vyřídit →</a></p>
+  </div>
+</section>
+
+{# 6 — Garance info box #}
+<section class="wrap sekce">
+  <div class="info-box">
+    <div class="kick">04 — Garance zdraví</div>
+    <h2 class="disp">6týdenní garance</h2>
+    <p>Na zdraví želvy platí 6týdenní lhůta. Kdyby se cokoli dělo, zavolejte nám jako prvním – vždy se domluvíme.</p>
+    <p><a href="{{ '/reklamace-a-garance/' | url }}">Podmínky reklamace →</a></p>
+  </div>
+</section>
+
+{# 7 — FAQ #}
+<section class="wrap sekce">
+  <div class="kick">05 — Otázky</div>
+  <h2 class="disp sekce__h2">Časté otázky</h2>
+  <div class="faq">
+    <details name="faq">
+      <summary>Kdy je termín příštího rozvozu?</summary>
+      <p>[DOPLNIT – klient doplňuje aktuální termín] Zavolejte a domluvíme se na konkrétním místě a čase.</p>
+    </details>
+    <details name="faq">
+      <summary>Lze želvu rezervovat?</summary>
+      <p>Domluvíme se individuálně. Zavolejte a řekneme vám, co je k dispozici a jak postupovat.</p>
+    </details>
+    <details name="faq">
+      <summary>Prodáváte i do zahraničí?</summary>
+      <p>Ano, Jiří Haltuf zajišťuje i zahraniční prodej. Podmínky domluvíme po telefonu.</p>
+    </details>
+    <details name="faq">
+      <summary>Dovezete i terárium?</summary>
+      <p>Ano, terárium dovezeme spolu se želvou při rozvozu. Podrobnosti domluvíme po telefonu.</p>
+    </details>
+  </div>
+</section>
+
+{% include "partials/cta.njk" %}
