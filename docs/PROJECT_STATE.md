@@ -1,13 +1,13 @@
 # Želvy ČR (zelvycr-web) — Project State
 
-_Last updated: 2026-11-04 (zahájení Sprintu 2)_
+_Last updated: 2026-11-04 (Sprint 2 ověřen Pavlem, PR #3 čeká na merge)_
 
 ## Aktuální fáze
 
-**Fáze 5: Sprint 2 aktivní — kompletní katalog a fotky.**
-Sprint 1 je uzavřený (PR #1 a #2 mergnuty, detail v `docs/backlog-archive.md`). Sprint 2 staví
-fotopipeline, zbylých 5 detailů druhů, startovací sady, příslušenství a terária na míru
-(TASK-008 až TASK-011), končí ověřením TASK-012. Web běží na GitHub Pages jako `noindex` prototyp.
+**Fáze 5: Sprint 2 ověřen — PR #3 čeká na merge.**
+Sprint 1 je uzavřený (PR #1 a #2 mergnuty, detail v `docs/backlog-archive.md`). Sprint 2
+(TASK-009–012) je implementačně hotový a prošel manuálním ověřením Pavla. TASK-008 (fotopipeline)
+odloženo — hotlinky na zelvycr.cz zatím zůstávají. Merge PR #3 → Sprint 2 uzavřen.
 Souběžně čeká TASK-022 (podklady pro tři `[DOPLNIT]` na detailu zelenavé).
 
 **Režim práce:** Claude (šéf vývoje) píše backlog a dokumentaci do repa. Implementaci dělá

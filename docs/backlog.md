@@ -23,7 +23,7 @@ Detail Sprintu 1: `docs/backlog-archive.md`._
 | TASK-009 | Zbylých 5 detailů druhů (vroubená, žlutohnědá, stepní, pardálí, kloubnatá) | M    | High     | ✅     |
 | TASK-010 | Startovací sady (/startovaci-sady/)                                        | M    | Medium   | ✅     |
 | TASK-011 | Příslušenství (/prislusenstvi/) + Terária na míru (/terarium-na-miru/)     | L    | Medium   | ✅     |
-| TASK-012 | Lokální ověření Sprintu 2                                                  | S    | High     | ⬜     |
+| TASK-012 | Lokální ověření Sprintu 2                                                  | S    | High     | ✅     |
 
 ---
 
@@ -163,7 +163,7 @@ teráií na míru. Datová struktura připravená pro e-shop fáze 2.
 
 ### TASK-012: Lokální ověření Sprintu 2
 
-**Size:** S (30–60 min) · **Status:** ⬜ Pending · **Priority:** High
+**Size:** S (30–60 min) · **Status:** ✅ Done (2026-11-04) · **Priority:** High
 **Goal:** Pavel na běžící aplikaci odklikne, že katalogová část sedí, a teprve pak se merguje.
 
 **Jak spustit lokálně:**
