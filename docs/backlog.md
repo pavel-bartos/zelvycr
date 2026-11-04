@@ -1,10 +1,85 @@
 # Želvy ČR (zelvycr-web) — Backlog
 
-_Last updated: 2026-11-04 | Sprint: 3 ✅ uzavřen · Sprint 4 zatím nezahájen · detaily archivů v `docs/backlog-archive.md`_
+_Last updated: 2026-11-04 | Sprint: 4 aktivní (Galerie — technická kostra) · Sprinty 1–3 ✅ · archiv v `docs/backlog-archive.md`_
 
 Backlog píše Claude (šéf vývoje), implementaci dělá Claude Code. Každý kódovací task má
 **Claude Code prompt** a odvolává se na `docs/design-policy.md` (vzhled) a zadání v Claude
 projektu (obsah). Fakta o želvách Claude Code **nevymýšlí** — konkrétní hodnoty jsou v tascích.
+
+## Current Sprint — Sprint 4: Galerie (technická kostra)
+
+**Cíl sprintu:** Postavit stránku Galerie jako data-driven mřížku s kategoriemi, zvětšením
+a lazy loadingem — připravenou tak, že finální fotky se jen „naládují" do dat, bez přestavby.
+Běží paralelně s přípravou obsahu; nezávisí na finálních textech.
+
+| ID       | Task                                                | Size | Priority | Status |
+| -------- | --------------------------------------------------- | ---- | -------- | ------ |
+| TASK-017 | Galerie (/galerie/) — technická kostra, data-driven | M    | Medium   | ⬜     |
+| TASK-024 | Lokální ověření Sprintu 4                           | S    | High     | ⬜     |
+
+---
+
+### TASK-017: Galerie (/galerie/) — technická kostra, data-driven
+
+**Size:** M (3–4 h) · **Status:** ⬜ Pending · **Priority:** Medium
+**Goal:** Hotová stránka Galerie, do které se finální fotky jen doplní jako data.
+
+**Acceptance criteria:**
+
+- [ ] `/galerie/` čte seznam fotek z `src/_data/galerie.json` — položky
+      `{ soubor, kategorie, popis, alt }`. Přidání fotky = přidání položky + souboru, žádná
+      změna šablony.
+- [ ] Kategorie dle zadání 4.12: **Želvy · Mláďata a líheň · Zahrada a výběhy · Terária**.
+      Filtr/záložky jako progressive enhancement; **bez JS** musí fungovat aspoň nadpisy
+      kategorií s kotvami (přenositelnost, design-policy §5).
+- [ ] Responzivní mřížka, lazy loading, `width`/`height` u obrázků. Zvětšení po kliknutí:
+      baseline = odkaz na plnou velikost (funguje bez JS), lightbox volitelně jako
+      progressive enhancement.
+- [ ] Dočasně naplněno ~6–10 existujícími chovovými fotkami (ty, co web teď hotlinkuje ze
+      `zelvycr.cz`) jako výplň, s komentářem `[VÝPLŇ — finální výběr 40–60 fotek dodá Pavel]`.
+- [ ] Případné fotky „Období páření" mají neutrální popisek (zadání 4.12).
+- [ ] Design dle `docs/design-policy.md`, 360 px bez vodorovného posouvání, závěrečné CTA
+      „Vybrat želvu". Brány zelené.
+
+**Claude Code prompt:**
+
+> Postav stránku Galerie (`/galerie/`) jako data-driven: šablona čte `src/_data/galerie.json`
+> (položky `{soubor, kategorie, popis, alt}`) a vykreslí responzivní mřížku s kategoriemi
+> Želvy / Mláďata a líheň / Zahrada a výběhy / Terária. Bez JS musí fungovat aspoň kotvy na
+> kategorie a odkaz na plnou velikost obrázku; lightbox a filtr dělej jako progressive
+> enhancement. Naplň zatím 6–10 existujícími hotlinkovanými chovovými fotkami jako výplň
+> (komentář `[VÝPLŇ …]`). Dodrž `docs/design-policy.md` a přenositelnost do Shoptetu (§5).
+
+**Notes:** Finální kurátorský výběr 40–60 fotek a optimalizace na WebP (fotopipeline,
+TASK-008) jsou součást grafického sprintu. Tahle kostra na ně jen čeká.
+
+---
+
+### TASK-024: Lokální ověření Sprintu 4
+
+**Size:** S (20–40 min) · **Status:** ⬜ Pending · **Priority:** High
+**Goal:** Pavel odklikne, že galerie technicky funguje a je připravená na fotky.
+
+**Jak spustit lokálně:**
+
+> `npm run dev` → otevřít `http://localhost:8080/galerie/`
+
+**Checklist k odkliknutí:**
+
+- [ ] Galerie zobrazuje mřížku fotek rozdělenou do 4 kategorií.
+- [ ] Kliknutí na fotku ji zvětší nebo otevře plnou velikost; funguje i s vypnutým JS.
+- [ ] Na 360 px žádný vodorovný posun; obrázky se načítají lazy.
+- [ ] Je zřejmé, že fotky jsou výplň (`[VÝPLŇ …]`) a finální se jen doplní do
+      `src/_data/galerie.json`.
+- [ ] Regrese: ostatní stránky fungují; build, lint, format:check a testy zelené.
+
+**Po odkliknutí:**
+
+> otevři PR z feature větve → zelená CI → merge PR.
+
+**Notes:** Manuální task pro Pavla.
+
+---
 
 ## ✅ Sprint 3 — Stránky důvěry a Průvodce chovem (uzavřen 2026-11-04)
 
@@ -28,12 +103,10 @@ projektu (obsah). Fakta o želvách Claude Code **nevymýšlí** — konkrétní
 
 | ID       | Task                                                                                                             | Size | Priority | Status |
 | -------- | ---------------------------------------------------------------------------------------------------------------- | ---- | -------- | ------ |
-| TASK-017 | Galerie (/galerie/)                                                                                              | M    | Low      | ⬜     |
 | TASK-018 | Přesměrování 17 starých `.html` adres + kotvy `#6_x` (3.3)                                                       | M    | High     | ⬜     |
 | TASK-019 | SEO: sitemap, kanonické adresy, Open Graph, JSON-LD (8.3)                                                        | M    | Medium   | ⬜     |
 | TASK-020 | Měření bez cookies + události `click_tel` (8.3/5.5)                                                              | S    | Medium   | ⬜     |
 | TASK-008 | Fotopipeline: self-hostované WebP obrázky místo hotlinků na zelvycr.cz                                           | M    | Medium   | ⏸️     |
-| TASK-021 | Branch protection na `main` (Pavel; GitHub Pages už zapnuté)                                                     | S    | High     | ⬜     |
 | TASK-022 | Doplnit `[DOPLNIT]` na detailu zelenavé: náročnost, text „O druhu", věta u T. h. boettgeri (podklady dodá Pavel) | S    | Medium   | ⬜     |
 
 ### TASK-008: Fotopipeline — self-hostované optimalizované obrázky
@@ -69,6 +142,7 @@ webu nebo manuální stažení). Než to půjde otevřít, Pavel dodá fotky neb
 | TASK-015 | Reklamace a garance + Ochrana osobních údajů                                         | 2026-11-04 |
 | TASK-016 | Průvodce chovem: rozcestník + 13 article skeletonů                                   | 2026-11-04 |
 | TASK-023 | Ověření Sprintu 3 (Pavel, produkce)                                                  | 2026-11-04 |
+| TASK-021 | Branch protection na `main` (ruleset: PR + status check + block force push)          | 2026-11-04 |
 
 ## Future / Deferred
 
