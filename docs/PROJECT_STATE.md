@@ -4,9 +4,14 @@ _Last updated: 2026-11-04_
 
 ## Aktuální fáze
 
-**Fáze 4 → 5: scaffold hotový, čeká se na založení repozitáře a první sprint.**
-Proces, Eleventy kostra, CI a deploy na GitHub Pages stojí. Obsah a stránky se zatím
-nestavěly — to je náplň Sprintu 1.
+**Fáze 5: Sprint 1 nadefinován, čeká se na implementaci (Claude Code).**
+Proces, Eleventy kostra, CI a deploy na GitHub Pages stojí. Repo je na GitHubu a napojené na
+Pavlův Mac. Schválená varianta B je kodifikovaná v `docs/design-policy.md`. Sprint 1 (vizuální
+základ + úvod + Želvy na prodej + detail druhu zelenavá) je rozepsaný v backlogu s AC a prompty
+pro Claude Code. Obsah a stránky se zatím nestavěly — to je náplň Sprintu 1.
+
+**Režim práce:** Claude (šéf vývoje) píše backlog a dokumentaci do repa, ale **nepíše kód**.
+Veškerou implementaci dělá Claude Code. Design policy je závazný zdroj pravdy pro vzhled.
 
 ## Stav fází
 
@@ -16,8 +21,8 @@ nestavěly — to je náplň Sprintu 1.
 | 1 PRD                | ✅   | zadání v Claude projektu „Zelvy CR" | Strategie, persony, cesta zákazníka, USP, KPI                                          |
 | 2 UX                 | ✅   | zadání, kap. 3–4                    | IA (6 položek menu), 25 stránek, specifikace sekcí po stránkách                        |
 | 3 Architektura       | ✅   | CLAUDE.md                           | Eleventy 3 + Nunjucks, statický výstup, GitHub Pages                                   |
-| 4 Roadmapa & backlog | 🔵   | docs/04-roadmap.md, docs/backlog.md | Roadmapa hotová, backlog Sprintu 1 se plní                                             |
-| 5+ Implementace      | ⬜   | docs/backlog.md                     | sprint: —                                                                              |
+| 4 Roadmapa & backlog | ✅   | docs/04-roadmap.md, docs/backlog.md | Roadmapa hotová, Sprint 1 rozepsaný                                                    |
+| 5+ Implementace      | 🔵   | docs/backlog.md                     | sprint: 1 (čeká na Claude Code)                                                        |
 
 ## Klíčová rozhodnutí (append-only)
 
@@ -27,6 +32,10 @@ nestavěly — to je náplň Sprintu 1.
 - 2026-11-04: **Prototyp je `noindex`** (meta + robots.txt), aby nekonkuroval běžícímu zelvycr.cz ve vyhledávání.
 - 2026-11-04: **Povaha projektu: nárazový** → CI continuous, preflight event-triggered před nasazením a před sezónou. Žádné crony.
 - 2026-11-04: Repozitář na GitHubu zakládá Pavel ručně; scaffold vznikl mimo něj a vkládá se jako první commit.
+- 2026-11-04: Repo **pavel-bartos/zelvycr** založeno, scaffold nahraný, lokální klon na Macu v „Dev projects/Zelvycr". Pages a branch protection zatím **nezapnuté** (deploy do té doby padá — nevadí).
+- 2026-11-04: **Režim práce:** Claude píše jen backlog a docs (ne kód), implementaci dělá Claude Code.
+- 2026-11-04: **Design = schválená varianta B** (mockupy úvod + Želvy na prodej), kodifikovaná do `docs/design-policy.md`. Webdesigner se nezapojuje — policy stačí jako zdroj pravdy.
+- 2026-11-04: **Sprint 1 = užší výřez + design-first:** nejdřív design systém, pak úvod, Želvy na prodej a jeden detail druhu (zelenavá). Schválení designu na výřezu před stavbou zbylých stránek.
 
 ## Otevřené otázky / TODO konzistence
 

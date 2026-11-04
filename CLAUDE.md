@@ -69,6 +69,9 @@ npm test             # vitest run
   zadání a z praxe chovatele. Chybí-li údaj, označ `[DOPLNIT]` a zeptej se — nedohledávej
   ho na internetu bez vědomí Pavla a nikdy ho netipuj.
 - **Recenze se nevymýšlejí ani nepřepisují** — jen skutečné, se souhlasem autora.
+- **Vzhled se řídí `docs/design-policy.md`** (schválená varianta B). Je to závazný zdroj
+  pravdy pro barvy, typografii a komponenty. Nezaváděj nový vizuální jazyk; chybí-li pravidlo,
+  dopiš ho do policy (přes task), ne potichu do kódu.
 
 ## Kontrolní a údržbový plán
 
@@ -95,6 +98,7 @@ rozhodnuto 2026-11-04_
 ## Dokumentace
 
 - Stav a rozhodnutí: `docs/PROJECT_STATE.md` · Backlog: `docs/backlog.md` · Roadmapa: `docs/04-roadmap.md`
+- **Design policy (závazná pro vzhled): `docs/design-policy.md`**
 - Proces a DoD: `docs/07-process.md` · Review rubrika: `docs/review-rubric.md`
 - Bezpečnostní baseline a co zbývá nastavit: `docs/security-baseline.md`
 - Architektura `docs/03-architecture.md` a UX `docs/02-ux-spec.md` zatím nevznikly — UX
