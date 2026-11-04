@@ -15,11 +15,12 @@ stav: ke-kontrole
 ## V kostce
 
 ::: v-kostce
+
 - Dvakrát týdně jemně posypte potravu minerálním doplňkem.
 - Vápník je nejdůležitější — pro krunýř a kosti.
 - Sépiová kost a sterilizované skořápky vajec jsou dobré zdroje.
 - Při potížích se poraďte s chovatelem nebo veterinářem se zkušeností s plazy.
-:::
+  :::
 
 Vitamíny a minerály řídí v těle želvy řadu pochodů a jejich potřeba se mění podle věku i ročního období. Nejdůležitější je **vápník** — bez něj neroste pevný krunýř ani kosti.
 

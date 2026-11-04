@@ -7,7 +7,8 @@ description: Jak správně nastavit terárium pro suchozemskou želvu. Teploty, 
 perex: Správné terárium je základ zdravého chovu. Poradíme s velikostí, teplotami, substrátem i denním rytmem.
 skupinaKicker: Než si želvu pořídíte
 cas_cteni: 6 min
-souvisejici: [/pruvodce-chovem/svetlo-a-teplo/, /pruvodce-chovem/voda-a-vlhkost/, /startovaci-sady/]
+souvisejici:
+  [/pruvodce-chovem/svetlo-a-teplo/, /pruvodce-chovem/voda-a-vlhkost/, /startovaci-sady/]
 zdroj: https://www.zelvycr.cz/jakchovatzelvu.html
 stav: ke-kontrole
 ---
@@ -15,11 +16,12 @@ stav: ke-kontrole
 ## V kostce
 
 ::: v-kostce
+
 - Pro první roky terárium nejméně 80 × 40 × 40 cm, pro starší želvu 100–120 cm.
 - Přes den 22–25 °C, pod výhřevnou bodovkou 30–35 °C, v noci kolem 20 °C.
 - Dvě zóny substrátu: vlhká v chladné části, suchá v teplé.
 - Po několika měsících aktivity teploty a svícení snižujte — želva potřebuje útlum.
-:::
+  :::
 
 Terárium je nejčastější způsob chovu, protože většina lidí ve městě nemá jinou možnost. Dá se v něm želvě dopřát dobré podmínky — chce to ale myslet na pár věcí, které v bytě nefungují samy od sebe.
 

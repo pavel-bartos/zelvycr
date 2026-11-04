@@ -15,10 +15,11 @@ stav: ke-kontrole
 ## V kostce
 
 ::: v-kostce
+
 - Hlavní vodítko: samci mají výrazně delší ocas než samice.
 - U mláďat pohlaví spolehlivě určit nelze.
 - Jistě ho poznáte až u staršího zvířete.
-:::
+  :::
 
 Suchozemské želvy nejsou oboupohlavní — rozlišujeme samce a samice. Základním vodítkem je **velikost ocasu**: samci ho mají výrazně delší než samice, a platí to napříč druhy.
 

@@ -15,11 +15,12 @@ stav: ke-kontrole
 ## V kostce
 
 ::: v-kostce
+
 - Nejčastější chyba v teráriu: málo vzdušné vlhkosti a horké noci.
 - Samotná miska s vodou nestačí, zvlášť u mláďat.
 - Mláďata koupejte alespoň 2× týdně na hodinu.
 - Voda v misce má sahat do třetiny krunýře.
-:::
+  :::
 
 Na složení vody nejsou suchozemské želvy nijak nároční — stačí odstátá nebo převařená. Dospělé zvíře vydrží bez vody dlouho; vodu získává i z potravy a z ranní rosy. Na želvě se vzdušná vlhkost přes noc vysráží v takové míře, že ráno najdete na spodní části krunýře (plastronu) krůpěje — i když je tráva kolem suchá. Díky tomu přežijí i malá mláďata suchá období.
 

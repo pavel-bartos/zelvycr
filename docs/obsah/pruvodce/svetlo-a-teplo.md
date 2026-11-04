@@ -7,7 +7,12 @@ description: UVB záření a výhřevná bodovka – proč na nich záleží a�
 perex: Bez UVB a tepla se želva v teráriu neobejde. Vysvětlíme, co funguje a na čem se dá spálit.
 skupinaKicker: Každodenní péče
 cas_cteni: 5 min
-souvisejici: [/pruvodce-chovem/chov-v-terariu/, /prislusenstvi/, /pruvodce-chovem/vitaminy-a-mineraly/]
+souvisejici:
+  [
+    /pruvodce-chovem/chov-v-terariu/,
+    /prislusenstvi/,
+    /pruvodce-chovem/vitaminy-a-mineraly/,
+  ]
 zdroj: https://www.zelvycr.cz/jakchovatzelvu.html
 stav: ke-kontrole
 ---
@@ -15,11 +20,12 @@ stav: ke-kontrole
 ## V kostce
 
 ::: v-kostce
+
 - V teráriu musí být výhřevná bodovka i UVB zářivka.
 - UVB působí nejlépe do 15 cm od trubice — umístěte ji blízko nad želvu.
 - Pod výhřevnou žárovkou mějte 33–35 °C; hlídejte, aby terárium nepřehřála.
 - Topné desky pod želvu nepatří — želva se ohřívá shora, zády.
-:::
+  :::
 
 Světlo a teplo řídí celý život suchozemské želvy. Bez nich želva nevyhřeje, nestráví a krunýř jí správně neroste — UVB záření totiž želvě umožňuje tvořit vitamín D3, bez kterého nevstřebá vápník.
 

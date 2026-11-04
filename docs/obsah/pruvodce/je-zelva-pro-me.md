@@ -15,12 +15,13 @@ stav: ke-kontrole
 ## V kostce
 
 ::: v-kostce
+
 - Želva je zvíře na desítky let — není to dárek na jednu sezónu.
 - Potřebuje UVB světlo, teplo, vlhkost a každý rok období klidu.
 - Do bytu i na zahradu; menší druhy zvládnete i v teráriu.
 - K dětem se hodí, ale péči musí zajistit dospělý.
 - Evropské druhy podléhají registraci CITES — vyřídíme ji za vás.
-:::
+  :::
 
 ## Želva je na celý život — a dlouhý
 

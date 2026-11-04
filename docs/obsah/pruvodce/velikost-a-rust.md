@@ -15,11 +15,12 @@ stav: ke-kontrole
 ## V kostce
 
 ::: v-kostce
+
 - Žádná univerzální tabulka stáří × velikost × váha neexistuje.
 - Velikost ovlivňuje druh, pohlaví, velikost vajíčka, podmínky i strava.
 - Venku roste želva jen zhruba tři měsíce v roce — „půl roku neroste" je normální.
 - Důležitý není rozměr, ale zdravotní stav.
-:::
+  :::
 
 Kolik má moje želva v tomhle věku měřit? Je to nevděčná otázka a kolem ní spousta mýtů. Pravda je prostá: **velikost želvy je nesmírně individuální.** Ovlivňuje ji druh, poddruh, pohlaví, velikost vajíčka, podmínky pro růst, strava i zdraví. Želva stejného druhu může být po narození větší než zdravá roční; pětiletá může být menší než dvouletá.
 

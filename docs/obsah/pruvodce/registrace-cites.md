@@ -15,11 +15,12 @@ stav: ke-kontrole
 ## V kostce
 
 ::: v-kostce
+
 - Týká se želvy zelenavé, vroubené a žlutohnědé; stepní, pardálí a kloubnatá registraci nevyžadují.
 - Registrace je **zdarma** a máte na ni **30 dnů** od koupě.
 - Ke každé želvě dostanete doklady i předvyplněný formulář.
 - Čipovanou želvu registrujete jen jednou a máte od úřadů pokoj.
-:::
+  :::
 
 CITES je mezinárodní úmluva na ochranu ohrožených druhů. Pro vás jako nového majitele z ní plyne jediná praktická povinnost: želvu, která jí podléhá, **zaregistrovat do 30 dnů od koupě** na krajském úřadě. Registrace je **bezplatná.** U nás to za vás co nejvíc připravíme.
 

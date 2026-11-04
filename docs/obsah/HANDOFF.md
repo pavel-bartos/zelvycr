@@ -25,6 +25,7 @@ Vše ostatní v revizi je drobnost; `[KLIENT]` = čeká na potvrzení klientem,
 
 **Detail želvy zelenavé** — `docs/obsah/druhy/zelva-zelenava.md` → naplň do
 `src/_data/detailyDruhu.json`, slug `zelva-zelenava`:
+
 - `oDruhu` = odstavce ze sekce „O druhu"
 - `formy[0].popis` (T. h. boettgeri) = „Nejběžnější forma. Menší typy kolem 12–15 cm, makedonské přes 25 cm."
 - `narocnost` zůstává `[DOPLNIT]` — návrh „Nízká – vděčný druh pro začátečníky", čeká na Jiřího.
@@ -33,26 +34,26 @@ Vše ostatní v revizi je drobnost; `[KLIENT]` = čeká na potvrzení klientem,
 `src/pruvodce-chovem/<slug>.md` (mají hotovou hlavičku, tělo je `[DOPLNIT – text článku]`).
 Mapování hlaviček:
 
-| docs/obsah (zdroj pravdy) | src/pruvodce-chovem |
-| --- | --- |
-| `h1` (bez latinského názvu) | `title` |
-| `url` | `permalink` |
-| `cas_cteni` | `casCteni` (teď `[DOPLNIT] min` — doplň odhad ze zdroje) |
-| `description`, `perex`, `skupinaKicker` | stejné (zdroj je novější, přenes) |
-| `seo_title` | SEO title stránky |
+| docs/obsah (zdroj pravdy)               | src/pruvodce-chovem                                      |
+| --------------------------------------- | -------------------------------------------------------- |
+| `h1` (bez latinského názvu)             | `title`                                                  |
+| `url`                                   | `permalink`                                              |
+| `cas_cteni`                             | `casCteni` (teď `[DOPLNIT] min` — doplň odhad ze zdroje) |
+| `description`, `perex`, `skupinaKicker` | stejné (zdroj je novější, přenes)                        |
+| `seo_title`                             | SEO title stránky                                        |
 
 **Boxy** `::: v-kostce`, `::: z-naseho-chovu`, `::: rada-chovatele` převeď na své HTML
 komponenty (třídy z design policy). Interní odkazy nech přes filtr `url`.
 
 ## Otevřené [DOPLNIT] / [KE KONTROLE KLIENTEM] — čekají na klienta
 
-| Kde | Co chybí |
-| --- | --- |
-| zelenavá | náročnost chovu |
-| je-zelva-pro-me | údaj o dožití |
-| zimování | jednotná teplota zimoviště (3–6 vs 5–6 °C) — teplota, kde chyba ublíží zvířeti |
-| registrace-cites, druhy | potvrzení příloh CITES (otevřený bod 13) |
-| pardálí, kloubnatá | celé texty `[KE KONTROLE KLIENTEM]` — klient přečte |
+| Kde                     | Co chybí                                                                       |
+| ----------------------- | ------------------------------------------------------------------------------ |
+| zelenavá                | náročnost chovu                                                                |
+| je-zelva-pro-me         | údaj o dožití                                                                  |
+| zimování                | jednotná teplota zimoviště (3–6 vs 5–6 °C) — teplota, kde chyba ublíží zvířeti |
+| registrace-cites, druhy | potvrzení příloh CITES (otevřený bod 13)                                       |
+| pardálí, kloubnatá      | celé texty `[KE KONTROLE KLIENTEM]` — klient přečte                            |
 
 Vše svedené do `docs/obsah/kontrola-faktu/` (README → druhy.md, clanky.md) ve formátu
 údaj → zdroj → otázka. Dokud klient neodpoví, texty zůstávají `ke-kontrole`, ne `schvaleno`.

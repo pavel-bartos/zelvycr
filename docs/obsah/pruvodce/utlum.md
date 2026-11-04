@@ -7,7 +7,8 @@ description: Letní útlum (estivace) u suchozemské želvy – příznaky, pro
 perex: Když vaše želva v létě znenadání zpomalí, nemusí jít o nemoc. Často si jen říká o klid. Poznáte to podle několika příznaků.
 skupinaKicker: Rok se želvou
 cas_cteni: 5 min
-souvisejici: [/pruvodce-chovem/zimovani/, /pruvodce-chovem/voda-a-vlhkost/, /zelva-zelenava/]
+souvisejici:
+  [/pruvodce-chovem/zimovani/, /pruvodce-chovem/voda-a-vlhkost/, /zelva-zelenava/]
 zdroj: https://www.zelvycr.cz/utlum.html
 stav: ke-kontrole
 ---
@@ -15,23 +16,25 @@ stav: ke-kontrole
 ## V kostce
 
 ::: v-kostce
+
 - Letní zpomalení bývá přirozený útlum (estivace), ne nemoc.
 - Nejčastěji ho potřebuje želva, která nezimovala.
 - Pomoc = klid: nesvítit, chránit před horkem, dopřát vlhko a volbu potravy.
 - Stav může trvat několik týdnů; návrat poznáte podle zvýšené aktivity.
-:::
+  :::
 
 Každé léto se nám ozývá spousta lidí, že jim želva po měsících nebo letech „bez příčiny" zpomalila nebo zeslábla. Pokud byla do té doby zdravá, bývá vysvětlení jedno: **želví organismus si říká o klid.** Ve slabší, letní podobě mu říkáme útlum (odborně estivace).
 
 ## Podle čeho ho poznáte
 
 ::: v-kostce
+
 - apatie a menší aktivita
 - snaha se někam zahrabat a ukrýt
 - nateklá nebo slepená víčka
 - propadlé oči
 - postupné měknutí spodní části krunýře (plastronu)
-:::
+  :::
 
 Želva se celý rok připravuje na zimu — ukládá tuk do jater. Když nejde do klidu, připravuje se pořád dokola, až to jednoho dne nevydrží a rozhodne se jít spát. Proto útlum nejčastěji potřebuje želva, která nezimovala. Může ale nastat i u řádně zimovaných zvířat, třeba když mají nadbytek potravy a játra se jim zatuční rychleji.
 

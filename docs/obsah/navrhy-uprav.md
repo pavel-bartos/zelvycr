@@ -20,13 +20,13 @@ Protože fotky zatím hotlinkujeme z původního webu a jejich obsah neznám j
 podle toho, co na fotkách být má (galerie druhu = daný druh v různých pohledech). Finální znění
 potvrdí, kdo fotky vybíral:
 
-| Teď | Návrh |
-| --- | --- |
-| Želva zelenavá z našeho chovu, fotografie 1 z 5 | Dospělá želva zelenavá z našeho chovu |
-| …fotografie 2 z 5 | Krunýř želvy zelenavé shora — žlutohnědá kresba |
-| …fotografie 3 z 5 | Mládě želvy zelenavé v trávě |
-| …fotografie 4 z 5 | Želva zelenavá při krmení |
-| …fotografie 5 z 5 | Spodní část krunýře (plastron) — rozlišení pohlaví |
+| Teď                                             | Návrh                                              |
+| ----------------------------------------------- | -------------------------------------------------- |
+| Želva zelenavá z našeho chovu, fotografie 1 z 5 | Dospělá želva zelenavá z našeho chovu              |
+| …fotografie 2 z 5                               | Krunýř želvy zelenavé shora — žlutohnědá kresba    |
+| …fotografie 3 z 5                               | Mládě želvy zelenavé v trávě                       |
+| …fotografie 4 z 5                               | Želva zelenavá při krmení                          |
+| …fotografie 5 z 5                               | Spodní část krunýře (plastron) — rozlišení pohlaví |
 
 **[KLIENT]** potvrdí, že fotky tohle opravdu ukazují; jinak alt upravíme podle skutečnosti.
 Stejné pravidlo platí pro všechny fotky, které se budou doplňovat — žádné „fotografie N z M".
@@ -72,7 +72,7 @@ máme v chovu, ale neprodáváme." Tím 9 i 10 dávají smysl vedle sebe.
 
 **Soubor:** `src/o-nas.njk`, sekce Chov v číslech.
 
-**Teď:** „želv odchovaných do dospělosti *[DOPLNIT: ověřit]*".
+**Teď:** „želv odchovaných do dospělosti _[DOPLNIT: ověřit]_".
 
 **Zjištění:** Tvrzení **je na starém webu** (stránka Velikost / růst: „jsme odchovali více než sto
 želv do dospělosti"). Je to vlastní tvrzení chovatele, ne něco, co bych dohledával. Můžeme ho
@@ -90,12 +90,12 @@ tedy uvést:
 
 **Soubory:** `src/o-nas.njk`, `src/kontakty.njk`.
 
-| Místo | Teď | Návrh |
-| --- | --- | --- |
-| Kontakty, foto Jiřího | [DOPLNIT – portrét Jiřího Haltufa] | Jiří Haltuf, prodej a poradenství |
-| O nás, foto chovu | [DOPLNIT – popis fotografie chovu] | Venkovní výběh našeho chovu želv |
-| O nás, foto Jana | [DOPLNIT – popis fotografie Jana Haltufa] | Jan Haltuf starší, zakladatel chovu |
-| O nás, foto Jiřího | [DOPLNIT – popis fotografie Jiřího Haltufa] | Jiří Haltuf, druhá generace chovu |
+| Místo                 | Teď                                         | Návrh                               |
+| --------------------- | ------------------------------------------- | ----------------------------------- |
+| Kontakty, foto Jiřího | [DOPLNIT – portrét Jiřího Haltufa]          | Jiří Haltuf, prodej a poradenství   |
+| O nás, foto chovu     | [DOPLNIT – popis fotografie chovu]          | Venkovní výběh našeho chovu želv    |
+| O nás, foto Jana      | [DOPLNIT – popis fotografie Jana Haltufa]   | Jan Haltuf starší, zakladatel chovu |
+| O nás, foto Jiřího    | [DOPLNIT – popis fotografie Jiřího Haltufa] | Jiří Haltuf, druhá generace chovu   |
 
 ### E2. Jak nakoupit + Kontakty — termíny, které udržuje klient
 
@@ -106,10 +106,10 @@ je klient průběžně. **Neodstraňovat.** Jen doplnit **náhradní text pro pr
 8.7: „prázdný seznam burz zobrazí náhradní text"), aby stránka nevypadala rozbitě, než klient
 termín zadá:
 
-| Místo | Náhradní text, když není termín |
-| --- | --- |
-| Termín příštího rozvozu | „Termín nejbližšího rozvozu domluvíme po telefonu." |
-| Nejbližší burzy | „Nejbližší burzy vám řekneme po telefonu — rádi vás na některé potkáme." |
+| Místo                   | Náhradní text, když není termín                                          |
+| ----------------------- | ------------------------------------------------------------------------ |
+| Termín příštího rozvozu | „Termín nejbližšího rozvozu domluvíme po telefonu."                      |
+| Nejbližší burzy         | „Nejbližší burzy vám řekneme po telefonu — rádi vás na některé potkáme." |
 
 ---
 

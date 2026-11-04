@@ -7,7 +7,8 @@ description: Jak připravit suchozemskou želvu na zimní spánek – dva postup
 perex: Zimní klid je pro evropské želvy přirozený. Ukážeme dva postupy — z venkovního výběhu i z terária — krok za krokem.
 skupinaKicker: Rok se želvou
 cas_cteni: 6 min
-souvisejici: [/pruvodce-chovem/utlum/, /pruvodce-chovem/chov-na-zahrade/, /zelva-vroubena/]
+souvisejici:
+  [/pruvodce-chovem/utlum/, /pruvodce-chovem/chov-na-zahrade/, /zelva-vroubena/]
 zdroj: https://www.zelvycr.cz/zimovani.html
 stav: ke-kontrole
 ---
@@ -15,11 +16,12 @@ stav: ke-kontrole
 ## V kostce
 
 ::: v-kostce
+
 - Evropské druhy potřebují každý rok období klidu; africké druhy nezimují.
 - Tvrdé zimování není povinné, ale útlum je vhodný — játra se odtuční.
 - Zimoviště drží kolem 3–6 °C; spánek u menších želv trvá asi 2 měsíce.
 - Největší chyba je uspěchání — zbytky potravy ve střevech zkvasí.
-:::
+  :::
 
 Zimují všechny želvy? Ne. Africké druhy a želvy z oblastí s mírnými výkyvy počasí nezimují. Většina želv chovaných u nás ale pochází z jižní Evropy a jejich organismus se na zimu připravuje — ukládá tuk do jater. Tvrdé zimování není nutné každý rok, ale aspoň útlum je vhodný: během spánku se játra odtuční a želva se na jaře dostane do formy. Kdyby se to nedělo roky po sobě, organismus se přetíží.
 
