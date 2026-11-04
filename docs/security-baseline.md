@@ -45,11 +45,14 @@ skriptem**, to by hook obešlo i pro skutečné hrozby.
 
 ## Co udělat na GitHubu
 
-Po založení repozitáře: **Settings → Branches → Add branch ruleset** na `main`:
+Repozitář: **[pavel-bartos/zelvycr](https://github.com/pavel-bartos/zelvycr)** · prototyp poběží na **https://pavel-bartos.github.io/zelvycr/**
 
-- Require a pull request before merging
-- Require status checks to pass → vyber `check` (job z `ci.yml`)
-- Block force pushes
+1. **Settings → Pages → Source: GitHub Actions** (zapne deploy workflow).
+2. **Settings → Branches → Add branch ruleset** na `main`:
+
+   - Require a pull request before merging
+   - Require status checks to pass → vyber `check` (job z `ci.yml`)
+   - Block force pushes
 
 ## Příkazy projektu, které musí hooky pustit
 

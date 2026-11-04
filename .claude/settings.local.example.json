@@ -2,8 +2,8 @@
   "_comment": "Zkopíruj na .claude/settings.local.json a doplň. Soubor je gitignored a platí jen pro tvůj stroj. Doplňuje globální bezpečnostní baseline v ~/.claude/, nenahrazuje ji.",
   "autoMode": {
     "environment": {
-      "repo": "DOPLNIT owner/zelvycr-web",
-      "deployUrl": "DOPLNIT https://<owner>.github.io/<repo>/",
+      "repo": "pavel-bartos/zelvycr",
+      "deployUrl": "https://pavel-bartos.github.io/zelvycr/",
       "localhost": "http://localhost:8080",
       "envFiles": "projekt žádné secrets nemá; .env* je gitignored a nemá vznikat",
       "citlivaData": "žádná — statický web bez backendu, bez osobních údajů návštěvníků"
