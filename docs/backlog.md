@@ -22,7 +22,7 @@ Detail Sprintu 1: `docs/backlog-archive.md`._
 | -------- | -------------------------------------------------------------------------- | ---- | -------- | ------ |
 | TASK-009 | Zbylých 5 detailů druhů (vroubená, žlutohnědá, stepní, pardálí, kloubnatá) | M    | High     | ✅     |
 | TASK-010 | Startovací sady (/startovaci-sady/)                                        | M    | Medium   | ✅     |
-| TASK-011 | Příslušenství (/prislusenstvi/) + Terária na míru (/terarium-na-miru/)     | L    | Medium   | ⬜     |
+| TASK-011 | Příslušenství (/prislusenstvi/) + Terária na míru (/terarium-na-miru/)     | L    | Medium   | ✅     |
 | TASK-012 | Lokální ověření Sprintu 2                                                  | S    | High     | ⬜     |
 
 ---
@@ -114,7 +114,7 @@ potřebuju".
 
 ### TASK-011: Příslušenství + Terária na míru
 
-**Size:** L (4–6 h) · **Status:** ⬜ Pending · **Priority:** Medium
+**Size:** L (4–6 h) · **Status:** ✅ Done (2026-11-04) · **Priority:** Medium
 **Goal:** Ukázat šíři sortimentu s odborným doporučením (objednávka telefonem) a stránku
 teráií na míru. Datová struktura připravená pro e-shop fáze 2.
 
