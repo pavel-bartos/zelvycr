@@ -1,0 +1,45 @@
+---
+layout: layouts/base.njk
+title: Galerie – fotky z chovu Haltufových
+description: Fotografie ze 45 let chovu suchozemských želv u Haltufových — želvy, terária, zahrady a odchov.
+permalink: /galerie/
+---
+
+<section class="wrap galerie-stranka">
+  <nav class="drobky" aria-label="Drobečková navigace">
+    <a href="{{ '/' | url }}">Úvod</a> <span aria-hidden="true">›</span>
+    <span aria-current="page">Galerie</span>
+  </nav>
+
+  <div class="rule galerie-stranka__zahlavi">
+    <div class="kick">Fotografie z chovu</div>
+    <h1 class="disp">Galerie</h1>
+    <p class="galerie-stranka__perex">Snímky ze čtyřiceti pěti let chovu — ze zahrad, terárií i odchovu mláďat.</p>
+  </div>
+
+  {% for kategorie in galerie.kategorie %}
+  <section class="galerie-kategorie" id="{{ kategorie.id }}">
+    <div class="rule galerie-kategorie__zahlavi">
+      <div class="kick">{{ kategorie.kicker }}</div>
+      <h2 class="disp galerie-kategorie__nazev">{{ kategorie.nazev }}</h2>
+    </div>
+    <ul class="galerie-mrizka" role="list">
+      {% for foto in kategorie.fotky %}
+      <li class="galerie-polozka">
+        <a href="{{ foto.plna }}" target="_blank" rel="noopener" aria-label="{{ foto.alt }} — otevřít v plné velikosti">
+          <img
+            src="{{ foto.nahled }}"
+            alt="{{ foto.alt }}"
+            loading="lazy"
+            width="180"
+            height="135"
+          >
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endfor %}
+</section>
+
+{% include "partials/cta.njk" %}

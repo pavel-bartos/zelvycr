@@ -1,6 +1,6 @@
 # Želvy ČR (zelvycr-web) — Backlog
 
-_Last updated: 2026-11-04 | Sprint: 3 ✅ uzavřen · Sprint 4 zatím nezahájen · detaily archivů v `docs/backlog-archive.md`_
+_Last updated: 2026-11-05 | Sprint: 4 🔵 Galerie · detaily archivů v `docs/backlog-archive.md`_
 
 Backlog píše Claude (šéf vývoje), implementaci dělá Claude Code. Každý kódovací task má
 **Claude Code prompt** a odvolává se na `docs/design-policy.md` (vzhled) a zadání v Claude
@@ -22,13 +22,81 @@ projektu (obsah). Fakta o želvách Claude Code **nevymýšlí** — konkrétní
 
 ---
 
+## 🔵 Sprint 4 — Galerie
+
+> **Cíl:** Stránka `/galerie/` existuje, zobrazuje fotky v responzivní mřížce s popisnými
+> alt texty a odkazem na plnou velikost (bez JS lightboxu).
+
+| ID       | Task                                | Size | Priority | Status |
+| -------- | ----------------------------------- | ---- | -------- | ------ |
+| TASK-017 | Galerie (/galerie/)                 | M    | Medium   | 🔵     |
+| TASK-024 | Ověření Sprintu 4 (Pavel, produkce) | S    | High     | ⬜     |
+
+### TASK-017: Galerie (/galerie/)
+
+**Size:** M (2–4 h) · **Status:** 🔵 In Progress · **Priority:** Medium
+**Goal:** Postavit stránku `/galerie/` s responzivní fotomřížkou, popisnými alt texty a odkazem
+na plnou velikost každé fotky — bez JS lightboxu (policy §5), přenositelné na Shoptet (§5).
+
+**Acceptance criteria:**
+
+- [ ] Stránka `/galerie/` existuje a je dostupná na produkci
+- [ ] Fotky jsou v responzivní CSS mřížce (min. 2 sloupce na tabletu, 3 na desktopu, 1 na mobilu)
+- [ ] Každá fotka má popisný `alt` text (ne „fotografie N z M", ne prázdný)
+- [ ] Každá fotka je odkaz na plnou velikost (`<a href="..."><img …></a>`) — bez JS lightboxu
+- [ ] Galerie je rozdělena do pojmenovaných kategorií (dle designu sekce — hairline + kicker)
+- [ ] Nový `tel:` odkaz v CTA pruhu má třídu `js-tel-galerie`
+- [ ] Stránka je v navigaci nebo patičce (dle `navigace.json`)
+- [ ] Lint + testy zelené + CI prošla
+- [ ] Revize diffu bez kritických nálezů
+
+**Claude Code prompt:**
+
+> Postav stránku `/galerie/` podle `docs/design-policy.md` §7.1 (nová sekce pro galerii) a TASK-017.
+> Data fotek v `src/_data/galerie.json` (vytvořit). Fotky hotlinkují ze starého webu (TASK-008 je
+> odložen). Bez JS lightboxu — každá fotka je `<a href="…"><img …></a>`. CSS třídy
+> `.galerie-stranka`, `.galerie-kategorie`, `.galerie-mrizka`, `.galerie-polozka` do `style.css`.
+> Specifikaci komponenty dopsat do `docs/design-policy.md` §7 (nová podsekce). Číslo telefonu
+> vždy z `site.json`. Nový `tel:` odkaz s třídou `js-tel-galerie`.
+
+**Notes:** Fotky jsou dočasné hotlinky ze `zelvycr.cz` — TASK-008 (fotopipeline) je ⏸️ Deferred.
+Výběr 40–60 nejlepších fotek je otevřený bod 8 zadání; zatím použít dostupné foto-URL z
+`detailyDruhu.json` a co najdeme na starém webu. Novou komponentu `.galerie-mrizka` zapiš do
+design-policy.md.
+
+---
+
+### TASK-024: Lokální ověření Sprintu 4 — Galerie
+
+**Size:** S (30–60 min) · **Status:** ⬜ Pending · **Priority:** High
+**Goal:** Uživatel na běžící aplikaci odklikne, že sprint splnil cíl, a teprve pak se nasazuje.
+
+**Jak spustit lokálně:**
+
+> `npm run dev`
+
+**Checklist k odkliknutí:**
+
+- [ ] Přejdi na `/galerie/` — stránka se načte bez chyby
+- [ ] Fotky jsou zobrazeny v mřížce (ne za sebou v řadě)
+- [ ] Každá fotka je klikatelná a otevírá plnou velikost (nový tab nebo totéž okno)
+- [ ] Alt texty jsou popisné — otevři DevTools, zkontroluj `alt` atribut u 2–3 fotek (nesmí být „fotografie N z M" ani prázdné)
+- [ ] Stránka vypadá rozumně na mobilu (zúži prohlížeč na 360 px) — 1 sloupec, žádné vodorovné posouvání
+- [ ] Regrese: úvodní stránka, detail zelenavé a Průvodce chovem fungují beze změny
+
+**Po odkliknutí všech bodů:**
+
+> otevři PR z feature větve (`git push -u origin feat/sprint-4-galerie` → `gh pr create`) →
+> počkej na zelenou CI → **merge PR** (ne přímý push do main; viz CLAUDE.md).
+
+**Notes:** Manuální task pro uživatele, ne pro Claude Code.
+
 ---
 
 ## Backlog (Upcoming)
 
 | ID       | Task                                                                                                             | Size | Priority | Status |
 | -------- | ---------------------------------------------------------------------------------------------------------------- | ---- | -------- | ------ |
-| TASK-017 | Galerie (/galerie/)                                                                                              | M    | Low      | ⬜     |
 | TASK-018 | Přesměrování 17 starých `.html` adres + kotvy `#6_x` (3.3)                                                       | M    | High     | ⬜     |
 | TASK-019 | SEO: sitemap, kanonické adresy, Open Graph, JSON-LD (8.3)                                                        | M    | Medium   | ⬜     |
 | TASK-020 | Měření bez cookies + události `click_tel` (8.3/5.5)                                                              | S    | Medium   | ⬜     |

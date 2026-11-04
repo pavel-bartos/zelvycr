@@ -4,6 +4,7 @@
     { "nazev": "Startovací sady", "url": "/startovaci-sady/" },
     { "nazev": "Příslušenství", "url": "/prislusenstvi/" },
     { "nazev": "Jak nakoupit", "url": "/jak-nakoupit/" },
+    { "nazev": "Galerie", "url": "/galerie/" },
     { "nazev": "O nás", "url": "/o-nas/" }
   ],
   "pruvodce": [
