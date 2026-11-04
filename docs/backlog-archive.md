@@ -280,3 +280,69 @@ sady, příslušenství a terária na míru. Fotky zatím zůstávají hotlinkov
 **Notes:** Manuální task pro Pavla — ověřeno 2026-11-04.
 
 ---
+
+## Sprint 3 — Stránky důvěry a Průvodce chovem (uzavřen 2026-11-04)
+
+> Uzavřeno: PR #4 (`feat/sprint-3-duvera-pruvodce`) mergnut do `main`, CI zelená, ověřeno
+> Pavlem na produkci (https://pavel-bartos.github.io/zelvycr/). Všechny stránky z navigace
+> a patičky existují; obsah se bude ladit postupně.
+
+**Cíl sprintu:** Žádná 404. Stránky existují jako skeletony s `[DOPLNIT]` pro obsah.
+
+| ID       | Task                                               | Size | Priority | Status |
+| -------- | -------------------------------------------------- | ---- | -------- | ------ |
+| TASK-013 | Jak nakoupit (/jak-nakoupit/)                      | M    | High     | ✅     |
+| TASK-014 | O nás (/o-nas/) + Kontakty (/kontakty/)            | M    | High     | ✅     |
+| TASK-015 | Reklamace a garance + Ochrana osobních údajů       | S    | Medium   | ✅     |
+| TASK-016 | Průvodce chovem: rozcestník + 13 article skeletonů | L    | Medium   | ✅     |
+| TASK-023 | Ověření Sprintu 3 (Pavel, produkce)                | S    | High     | ✅     |
+
+### TASK-013: Jak nakoupit (/jak-nakoupit/)
+
+**Size:** M · **Status:** ✅ Done (2026-11-04) · **Priority:** High
+**Goal:** Odstranit nejistotu z nákupu — zákazník přijde na stránku a přesně ví, co ho čeká.
+
+**Hotovo:** `/jak-nakoupit/` — 4 kroky, 3 způsoby předání (Rozvoz/Záhornice/Burzy),
+platba, CITES a garance `.info-box`, FAQ `<details name="faq">`, CTA. `js-tel-nakoupit`.
+
+---
+
+### TASK-014: O nás + Kontakty
+
+**Size:** M · **Status:** ✅ Done (2026-11-04) · **Priority:** High
+**Goal:** Budovat důvěru příběhem rodiny; kontaktní údaje přehledně.
+
+**Hotovo:** `/o-nas/` — příběh, stat-bar (45/2/9/[DOPLNIT]), karty osob (Jan + Jiří st.), CTA.
+`/kontakty/` — hlavní karta Jiří, 2 místa (Záhornice + Nepolisy), fakturační údaje. `js-tel-kontakt`.
+
+---
+
+### TASK-015: Reklamace a garance + Ochrana osobních údajů
+
+**Size:** S · **Status:** ✅ Done (2026-11-04) · **Priority:** Medium
+**Goal:** Stránky v patičce existují se smysluplným obsahem.
+
+**Hotovo:** `/reklamace-a-garance/` — 4 body ze zadání 4.15, vstřícný tón, `js-tel-reklamace`, CTA.
+`/ochrana-osobnich-udaju/` — minimální GDPR, žádné cookies ani formuláře.
+
+---
+
+### TASK-016: Průvodce chovem — rozcestník + 13 article skeletonů
+
+**Size:** L · **Status:** ✅ Done (2026-11-04) · **Priority:** Medium
+**Goal:** Všechny URL průvodce chovem existují a jsou přístupné.
+
+**Hotovo:** Layout `src/_includes/layouts/clanek.njk` (breadcrumbs, perex, V kostce, tělo, CTA).
+Rozcestník `/pruvodce-chovem/` se 4 skupinami. 13 Markdown skeletonů. Data cascade JSON.
+CSS komponenty Sprint 3 (`.box-v-kostce`, `.pruvodce-skupiny`, `.karta-osoby`, atd.).
+Design-policy §7.5 doplněna.
+
+---
+
+### TASK-023: Ověření Sprintu 3
+
+**Size:** S · **Status:** ✅ Done (2026-11-04) · **Priority:** High
+**Goal:** Pavel na produkci odklikl, že nové stránky existují.
+**Notes:** Ověřeno na https://pavel-bartos.github.io/zelvycr/ — Pavel potvrdil „je to ok".
+
+---
