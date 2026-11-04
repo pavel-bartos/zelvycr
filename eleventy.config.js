@@ -1,4 +1,4 @@
-import { datumCZ, telHref } from './lib/filtry.js';
+import { datumCZ, kc, rozpetiKc, telHref } from './lib/filtry.js';
 
 /**
  * Eleventy konfigurace — statický prototyp webu Želvy ČR.
@@ -14,6 +14,8 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addFilter('datumCZ', datumCZ);
   eleventyConfig.addFilter('telHref', telHref);
+  eleventyConfig.addFilter('kc', kc);
+  eleventyConfig.addFilter('rozpetiKc', rozpetiKc);
 
   return {
     pathPrefix: process.env.PATH_PREFIX || '/',

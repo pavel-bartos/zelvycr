@@ -183,6 +183,10 @@ vpravo H3 (displej 30px, váha 600) + latinský název kurzívou slabě + `<dl>`
 (Velikost / Chov / Cena). Hover: podtržení H3. `dl` je grid `auto 1fr`, `dt` slabá barva,
 `dd` váha 600.
 
+**Štítky druhu `.stitek`** (Byt / Zahrada / Začátečník, doplněno v TASK-004 podle zadání 4.1): malé
+pilulky odvozené z badge — `background: var(--barva-plocha-neutr); color: var(--barva-text-tlumena);`
+14px, váha 700, `--radius-badge`. Jsou pod názvem druhu, před `<dl>`. Barvou nenesou informaci, vždy mají text.
+
 **Varianta karta článku:** stejná `.row`, širší fotka 240×135 (poměr 16:9), H3 + jednořádkový
 perex. Používá se v „Z průvodce chovem".
 

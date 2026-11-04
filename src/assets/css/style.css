@@ -196,6 +196,548 @@ a:hover {
   height: 24px;
 }
 
+/* ---------- sekce a společné prvky ---------- */
+
+.sekce {
+  padding-block: 0 96px;
+}
+
+.sekce--lista {
+  padding-block: 56px 72px;
+}
+
+.sekce--siroka {
+  padding-block: 96px;
+}
+
+.sekce--pruvodce {
+  padding-block: 96px 72px;
+}
+
+.sekce--faq {
+  padding-bottom: 96px;
+}
+
+.sekce__hlava {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px 24px;
+  padding-top: 20px;
+  margin-bottom: 16px;
+}
+
+.sekce__titul {
+  flex: 1 1 520px;
+}
+
+.sekce__titul .kick,
+.sekce > .kick,
+.sekce--siroka > .kick {
+  margin-bottom: 14px;
+}
+
+.sekce__titul h2,
+.sekce__h2 {
+  margin: 0 0 14px;
+  font-size: 56px;
+}
+
+.sekce__h2 {
+  margin-bottom: 40px;
+}
+
+.sekce__podtitulek {
+  max-width: 34em;
+  margin: 0;
+  color: var(--barva-text-tlumena);
+}
+
+.sekce__odkaz {
+  margin: 36px 0 0;
+}
+
+.odkaz-sipka {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-end;
+  min-height: 44px;
+  font-weight: 700;
+  text-underline-offset: 4px;
+}
+
+.kick--tma {
+  color: var(--barva-zelena-svetla);
+}
+
+.kick--tma + h1,
+.kick--tma + h2 {
+  margin-top: 0;
+}
+
+/* ---------- hero ---------- */
+
+.hero {
+  position: relative;
+}
+
+.hero__foto {
+  display: block;
+  width: 100%;
+  height: 680px;
+  object-fit: cover;
+  background: var(--barva-img-placeholder);
+}
+
+.hero__panel-obal {
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  max-width: none;
+}
+
+.hero__panel {
+  max-width: 660px;
+  padding: 44px 44px 40px;
+  background: var(--barva-tma);
+  color: var(--barva-papir);
+}
+
+.hero__panel .kick {
+  margin-bottom: 18px;
+}
+
+.hero__panel h1 {
+  margin: 0 0 22px;
+  font-size: 64px;
+  color: var(--barva-papir);
+}
+
+.hero__panel p {
+  margin: 0 0 30px;
+  font-size: 20px;
+  color: var(--barva-text-na-tme);
+}
+
+.hero__tlacitka {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.hero__panel .btn--obrys {
+  color: var(--barva-papir);
+}
+
+/* ---------- lišta důvěry ---------- */
+
+.stat-bar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+}
+
+.stat-bar__polozka {
+  padding: 24px 24px 0 0;
+}
+
+.stat-bar__cislo {
+  font-size: 72px;
+}
+
+/* ---------- akce na úvodu ---------- */
+
+.akce-sekce {
+  margin-bottom: 96px;
+  background: var(--barva-jantar);
+}
+
+.akce-sekce__obsah {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding-block: 40px;
+}
+
+.akce-sekce h2 {
+  margin: 8px 0 10px;
+  font-size: 44px;
+}
+
+.akce-sekce p {
+  margin: 0;
+  font-size: 20px;
+}
+
+.akce-sekce .kick--tma {
+  color: var(--barva-text);
+}
+
+/* ---------- karty druhů a článků (.row) ---------- */
+
+.karty-druhu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 500px), 1fr));
+  column-gap: 48px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--barva-linka);
+  color: inherit;
+  text-decoration: none;
+}
+
+.row:hover {
+  color: inherit;
+}
+
+.row:hover h3 {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+.row img {
+  flex: none;
+  display: block;
+  width: 168px;
+  height: 168px;
+  object-fit: cover;
+  background: var(--barva-img-placeholder);
+}
+
+.row--clanek img {
+  width: 240px;
+  height: 135px;
+}
+
+.row__text {
+  display: flex;
+  flex: 1 1 220px;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+
+.row--clanek .row__text {
+  flex-basis: 300px;
+}
+
+.row h3 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.row p {
+  margin: 8px 0 0;
+  color: var(--barva-text-tlumena);
+}
+
+.row__latinsky {
+  margin-top: 4px;
+  font-size: 16px;
+  font-style: italic;
+  color: var(--barva-text-slaba);
+}
+
+.stitky {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.stitek {
+  padding: 2px 10px;
+  border-radius: var(--radius-badge);
+  background: var(--barva-plocha-neutr);
+  color: var(--barva-text-tlumena);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 4px 16px;
+  margin: 0;
+  font-size: 16px;
+}
+
+dt {
+  color: var(--barva-text-slaba);
+}
+
+dd {
+  margin: 0;
+  font-weight: 600;
+}
+
+/* ---------- startovací sada ---------- */
+
+.sekce-plocha {
+  background: var(--barva-plocha);
+}
+
+.sekce-plocha__obsah {
+  padding-block: 88px;
+}
+
+.sekce-plocha .kick {
+  margin-bottom: 14px;
+}
+
+.sada {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+  align-items: flex-start;
+}
+
+.sada__text {
+  flex: 1 1 460px;
+  min-width: 0;
+}
+
+.sada h2 {
+  margin: 0 0 28px;
+  font-size: 56px;
+}
+
+.sada__polozky {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  gap: 0 32px;
+  margin: 0 0 36px;
+  padding: 0;
+  list-style: none;
+}
+
+.sada__polozka {
+  padding: 14px 0 18px;
+  border-top: 1px solid var(--barva-linka-silna);
+}
+
+.sada__cena-radek {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 28px;
+}
+
+.sada__cena-popisek {
+  font-size: 16px;
+  color: var(--barva-text-slaba);
+}
+
+.sada__cena {
+  font-size: 48px;
+}
+
+.sada__foto {
+  flex: 1 1 460px;
+  display: block;
+  min-width: 0;
+  height: 460px;
+  object-fit: cover;
+  background: var(--barva-img-placeholder);
+}
+
+/* ---------- kroky „Jak koupit“ ---------- */
+
+.kroky {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  gap: 0 32px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.kroky__krok {
+  padding-top: 18px;
+}
+
+.kroky__cislo {
+  margin-bottom: 14px;
+  font-size: 20px;
+  color: var(--barva-zelena);
+}
+
+.kroky__krok strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 22px;
+}
+
+.kroky__krok span {
+  color: var(--barva-text-tlumena);
+}
+
+/* ---------- tmavá sekce (rodina) ---------- */
+
+.sekce-tma {
+  background: var(--barva-tma);
+  color: var(--barva-papir);
+}
+
+.sekce-tma__obsah {
+  padding-block: 96px;
+}
+
+.sekce-tma .kick {
+  margin-bottom: 14px;
+}
+
+.rodina {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 56px;
+  align-items: flex-end;
+}
+
+.rodina__text {
+  flex: 1 1 520px;
+  min-width: 0;
+}
+
+.rodina h2 {
+  margin: 0 0 28px;
+  font-size: 80px;
+  color: var(--barva-papir);
+}
+
+.rodina__text p {
+  max-width: 32em;
+  margin: 0 0 16px;
+  font-size: 20px;
+  color: var(--barva-text-na-tme);
+}
+
+.rodina__text p:last-of-type {
+  margin-bottom: 32px;
+}
+
+.rodina__lide {
+  display: grid;
+  flex: 1 1 460px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  min-width: 0;
+}
+
+.rodina figure {
+  margin: 0;
+}
+
+.rodina img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  background: var(--barva-img-placeholder);
+}
+
+.rodina figcaption {
+  margin-top: 10px;
+}
+
+.rodina figcaption span {
+  font-size: 16px;
+  color: var(--barva-text-na-tme-slaba);
+}
+
+/* ---------- recenze (zobrazí se až s reálnými daty) ---------- */
+
+.recenze {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  gap: 32px;
+}
+
+.recenze__polozka {
+  margin: 0;
+  padding-top: 18px;
+}
+
+.recenze blockquote {
+  margin: 0 0 12px;
+}
+
+.recenze__pozn {
+  margin: 24px 0 0;
+  font-size: 14px;
+  color: var(--barva-text-slaba);
+}
+
+/* ---------- FAQ ---------- */
+
+.faq {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+}
+
+.faq__titul {
+  flex: 1 1 300px;
+}
+
+.faq__titul h2 {
+  margin: 14px 0 0;
+  font-size: 56px;
+}
+
+.faq__seznam {
+  flex: 2 1 560px;
+  min-width: 0;
+}
+
+details {
+  padding: 20px 0;
+  border-top: 1px solid var(--barva-linka);
+}
+
+details:last-child {
+  border-bottom: 1px solid var(--barva-linka);
+}
+
+summary {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 44px;
+  font-size: 20px;
+  font-weight: 700;
+  list-style: none;
+  cursor: pointer;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary::after {
+  content: '↓';
+  color: var(--barva-zelena);
+}
+
+details[open] summary::after {
+  content: '↑';
+}
+
+details p {
+  margin: 12px 0 0;
+  color: var(--barva-text-tlumena);
+}
+
 /* ---------- oznamovací pruhy ---------- */
 
 .prototyp-pruh {
@@ -460,6 +1002,90 @@ a:hover {
 
   .cta-pruh h2 {
     font-size: clamp(1.75rem, 8vw, 2.125rem);
+  }
+
+  .hero__foto {
+    height: 280px;
+  }
+
+  .hero__panel-obal {
+    position: static;
+    padding-inline: 0;
+  }
+
+  .hero__panel {
+    max-width: none;
+    padding: 32px var(--gutter);
+  }
+
+  .hero__panel h1 {
+    font-size: clamp(2rem, 10vw, 2.5rem);
+  }
+
+  .hero__panel p {
+    font-size: 18px;
+  }
+
+  .sekce,
+  .sekce--siroka,
+  .sekce--pruvodce {
+    padding-block: 0 56px;
+  }
+
+  .sekce--lista {
+    padding-block: 32px 40px;
+  }
+
+  .sekce--siroka,
+  .sekce--pruvodce {
+    padding-top: 56px;
+  }
+
+  .sekce__titul h2,
+  .sekce__h2,
+  .sada h2,
+  .faq__titul h2 {
+    font-size: clamp(2rem, 9vw, 2.125rem);
+  }
+
+  .stat-bar__cislo {
+    font-size: 56px;
+  }
+
+  .sekce-plocha__obsah,
+  .sekce-tma__obsah {
+    padding-block: 56px;
+  }
+
+  .rodina {
+    gap: 40px;
+  }
+
+  .rodina h2 {
+    font-size: clamp(2.25rem, 12vw, 3rem);
+  }
+
+  .sada__foto {
+    height: 280px;
+  }
+
+  .akce-sekce {
+    margin-bottom: 56px;
+  }
+
+  .akce-sekce h2 {
+    font-size: clamp(1.75rem, 8vw, 2.125rem);
+  }
+
+  .row img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .row--clanek img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
   }
 
   .btn--velke {
