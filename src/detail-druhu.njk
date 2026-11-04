@@ -1,0 +1,187 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: detailyDruhu
+  size: 1
+  alias: detail
+eleventyComputed:
+  title: "{{ (druhy | podleSlugu(detail.slug)).nazev }} – prodej z chovu, velikost, chov"
+  description: "{{ (druhy | podleSlugu(detail.slug)).nazev }} ({{ (druhy | podleSlugu(detail.slug)).latinsky }}) z vlastního odchovu: velikost, nároky a chov. Cena {{ site.cenaZelvyOd | rozpetiKc(site.cenaZelvyDo) }}, doklady CITES. Zavolejte a domluvte nákup."
+permalink: "/{{ detail.slug }}/"
+---
+
+{% set d = druhy | podleSlugu(detail.slug) %}
+{% set stav = dostupnost[d.dostupnost] %}
+
+{# 1 — Hlavička druhu #}
+<section class="wrap druh-hlavicka">
+  <nav class="drobky" aria-label="Drobečková navigace">
+    <a href="{{ '/' | url }}">Úvod</a> <span aria-hidden="true">›</span>
+    <a href="{{ '/zelvy-na-prodej/' | url }}">Želvy na prodej</a> <span aria-hidden="true">›</span>
+    <span aria-current="page">{{ d.nazev }}</span>
+  </nav>
+  <div class="rule druh-hlavicka__obsah">
+    <div class="galerie">
+      {% for g in detail.galerie %}
+        {% if loop.first %}
+        <a class="galerie__hlavni" href="{{ g.foto }}">
+          <img src="{{ g.foto }}" alt="{{ g.alt }}" width="800" height="600" fetchpriority="high">
+        </a>
+        <ul class="galerie__nahledy">
+        {% else %}
+          <li>
+            <a href="{{ g.foto }}">
+              <img src="{{ g.foto }}" alt="{{ g.alt }}" width="96" height="96" loading="lazy">
+            </a>
+          </li>
+        {% endif %}
+        {% if loop.last %}</ul>{% endif %}
+      {% endfor %}
+    </div>
+    <div class="druh-panel">
+      <span class="badge {{ stav.trida }}">{{ stav.text }}</span>
+      <h1 class="disp">{{ d.nazev }} <span class="druh-panel__latinsky">({{ d.latinsky }})</span></h1>
+      <p class="druh-panel__souhrn">{{ d.poznamka | capitalize }}.</p>
+      {% if d.stitky.length %}
+      <ul class="stitky">
+        {% for s in d.stitky %}<li class="stitek">{{ s }}</li>{% endfor %}
+      </ul>
+      {% endif %}
+      <dl class="fakta">
+        <div class="fakta__polozka">
+          <dt>Cena</dt>
+          <dd class="disp fakta__cena">{{ site.cenaZelvyOd | rozpetiKc(site.cenaZelvyDo) }}</dd>
+          <dd class="fakta__pozn">podle formy a stáří</dd>
+        </div>
+      </dl>
+      <div class="druh-panel__tlacitka">
+        <a class="btn btn--tel js-tel-hero" href="tel:{{ site.telefon | telHref }}">
+          {% include "partials/ikona-tel.njk" %}
+          Zavolat a domluvit nákup
+        </a>
+        <a class="btn btn--tma" href="{{ '/startovaci-sady/' | url }}">Startovací sada</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# 2 — V kostce #}
+<section class="wrap sekce sekce--detail">
+  <div class="rule v-kostce">
+    <div class="kick">01 — V kostce</div>
+    <h2 class="disp">{{ d.nazev }} v kostce</h2>
+    <dl class="v-kostce__tabulka">
+      <dt>Velikost</dt><dd>{{ d.velikost }}</dd>
+      <dt>Vhodný chov</dt><dd>{{ d.chov }}</dd>
+      <dt>Zimování</dt><dd>{{ d.zimuje }}</dd>
+      <dt>Povinná registrace</dt><dd>{{ d.registrace }}</dd>
+      <dt>Náročnost</dt><dd>{{ detail.narocnost }}</dd>
+    </dl>
+  </div>
+</section>
+
+{# 3 — O druhu #}
+<section class="wrap sekce sekce--detail">
+  <div class="rule druh-text">
+    <div class="kick">02 — O druhu</div>
+    <h2 class="disp">O druhu</h2>
+    {% for o in detail.oDruhu %}<p>{{ o }}</p>{% endfor %}
+    {% if detail.postrehChovatele %}
+    <aside class="box-chov">
+      <div class="kick">Z našeho chovu</div>
+      <p>{{ detail.postrehChovatele }}</p>
+    </aside>
+    {% endif %}
+  </div>
+</section>
+
+{# 4 — Formy, které chováme #}
+{% if detail.formy.length %}
+<section class="wrap sekce sekce--detail">
+  <div class="rule formy">
+    <div class="kick">03 — Formy</div>
+    <h2 class="disp">Formy, které chováme</h2>
+    <ul class="formy__seznam">
+      {% for f in detail.formy %}
+      <li>
+        <h3 class="disp"><i>{{ f.nazev }}</i></h3>
+        <p>{{ f.popis }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% endif %}
+
+{# 5 — Co bude potřebovat #}
+<section class="sekce-plocha">
+  <div class="wrap sekce-plocha__obsah">
+    <div class="kick">04 — Vybavení</div>
+    <h2 class="disp sekce__h2">Co bude potřebovat</h2>
+    <div class="druh-potreby">
+      <ul class="druh-potreby__seznam">
+        {% for p in detail.potreby %}<li class="sada__polozka">{{ p }}</li>{% endfor %}
+      </ul>
+      {% set sada = zelvyNaProdej.vybaveni[0] %}
+      <a class="karta-vybaveni" href="{{ sada.url | url }}">
+        <img src="{{ sada.foto }}" alt="{{ sada.alt }}" width="640" height="360" loading="lazy">
+        <div class="rule karta-vybaveni__text">
+          <h3 class="disp">{{ sada.nazev }}</h3>
+          <p>{{ sada.text }}</p>
+          <span class="row__vice">{{ sada.odkaz }}</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+{# 6 — Související články #}
+<section class="wrap sekce sekce--pruvodce">
+  <div class="rule sekce__hlava">
+    <div class="sekce__titul">
+      <div class="kick">05 — Průvodce</div>
+      <h2 class="disp">Související články</h2>
+    </div>
+    <a class="odkaz-sipka" href="{{ '/pruvodce-chovem/' | url }}">Celý průvodce chovem →</a>
+  </div>
+  {% for c in uvod.clanky %}
+  <a class="row row--clanek" href="{{ c.url | url }}">
+    <img src="{{ c.foto }}" alt="{{ c.alt }}" width="240" height="135" loading="lazy">
+    <div class="row__text">
+      <h3 class="disp">{{ c.nazev }}</h3>
+      <p>{{ c.perex }}</p>
+    </div>
+  </a>
+  {% endfor %}
+</section>
+
+{# 7 — Další druhy #}
+<section class="wrap sekce sekce--druhy">
+  <div class="rule sekce__hlava">
+    <div class="sekce__titul">
+      <div class="kick">06 — Další druhy</div>
+      <h2 class="disp">Další druhy v nabídce</h2>
+    </div>
+    <a class="odkaz-sipka" href="{{ '/zelvy-na-prodej/' | url }}">Porovnat všechny druhy →</a>
+  </div>
+  <div class="karty-druhu">
+    {% for x in druhy | jinePolozky(detail.slug, 3) %}
+    {% set xs = dostupnost[x.dostupnost] %}
+    <a class="row" href="{{ ('/' + x.slug + '/') | url }}">
+      <img src="{{ x.foto }}" alt="{{ x.nazev }}" width="168" height="168" loading="lazy">
+      <div class="row__text">
+        <div>
+          <span class="badge {{ xs.trida }}">{{ xs.text }}</span>
+          <h3 class="disp">{{ x.nazev }}</h3>
+          <div class="row__latinsky">{{ x.latinsky }}</div>
+        </div>
+        <dl>
+          <dt>Velikost</dt><dd>{{ x.velikost }}</dd>
+          <dt>Chov</dt><dd>{{ x.chov }}</dd>
+        </dl>
+        <span class="row__vice">Detail druhu →</span>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</section>

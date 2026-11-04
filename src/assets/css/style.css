@@ -1102,6 +1102,219 @@ details p {
   margin-top: 8px;
 }
 
+/* ---------- detail druhu (policy §7.1) ---------- */
+
+.druh-hlavicka {
+  padding-block: 24px 72px;
+}
+
+.druh-hlavicka__obsah {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+  padding-top: 28px;
+}
+
+.galerie {
+  flex: 1 1 480px;
+  min-width: 0;
+}
+
+.galerie__hlavni {
+  display: block;
+}
+
+.galerie__hlavni img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: var(--barva-img-placeholder);
+}
+
+.galerie__nahledy {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.galerie__nahledy a {
+  display: block;
+  border: 1px solid var(--barva-linka);
+}
+
+.galerie__nahledy img {
+  display: block;
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  background: var(--barva-img-placeholder);
+}
+
+.druh-panel {
+  display: flex;
+  flex: 1 1 440px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+  min-width: 0;
+}
+
+.druh-panel .badge {
+  margin-bottom: 0;
+}
+
+.druh-panel h1 {
+  margin: 0;
+  font-size: 56px;
+}
+
+.druh-panel__latinsky {
+  display: block;
+  margin-top: 10px;
+  font-family: var(--pismo-text);
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: var(--barva-text-slaba);
+}
+
+.druh-panel__souhrn {
+  margin: 0;
+  font-size: 20px;
+  color: var(--barva-text-tlumena);
+}
+
+.druh-panel .fakta {
+  width: 100%;
+  flex: none;
+}
+
+.fakta__pozn {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--barva-text-slaba);
+}
+
+.druh-panel__tlacitka {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.sekce--detail {
+  padding-block: 0 72px;
+}
+
+.v-kostce,
+.druh-text,
+.formy {
+  padding-top: 28px;
+}
+
+.v-kostce .kick,
+.druh-text .kick,
+.formy .kick {
+  margin-bottom: 14px;
+}
+
+.v-kostce h2,
+.druh-text h2,
+.formy h2 {
+  margin: 0 0 28px;
+  font-size: 56px;
+}
+
+.v-kostce__tabulka {
+  display: grid;
+  grid-template-columns: minmax(160px, auto) 1fr;
+  gap: 0 32px;
+  font-size: 18px;
+}
+
+.v-kostce__tabulka dt,
+.v-kostce__tabulka dd {
+  padding: 14px 0;
+  border-top: 1px solid var(--barva-linka);
+}
+
+.v-kostce__tabulka dt:last-of-type,
+.v-kostce__tabulka dd:last-of-type {
+  border-bottom: 1px solid var(--barva-linka);
+}
+
+.druh-text p {
+  max-width: 40em;
+  margin: 0 0 16px;
+  color: var(--barva-text-tlumena);
+}
+
+.box-chov {
+  max-width: 40em;
+  margin-top: 24px;
+  padding: 24px;
+  border-left: 4px solid var(--barva-zelena);
+  background: var(--barva-plocha);
+}
+
+.box-chov .kick {
+  margin-bottom: 8px;
+}
+
+.box-chov p {
+  margin: 0;
+}
+
+.formy__seznam {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.formy__seznam li {
+  padding: 20px 0;
+  border-top: 1px solid var(--barva-linka);
+}
+
+.formy__seznam li:last-child {
+  border-bottom: 1px solid var(--barva-linka);
+}
+
+.formy__seznam h3 {
+  margin: 0 0 6px;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.formy__seznam p {
+  margin: 0;
+  color: var(--barva-text-tlumena);
+}
+
+.druh-potreby {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+  align-items: flex-start;
+}
+
+.druh-potreby__seznam {
+  flex: 1 1 360px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.druh-potreby .karta-vybaveni {
+  flex: 1 1 360px;
+  min-width: 0;
+}
+
 /* ---------- oznamovací pruhy ---------- */
 
 .prototyp-pruh {
@@ -1473,6 +1686,44 @@ details p {
 
   .info-box h2 {
     font-size: clamp(1.75rem, 8vw, 2.125rem);
+  }
+
+  .druh-hlavicka {
+    padding-bottom: 48px;
+  }
+
+  .druh-panel h1 {
+    font-size: clamp(2.25rem, 10vw, 3.5rem);
+  }
+
+  .v-kostce h2,
+  .druh-text h2,
+  .formy h2 {
+    font-size: clamp(2rem, 9vw, 2.125rem);
+  }
+
+  .v-kostce__tabulka {
+    grid-template-columns: 1fr;
+  }
+
+  .v-kostce__tabulka dt {
+    padding-bottom: 0;
+    border-bottom: 0;
+    font-size: 16px;
+    color: var(--barva-text-slaba);
+  }
+
+  .v-kostce__tabulka dd {
+    padding-top: 2px;
+    border-top: 0;
+  }
+
+  .v-kostce__tabulka dt:last-of-type {
+    border-bottom: 0;
+  }
+
+  .sekce--detail {
+    padding-block: 0 48px;
   }
 
   .row img {

@@ -18,7 +18,7 @@ a obsahu dřív, než se postaví zbývajících ~21 stránek.
 | TASK-003 | Datový model druhů (`src/_data/druhy.json`)                     | S    | High     | 🔵     |
 | TASK-004 | Úvodní stránka podle 4.1 + varianty B                           | L    | High     | 🔵     |
 | TASK-005 | Stránka „Želvy na prodej" podle 4.2 + varianty B                | L    | High     | 🔵     |
-| TASK-006 | Šablona detailu druhu + stránka „Želva zelenavá" podle 4.3      | L    | High     | ⬜     |
+| TASK-006 | Šablona detailu druhu + stránka „Želva zelenavá" podle 4.3      | L    | High     | 🔵     |
 | TASK-007 | Lokální ověření Sprintu 1                                       | S    | High     | ⬜     |
 
 ---
@@ -164,7 +164,7 @@ nebo na detail druhu.
 
 ### TASK-006: Šablona detailu druhu + stránka „Želva zelenavá" podle 4.3
 
-**Size:** L (4–6 h) · **Status:** ⬜ Pending · **Priority:** High
+**Size:** L (4–6 h) · **Status:** 🔵 Implementováno na `feat/design-system`, čeká na revizi a doplnění textů · **Priority:** High
 **Goal:** Jedna šablona detailu druhu (použitelná pro všech 6) + naplněná pro želvu zelenavou
 jako vzor ke schválení.
 
