@@ -1,6 +1,6 @@
 # Želvy ČR (zelvycr-web) — Backlog
 
-_Last updated: 2026-11-04 | Sprint: 2 (aktivní) · Sprint 1 ✅ uzavřen, detail v `docs/backlog-archive.md`_
+_Last updated: 2026-11-04 | Sprint: 2 (aktivní, fotky odloženy) · Sprint 1 ✅ uzavřen, detail v `docs/backlog-archive.md`_
 
 Backlog píše Claude (šéf vývoje), implementaci dělá Claude Code. Každý kódovací task má
 **Claude Code prompt** a odvolává se na `docs/design-policy.md` (vzhled) a zadání v Claude
@@ -9,8 +9,9 @@ projektu (obsah). Fakta o želvách Claude Code **nevymýšlí** — konkrétní
 ## Current Sprint — Sprint 2: Kompletní katalog a fotky
 
 **Cíl sprintu:** Dokončit vše, co si návštěvník může koupit — zbylých 5 druhů, startovací
-sady, příslušenství a terária na míru — a nahradit dočasné hotlinkované fotky vlastními
-optimalizovanými. Po Sprintu 2 je katalogová část weba hotová; stránky důvěry (Jak nakoupit,
+sady, příslušenství a terária na míru. Fotky zatím zůstávají hotlinkované na zelvycr.cz;
+náhrada vlastními optimalizovanými je TASK-008 (odloženo do pozdějšího sprintu).
+Po Sprintu 2 je katalogová část weba hotová; stránky důvěry (Jak nakoupit,
 O nás, Kontakt, Reklamace) a průvodce chovem jsou Sprint 3.
 
 _Zahájen 2026-11-04 po uzavření Sprintu 1 (PR #1 a #2 mergnuty, TASK-007 schválen Pavlem).
@@ -19,40 +20,10 @@ Detail Sprintu 1: `docs/backlog-archive.md`._
 
 | ID       | Task                                                                       | Size | Priority | Status |
 | -------- | -------------------------------------------------------------------------- | ---- | -------- | ------ |
-| TASK-008 | Fotopipeline: self-hostované optimalizované obrázky místo hotlinků         | M    | High     | 🔵     |
 | TASK-009 | Zbylých 5 detailů druhů (vroubená, žlutohnědá, stepní, pardálí, kloubnatá) | M    | High     | ⬜     |
 | TASK-010 | Startovací sady (/startovaci-sady/)                                        | M    | Medium   | ⬜     |
 | TASK-011 | Příslušenství (/prislusenstvi/) + Terária na míru (/terarium-na-miru/)     | L    | Medium   | ⬜     |
 | TASK-012 | Lokální ověření Sprintu 2                                                  | S    | High     | ⬜     |
-
----
-
-### TASK-008: Fotopipeline — self-hostované optimalizované obrázky
-
-**Size:** M (2–4 h) · **Status:** 🔵 In Progress · **Priority:** High
-**Goal:** Nahradit dočasné hotlinky na `zelvycr.cz` vlastními obrázky v repu — optimalizovanými,
-s rozměry a popisnými alt texty. Web pak nezávisí na starém hostingu a je rychlý.
-
-**Acceptance criteria:**
-
-- [ ] Obrázky použité na dosud hotových stránkách (druhy, hero, sady) jsou v `src/assets/img/`,
-      pojmenované podle obsahu (`zelva-vroubena-mlade.webp`, ne `foto5`).
-- [ ] Formát WebP (volitelně AVIF), několik šířek pro responzivitu; `loading="lazy"` kromě hero;
-      explicitní `width`/`height` (prevence CLS).
-- [ ] `druhy.json` a šablony odkazují na lokální cesty přes `url` filtr, žádný `zelvycr.cz` hotlink.
-- [ ] Alt texty česky a popisně.
-- [ ] Brány zelené; build nestáhne nic z internetu (obrázky už jsou v repu).
-
-**Claude Code prompt:**
-
-> Stáhni obrázky, které web aktuálně hotlinkuje z `https://www.zelvycr.cz` (viz `druhy.json`
-> a šablony úvodu/sad), do `src/assets/img/`. Převeď na WebP v rozumných šířkách, pojmenuj
-> podle obsahu, přidej `width`/`height` a `loading="lazy"` (kromě hero). Přepiš odkazy na
-> lokální cesty přes `url` filtr. Pokud síť stahování z `zelvycr.cz` nepovolí, zastav se
-> a napiš to — fotky dodá Pavel (zadání otevřený bod S4).
-
-**Notes:** Fotky v plném rozlišení řeší otevřený bod S4 (přístup k FTP starého webu nebo
-stažení). Pokud veřejné URL nejdou stáhnout, je to blocker pro Pavla, ne pro CC.
 
 ---
 
@@ -204,7 +175,7 @@ teráií na míru. Datová struktura připravená pro e-shop fáze 2.
 - [ ] Všech 6 druhů má detail; pardálí a kloubnatá mají text označený `[KE KONTROLE KLIENTEM]`.
 - [ ] Startovací sady: hlavní sada ukazuje 5 999 Kč, vybavené terárium „na dotaz".
 - [ ] Příslušenství má 5 podkategorií s radami; terária na míru mají nabídku a rozměry v cm.
-- [ ] Obrázky se načítají z repa (ne z `zelvycr.cz`), mají popisné alt texty a nejsou rozmazané.
+- [ ] Obrázky se zobrazují (hotlinky na `zelvycr.cz` fungují; alt texty popisné a česky).
 - [ ] Žádný vymyšlený údaj o želvách; `[DOPLNIT]`/`[KE KONTROLE KLIENTEM]` jen tam, kde čekáš.
 - [ ] Na 360 px žádný vodorovný posun (vč. tabulek).
 - [ ] Regrese: úvod a Želvy na prodej ze Sprintu 1 fungují beze změny; build, lint, format:check
@@ -233,8 +204,21 @@ Sprint 3+ — stránky důvěry, průvodce chovem a příprava na spuštění. R
 | TASK-018 | Přesměrování 17 starých `.html` adres + kotvy `#6_x` (3.3)                                                       | M    | High     | ⬜     |
 | TASK-019 | SEO: sitemap, kanonické adresy, Open Graph, JSON-LD (8.3)                                                        | M    | Medium   | ⬜     |
 | TASK-020 | Měření bez cookies + události `click_tel` (8.3/5.5)                                                              | S    | Medium   | ⬜     |
+| TASK-008 | Fotopipeline: self-hostované WebP obrázky místo hotlinků na zelvycr.cz                                           | M    | Medium   | ⏸️     |
 | TASK-021 | Branch protection na `main` (Pavel; GitHub Pages už zapnuté)                                                     | S    | High     | ⬜     |
 | TASK-022 | Doplnit `[DOPLNIT]` na detailu zelenavé: náročnost, text „O druhu", věta u T. h. boettgeri (podklady dodá Pavel) | S    | Medium   | ⬜     |
+
+### TASK-008: Fotopipeline — self-hostované optimalizované obrázky
+
+**Size:** M (2–4 h) · **Status:** ⏸️ Deferred · **Priority:** Medium
+**Goal:** Nahradit dočasné hotlinky na `zelvycr.cz` vlastními obrázky v repu — optimalizovanými WebP
+s rozměry a popisnými alt texty. Web pak nezávisí na starém hostingu a je rychlý.
+
+**Notes:** Odloženo rozhodnutím Pavla 2026-11-04 — hotlinky na zelvycr.cz zatím nevadí, fotopipeline
+řešit až v pozdějším sprintu. Fotky v plném rozlišení jsou otevřený bod S4 (přístup k FTP starého
+webu nebo manuální stažení). Než to půjde otevřít, Pavel dodá fotky nebo přístup k FTP.
+
+---
 
 ## Done ✅
 

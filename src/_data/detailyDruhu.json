@@ -25,7 +25,7 @@
     ],
     "narocnost": "[DOPLNIT: náročnost chovu]",
     "oDruhu": [
-      "[DOPLNIT: text „O druhu“ — odstavce o T. h. boettgeri a T. h. hermanni (velikosti forem, snůšky, vzácnost) z původní stránky Druhy želv; zachovat osobní postřehy chovatele]"
+      "[DOPLNIT: text sekce O druhu — odstavce o T. h. boettgeri a T. h. hermanni (velikosti forem, snůšky, vzácnost) z původní stránky Druhy želv; zachovat osobní postřehy chovatele]"
     ],
     "postrehChovatele": null,
     "formy": [
@@ -46,6 +46,160 @@
       "Terárium minimálně 80 × 40 × 40 cm pro první roky, později 100–120 cm",
       "UVB zářivka",
       "Výhřevná bodovka"
+    ]
+  },
+  {
+    "slug": "zelva-vroubena",
+    "galerie": [
+      {
+        "foto": "https://www.zelvycr.cz/foto/foto5.jpg",
+        "alt": "Želva vroubená dospělá — podlouhlý tmavý krunýř typický pro tento druh"
+      }
+    ],
+    "narocnost": "Nízká — snáší mráz, ideální pro venkovní chov",
+    "oDruhu": [
+      "Želva vroubená je největší evropský suchozemský druh. Dospělé exempláře mají typický podlouhlý tvar krunýře, jehož zadní okraj je zubatě vyhrnutý — odtud název vroubená.",
+      "S věkem krunýř výrazně tmavne a kontrastní kresba mláďat přechází v tmavě šedou nebo černou. Mláďata a juvenilové jsou naopak kontrastní a nápadní.",
+      "Tento druh snáší mráz a je výborně přizpůsoben pro celoroční chov ve venkovním výběhu. Nezahrabává se tak hluboce jako jiné druhy a je vhodná pro volný chov na zahradě."
+    ],
+    "postrehChovatele": null,
+    "formy": [
+      {
+        "nazev": "Testudo marginata",
+        "popis": "Nominátní forma, pochází z jižního Řecka a Peloponésu. Velká, robustní."
+      },
+      {
+        "nazev": "T. m. weissingeri",
+        "popis": "Menší ostrovní forma z ostrůvků v Lakonickém zálivu. Vzácnější."
+      }
+    ],
+    "potreby": [
+      "Velký venkovní výběh s možností úkrytu",
+      "Místo k vyhřívání (přirozené slunce nebo bodovka)",
+      "Přezimování v chladu — zimní boks nebo zahradní přezimování",
+      "Vhodná vegetace a substrát pro hrabání"
+    ]
+  },
+  {
+    "slug": "zelva-zlutohneda",
+    "galerie": [
+      {
+        "foto": "https://www.zelvycr.cz/foto/foto6.jpg",
+        "alt": "Želva žlutohnědá — jeden z nejpestřejších evropských druhů s velkou variabilitou forem"
+      }
+    ],
+    "narocnost": "Nízká — kontaktní a odolný druh",
+    "oDruhu": [
+      "Želva žlutohnědá je skupinou zahrnující obrovskou variabilitu forem — od malých středomořských po velké iberské a severoafrické. Jednotlivé formy se liší velikostí, barvou i nároky na chov.",
+      "Jedním z nejnápadnějších znaků tohoto druhu je silná fixace na člověka — žlutohnědé si pamatují svého chovatele a aktivně vyhledávají kontakt. Z toho důvodu patří k nejoblíbenějším druhům u zkušenějších chovatelů.",
+      "Africké populace nejsou přizpůsobeny na zimování v Evropě a pro venkovní chov jsou problematické — vyžadují celoroční přístup do temperovaného prostoru."
+    ],
+    "postrehChovatele": "Žlutohnědé nás poznávají. Stačí přijít ke výběhu a hned přibíhají — to je na želvách pořád překvapivé.",
+    "formy": [
+      {
+        "nazev": "Testudo graeca",
+        "popis": "Nominátní středomořská forma. Menší, kulatější krunýř, nárty na zadních nohách."
+      },
+      {
+        "nazev": "T. g. ibera — iberská (gigantní) forma",
+        "popis": "Největší forma druhu, dospělí až 30–35 cm. Pochází z oblasti Turecka a Kavkazu."
+      }
+    ],
+    "potreby": [
+      "Terárium minimálně 80 × 40 × 40 cm nebo venkovní výběh",
+      "UVB zářivka",
+      "Výhřevná bodovka",
+      "U afrických forem: celoroční přístup do temperovaného prostoru (nezimuje)"
+    ]
+  },
+  {
+    "slug": "zelva-stepni",
+    "galerie": [
+      {
+        "foto": "https://www.zelvycr.cz/foto/foto7.jpg",
+        "alt": "Želva stepní — robustní druh se čtyřprstými předními končetinami"
+      }
+    ],
+    "narocnost": "Střední — potřebuje dlouhé klidové období a pevné oplocení",
+    "oDruhu": [
+      "Želva stepní je jedním z nejodolnějších druhů v chovu. Pochází ze středoasijských stepí a pouštních oblastí, kde přežívá v extrémních podmínkách — letní horka i zimní mrazy.",
+      "Ve skupině má výraznou povahu a hierarchii — mezi jedinci se tvoří jasná dominance a submisivní jedinci mohou být stresováni. Doporučuje se chovat páry nebo trojice, ne větší skupiny bez dostatečného prostoru.",
+      "Stepní želva hrabe — a hluboce. Plot musí být zapuštěn do země minimálně 30–40 cm, jinak se podkope a uteče. Klidové období je nutné a délkou přesahuje jiné druhy: obvykle 5–6 měsíců."
+    ],
+    "postrehChovatele": null,
+    "formy": [
+      {
+        "nazev": "Testudo horsfieldii",
+        "popis": "Jediná forma chovaná u nás. Poznat ji lze podle čtyř prstů na předních končetinách."
+      }
+    ],
+    "potreby": [
+      "Venkovní výběh s plotem zapuštěným do země (min. 30–40 cm)",
+      "Místo k hrabání a úkryt",
+      "Přezimování — 5 až 6 měsíců v chladu",
+      "UVB a výhřevná bodovka pro terárium (mimo sezónu)"
+    ]
+  },
+  {
+    "slug": "zelva-pardali",
+    "galerie": [
+      {
+        "foto": "https://www.zelvycr.cz/foto/foto10.jpg",
+        "alt": "Želva pardálí — jeden z největších suchozemských druhů, africký původ"
+      }
+    ],
+    "narocnost": "[KE KONTROLE KLIENTEM] Střední až vysoká — velký druh s nároky na prostor a celoroční vytápění",
+    "oDruhu": [
+      "[KE KONTROLE KLIENTEM] Želva pardálí je druhý největší africký suchozemský druh. Dospělá zvířata dorůstají krunýře 30–50 cm a váhy 13–20 kg. Pochází ze savan a polopouští subsaharské Afriky.",
+      "[KE KONTROLE KLIENTEM] Tento druh nezimuje. Celoročně potřebuje teploty přes den 26–29 °C, místo k vyhřívání na 32–35 °C a noční teploty nesmí klesnout pod přibližně 24 °C. V létě může být venku, ale jen za dostatečně teplého počasí.",
+      "[KE KONTROLE KLIENTEM] Dospělá pardálí želva potřebuje hodně místa — mládě vystačí s terárium, ale dospělý exemplář vyžaduje velký vytápěný prostor, který musí chovatel předem reálně zajistit."
+    ],
+    "postrehChovatele": null,
+    "formy": [
+      {
+        "nazev": "Stigmochelys pardalis",
+        "popis": "[KE KONTROLE KLIENTEM] Monotypický druh bez uznávaných poddruhů v chovu."
+      }
+    ],
+    "potreby": [
+      "Velké terárium nebo vytápěná místnost pro dospělá zvířata",
+      "Celoroční vytápění — přes den 26–29 °C, vyhřívání 32–35 °C, noc min. ~24 °C",
+      "UVB zářivka s dostatečným výkonem",
+      "Letní venkovní výběh (jen za tepla)",
+      "Velký prostor — dospělá zvířata 13–20 kg"
+    ]
+  },
+  {
+    "slug": "zelva-kloubnata",
+    "galerie": [
+      {
+        "foto": "https://www.zelvycr.cz/foto/foto11.jpg",
+        "alt": "Želva kloubnatá — africký druh s pohyblivým kloubem v zadní části krunýře"
+      }
+    ],
+    "narocnost": "[KE KONTROLE KLIENTEM] Střední — celoroční vytápění, specifická strava, letní klid",
+    "oDruhu": [
+      "[KE KONTROLE KLIENTEM] Želva kloubnatá je africký druh ze savan, jehož nejznámějším znakem je pohyblivý kloub v zadní části krunýře. Tento kloub umožňuje zavřít zadní část krunýře jako víko — obranný mechanismus před predátory.",
+      "[KE KONTROLE KLIENTEM] Na rozdíl od většiny chovaných druhů je kloubnatá všežravá: jí ovoce, houby, trávy, hmyz i šneky. Tato pestrost stravy je při chovu nutná — jednostranná vegetariánská dieta jí nevyhovuje.",
+      "[KE KONTROLE KLIENTEM] Je aktivní především ráno a večer. Nezimuje, ale za sucha upadá do letního klidu (estivace). Teploty kolem 24 °C s vyhříváním na aspoň 32 °C."
+    ],
+    "postrehChovatele": null,
+    "formy": [
+      {
+        "nazev": "Kinixys belliana nogueyi",
+        "popis": "[KE KONTROLE KLIENTEM] Západoafrická forma, nejčastěji dostupná v chovu."
+      },
+      {
+        "nazev": "Kinixys belliana zombensis",
+        "popis": "[KE KONTROLE KLIENTEM] Východoafrická forma."
+      }
+    ],
+    "potreby": [
+      "Terárium s celoročním vytápěním — kolem 24 °C, vyhřívání min. 32 °C",
+      "UVB zářivka",
+      "Pestrá strava — ovoce, houby, zelenina, hmyz, šneci",
+      "Vlhčí substrát (více vlhkosti než středomořské druhy)",
+      "V létě výběh za tepla"
     ]
   }
 ]
