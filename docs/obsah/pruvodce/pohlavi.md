@@ -29,6 +29,6 @@ U některých druhů pomáhají i další znaky — třeba tvar spodní část
 
 ## Chcete pomoct s určením?
 
-Nejste si jistí pohlavím své želvy? Zavolejte nebo se zastavte — rádi se podíváme.
+Nejste si jistí pohlavím své želvy? U mláďat na prodej pohlaví ještě nezaručíme — jistotu má až odrostlejší zvíře. Vybrat si můžete mezi [našimi želvami](/zelvy-na-prodej/). Zavolejte nebo se zastavte — rádi se podíváme.
 
 <!-- Fotky: /foto/pohlavi/ — 5 fotek, srovnání samec/samice po druzích, s popisky „samec" / „samice" (zadání 4.9). -->

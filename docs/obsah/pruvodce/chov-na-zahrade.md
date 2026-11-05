@@ -20,7 +20,7 @@ stav: ke-kontrole
 - Volný chov na zahradě je z pohledu želvy nejlepší — sama si určuje svůj rytmus.
 - Výběh musí být dokonale oplocený; plot zapusťte desítky centimetrů do země.
 - Pozor na jímky, bazény a kanály — pro želvu jsou smrtelně nebezpečné.
-- Na zahradu doporučujeme odrostlejší zvíře, nejlépe už několikrát zimované.
+- Na zahradu doporučujeme [odrostlejší zvíře](/zelvy-na-prodej/), nejlépe už několikrát zimované.
   :::
 
 Nejlepší a nejpřirozenější způsob chovu je z pohledu želvy volný chov na zahradě. Setkali jsme se s želvami, které takhle žily i zimovaly venku desítky let bez problémů. Výhoda je, že si želva sama určuje roční biorytmus — a podle našich zkušeností se takto chované želvy dožívají nejdelšího věku.

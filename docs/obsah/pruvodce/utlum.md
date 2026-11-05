@@ -44,7 +44,7 @@ Dopřejte jí klid — nenuťte ji do aktivity:
 
 1. **Nesviťte** jí v teráriu žádným světlem.
 2. Je-li venku, **chraňte ji před sluncem a horkem.** Malou nebo nezimovanou želvu v horkých dnech raději vezměte domů.
-3. Nechte ji odpočívat **v lehce vlhkém substrátu**, s potravou na dosah — ať má na vybranou, jestli se najíst, nebo ne.
+3. Nechte ji odpočívat **v lehce vlhkém [substrátu](/prislusenstvi/)**, s potravou na dosah — ať má na vybranou, jestli se najíst, nebo ne.
 4. Hlídejte, aby **přes noc teplota klesla na 15–17 °C** a přes den nevystoupala o mnoho výš. Jinak to nejsou podmínky k útlumu a želvě nepomůžete.
 
 Želvu můžete jednou až dvakrát týdně vykoupat — hlavně když je příliš měkká (klidně častěji) nebo znatelně lehčí, tedy „vysušená". Volte vlažnější vodu a spíš jí dávejte méně. Zahrabanou želvu na zahradě klidně denně kropte vodou.
