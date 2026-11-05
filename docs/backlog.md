@@ -1,6 +1,6 @@
 # Želvy ČR (zelvycr-web) — Backlog
 
-_Last updated: 2026-11-05 | Sprint: 5 🔵 Texty (zahájeno) · Sprint 4 čeká na ověření · archiv v `docs/backlog-archive.md`_
+_Last updated: 2026-11-05 | Sprint: 6 🔵 Testovací brána (aktuální) · Sprint 5 🔵 Texty (souběžně) · Sprinty 1–4 ✅ · archiv v `docs/backlog-archive.md`_
 
 Backlog píše Claude (šéf vývoje), implementaci dělá Claude Code. Každý kódovací task má
 **Claude Code prompt** a odvolává se na `docs/design-policy.md` (vzhled) a zadání v Claude
@@ -22,7 +22,10 @@ projektu (obsah). Fakta o želvách Claude Code **nevymýšlí** — konkrétní
 
 ---
 
-## 🔵 Sprint 4 — Galerie
+## ✅ Sprint 4 — Galerie (uzavřen 2026-11-05)
+
+> Uzavřeno: TASK-017 (galerie) mergnuta, TASK-024 ověřena Pavlem. Stránka `/galerie/` je
+> data-driven a čeká jen na finální fotky (grafický sprint).
 
 > **Cíl:** Stránka `/galerie/` existuje, zobrazuje fotky v responzivní mřížce s popisnými
 > alt texty a odkazem na plnou velikost (bez JS lightboxu).
@@ -30,7 +33,7 @@ projektu (obsah). Fakta o želvách Claude Code **nevymýšlí** — konkrétní
 | ID       | Task                                | Size | Priority | Status |
 | -------- | ----------------------------------- | ---- | -------- | ------ |
 | TASK-017 | Galerie (/galerie/)                 | M    | Medium   | ✅     |
-| TASK-024 | Ověření Sprintu 4 (Pavel, produkce) | S    | High     | ⬜     |
+| TASK-024 | Ověření Sprintu 4 (Pavel, produkce) | S    | High     | ✅     |
 
 ### TASK-017: Galerie (/galerie/)
 
@@ -93,7 +96,150 @@ design-policy.md.
 
 ---
 
-## 🔵 Sprint 5 — Dotažení textového obsahu (zahájeno 2026-11-05)
+## 🔵 Sprint 6 — Testovací brána (aktuální sprint)
+
+**Cíl sprintu:** Rozšířit CI z jednoduché rychlé brány na **vícevrstvou bránu s path-filtrovaným
+spouštěním** — obsahové PR neběží zbytečně těžké testy, strukturální PR jsou chráněné e2e,
+responzivitou a přístupností. Jeden agregační `gate` job řeší past „přeskočený required check
+blokuje merge".
+
+_Běží jako infrastruktura souběžně se Sprintem 5 (texty). Lighthouse/CWV a vizuální regrese
+sem NEpatří — ty jsou v nasazovacím sprintu (preflight)._
+
+| ID       | Task                                                               | Size | Priority | Status |
+| -------- | ------------------------------------------------------------------ | ---- | -------- | ------ |
+| TASK-027 | CI architektura: rychlá brána + strukturální (path filtr) + `gate` | M    | High     | ⬜     |
+| TASK-028 | Strukturální testy: Playwright e2e smoke + responzivita 360 px     | L    | High     | ⬜     |
+| TASK-029 | Přístupnost (axe-core) + kontrola odkazů a alt textů               | M    | Medium   | ⬜     |
+| TASK-030 | Lokální ověření Sprintu 6                                          | S    | High     | ⬜     |
+
+---
+
+### TASK-027: CI architektura — rychlá brána + strukturální (path filtr) + agregační `gate`
+
+**Size:** M (2–4 h) · **Status:** ⬜ Pending · **Priority:** High
+**Goal:** CI pouští těžké testy jen tam, kde dávají smysl, a merge se nikdy nezasekne na
+přeskočeném required checku.
+
+**Acceptance criteria:**
+
+- [ ] CI má tři joby: **`rychla-brana`** (vždy), **`strukturalni`** (podmíněně), **`gate`** (agregace).
+- [ ] `rychla-brana` běží na **každý PR**: `format:check`, `lint`, unit (`vitest`), `build`,
+      kontrola odkazů a kontrola, že každý `<img>` má `alt` (implementace v TASK-029).
+- [ ] `strukturalni` běží **jen když PR mění** `src/_includes/**`, `src/assets/**`, `**/*.njk`,
+      `lib/**`, `eleventy.config.js`, `src/_data/**` nebo `.github/workflows/**` (path filtr —
+      `paths:` na triggeru nebo `dorny/paths-filter`). Na čistě obsahový/`docs/` PR se přeskočí.
+- [ ] Štítek PR **`run-full-suite`** vynutí `strukturalni` i na jinak přeskočeném PR.
+- [ ] `gate` job: `needs: [rychla-brana, strukturalni]`, `if: always()`; **uspěje, jen když
+      žádný potřebný job neselhal** (přeskočený = OK, failed = ne). Je to **jediný required
+      status check** v branch protection.
+- [ ] Mapa „cesta → vrstva testů" je zdokumentovaná v komentáři workflow i v `CONTRIBUTING.md`.
+
+**Claude Code prompt:**
+
+> Přestav `.github/workflows/ci.yml` na tři joby: `rychla-brana` (vždy: format:check, lint,
+> vitest, build + kroky z TASK-029), `strukturalni` (path filtr na `src/_includes/**`,
+> `src/assets/**`, `**/*.njk`, `lib/**`, `eleventy.config.js`, `src/_data/**`,
+> `.github/workflows/**`; override štítkem `run-full-suite`; obsahuje testy z TASK-028/029)
+> a `gate` (`needs: [rychla-brana, strukturalni]`, `if: always()`, selže jen při reálném
+> selhání potřebného jobu, ne při skipu). Zdokumentuj mapu cest do komentáře workflow
+> a do `CONTRIBUTING.md`. Nic nerozbij — stávající kroky se jen přesunou do `rychla-brana`.
+
+**Notes:** ⚠️ **Akce pro Pavla (sběr povolení předem):** po mergi tohohle PR je potřeba
+v branch protection ruleset **změnit required status check z `check` na `gate`** (Settings →
+Rules → ruleset → Require status checks). Jinak zůstane vyžadovaný starý `check`, který už
+nebude existovat, a merge se zablokuje. Naveď Pavla v okamžiku, kdy PR půjde do review.
+
+---
+
+### TASK-028: Strukturální testy — Playwright e2e smoke + responzivita 360 px
+
+**Size:** L (4–6 h) · **Status:** ⬜ Pending · **Priority:** High
+**Goal:** Automaticky ověřit, že se web načítá, ovládací prvky fungují a nic se neláme na mobilu.
+
+**Acceptance criteria:**
+
+- [ ] Playwright (chromium) nainstalovaný, skript `npm run test:e2e`, zapojený do jobu
+      `strukturalni` (headless).
+- [ ] **Smoke:** úvod, Želvy na prodej, jeden detail druhu, jeden článek a Kontakt se načtou
+      (200, existuje `<h1>`); hlavní menu má 6 položek; `tel:` odkazy mají tvar
+      `tel:+420774579582` a třídu `js-tel-*`; FAQ `<details>` jde otevřít; sticky „Zavolat"
+      je na mobilním viewportu viditelná.
+- [ ] **Responzivita:** na šířce 360 px žádný vodorovný posun (`scrollWidth <= clientWidth`)
+      na úvodu, Želvy na prodej a jednom článku.
+- [ ] Testy běží proti produkčnímu buildu (`npm run build` → lokální server → test), ne proti
+      dev serveru s watchem.
+- [ ] Testy ověřují **strukturu, ne konkrétní copy** — změna textu je nerozbije.
+
+**Claude Code prompt:**
+
+> Přidej Playwright e2e testy (chromium) podle AC v TASK-028: smoke na 5 klíčových stránkách
+>
+> - kontrola menu, `tel:` tvaru a tříd, FAQ `<details>`, sticky na mobilu; responzivita 360 px
+>   bez vodorovného posunu. Spouštěj proti `npm run build` výstupu přes lokální server. Zapoj do
+>   jobu `strukturalni` (TASK-027). Testuj strukturu/chování, ne konkrétní texty.
+
+**Notes:** Blokováno TASK-027 (job `strukturalni`). Používej selektory odolné vůči změně obsahu
+(role, třídy `js-tel-*`, `<details>`), ne text copy.
+
+---
+
+### TASK-029: Přístupnost (axe-core) + kontrola odkazů a alt textů
+
+**Size:** M (3–4 h) · **Status:** ⬜ Pending · **Priority:** Medium
+**Goal:** Automaticky hlídat WCAG 2.2 AA a rozbité odkazy — i u obsahových PR tu levnou část.
+
+**Acceptance criteria:**
+
+- [ ] **axe-core** (přes Playwright) na úvodu, Želvy na prodej, detailu druhu a článku:
+      žádné porušení úrovně `serious`/`critical`. Vědomé výjimky zdokumentované v testu.
+      Běží v jobu `strukturalni`.
+- [ ] **Kontrola odkazů** na `dist` buildu (linkinator/lychee nebo vlastní skript): žádný
+      rozbitý interní odkaz; respektuje pathPrefix. Běží v `rychla-brana` (levné, chytá
+      i obsahové PR).
+- [ ] **Kontrola alt textů:** každý `<img>` v buildu má neprázdný `alt` (nebo vědomě `alt=""`
+      u dekorativních). Běží v `rychla-brana`.
+
+**Claude Code prompt:**
+
+> Přidej axe-core a11y testy (Playwright) na 4 klíčové stránky do jobu `strukturalni` (fail na
+> serious/critical). Do jobu `rychla-brana` přidej kontrolu interních odkazů na `dist` buildu
+> (respektuj pathPrefix) a kontrolu, že každý `<img>` má `alt`. Vědomé výjimky zdokumentuj.
+
+**Notes:** Blokováno TASK-027. Odkazy a alt jdou do rychlé brány schválně — obsahový PR může
+rozbít odkaz nebo zapomenout alt, a tohle to chytne levně bez e2e.
+
+---
+
+### TASK-030: Lokální ověření Sprintu 6
+
+**Size:** S (30–60 min) · **Status:** ⬜ Pending · **Priority:** High
+**Goal:** Pavel ověří, že brána funguje: obsahový PR neběží strukturální testy, kódový ano,
+`gate` správně hlídá merge.
+
+**Jak spustit lokálně:**
+
+> `npm test` (unit) · `npm run test:e2e` (Playwright) · `npm run build` a kontrola odkazů
+
+**Checklist k odkliknutí:**
+
+- [ ] Lokálně projdou unit, e2e i a11y testy; build zelený.
+- [ ] Zkušební **obsahový** PR (změna jen v `docs/` nebo článku) má `strukturalni` **přeskočený**
+      a `gate` přesto zelený → jde mergnout.
+- [ ] Zkušební **kódový** PR (změna v šabloně/CSS) má `strukturalni` **spuštěný**.
+- [ ] Štítek `run-full-suite` vynutí strukturální testy i na obsahovém PR.
+- [ ] Required status check v ruleset je **přepnutý na `gate`** (akce Pavla z TASK-027).
+- [ ] Regrese: běžné PR flow funguje, nic se nezaseklo.
+
+**Po odkliknutí:**
+
+> otevři PR → zelená CI (`gate`) → merge PR.
+
+**Notes:** Manuální task pro Pavla. Součástí je i přepnutí required checku na `gate`.
+
+---
+
+## 🔵 Sprint 5 — Dotažení textového obsahu (běží souběžně, Claude Code na TASK-025)
 
 **Cíl sprintu:** Propsat finální texty copywritera z `docs/obsah/` (zdroj pravdy) do webu
 (`src/`). Po sprintu má web reálné texty místo `[DOPLNIT]` placeholderů. Odblokováno dodáním
@@ -256,6 +402,7 @@ webu nebo manuální stažení). Než to půjde otevřít, Pavel dodá fotky neb
 | TASK-015 | Reklamace a garance + Ochrana osobních údajů                                         | 2026-11-04 |
 | TASK-016 | Průvodce chovem: rozcestník + 13 article skeletonů                                   | 2026-11-04 |
 | TASK-023 | Ověření Sprintu 3 (Pavel, produkce)                                                  | 2026-11-04 |
+| TASK-024 | Ověření Sprintu 4 — Galerie (Pavel)                                                  | 2026-11-05 |
 | TASK-021 | Branch protection na `main` (ruleset: PR + status check + block force push)          | 2026-11-04 |
 
 ## Future / Deferred
