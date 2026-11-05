@@ -65,3 +65,18 @@ Vše svedené do `docs/obsah/kontrola-faktu/` (README → druhy.md, clanky.md) v
 3. Doplň `[DOPLNIT]` podle odpovědí klienta.
 4. Korektura: samostatný průchod nad celým webem (pevné mezery, uvozovky, shoda) dle
    `docs/obsah/README.md` kap. 11 — až bude obsah schválený.
+
+---
+
+## Aktualizace 5. 11. — kompletní zdroj pravdy pro druhy
+
+`docs/obsah/druhy/` teď obsahuje **všech 6 druhů** jako zdroj pravdy (ne jen zelenavou).
+Proto bod 2 i bod 3 (druhy) implementuj **jednotně ze zdroje**:
+
+- Pro každý druh naplň `src/_data/detailyDruhu.json` z jeho `docs/obsah/druhy/<slug>.md`
+  (`oDruhu`, `formy`, `potreby`, `narocnost`, případně `postrehChovatele`).
+- **Náročnost** u všech druhů nese `[KE KONTROLE KLIENTEM]` – carry marker, neřeš.
+- Oprava u vroubené: v `potreby` už **není** „substrát pro hrabání" (druh se nezahrabává).
+- Postřeh u žlutohnědé je ve zdroji už opravený (bez vymyšleného „přibíhají k výběhu").
+- **Alt texty galerie** nejsou součástí prózy ve zdroji – ty oprav podle
+  `navrhy-uprav.md` bod A přímo v JSON (zrušit číslování „fotografie N z M").

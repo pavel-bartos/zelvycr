@@ -25,7 +25,7 @@ stav: ke-kontrole
 - **Kam se hodí:** byt i zahrada
 - **Zimování:** ano, každý rok období klidu
 - **Registrace CITES:** ano (v EU příloha A)
-- **Náročnost:** [DOPLNIT: potvrdí Jiří — návrh „Nízká – vděčný druh pro začátečníky"]
+- **Náročnost:** [KE KONTROLE KLIENTEM] Nízká – vděčný druh pro začátečníky
   :::
 
 ## O druhu
