@@ -25,13 +25,15 @@
     ],
     "narocnost": "[DOPLNIT: náročnost chovu]",
     "oDruhu": [
-      "[DOPLNIT: text sekce O druhu — odstavce o T. h. boettgeri a T. h. hermanni (velikosti forem, snůšky, vzácnost) z původní stránky Druhy želv; zachovat osobní postřehy chovatele]"
+      "Želva zelenavá je u nás nejoblíbenější suchozemská želva a dobrá volba pro začátečníka. Menší formy zůstávají drobné a vejdou se do terária v bytě, zároveň jim svědčí i venkovní výběh. Je to evropský druh, který každý rok potřebuje období klidu přes zimu.",
+      "Druh má několik forem, které se v dospělosti hodně liší velikostí. Samci menších typů dorůstají kolem 12 cm, samice bývají zhruba o třetinu větší, kolem 15 cm. Makedonské formy jsou mnohem robustnější a měří přes 25 cm. S velikostí se liší i snůška: menší typy snášejí dvě až tři vajíčka, větší šest až osm i více. Některé poddruhy jsou v chovu vzácné, protože i v přírodě jsou jejich stavy omezené.",
+      "Zvláštní místo má poddruh z Toskánska (Testudo hermanni hermanni). Dorůstá menších rozměrů, kolem 15 cm, a má tmavší kresbu. Čistá forma se dnes téměř nevyskytuje, a je proto chovatelsky nejcennější."
     ],
     "postrehChovatele": null,
     "formy": [
       {
         "nazev": "T. h. boettgeri",
-        "popis": "[DOPLNIT: jedna věta o formě]"
+        "popis": "Nejběžnější forma. Menší typy kolem 12–15 cm, makedonské přes 25 cm."
       },
       {
         "nazev": "T. h. hermanni – Toskánsko",
