@@ -361,13 +361,12 @@ chovatele jsou vědomě ponechaná jako placeholdery — nedolaďovat je v tomhl
 
 ## Backlog (Upcoming)
 
-| ID       | Task                                                                                                             | Size | Priority | Status |
-| -------- | ---------------------------------------------------------------------------------------------------------------- | ---- | -------- | ------ |
-| TASK-018 | Přesměrování 17 starých `.html` adres + kotvy `#6_x` (3.3)                                                       | M    | High     | ⬜     |
-| TASK-019 | SEO: sitemap, kanonické adresy, Open Graph, JSON-LD (8.3)                                                        | M    | Medium   | ⬜     |
-| TASK-020 | Měření bez cookies + události `click_tel` (8.3/5.5)                                                              | S    | Medium   | ⬜     |
-| TASK-008 | Fotopipeline: self-hostované WebP obrázky místo hotlinků na zelvycr.cz                                           | M    | Medium   | ⏸️     |
-| TASK-022 | Doplnit `[DOPLNIT]` na detailu zelenavé: náročnost, text „O druhu", věta u T. h. boettgeri (podklady dodá Pavel) | S    | Medium   | ⬜     |
+| ID       | Task                                                                   | Size | Priority | Status |
+| -------- | ---------------------------------------------------------------------- | ---- | -------- | ------ |
+| TASK-018 | Přesměrování 17 starých `.html` adres + kotvy `#6_x` (3.3)             | M    | High     | ⬜     |
+| TASK-019 | SEO: sitemap, kanonické adresy, Open Graph, JSON-LD (8.3)              | M    | Medium   | ⬜     |
+| TASK-020 | Měření bez cookies + události `click_tel` (8.3/5.5)                    | S    | Medium   | ⬜     |
+| TASK-008 | Fotopipeline: self-hostované WebP obrázky místo hotlinků na zelvycr.cz | M    | Medium   | ⏸️     |
 
 ### TASK-008: Fotopipeline — self-hostované optimalizované obrázky
 
