@@ -26,7 +26,7 @@ stav: ke-kontrole
 
 ## O druhu
 
-Želva vroubená je největší evropská suchozemská želva. [KE KONTROLE KLIENTEM: tvrzení „největší evropský druh" není ze starého webu, potvrdí chovatel.] Dospělé exempláře mají typický podlouhlý krunýř, jehož zadní okraj je zubatě vyhrnutý – odtud název vroubená.
+Želva vroubená je největší evropská suchozemská želva. [KE KONTROLE KLIENTEM: dohledáno – T. marginata je největší evropská suchozemská želva (IUCN); potvrdí chovatel.] Dospělé exempláře mají typický podlouhlý krunýř, jehož zadní okraj je zubatě vyhrnutý – odtud název vroubená.
 
 S věkem krunýř výrazně tmavne a kontrastní kresba mláďat přechází do tmavě šedé až černé. Právě mláďata a mladší zvířata jsou proto nejnápadnější.
 

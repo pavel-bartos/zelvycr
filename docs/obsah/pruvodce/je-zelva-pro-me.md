@@ -25,7 +25,7 @@ stav: ke-kontrole
 
 ## Želva je na celý život — a dlouhý
 
-Suchozemská želva se při dobré péči dožívá desítek let. [DOPLNIT: konkrétní údaj o dožití u želvy zelenavé — doloží Jiří z praxe, případně odborným zdrojem.] Než si ji pořídíte, počítejte s tím, že vás bude provázet řadu let a leckdy přejde i na další generaci v rodině. To je na želvě to hezké — ale je dobré to vědět předem.
+Suchozemská želva se při dobré péči dožívá desítek let – v zajetí běžně 60–70 let, výjimečně i přes sto; ve volné přírodě kolem třiceti. [KE KONTROLE KLIENTEM: údaje jsou dohledané z veřejných zdrojů, potvrdí je chovatel podle své praxe.] Než si ji pořídíte, počítejte s tím, že vás bude provázet řadu let a leckdy přejde i na další generaci v rodině. To je na želvě to hezké — ale je dobré to vědět předem.
 
 ## Co želva potřebuje
 
