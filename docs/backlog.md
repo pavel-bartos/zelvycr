@@ -376,6 +376,7 @@ Souběžně běží copywriterské a designérské připomínky (mimo repo → p
 | TASK-040 | Tabulka /zelvy-na-prodej/ — scroll affordance ⟵ čeká na designera             | S    | Medium   | ⬜     |
 | TASK-041 | Práce s fotkami v průvodci (výpis + detail článku) ⟵ čeká na designera        | M    | Medium   | ⬜     |
 | TASK-042 | O nás — velikost/umístění hlavní fotky ⟵ čeká na designera                    | S    | Low      | ⬜     |
+| TASK-044 | Startovací sady — oprava textu (překlep „już"→„už" + přejmenování nadpisu)    | XS   | High     | ⬜     |
 | TASK-043 | Ověření Revize v1 (Pavel, produkce)                                           | S    | High     | ⬜     |
 
 ---
@@ -508,6 +509,25 @@ Claude Code implementuje. (Deformaci řeší TASK-038.) Blokováno do dodání d
 
 ---
 
+### TASK-044: Startovací sady — oprava textu (překlep + přejmenování)
+
+**Size:** XS · **Status:** ⬜ · **Priority:** High
+**Goal:** Opravit překlep a přejmenovat hlavní sadu na stránce Startovací sady.
+**Acceptance criteria:**
+
+- [ ] Překlep „Pro toho, kdo już želvu má" → „Pro toho, kdo **už** želvu má" (polské „już" → „už").
+- [ ] Nadpis „Startovací sada" → „Startovací sada i s vaší první želvou".
+- [ ] Text je v dev-šabloně (`src/startovaci-sady.njk` — ověř umístění); brány zelené.
+      **Claude Code prompt:**
+
+> Na stránce Startovací sady oprav překlep „już" → „už" ve větě „Pro toho, kdo už želvu má"
+> a přejmenuj nadpis „Startovací sada" na „Startovací sada i s vaší první želvou". Jen tyto
+> dvě textové úpravy, nic víc.
+> **Notes:** Připomínka z revize; text je v dev-psané šabloně (ne v `docs/obsah/`), proto dev
+> task, ne copywriter.
+
+---
+
 ### TASK-043: Ověření Revize v1
 
 **Size:** S · **Status:** ⬜ · **Priority:** High
@@ -519,6 +539,7 @@ Claude Code implementuje. (Deformaci řeší TASK-038.) Blokováno do dodání d
 - [ ] Pod ~1000 px je hamburger; při zalomení je CTA vpravo; na 360 px žádný posun.
 - [ ] Patička je na mobilu zmenšená s rozklikávacími sekcemi.
 - [ ] Fotky na O nás nejsou deformované; je tam náhled galerie s proklikem.
+- [ ] Startovací sady: žádný překlep „już"; nadpis zní „Startovací sada i s vaší první želvou".
 - [ ] (po dodání designu) hero header, scroll tabulky, foto-layout průvodce a foto na O nás sedí.
       **Notes:** Manuální task pro Pavla. Design-blokované body (039–042) se ověřují až po jejich dodání.
 
