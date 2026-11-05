@@ -17,12 +17,13 @@ stav: ke-kontrole
 ## V kostce
 
 ::: v-kostce
+
 - **Velikost:** krunýř do ~22 cm
 - **Kam se hodí:** terárium, v létě výběh
 - **Zimování:** ne (africký druh), za sucha letní klid
 - **Registrace CITES:** ne (v EU příloha B)
 - **Náročnost:** Střední – celoroční teplo, pestrá strava, letní klid
-:::
+  :::
 
 ## O druhu
 

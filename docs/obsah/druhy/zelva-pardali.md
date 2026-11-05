@@ -7,7 +7,8 @@ description: Želva pardálí z vlastního odchovu. Velký africký druh pro ch
 shrnuti: Velký africký druh pro chovatele s prostorem – nezimuje.
 stitky: []
 cena: 500–2 500 Kč podle formy a stáří
-souvisejici: [/zelva-kloubnata/, /pruvodce-chovem/je-zelva-pro-me/, /pruvodce-chovem/svetlo-a-teplo/]
+souvisejici:
+  [/zelva-kloubnata/, /pruvodce-chovem/je-zelva-pro-me/, /pruvodce-chovem/svetlo-a-teplo/]
 zdroj: nový text z veřejných zdrojů (zadání 4.3)
 stav: ke-kontrole
 ---
@@ -17,12 +18,13 @@ stav: ke-kontrole
 ## V kostce
 
 ::: v-kostce
+
 - **Velikost:** krunýř 30–50 cm, dospělí 13–20 kg
 - **Kam se hodí:** mládě do terária; dospělá velký vytápěný prostor + letní výběh
 - **Zimování:** ne (africký druh)
 - **Registrace CITES:** ne (v EU příloha B)
 - **Náročnost:** Střední až vysoká – velký druh s nároky na prostor a celoroční teplo
-:::
+  :::
 
 ## O druhu
 

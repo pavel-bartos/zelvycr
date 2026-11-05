@@ -7,7 +7,8 @@ description: Želva vroubená z vlastního odchovu. Největší evropská sucho
 shrnuti: Největší evropská suchozemská želva – patří na zahradu a snáší i mráz.
 stitky: [Zahrada]
 cena: 500–2 500 Kč podle formy a stáří
-souvisejici: [/zelva-zelenava/, /pruvodce-chovem/chov-na-zahrade/, /pruvodce-chovem/zimovani/]
+souvisejici:
+  [/zelva-zelenava/, /pruvodce-chovem/chov-na-zahrade/, /pruvodce-chovem/zimovani/]
 zdroj: https://www.zelvycr.cz/druhyzelv.html
 stav: ke-kontrole
 ---
@@ -15,12 +16,13 @@ stav: ke-kontrole
 ## V kostce
 
 ::: v-kostce
+
 - **Velikost:** 30–35 cm v dospělosti
 - **Kam se hodí:** hlavně zahrada, vhodná pro volný chov
 - **Zimování:** ano, každý rok období klidu
 - **Registrace CITES:** ano (v EU příloha A)
 - **Náročnost:** [KE KONTROLE KLIENTEM] Nízká – snáší mráz, ideální pro venkovní chov
-:::
+  :::
 
 ## O druhu
 

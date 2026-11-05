@@ -7,7 +7,8 @@ description: Želva stepní z vlastního odchovu. Odolný druh s výraznou pov
 shrnuti: Odolný stepní druh s výraznou povahou – hrabe, potřebuje dlouhý klid.
 stitky: [Byt, Zahrada]
 cena: 500–2 500 Kč podle formy a stáří
-souvisejici: [/zelva-zelenava/, /pruvodce-chovem/chov-na-zahrade/, /pruvodce-chovem/zimovani/]
+souvisejici:
+  [/zelva-zelenava/, /pruvodce-chovem/chov-na-zahrade/, /pruvodce-chovem/zimovani/]
 zdroj: https://www.zelvycr.cz/druhyzelv.html
 stav: ke-kontrole
 ---
@@ -15,12 +16,13 @@ stav: ke-kontrole
 ## V kostce
 
 ::: v-kostce
+
 - **Velikost:** samci ~13–20 cm, samice až 25 cm
 - **Kam se hodí:** byt i zahrada – plot je nutné zapustit do země
 - **Zimování:** ano, dlouhé období klidu
 - **Registrace CITES:** ne (v EU příloha B)
 - **Náročnost:** [KE KONTROLE KLIENTEM] Střední – dlouhé klidové období a pevné oplocení
-:::
+  :::
 
 ## O druhu
 

@@ -7,7 +7,8 @@ description: Želva žlutohnědá z vlastního odchovu. Nejkontaktnější druh
 shrnuti: Nejkontaktnější druh – pamatuje si lidi. Velká variabilita forem.
 stitky: [Byt, Zahrada]
 cena: 500–2 500 Kč podle formy a stáří
-souvisejici: [/zelva-zelenava/, /pruvodce-chovem/je-zelva-pro-me/, /pruvodce-chovem/chov-v-terariu/]
+souvisejici:
+  [/zelva-zelenava/, /pruvodce-chovem/je-zelva-pro-me/, /pruvodce-chovem/chov-v-terariu/]
 zdroj: https://www.zelvycr.cz/druhyzelv.html
 stav: ke-kontrole
 ---
@@ -15,12 +16,13 @@ stav: ke-kontrole
 ## V kostce
 
 ::: v-kostce
+
 - **Velikost:** 15–40 cm podle formy
 - **Kam se hodí:** byt i zahrada
 - **Zimování:** ano (podle původu formy)
 - **Registrace CITES:** ano (v EU příloha A)
 - **Náročnost:** [KE KONTROLE KLIENTEM] Nízká – kontaktní a odolný druh
-:::
+  :::
 
 ## O druhu
 
