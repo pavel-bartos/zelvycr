@@ -359,6 +359,171 @@ chovatele jsou vědomě ponechaná jako placeholdery — nedolaďovat je v tomhl
 
 ---
 
+## 🔧 Revize v1 — připomínky k běžící verzi (2026-11-05)
+
+Dev připomínky z revize běžící produkce. Část je nezávislá (dá se hned), část **čeká na
+rozhodnutí designera** (implementuje se, až designer dodá vizuál do `docs/design-policy.md`).
+Souběžně běží copywriterské a designérské připomínky (mimo repo → prompty).
+
+| ID       | Task                                                                          | Size | Priority | Status |
+| -------- | ----------------------------------------------------------------------------- | ---- | -------- | ------ |
+| TASK-034 | Navigace: Galerie do hlavního menu + v patičce přesun do sekce Informace      | S    | High     | ⬜     |
+| TASK-035 | Opravit duplicitní žluté CTA boxy — na stránce vždy jen jeden                 | S    | High     | ⬜     |
+| TASK-036 | Responzivní menu: hamburger < ~1000 px (CSS-only) + CTA doprava při zalomení  | M    | High     | ⬜     |
+| TASK-037 | Responzivní patička: mobil zmenšit, odkazy do rozklikávacích sekcí            | M    | Medium   | ⬜     |
+| TASK-038 | O nás: opravit „šišaté" fotky (poměr/object-fit) + náhled galerie s proklikem | M    | Medium   | ⬜     |
+| TASK-039 | Hero header homepage — nové řešení (pattern/blur) ⟵ čeká na designera         | S    | Medium   | ⬜     |
+| TASK-040 | Tabulka /zelvy-na-prodej/ — scroll affordance ⟵ čeká na designera             | S    | Medium   | ⬜     |
+| TASK-041 | Práce s fotkami v průvodci (výpis + detail článku) ⟵ čeká na designera        | M    | Medium   | ⬜     |
+| TASK-042 | O nás — velikost/umístění hlavní fotky ⟵ čeká na designera                    | S    | Low      | ⬜     |
+| TASK-043 | Ověření Revize v1 (Pavel, produkce)                                           | S    | High     | ⬜     |
+
+---
+
+### TASK-034: Navigace — Galerie do menu + patička do sekce Informace
+
+**Size:** S · **Status:** ⬜ · **Priority:** High
+**Goal:** Galerie je dostupná z hlavního menu; patička má logické sekce.
+**Acceptance criteria:**
+
+- [ ] Položka **Galerie** přidána do hlavního menu (`src/_data/navigace.json` / `header.njk`).
+- [ ] V patičce jsou **Jak nakoupit, Galerie, O nás** přesunuty do sekce **Informace**.
+- [ ] Odkazy přes `url` filtr; 360 px OK; brány zelené.
+      **Claude Code prompt:**
+
+> Přidej Galerii do hlavního menu a v patičce (`footer.njk`) přesuň Jak nakoupit, Galerie
+> a O nás do sekce Informace. Dodrž `docs/design-policy.md` (§3.2, §3.11).
+
+---
+
+### TASK-035: Opravit duplicitní žluté CTA boxy
+
+**Size:** S · **Status:** ⬜ · **Priority:** High
+**Goal:** Na každé stránce je právě jeden závěrečný CTA pruh.
+**Acceptance criteria:**
+
+- [ ] Příčina: `base.njk` vkládá `cta.njk` a zároveň ho vkládají i jednotlivé stránky
+      (`o-nas.njk`, `startovaci-sady.njk` a další) → vzniká dvojitý CTA.
+- [ ] Sjednotit: CTA se vkládá na **jednom místě** (buď layout, nebo stránka), nikdy dvakrát.
+- [ ] Projít všechny stránky, ověřit že je vždy jeden; brány zelené.
+      **Claude Code prompt:**
+
+> Najdi, proč se na mnoha stránkách zobrazují dva žluté CTA pruhy (`cta.njk` je vkládán
+> v `base.njk` i v jednotlivých `*.njk`). Zvol jedno místo vkládání a odstraň duplicity tak,
+> aby byl na každé stránce právě jeden závěrečný CTA. Ověř napříč všemi stránkami.
+
+---
+
+### TASK-036: Responzivní menu — hamburger + zarovnání CTA
+
+**Size:** M · **Status:** ⬜ · **Priority:** High
+**Goal:** Menu je na úzkých šířkách použitelné a nerozsype se.
+**Acceptance criteria:**
+
+- [ ] Pod ~1000 px (kde menu padá pod logo) se hlavní menu přepne na **hamburger**.
+- [ ] Hamburger je **CSS-only** (bez JS jako podmínky — `<details>`/checkbox hack), ať drží
+      no-JS baseline a přenositelnost (design-policy §5). JS jen jako progressive enhancement.
+- [ ] Když se menu zalomí na víc řádků, tlačítko „Zavolat" se zarovná **doprava**.
+- [ ] 360 px bez vodorovného posunu; cílové plochy ≥ 44×44 px; brány zelené.
+      **Claude Code prompt:**
+
+> Udělej hlavní menu responzivní: pod ~1000 px přepni na hamburger (CSS-only, bez JS jako
+> podmínky — `<details>` nebo checkbox), při zalomení zarovnej CTA „Zavolat" doprava. Dodrž
+> design-policy (§3.2, §4, §5). Doplň do policy §3.2 pravidlo pro mobilní menu.
+
+---
+
+### TASK-037: Responzivní patička — rozklikávací sekce na mobilu
+
+**Size:** M · **Status:** ⬜ · **Priority:** Medium
+**Goal:** Patička na mobilu nezabírá celou obrazovku.
+**Acceptance criteria:**
+
+- [ ] Na mobilu je patička menší a odkazy jsou schované do **rozklikávacích sekcí**
+      Nabídka / Průvodce chovem / Informace (`<details>`, bez JS).
+- [ ] Na desktopu zůstává patička jako teď; 360 px OK; brány zelené.
+      **Claude Code prompt:**
+
+> Na mobilu zmenši patičku a odkazy schovej do rozklikávacích sekcí (`<details>`): Nabídka,
+> Průvodce chovem, Informace. Desktop beze změny. Dodrž design-policy (§3.11, §5).
+
+---
+
+### TASK-038: O nás — šišaté fotky + náhled galerie
+
+**Size:** M · **Status:** ⬜ · **Priority:** Medium
+**Goal:** Fotky na O nás nejsou deformované a stránka vede do galerie.
+**Acceptance criteria:**
+
+- [ ] „Šišaté" fotky opraveny — správný poměr stran (`object-fit: cover` + `aspect-ratio`),
+      žádné roztažení.
+- [ ] V sekci **„Jak u nás želvy žijí"** přibyl náhled galerie: několik fotek z jednotlivých
+      kapitol galerie s proklikem do `/galerie/` (data z `src/_data/galerie.json`).
+- [ ] 360 px OK; alt texty česky; brány zelené.
+      **Claude Code prompt:**
+
+> Na stránce O nás oprav deformované fotky (object-fit/aspect-ratio) a do sekce „Jak u nás
+> želvy žijí" přidej náhled galerie — pár fotek z kapitol `galerie.json` s proklikem do
+> `/galerie/`. Umístění/velikost hlavní fotky řeší TASK-042 (designer) — tady jen deformaci.
+
+---
+
+### TASK-039: Hero header homepage — nové řešení ⟵ čeká na designera
+
+**Size:** S · **Status:** ⬜ · **Priority:** Medium
+**Goal:** Hero header není příliš černý/agresivní.
+**Notes:** Designer rozhodne (tečkovaný polotransparentní patern / rozmazané polotransparentní
+pozadí), výsledek se zanese do `docs/design-policy.md` §3.3. Pak Claude Code implementuje.
+Blokováno do dodání designu.
+
+---
+
+### TASK-040: Tabulka /zelvy-na-prodej/ — scroll affordance ⟵ čeká na designera
+
+**Size:** S · **Status:** ⬜ · **Priority:** Medium
+**Goal:** Vodorovné posouvání tabulky vypadá záměrně a pozná se, že se s ní dá hnout.
+**Notes:** Designer navrhne vizuální affordance (fade/stín na kraji, hint „← posuňte →",
+sticky první sloupec…). Zanese se do design-policy §3.13; pak Claude Code implementuje.
+Blokováno do dodání designu.
+
+---
+
+### TASK-041: Práce s fotkami v průvodci ⟵ čeká na designera
+
+**Size:** M · **Status:** ⬜ · **Priority:** Medium
+**Goal:** Výpis na `/pruvodce-chovem/` i detail článku pracují s fotkami (jako hezký výpis na homepage).
+**Notes:** Designer navrhne jednotný foto-layout (náhledy ve výpisu rubriky + úvodní/inline
+fotka v článku), konzistentní s kartami článků na homepage. Zanese se do design-policy;
+Claude Code implementuje. Reálné fotky jsou grafický sprint (prozatím výplňové/hotlinkované).
+Blokováno do dodání designu.
+
+---
+
+### TASK-042: O nás — velikost/umístění hlavní fotky ⟵ čeká na designera
+
+**Size:** S · **Status:** ⬜ · **Priority:** Low
+**Goal:** Hlavní fotka na O nás je přiměřeně velká a dobře umístěná.
+**Notes:** Designer rozhodne velikost/umístění/treatment; zanese se do design-policy; pak
+Claude Code implementuje. (Deformaci řeší TASK-038.) Blokováno do dodání designu.
+
+---
+
+### TASK-043: Ověření Revize v1
+
+**Size:** S · **Status:** ⬜ · **Priority:** High
+**Goal:** Pavel na produkci odklikne, že připomínky jsou vyřešené.
+**Checklist k odkliknutí:**
+
+- [ ] Galerie je v menu; patička má Jak nakoupit/Galerie/O nás v Informacích.
+- [ ] Žádná stránka nemá dva žluté CTA boxy.
+- [ ] Pod ~1000 px je hamburger; při zalomení je CTA vpravo; na 360 px žádný posun.
+- [ ] Patička je na mobilu zmenšená s rozklikávacími sekcemi.
+- [ ] Fotky na O nás nejsou deformované; je tam náhled galerie s proklikem.
+- [ ] (po dodání designu) hero header, scroll tabulky, foto-layout průvodce a foto na O nás sedí.
+      **Notes:** Manuální task pro Pavla. Design-blokované body (039–042) se ověřují až po jejich dodání.
+
+---
+
 ## Backlog (Upcoming)
 
 | ID       | Task                                                                                                | Size | Priority | Status |
