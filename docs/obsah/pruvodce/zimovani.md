@@ -19,7 +19,7 @@ stav: ke-kontrole
 
 - Evropské druhy potřebují každý rok období klidu; africké druhy nezimují.
 - Tvrdé zimování není povinné, ale útlum je vhodný — játra se odtuční.
-- Zimoviště drží kolem 3–6 °C; spánek u menších želv trvá asi 2 měsíce.
+- Zimoviště drží kolem 5 °C (bezpečně 4–6 °C); spánek u menších želv trvá asi 2 měsíce.
 - Největší chyba je uspěchání — zbytky potravy ve střevech zkvasí.
   :::
 
@@ -32,7 +32,7 @@ Zimují všechny želvy? Ne. Africké druhy a želvy z oblastí s mírnými v
 Nejlepší podmínky. Želva se na zimu připraví sama, jak se zkracují dny a ochlazuje:
 
 1. Na podzim **přestává přijímat potravu.** Dopřejte jí v té době **častější koupele**, aby se dostatečně vyprázdnila.
-2. Jakmile se blíží mrazy, **přeneste ji do zimoviště** a držte teplotu kolem **3–6 °C**.
+2. Jakmile se blíží mrazy, **přeneste ji do zimoviště** a držte teplotu kolem **5 °C** (bezpečně v rozmezí 4–6 °C, nikdy pod bod mrazu).
 3. Nechte ji tam, **dokud mrazy neustanou.**
 4. Když se venku jasně otepluje, **vraťte ji do boudy**, kde se s rostoucími teplotami sama probudí.
 
@@ -46,7 +46,7 @@ Je složitější, protože napodobujeme to, co venku proběhne samo:
 2. Zajistěte **skutečný pokles teplot přes noc.**
 3. Na konci října nebo v listopadu **přestaňte svítit** a přesuňte želvu do chladné místnosti (kolem 15 °C). Aktivita klesá.
 4. **Méně krmte** a několikrát želvu vykoupejte, aby si vyprázdnila střeva.
-5. Polospící želvu přesuňte do chladu kolem **3–6 °C**. [DOPLNIT: starý web uvádí u tohoto kroku 5–6 °C, u zimování z výběhu 3–6 °C. Potvrdí Jiří jednotnou teplotu zimoviště — teplota, kde chyba ublíží zvířeti.]
+5. Polospící želvu přesuňte do chladu kolem **5 °C** (bezpečně 4–6 °C). [KE KONTROLE KLIENTEM: sjednoceno podle veterinárního doporučení (ideál ~5 °C, pod bodem mrazu smrtelné); chovatel potvrdí svou teplotu zimoviště.]
 
 Spánek u menších želv trvá přibližně **dva měsíce.** Na jaře probouzíte obráceným postupem: postupně oteplujete, pak začnete krátce svítit a přidáváte potravu.
 

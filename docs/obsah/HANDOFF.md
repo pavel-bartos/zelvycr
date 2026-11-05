@@ -80,3 +80,15 @@ Proto bod 2 i bod 3 (druhy) implementuj **jednotně ze zdroje**:
 - Postřeh u žlutohnědé je ve zdroji už opravený (bez vymyšleného „přibíhají k výběhu").
 - **Alt texty galerie** nejsou součástí prózy ve zdroji – ty oprav podle
   `navrhy-uprav.md` bod A přímo v JSON (zrušit číslování „fotografie N z M").
+
+---
+
+## Aktualizace 5. 11. (2) — dohledané údaje
+
+Chybějící fakta (`[DOPLNIT]`) byla dohledána z veřejných zdrojů a doplněna do textů jako
+`[KE KONTROLE KLIENTEM]` (dožití, teplota zimoviště ~5 °C, přílohy CITES, fakta o pardálí
+a kloubnaté). **V druzích ani článcích už není žádný `[DOPLNIT]`** – zbývají jen
+`[KE KONTROLE KLIENTEM]` značky, které carry marker, dokud klient nepotvrdí.
+
+Kontrola faktů je nově rozdělená na **A-potvrdit.md** (dohledáno, klient potvrdí) a
+**B-dodat.md** (nevíme, klient dodá). Soubory `druhy.md` a `clanky.md` nahrazeny.
