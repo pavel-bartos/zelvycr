@@ -45,3 +45,10 @@ Celý text přečíst. Klíčové údaje k ověření:
 | Krunýř do ~22 cm, pohyblivý kloub v zadní části krunýře          | Souhlasí? |
 | Všežravá (ovoce, houby, trávy, hmyz, šneci)                      | Souhlasí? |
 | Kolem 24 °C, vyhřívání min. 32 °C; nezimuje, letní klid za sucha | Souhlasí? |
+
+## Doplněno 5. 11. — po zkompletování zdroje pravdy
+
+| Údaj                              | Zdroj                      | Otázka pro klienta                                                                                                           |
+| --------------------------------- | -------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| Náročnost u všech 6 druhů         | návrh copywritera          | Ratingy náročnosti (Nízká / Střední / …) jsou návrhy. Potvrdíte je, nebo upravíte?                                           |
+| Vroubená – „substrát pro hrabání" | rozpor v pracovních datech | Pracovní data uváděla u vroubené potřebu hrabání, ale druh se „nezahrabává". V novém textu jsme hrabání vypustili. Souhlasí? |
