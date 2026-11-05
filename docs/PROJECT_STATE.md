@@ -43,6 +43,7 @@ Claude Code (včetně dokumentace sprintu na pokyn). Design policy je závazný 
 - 2026-11-04: **Sprint 3 uzavřen.** PR #4 mergnut. Všechny stránky z navigace a patičky existují. Průvodce chovem: rozcestník + 13 article skeletonů. Obsah se ladí průběžně.
 - 2026-11-05: **Sprint 4 nasazen.** PR #9 mergnut. Galerie `/galerie/` s responzivní mřížkou, 3 kategoriemi (Želvy · Terária · Zahrada), 121 fotkami hotlinkovanými ze zelvycr.cz. TASK-024 čeká na ověření Pavlem.
 - 2026-11-04: **Repo je veřejné** — zadání (interní klientský dokument) se proto do repa nevkládá; tasky nesou potřebný obsah v sobě. Doporučeno zvážit přepnutí na privátní.
+- 2026-11-05: **Hosting:** preview zůstává na GitHub Pages; **před finálním nasazením přesun na Vedos** (Apache `.htaccess` kvůli 301 přesměrováním, co-location s doménou a starým webem). Zaneseno jako TASK-047.
 
 ## Otevřené otázky / TODO konzistence
 
