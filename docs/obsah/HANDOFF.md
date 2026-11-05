@@ -92,3 +92,25 @@ a kloubnaté). **V druzích ani článcích už není žádný `[DOPLNIT]`** –
 
 Kontrola faktů je nově rozdělená na **A-potvrdit.md** (dohledáno, klient potvrdí) a
 **B-dodat.md** (nevíme, klient dodá). Soubory `druhy.md` a `clanky.md` nahrazeny.
+
+---
+
+## Jak zacházet se značkami při implementaci (povinné)
+
+Značky `[KE KONTROLE KLIENTEM: …]` a `[DOPLNIT: …]` jsou **redakční poznámky, ne text na web.**
+Nikdy je nerenderuj na stránku. Konkrétně:
+
+- **`[KE KONTROLE KLIENTEM]`** — text kolem značky je publikovatelný (prototyp je `noindex`, slouží
+  k revizi). Implementuj **text, ale hranatou závorku se značkou zahoď.** Provizornost drž přes
+  `stav: ke-kontrole` ve frontmatteru a případně HTML komentář u bloku, **ne viditelně v textu.**
+  - Příklad: `…dožívá se 60–70 let [KE KONTROLE KLIENTEM: …]` → na web jde jen `…dožívá se 60–70 let.`
+- **Celořádkové bannery** u pardálí a kloubnaté (`> **[KE KONTROLE KLIENTEM]** Celý text …`) jsou
+  celé poznámka — ten řádek **nepublikuj vůbec**, zbytek textu druhu ano.
+- **`[DOPLNIT: …]`** (co opravdu nevíme — termíny burz, rozvozu) → použij **náhradní text prázdného
+  stavu** z `navrhy-uprav.md` bodu E2, nikdy ne doslovnou závorku.
+
+**Brána před hotovo:** v `dist/` se nesmí objevit žádná z těchto značek. Ověř:
+
+```bash
+grep -rn "KE KONTROLE\|DOPLNIT" dist/ && echo "CHYBA: značka v buildu" || echo "OK: čisté"
+```
