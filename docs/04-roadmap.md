@@ -7,35 +7,30 @@ _Poslední aktualizace: 2026-11-04 (Sprinty 1–3 ✅ hotové)_
 Roadmapa říká **co a proč**, backlog **jak**. Tenhle web je dočasný prototyp; konečné
 řešení vzniká souběžně na Shoptetu.
 
-## 🟢 Now — Sprint 4: Galerie (technická kostra)
+## 🟢 Now — Souběžně: obsah (Sprint 5) + testovací brána (Sprint 6)
 
-- **Sprinty 1–3 hotové a ověřené na produkci.** Stojí design systém (varianta B) a všechny
-  stránky z navigace i patičky: úvod, 6 druhů, Startovací sady, Příslušenství, Terária na
-  míru, Jak nakoupit, O nás, Kontakt, Reklamace a garance, Ochrana osobních údajů, Průvodce
-  chovem + 13 skeletonů článků. Obsah je zatím kostrový/placeholderový.
-- **Sprint 4 — Galerie jako technická kostra.** Data-driven mřížka s kategoriemi, zvětšením
-  a lazy loadingem; finální fotky se jen „naládují" do dat. _Proč teď:_ je to jediný
-  zbývající čistě technický kousek, který **nezávisí na obsahu** a běží paralelně s jeho
-  přípravou.
+- **Sprinty 1–4 hotové.** Design systém (varianta B), všechny stránky z navigace i patičky
+  a data-driven galerie (Sprint 4). Obsah je zatím kostrový/placeholderový.
+- **Sprint 5 — Dotažení textového obsahu (běží).** Copywriter dodal finální texty do
+  `docs/obsah/`; Claude Code je propisuje do `src/` (13 článků, detail zelenavé, úpravy
+  z revize). Fakta čekající na chovatele zůstávají placeholdery.
+- **Sprint 6 — Testovací brána (aktuální infra).** Vícevrstvá CI: rychlá brána vždy,
+  strukturální testy (e2e, 360 px, přístupnost) přes path filtr, agregační `gate` job.
+  _Proč teď:_ je nezávislá na obsahu a chrání veškerou práci obsahových sprintů.
 
-## 🟡 Next — Obsahové sprinty (blokováno obsahem od Pavla)
+## 🟡 Next — Grafický obsah (blokováno fotkami od Pavla)
 
-- **Sprint 5 — Dotažení textového obsahu.** Finální texty všech stránek a 13 článků
-  průvodce, doplnění `[DOPLNIT]` míst (např. detail zelenavé). _Proč první z obsahu:_ text je
-  páteř webu, graficky i technicky se pak dolaďuje na hotových textech.
-- **Sprint 6 — Dotažení grafického obsahu.** Reálné fotky: hero, karty druhů, sady, výběr
+- **Sprint 7 — Dotažení grafického obsahu.** Reálné fotky: hero, karty druhů, sady, výběr
   40–60 fotek do galerie a fotopipeline (stažení, optimalizace na WebP, self-host místo
-  hotlinků). _Proč druhé:_ obraz sedá na hotový text a layout.
-
-_Oba sprinty jsou blokované, dokud Pavel nedodá obsah (texty, resp. fotky / přístup k FTP
-starého webu — otevřený bod S4)._
+  hotlinků). _Blokováno, dokud Pavel nedodá fotky / přístup k FTP starého webu (bod S4)._
 
 ## 🔵 Later — Nasazovací sprint (poslední před přepnutím domény)
 
-- **Sprint 7 — Připravenost ke spuštění.** Přesměrování 17 starých `.html` adres + kotvy
+- **Sprint 8 — Připravenost ke spuštění.** Přesměrování 17 starých `.html` adres + kotvy
   `#6_x`, analytika bez cookies s událostí `click_tel`, technické SEO (sitemap, kanonické
-  adresy, Open Graph, případně JSON-LD). _Proč až nakonec:_ přesměrování a analytika se
-  vážou na ostrou doménu, SEO má smysl až na hotovém obsahu a po zrušení `noindex`.
+  adresy, Open Graph, případně JSON-LD) a **těžké testy (Lighthouse/CWV, vizuální regrese)**
+  jako preflight. _Proč až nakonec:_ přesměrování a analytika se vážou na ostrou doménu, SEO
+  a výkon mají smysl až na hotovém obsahu a po zrušení `noindex`.
 - **Předání obsahu na Shoptet** — texty a HTML bloky jako podklad pro konečný web.
 
 ## ❌ Záměrně nezahrnuto (v prototypu)
