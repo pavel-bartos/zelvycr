@@ -361,15 +361,14 @@ chovatele jsou vědomě ponechaná jako placeholdery — nedolaďovat je v tomhl
 
 ## Backlog (Upcoming)
 
-| ID       | Task                                                                                                             | Size | Priority | Status |
-| -------- | ---------------------------------------------------------------------------------------------------------------- | ---- | -------- | ------ |
-| TASK-018 | Přesměrování 17 starých `.html` adres + kotvy `#6_x` (3.3)                                                       | M    | High     | ⬜     |
-| TASK-019 | SEO: sitemap, kanonické adresy, Open Graph, JSON-LD (8.3)                                                        | M    | Medium   | ⬜     |
-| TASK-031 | GTM kontejner + cookie consent (Consent Mode v2, základ) — plán Sprint 9                                         | M    | High     | ⬜     |
-| TASK-032 | GA4 + Google Ads + Meta Pixel přes GTM (základní, consent-gated, bez custom eventů) — plán Sprint 9              | M    | High     | ⬜     |
-| TASK-033 | Ověření měřicího sprintu (GTM Preview, consent chování) — plán Sprint 9                                          | S    | High     | ⬜     |
-| TASK-008 | Fotopipeline: self-hostované WebP obrázky místo hotlinků na zelvycr.cz                                           | M    | Medium   | ⏸️     |
-| TASK-022 | Doplnit `[DOPLNIT]` na detailu zelenavé: náročnost, text „O druhu", věta u T. h. boettgeri (podklady dodá Pavel) | S    | Medium   | ⬜     |
+| ID       | Task                                                                                                | Size | Priority | Status |
+| -------- | --------------------------------------------------------------------------------------------------- | ---- | -------- | ------ |
+| TASK-018 | Přesměrování 17 starých `.html` adres + kotvy `#6_x` (3.3)                                          | M    | High     | ⬜     |
+| TASK-019 | SEO: sitemap, kanonické adresy, Open Graph, JSON-LD (8.3)                                           | M    | Medium   | ⬜     |
+| TASK-031 | GTM kontejner + cookie consent (Consent Mode v2, základ) — plán Sprint 9                            | M    | High     | ⬜     |
+| TASK-032 | GA4 + Google Ads + Meta Pixel přes GTM (základní, consent-gated, bez custom eventů) — plán Sprint 9 | M    | High     | ⬜     |
+| TASK-033 | Ověření měřicího sprintu (GTM Preview, consent chování) — plán Sprint 9                             | S    | High     | ⬜     |
+| TASK-008 | Fotopipeline: self-hostované WebP obrázky místo hotlinků na zelvycr.cz                              | M    | Medium   | ⏸️     |
 
 ### TASK-008: Fotopipeline — self-hostované optimalizované obrázky
 
