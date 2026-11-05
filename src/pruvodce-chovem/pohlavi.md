@@ -1,37 +1,27 @@
 ---
-title: Jak poznat pohlaví želvy
+title: Pohlaví
 seoTitle: Jak poznat pohlaví želvy – samec, nebo samice
-description: Jak rozeznat samce a samici suchozemské želvy. Praktický návod z chovu – co funguje a od kdy je určení spolehlivé.
+description: Jak rozlišit samce a samici u suchozemské želvy. Hlavní vodítko je délka ocasu – a u mláďat to zatím nejde.
 permalink: /pruvodce-chovem/pohlavi/
-skupinaKicker: Než si želvu pořídíte
-perex: Samec nebo samice? Na první pohled to nepoznáte. Ukážeme, které znaky jsou spolehlivé a od jaké velikosti.
-casCteni: 4 min
+skupinaKicker: Rok se želvou
+perex: Samce od samice poznáte hlavně podle ocasu. U mláďat to ale ještě možné není — vysvětlíme proč.
+casCteni: 3 min
 vKostce: |
   <ul>
-    <li>Spolehlivé určení pohlaví je možné až od 7–8 cm délky krunýře.</li>
-    <li>Samec má delší ocas a prohnutý plastron (spodní krunýř).</li>
-    <li>Samice jsou obvykle větší, s plochým plastronem.</li>
+    <li>Hlavní vodítko: samci mají výrazně delší ocas než samice.</li>
+    <li>U mláďat pohlaví spolehlivě určit nelze.</li>
+    <li>Jistě ho poznáte až u staršího zvířete.</li>
   </ul>
 ---
 
-Pohlaví suchozemské želvy nelze spolehlivě určit u malých zvířat. U novorozených mláďat a drobných jedinců pod 7 cm délky krunýře se pokoušet o určení nemá cenu — znaky, které pohlaví prozrazují, se projeví až s věkem.
+Suchozemské želvy nejsou oboupohlavní — rozlišujeme samce a samice. Základním vodítkem je **velikost ocasu**: samci ho mají výrazně delší než samice, a platí to napříč druhy.
 
-## Jak poznat dospělého samce
+Z toho plyne důležitá věc: **u mláďat pohlaví určit nejde.** Zkušený chovatel ho u některých jedinců dokáže odhadnout už v mládí, ale je to opravdu jen odhad. Jistotu máte až u staršího zvířete.
 
-Nejspolehlivější znaky:
+U některých druhů pomáhají i další znaky — třeba tvar spodní části krunýře (plastronu) u [želvy vroubené]({{ '/zelva-vroubena/' | url }}). I ty jsou ale znatelné až s věkem.
 
-- **Delší a silnější ocas** — samec ho podkládá dozadu a nese složený na bok; samice má krátký a tenký ocas.
-- **Prohnutý (konkávní) plastron** — spodní krunýř samce je mírně vydutý dovnitř. U samice je rovný nebo lehce vypouklý.
-- **Poloha kloaky** (řiť) — u samce je dál od těla, blíže ke konci ocasu.
+## Chcete pomoct s určením?
 
-Ostatní znaky, jako tvar hlavy nebo zbarvení, jsou nespolehlivé a liší se druh od druhu.
+Nejste si jistí pohlavím své želvy? Zavolejte nebo se zastavte — rádi se podíváme.
 
-## Co samci dělají
-
-Samci v aktivní sezóně pronásledují samice, dorážejí na ně a soupeří s ostatními samci. Vidíte-li toto chování, je určení jednoduché. V jednom výběhu může být více samic, ale vždy jen jeden samec — více samců se vzájemně poraní.
-
-<!-- POZN. CHOVATELE: Přidat typické fotky samce vs. samice ze zelenavé nebo vroubené? -->
-
-## Chcete vědět víc o druzích?
-
-Každý druh má trochu jiné znaky. Pokud si nejste jistí, podívejte se na detail konkrétního druhu — třeba [želvy vroubené]({{ '/druhy/zelva-vroubena/' | url }}) — nebo zavolejte.
+<!-- Fotky: /foto/pohlavi/ — 5 fotek, srovnání samec/samice po druzích, s popisky „samec" / „samice" (zadání 4.9). -->

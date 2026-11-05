@@ -1,34 +1,33 @@
 ---
 title: Želví kuriozity
 seoTitle: Želví kuriozity z našeho chovu
-description: Zajímavosti a kuriozity ze 45 let chovu suchozemských želv. Co vás možná překvapí.
+description: Zajímavosti z desítek let chovu želv – dvojčata, albín, neobvyklé nálezy. Některé snímky jsou citlivé a zobrazí se na vyžádání.
 permalink: /pruvodce-chovem/zelvi-kuriozity/
-skupinaKicker: Rok se želvou
-perex: Za 45 let chovu jsme viděli leccos. Tady je výběr věcí, které nás překvapily nebo pobavily – a o které se rádi dělíme.
-casCteni: 4 min
+skupinaKicker: Papíry a zajímavosti
+perex: Za desítky let chovu jsme viděli leccos neobvyklého. Pár zajímavostí jsme sem dali — s respektem ke zvířatům.
+casCteni: 3 min
 ---
 
-Každá želva je jiná. Za ty roky jsme zažili situace, které bychom sami nevymysleli. Tohle jsou naše oblíbené.
+Za desítky let chovu projdou rukama tisíce vajec a mláďat — a občas se objeví něco neobvyklého. Nejsou to senzace, spíš připomínka, jak pestrá příroda je. Pár takových momentů jsme zachytili:
 
-## Každá miluje jiné jídlo
+- jednovaječná i dvojvaječná dvojčata — některá plně vyvinutá, jiná ne,
+- první trojčata za desítky let chovu,
+- albín,
+- velký močový kámen (urát), který želva vyloučila po koupeli,
+- nezatažený žloutek u čerstvě vylíhnutého mláděte.
 
-Obecné doporučení říká: pampelišky a trávy ano, ovoce skoro vůbec. V praxi to vypadá tak, že jedna naše samice jí výhradně kopřivy a druhou při kopřivách ani neuhájíte. Pár zvířat v celé historii chovu granule odmítlo celý život. A jeden samec obešel misku s pampeliškami, aby sežral jedinou jahodu na druhém konci výběhu.
+## Citlivé snímky
 
-## Paměť na místa je překvapivá
+Některé nálezy — vývojové vady a nevyvinutá mláďata — ukazujeme jen návštěvníkům, kteří o to stojí. Fotky jsou proto skryté a zobrazí se až po rozbalení. Přistupujeme k nim věcně a s úctou ke zvířatům.
 
-Přesunete-li misku s jídlem na jiné místo, mnohé želvy se vrátí na původní místo a hledají tam i druhý den. Misku nakonec najdou, ale čas strávený na „starém místě" je nezanedbatelný. Zvykají si pozvolna, ale zvyknou si.
+<details>
+<summary>Zobrazit citlivé snímky</summary>
+<!-- Fotky citlivých nálezů sem doplní Pavel/Jiří: /foto/kuriozity/ -->
+</details>
 
-## Zvuky, které nevíte, odkud jdou
+## Chov je každý den jiný
 
-Pářící samec vydává zvuky podobné skřípění nebo tlumenému hvízdání. Poprvé je uslyšíte a budete hledat, co se v zahradě pokazilo. Zvuky jsou výrazné a s jejich zdrojem je potřeba se smířit.
+Právě tyhle drobnosti dělají chov tím, čím je. Víc o našem chovu a jeho zázemí najdete na stránce [O nás]({{ '/o-nas/' | url }}).
 
-## Nejstarší u nás
-
-Nejstarší zvíře, které jsme chovali, přišlo k nám jako dospělé, s neznámou historií. Za dobu, co bylo u nás, zestárlo o bezpečně odhadnutelná dvě desetiletí. Přesný věk jsme nikdy nevěděli. O želvách se říká, že přežijí svého majitele; to není jen fráze.
-
-<!-- POZN. CHOVATELE: Přidat konkrétní příhodu nebo kuriozitu od Jiřího, která se hodí sem a nebyla dosud zmíněna. -->
-<!-- POZN. CHOVATELE: Případně přidat foto kuriozity ze sbírky. -->
-
-## Chcete vědět víc o nás?
-
-Tohle je jen zlomek toho, co víme. Více o historii a přístupu najdete [na naší stránce O nás]({{ '/o-nas/' | url }}).
+<!-- Citlivé fotky (deformace, nevyvinutá mláďata) povinně za rozklikávací „Zobrazit" (zadání 4.9, 7.1). Cesty: /foto/kuriozity/. -->
+<!-- Sjednoceno: „za 30 let chovu" z původního webu → „za desítky let chovu" (praxe = 45 let). -->

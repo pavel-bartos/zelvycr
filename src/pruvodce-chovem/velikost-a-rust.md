@@ -1,39 +1,39 @@
 ---
-title: Jak rychle roste želva
+title: Velikost a růst
 seoTitle: Jak rychle roste želva – tabulka velikosti neexistuje
-description: Jak rychle roste suchozemská želva a co ovlivňuje její velikost. Tabulky velikosti jsou nespolehlivé – vysvětlujeme proč.
+description: Jak velká má želva v daném věku být? Žádná univerzální tabulka neexistuje – rozhoduje zdraví, ne čísla. Vysvětlíme proč.
 permalink: /pruvodce-chovem/velikost-a-rust/
-skupinaKicker: Než si želvu pořídíte
-perex: Tabulky růstu želv jsou oblíbené, ale nespolehlivé. Co skutečně rozhoduje o tom, jak rychle vaše želva poroste?
-casCteni: 5 min
+skupinaKicker: Rok se želvou
+perex: 'Jak velká má želva v daném věku být? Odpověď zní: záleží. Univerzální tabulka velikosti neexistuje a nejdůležitější je zdraví.'
+casCteni: 4 min
 vKostce: |
   <ul>
-    <li>Rychlost růstu závisí hlavně na podmínkách, ne na věku.</li>
-    <li>Správné světlo, teplo, vlhkost a krmení jsou klíč k rovnoměrnému krunýři.</li>
-    <li>Přerůstání je problém i zaostávání — obojí bývá chybou v péči.</li>
-    <li>Přesný věk u zakoupené želvy zjistíte jen z dokladů, ne z velikosti.</li>
+    <li>Žádná univerzální tabulka stáří × velikost × váha neexistuje.</li>
+    <li>Velikost ovlivňuje druh, pohlaví, velikost vajíčka, podmínky i strava.</li>
+    <li>Venku roste želva jen zhruba tři měsíce v roce — „půl roku neroste" je normální.</li>
+    <li>Důležitý není rozměr, ale zdravotní stav.</li>
   </ul>
 ---
 
-„Jak velká bude má želva za rok?" Tahle otázka nemá jednoduchou odpověď — a to ani přibližnou. Růst suchozemských želv závisí na podmínkách víc než na věku. Dvě želvy stejného stáří mohou být rozdílně velké, přitom obě zdravé a spokojeně žijí.
+Kolik má moje želva v tomhle věku měřit? Je to nevděčná otázka a kolem ní spousta mýtů. Pravda je prostá: **velikost želvy je nesmírně individuální.** Ovlivňuje ji druh, poddruh, pohlaví, velikost vajíčka, podmínky pro růst, strava i zdraví. Želva stejného druhu může být po narození větší než zdravá roční; pětiletá může být menší než dvouletá.
 
-## Co rozhoduje o růstu
+**Žádný žebříček „správné" velikosti podle stáří a váhy neexistuje.** Ve venkovních podmínkách roste želva jen zhruba tři měsíce v roce — takže „půl roku mi želva neroste" není žádný problém. Důležitý je zdravotní stav, ne číslo na pravítku.
 
-Tři věci dohromady: [světlo a teplo]({{ '/pruvodce-chovem/svetlo-a-teplo/' | url }}), [voda a vlhkost]({{ '/pruvodce-chovem/voda-a-vlhkost/' | url }}) a [krmení]({{ '/pruvodce-chovem/krmeni/' | url }}). Pokud některá z nich chybí nebo je nedostatečná, želva buď roste příliš pomalu, nebo přerůstá do nepravidelného pyramidovitého krunýře — to je výsledek nadměrného krmení a nedostatku vlhkosti v raném věku.
+## Kdy zpozornět
 
-## Přerůstání i zaostávání je problém
-
-Ani jedno není normální stav. Rychlý nezdravý růst dělá z krunýře „bambulku" — jednotlivé štítky se vyzdvihují do pyramid místo aby rostly do plochy. Tento stav je nevratný. Pomalý růst zase signalizuje, že něco chybí.
+To neznamená růst nehlídat. Pokud zaznamenáte nečekané změny nebo želva prakticky neroste, zkuste nejdřív vylepšit její prostředí — [teplo a UVB]({{ '/pruvodce-chovem/svetlo-a-teplo/' | url }}), [vlhkost]({{ '/pruvodce-chovem/voda-a-vlhkost/' | url }}), [stravu]({{ '/pruvodce-chovem/krmeni/' | url }}). A poraďte se s chovatelem, od kterého želvu máte — ten zná podmínky, ze kterých vzešla.
 
 <aside class="box-chov">
 <div class="kick">Z našeho chovu</div>
-<p>Měli jsme želvu, které se v určitém věku zastavil růst. Čtyři roky žila, ale nepřibývala. Pak jsme jí změnili podmínky — víc vlhkosti, jiné krmení — a začala dorůstat. Přesnou příčinu jsme nikdy neodhalili. Dnes víme, že taková „plateau" jsou možná u každého druhu.</p>
+<p>Jedné naší želvě se růst na několik let prakticky zastavil, aniž jevila známky nemoci — žrala, lezla, byla tvrdá. Po letech začala znovu růst. Jediné, co jsme vypozorovali, byl urát (zvápenatělá kulička močoviny), který předtím vyloučila. Nejspíš jí blokoval růst — a nakonec si s ním poradila sama, jak to u želv bývá.</p>
 </aside>
 
-## Věk neodhadnete z velikosti
+Setkali jsme se i s rok starou želvou zelenavou, která měřila neuvěřitelných 14,5 cm — takhle rychlý růst je ale příliš velký nápor na zdraví a rozhodně ho nedoporučujeme.
 
-Věk zakoupené želvy nelze spolehlivě určit z velikosti ani z krunýře. Některé druhy rostou celý život, jen stále pomaleji; prsten na štítcích vypovídá o podmínkách, ne přesně o věku. Přesný věk zjistíte jen z dokladů. Pokud prodejce tvrdí věk bez dokladů, berte to jako odhad.
+## Mluvíme z praxe
 
-## Máte pochybnosti o kondici želvy?
+Odchovali jsme přes sto želv do dospělosti a na zahradě nám běhají celé želví generace. Tohle nejsou dojmy, ale co jsme za desítky let odpozorovali.
 
-Chcete poradit, jestli vaše želva roste tak, jak má? Zavolejte — porovnáme vaše podmínky s tím, co funguje u nás.
+## Nejste si jistí růstem?
+
+Zdá se vám, že želva neprospívá? Zavolejte — projdeme spolu, jestli nejde něco v prostředí zlepšit.

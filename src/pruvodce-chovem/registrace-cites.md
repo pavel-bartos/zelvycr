@@ -1,41 +1,40 @@
 ---
-title: Registrace CITES
+title: Registrace CITES krok za krokem
 seoTitle: Registrace želvy CITES – postup, lhůta, zdarma
-description: Jak zaregistrovat suchozemskou želvu na CITES – postup, lhůty, dokumenty. Registrace je zdarma a povinná pro vybrané druhy.
+description: Jak zaregistrovat suchozemskou želvu podle CITES. Lhůta 30 dnů, registrace zdarma, předvyplněný formulář od nás. Postup krok za krokem.
 permalink: /pruvodce-chovem/registrace-cites/
-skupinaKicker: Než si želvu pořídíte
-perex: Registrace želvy CITES je jednoduchá a zdarma. Přesto ji spousta chovatelů nechá být – a pak mají problém při prodeji nebo výjezdu do zahraničí.
+skupinaKicker: Papíry a zajímavosti
+perex: Registrace CITES zní složitě, ale je jednoduchá a zdarma. Dostanete od nás doklady i předvyplněný formulář a zvládnete ji poštou.
 casCteni: 5 min
 vKostce: |
   <ul>
-    <li>Registrace je povinná pro chráněné druhy – hlavně rody Testudo a Geochelone.</li>
-    <li>Po nabytí máte 30 dní na podání žádosti o registraci.</li>
-    <li>Registrace je zdarma na příslušné krajské pobočce ČIŽP.</li>
-    <li>Bez registrace nelze želvu legálně prodat ani cestovat s ní do zahraničí.</li>
+    <li>Týká se želvy zelenavé, vroubené a žlutohnědé; stepní, pardálí a kloubnatá registraci nevyžadují.</li>
+    <li>Registrace je <strong>zdarma</strong> a máte na ni <strong>30 dnů</strong> od koupě.</li>
+    <li>Ke každé želvě dostanete doklady i předvyplněný formulář.</li>
+    <li>Čipovanou želvu registrujete jen jednou a máte od úřadů pokoj.</li>
   </ul>
 ---
 
-Registrace CITES je administrativní záležitost, která trvá chvilku, ale při prodeji nebo výjezdu do zahraničí rozhoduje o tom, jestli s želvou vůbec smíte nakládat. Proto ji nepodceňujte.
+CITES je mezinárodní úmluva na ochranu ohrožených druhů. Pro vás jako nového majitele z ní plyne jediná praktická povinnost: želvu, která jí podléhá, **zaregistrovat do 30 dnů od koupě** na krajském úřadě. Registrace je **bezplatná.** U nás to za vás co nejvíc připravíme.
 
-## Které druhy se registrují
+## Kterých želv se to týká
 
-[DOPLNIT: upřesnit, zda Testudo patří do přílohy A nebo B CITES — ověřit aktuální legislativu]
+Povinnou registraci mají **želva zelenavá, vroubená a žlutohnědá** (v EU příloha A). **Želva stepní, pardálí a kloubnatá** registraci nevyžadují (příloha B). [DOPLNIT: potvrdí klient — otevřený bod 13 zadání.]
 
-Registraci podléhají druhy chráněné předpisy CITES a nařízením EU o obchodu s volně žijícími živočichy. U suchozemských želv se to týká převážně rodu Testudo (zelenavá, vroubená, stepní, Hermanniho, maurská) a dalších.
+Čipovaná želva se registruje jednou a dál už s úřady nemáte starosti. Nečipovanou je potřeba čas od času doložit fotkou spodní části krunýře (plastronu), protože kresba se mění.
 
-## Jak registrovat
+## Postup krok za krokem
 
-1. **Do 30 dnů** od nabytí (nákupu, získání mláděte apod.) podejte žádost na **krajské pracovišti ČIŽP** (Česká inspekce životního prostředí).
-2. K žádosti přiložte doklady o původu — kupní smlouvu nebo rodný list mláděte od chovatele.
-3. Registrace je **zdarma**. Dostanete registrační list, který patří ke zvířeti.
+1. **Při koupi dostanete doklady CITES** a k nim předvyplněný formulář pro převod exempláře s adresou vašeho krajského úřadu.
+2. **Vyplníte formulář** — údaje o novém držiteli jste vy; údaje o dosavadním držiteli i registrační čísla najdete na přední straně žlutého listu; datum přenechání je datum prodeje.
+3. **Odešlete na úřad** originály všech dokladů CITES a vyplněný formulář. Doporučujeme udělat si předtím kopie pro případ ztráty.
+4. **Úřad vám po registraci doklady pošle poštou zpět.**
 
-<!-- POZN. CHOVATELE: Přidat odkaz na formulář ČIŽP nebo na stránku s kontakty na krajská pracoviště? -->
-<!-- POZN. CHOVATELE: Doplnit, zda rodné listy, které vydáváme my, splňují podmínky ČIŽP, nebo je třeba jiný doklad. -->
+Po úhynu zvířete se želva z evidence zase odhlásí.
 
-## Co hrozí bez registrace
+## Pomůžeme vám s tím
 
-Bez platné registrace nelze suchozemskou chráněnou želvu legálně prodat, darovat ani s ní vyjet do jiné země EU. Při kontrole může být zvíře zabaveno.
+Nevíte si s formulářem rady? Zavolejte — provedeme vás tím. S doklady od nás je to otázka pár minut.
 
-## Pomůžeme vám s doklady
-
-Při nákupu od nás dostanete veškeré doklady potřebné pro registraci. Zavolejte, pokud si nejste jistí, co přesně potřebujete k vaší želvě.
+<!-- Fotky dokladů jako galerie s popisky (žlutý papír přední/zadní, registrační list přední/zadní, příloha s fotkou); vzor vyplněného formuláře ke stažení jako PDF. Cesty: /foto/foto15–19.jpg, /foto/citesDoc.png (zadání 4.9). -->
+<!-- Vypuštěn údaj „175 smluvních stran" ze starého webu — neověřený, dle zadání 4.9. -->
