@@ -138,3 +138,25 @@ rozměrů, 30–35 cm"). Tvrzení je pravděpodobně pravdivé, ale je nové �
 Startovací sady, Příslušenství, Terária na míru, Reklamace, Ochrana osobních údajů, 404 a
 rozcestník Průvodce chovem jsou napsané dobře a v souladu s příručkou. Drobné typografické
 nálezy (pevné mezery) vyřeší korekturní průchod nad celým webem na konci, ne tahle revize.
+
+---
+
+## Doplněno 5. 11. — startovací sady, O nás
+
+### Startovací sady (`src/startovaci-sady.njk`)
+
+| Místo                         | Teď                            | Návrh                                                 |
+| ----------------------------- | ------------------------------ | ----------------------------------------------------- |
+| Podtitulek vybaveného terária | Pro toho, kdo **już** želvu má | Pro toho, kdo **už** želvu má (oprava polského „już") |
+| Nadpis hlavní sady (`<h3>`)   | Startovací sada                | **Startovací sada i s vaší první želvou**             |
+
+### O nás (`src/o-nas.njk`) — připomínka
+
+Na živém webu pořád svítí **`[DOPLNIT: ověřit]`** u čísla odchovaných želv (ř. 45) a
+`[DOPLNIT – …]` v alt textech (ř. 21, 59, 70). Řeší to už body **D** a **E1** výše —
+při propisu (TASK-025) je nutné je vyřešit, ať se závorky nedostanou na web:
+
+- **Číslo:** použít **„více než 100"** (čitelně; je to vlastní údaj chovatele ze starého
+  webu, ne vymyšlené číslo). Přesný aktuální počet potvrdí klient — viz
+  `kontrola-faktu/B-dodat.md`. Závorku `[DOPLNIT: ověřit]` odstranit.
+- **Alt texty:** doplnit popisné znění z bodu E1.

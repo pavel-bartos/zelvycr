@@ -28,7 +28,7 @@ Kolik má moje želva v tomhle věku měřit? Je to nevděčná otázka a kole
 
 ## Kdy zpozornět
 
-To neznamená růst nehlídat. Pokud zaznamenáte nečekané změny nebo želva prakticky neroste, zkuste nejdřív vylepšit její prostředí — [teplo a UVB](/pruvodce-chovem/svetlo-a-teplo/), [vlhkost](/pruvodce-chovem/voda-a-vlhkost/), [stravu](/pruvodce-chovem/krmeni/). A poraďte se s chovatelem, od kterého želvu máte — ten zná podmínky, ze kterých vzešla.
+To neznamená růst nehlídat. Pokud zaznamenáte nečekané změny nebo želva prakticky neroste, zkuste nejdřív vylepšit její prostředí a [vybavení](/prislusenstvi/) — [teplo a UVB](/pruvodce-chovem/svetlo-a-teplo/), [vlhkost](/pruvodce-chovem/voda-a-vlhkost/), [stravu](/pruvodce-chovem/krmeni/). A poraďte se s chovatelem, od kterého želvu máte — ten zná podmínky, ze kterých vzešla.
 
 ::: z-naseho-chovu
 Jedné naší želvě se růst na několik let prakticky zastavil, aniž jevila známky nemoci — žrala, lezla, byla tvrdá. Po letech začala znovu růst. Jediné, co jsme vypozorovali, byl urát (zvápenatělá kulička močoviny), který předtím vyloučila. Nejspíš jí blokoval růst — a nakonec si s ním poradila sama, jak to u želv bývá.
