@@ -365,18 +365,20 @@ Dev připomínky z revize běžící produkce. Část je nezávislá (dá se hne
 rozhodnutí designera** (implementuje se, až designer dodá vizuál do `docs/design-policy.md`).
 Souběžně běží copywriterské a designérské připomínky (mimo repo → prompty).
 
-| ID       | Task                                                                          | Size | Priority | Status |
-| -------- | ----------------------------------------------------------------------------- | ---- | -------- | ------ |
-| TASK-034 | Navigace: Galerie do hlavního menu + v patičce přesun do sekce Informace      | S    | High     | ⬜     |
-| TASK-035 | Opravit duplicitní žluté CTA boxy — na stránce vždy jen jeden                 | S    | High     | ⬜     |
-| TASK-036 | Responzivní menu: hamburger < ~1000 px (CSS-only) + CTA doprava při zalomení  | M    | High     | ⬜     |
-| TASK-037 | Responzivní patička: mobil zmenšit, odkazy do rozklikávacích sekcí            | M    | Medium   | ⬜     |
-| TASK-038 | O nás: opravit „šišaté" fotky (poměr/object-fit) + náhled galerie s proklikem | M    | Medium   | ⬜     |
-| TASK-039 | Hero header homepage — nové řešení (pattern/blur) ⟵ čeká na designera         | S    | Medium   | ⬜     |
-| TASK-040 | Tabulka /zelvy-na-prodej/ — scroll affordance ⟵ čeká na designera             | S    | Medium   | ⬜     |
-| TASK-041 | Práce s fotkami v průvodci (výpis + detail článku) ⟵ čeká na designera        | M    | Medium   | ⬜     |
-| TASK-042 | O nás — velikost/umístění hlavní fotky ⟵ čeká na designera                    | S    | Low      | ⬜     |
-| TASK-043 | Ověření Revize v1 (Pavel, produkce)                                           | S    | High     | ⬜     |
+| ID       | Task                                                                             | Size | Priority | Status |
+| -------- | -------------------------------------------------------------------------------- | ---- | -------- | ------ |
+| TASK-034 | Navigace: Galerie do hlavního menu + v patičce přesun do sekce Informace         | S    | High     | ⬜     |
+| TASK-035 | Opravit duplicitní žluté CTA boxy — na stránce vždy jen jeden                    | S    | High     | ⬜     |
+| TASK-036 | Responzivní menu: hamburger < ~1000 px (CSS-only) + CTA doprava při zalomení     | M    | High     | ⬜     |
+| TASK-037 | Responzivní patička: mobil zmenšit, odkazy do rozklikávacích sekcí               | M    | Medium   | ⬜     |
+| TASK-038 | O nás: opravit „šišaté" fotky (poměr/object-fit) + náhled galerie s proklikem    | M    | Medium   | ⬜     |
+| TASK-039 | Hero header homepage — nové řešení (pattern/blur) ⟵ čeká na designera            | S    | Medium   | ⬜     |
+| TASK-040 | Tabulka /zelvy-na-prodej/ — scroll affordance ⟵ čeká na designera                | S    | Medium   | ⬜     |
+| TASK-041 | Práce s fotkami v průvodci (výpis + detail článku) ⟵ čeká na designera           | M    | Medium   | ⬜     |
+| TASK-042 | O nás — velikost/umístění hlavní fotky ⟵ čeká na designera                       | S    | Low      | ⬜     |
+| TASK-044 | Startovací sady — oprava textu (překlep „już"→„už" + přejmenování nadpisu)       | XS   | High     | ⬜     |
+| TASK-046 | Propsat poslední copywriterovy úpravy z `docs/obsah/` do `src/` (odkazy + O nás) | S    | High     | ⬜     |
+| TASK-043 | Ověření Revize v1 (Pavel, produkce)                                              | S    | High     | ⬜     |
 
 ---
 
@@ -508,6 +510,57 @@ Claude Code implementuje. (Deformaci řeší TASK-038.) Blokováno do dodání d
 
 ---
 
+### TASK-044: Startovací sady — oprava textu (překlep + přejmenování)
+
+**Size:** XS · **Status:** ⬜ · **Priority:** High
+**Goal:** Opravit překlep a přejmenovat hlavní sadu na stránce Startovací sady.
+**Acceptance criteria:**
+
+- [ ] Překlep „Pro toho, kdo już želvu má" → „Pro toho, kdo **už** želvu má" (polské „już" → „už").
+- [ ] Nadpis „Startovací sada" → „Startovací sada i s vaší první želvou".
+- [ ] Text je v dev-šabloně (`src/startovaci-sady.njk` — ověř umístění); brány zelené.
+      **Claude Code prompt:**
+
+> Na stránce Startovací sady oprav překlep „już" → „už" ve větě „Pro toho, kdo už želvu má"
+> a přejmenuj nadpis „Startovací sada" na „Startovací sada i s vaší první želvou". Jen tyto
+> dvě textové úpravy, nic víc.
+> **Notes:** Připomínka z revize; text je v dev-psané šabloně (ne v `docs/obsah/`), proto dev
+> task, ne copywriter.
+
+---
+
+### TASK-046: Propsat poslední copywriterovy úpravy z `docs/obsah/` do `src/`
+
+**Size:** S · **Status:** ⬜ · **Priority:** High
+**Goal:** Živý web (`src/`) obsahuje copywriterovy úpravy z `docs/obsah/` — interní odkazy
+v článcích a vyřešené `[DOPLNIT]` na O nás.
+**Acceptance criteria:**
+
+- [ ] Do 7 článků `src/pruvodce-chovem/<slug>.md` přenesen nově přidaný interní odkaz
+      z `docs/obsah/pruvodce/<slug>.md` (přes `url` filtr, přirozeně v textu): **chov-na-zahrade,
+      pohlavi, registrace-cites, utlum, velikost-a-rust, zelvi-kuriozity, zimovani**. (Zbylých
+      6 článků odkaz už mělo.)
+- [ ] O nás (`src/o-nas.njk`): `[DOPLNIT: ověřit]` u počtu odchovaných → **„více než 100"**
+      (vlastní údaj chovatele, ne vymyšlené); doplnit alt texty `[DOPLNIT – …]` dle
+      `docs/obsah/navrhy-uprav.md` (bod E1). **Žádná `[DOPLNIT]` závorka nesmí zůstat na webu.**
+- [ ] Startovací sady se tady NEřeší — to je TASK-044.
+- [ ] Odkazy přes `url` filtr; brány zelené.
+      **Claude Code prompt:**
+
+> Propsat poslední copywriterovy úpravy z `docs/obsah/` do `src/`:
+>
+> 1. Do 7 článků `src/pruvodce-chovem/{chov-na-zahrade,pohlavi,registrace-cites,utlum,
+velikost-a-rust,zelvi-kuriozity,zimovani}.md` přenes nově přidaný interní odkaz z
+>    `docs/obsah/pruvodce/<slug>.md` (porovnej docs/obsah vs src; odkaz přes `url` filtr,
+>    přirozeně ve větě).
+> 2. V `src/o-nas.njk` vyřeš `[DOPLNIT: ověřit]` u počtu odchovaných → „více než 100" a doplň
+>    alt texty podle `docs/obsah/navrhy-uprav.md` (bod E1). Žádná `[DOPLNIT]` závorka nesmí
+>    zůstat. Startovací sady neřeš (TASK-044). Ověř, že na webu nejsou žádné `[DOPLNIT]`.
+>    **Notes:** `docs/obsah/` je copywriterův zdroj — čti, needituj. Zdroj změn: commit `ac25a68`,
+>    sekce „Doplněno 5. 11." v `docs/obsah/navrhy-uprav.md`.
+
+---
+
 ### TASK-043: Ověření Revize v1
 
 **Size:** S · **Status:** ⬜ · **Priority:** High
@@ -519,6 +572,8 @@ Claude Code implementuje. (Deformaci řeší TASK-038.) Blokováno do dodání d
 - [ ] Pod ~1000 px je hamburger; při zalomení je CTA vpravo; na 360 px žádný posun.
 - [ ] Patička je na mobilu zmenšená s rozklikávacími sekcemi.
 - [ ] Fotky na O nás nejsou deformované; je tam náhled galerie s proklikem.
+- [ ] Startovací sady: žádný překlep „już"; nadpis zní „Startovací sada i s vaší první želvou".
+- [ ] Všech 13 článků průvodce odkazuje zpět na nabídku; na webu nejsou žádné `[DOPLNIT]` (vč. O nás).
 - [ ] (po dodání designu) hero header, scroll tabulky, foto-layout průvodce a foto na O nás sedí.
       **Notes:** Manuální task pro Pavla. Design-blokované body (039–042) se ověřují až po jejich dodání.
 
