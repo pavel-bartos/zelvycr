@@ -69,6 +69,13 @@ z varianty B. Nevymýšlej nové barvy; potřebuješ-li odstín navíc, přidej 
   --badge-dotaz-text: #45423a;
   --badge-neni-bg: #f6dcc4;
   --badge-neni-text: #7a3a0a;
+
+  /* revize 2026-11-05 (připomínky 1–4) — hero sklo + scroll affordance tabulky (viz §8) */
+  --hero-sklo-bg: rgb(251 250 246 / 0.85); /* --barva-papir, 85 % */
+  --hero-sklo-bg-zaloha: rgb(251 250 246 / 0.94); /* prohlížeč bez backdrop-filter */
+  --hero-sklo-filtr: blur(16px) saturate(1.15);
+  --tabulka-stin: rgb(28 27 23 / 0.16);
+  --tabulka-stin-sirka: 20px;
 }
 ```
 
@@ -162,11 +169,15 @@ centrovaný, krátký text + „Zobrazit akci →". Zobrazuje se jen v sezóně 
 
 ### 3.3 Hero
 
-Fotka přes celou šířku (výška ~680px desktop, na mobilu nižší) + **tmavý panel**
-`background: var(--barva-tma); color: var(--barva-papir);` (max-width ~660px, zarovnaný dolů).
-V panelu: kicker světle zelený (`Rodinný chov · 45 let`), H1 64px, perex, dvě CTA
-(jantarové „Vybrat želvu" + obrysové „Zavolat"). Fotka má `object-fit: cover` a placeholder
-podklad.
+> **Revize 2026-11-05 (§8, bod 1):** panel už **není plně tmavý**, ale světlé „papírové sklo"
+> (papír 85 % + `backdrop-filter`), text tmavý jako ve zbytku webu. Tlačítka: **jantarové
+> „Zavolat"** (s ikonou, `js-tel-hero`) + **tmavé `.btn--tma` „Vybrat želvu"** — jantar patří
+> jen „Zavolat" (§2.1). Starší znění níže (tmavý panel, jantarové „Vybrat želvu") je tím
+> nahrazené. Plný CSS v §8.
+
+Fotka přes celou šířku (výška ~680px desktop, na mobilu nižší) + panel (max-width ~660px,
+zarovnaný dolů). V panelu: kicker (`Rodinný chov · 45 let`), H1 64px, perex, dvě CTA. Fotka má
+`object-fit: cover` a placeholder podklad.
 
 ### 3.4 Lišta důvěry (stat bar)
 
@@ -176,6 +187,8 @@ podklad.
 15 zadání; drž „9", dokud klient nepotvrdí jinak.)
 
 ### 3.5 Karta druhu `.row`
+
+> **Revize 2026-11-05 (§8, bod 3):** varianta **karta článku ve výpisu rubriky** (název 24 px; kompaktní náhled 112×84 v úzkém sloupci přes container query) — viz §8.
 
 Vodorovná položka-odkaz: `display: flex; gap: 24px; padding: 24px 0;`
 `border-bottom: 1px solid var(--barva-linka);`. Vlevo čtvercová fotka 168×168 (`object-fit: cover`),
@@ -242,6 +255,8 @@ Tři stavy (vždy i text, nikdy jen barva — viz přístupnost):
 
 ### 3.13 Porovnávací tabulka
 
+> **Revize 2026-11-05 (§8, bod 2):** **scroll affordance** — nápověda „← Posuňte →", lepivý první sloupec, okrajový přechod (vše CSS, container query 61,25 rem) — viz §8.
+
 `table { border-collapse: collapse; width: 100%; min-width: 980px; }`. `th` vlevo, uppercase,
 14px, slabě, `border-bottom: 2px solid var(--barva-linka-silna)`. `td` hairline spodní linka,
 první sloupec tučně. **Na mobilu** se tabulka nesmí roztáhnout přes stránku — zabal ji do
@@ -283,6 +298,8 @@ Platí pro vše, co přidáváme (statický web stavíme celý, takže vše).
 ---
 
 ## 5. Přenositelnost do Shoptetu — závazné
+
+> **Revize 2026-11-05 (§8, bod 3):** pravidlo **„zobrazená šířka obrázku ≤ nativní šířka zdroje"**; fotky článků se čtou z front matter (jeden zdroj) — viz §8.
 
 Statický web je dočasný; jeho HTML bloky a CSS se přenesou do Shoptetu (zadání 8.4). Proto:
 
@@ -393,6 +410,8 @@ Příslušenství (`/prislusenstvi/`). Nový `tel:` odkaz `js-tel-tera`.
 
 ### 7.5 Sprint 3 — stránky důvěry a Průvodce chovem (TASK-013–016)
 
+> **Revize 2026-11-05 (§8, body 3–4):** layout **článku a rozcestníku Průvodce s fotkami** + **O nás** (grid 5/7, fotka výběhů, portréty 3:4 160 px, role mono) — viz §8.
+
 **Layout článku (`clanek.njk`):** Drobečky Úvod → Průvodce chovem → název článku, pak `.rule`
 s H1, perex (`clanek-perex`, 20 px, tlumeně), čas čtení (`clanek-meta`, 14 px, slabě). Pak
 `.box-v-kostce` (zelená levá linka 4 px, olivový kicker „V kostce", seznam 3–5 odrážek —
@@ -453,3 +472,368 @@ Každá fotka: `nahled` (URL náhledu), `plna` (URL plné velikosti), `alt` (pop
 - Mobil: 2 sloupce (`repeat(2, 1fr)`), `gap: 3px`.
 - Galerie je v patičce pod Nabídka; v hlavní nav není (příliš položek).
 - `tel:` odkaz v CTA pruhu má třídu `js-tel-galerie` (TODO: přidat, až se bude přiřazovat vlastní CTA).
+
+---
+
+## 8. Revize 2026-11-05 — vizuální připomínky 1–4
+
+Zdroj: návrh designera (`claude/navrh-vizualni-pripominky-1-4.md`), mockup
+`navrhy/B-pripominky-1-4.html`. Všechna řešení: WCAG 2.2 AA (kontrast ověřen), 360 px bez
+posunu, **bez JS** (jen CSS + container queries), Shoptet-friendly (třídy a tokeny, ne inline).
+
+### Bod 1 — Hero: papírové sklo místo černého panelu
+
+`.hero__panel` má místo plného `--barva-tma` světlé „papírové sklo" (papír 85 % + rozmazání
+pozadí). Fotka prosvítá, text je tmavý, nahoře 2px `.rule`.
+
+```css
+.hero__panel {
+  background: var(--hero-sklo-bg);
+  -webkit-backdrop-filter: var(--hero-sklo-filtr); /* Safari */
+  backdrop-filter: var(--hero-sklo-filtr);
+  border-top: 2px solid var(--barva-linka-silna);
+  color: var(--barva-text);
+}
+.hero__panel h1 {
+  color: var(--barva-text);
+}
+.hero__panel p {
+  color: var(--barva-text-tlumena);
+}
+.hero__panel .kick {
+  color: var(--barva-zelena);
+} /* ne --barva-zelena-svetla */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .hero__panel {
+    background: var(--hero-sklo-bg-zaloha);
+  }
+}
+@media (max-width: 47.99rem) {
+  /* mobil: panel je pod fotkou, sklo není potřeba */
+  .hero__panel {
+    background: var(--barva-papir);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border-top: 0;
+  }
+}
+```
+
+Rozměry/padding/max-width 660/velikosti písma/výška fotky zůstávají. Ze šablony pryč `kick--tma`
+a z CSS `.hero__panel .btn--obrys { color: papír }`. **Tlačítka:** `.btn--tel` „Zavolat 774 579 582"
+s ikonou (`js-tel-hero`, jantar) + `.btn--tma` „Vybrat želvu" (`#vyber`). Krytí 85 % neměnit bez
+nového výpočtu — pod 85 % kicker nesplní kontrast. Kontrast při 85 % (nejhorší podklad = černá):
+H1 11,7:1 · perex 6,8:1 · kicker (14 px) 5,0:1 · jantarové tlačítko 9,3:1. Raster (a) i tmavé
+sklo (b2) zamítnuty (šum / stejně těžké jako dnes).
+
+### Bod 2 — Porovnávací tabulka: naznačit posouvání (3 signály, čisté CSS)
+
+Zapínají se jen pod 980 px šířky **obalu** (container query → funguje i v úzkém sloupci Shoptetu).
+
+```html
+<div class="tabulka-blok">
+  <p class="tabulka-napoveda" aria-hidden="true">
+    <span>←</span> Posuňte do strany <span>→</span>
+  </p>
+  <div
+    class="tabulka-obal"
+    role="region"
+    aria-label="Porovnání druhů, tabulku lze posouvat do stran"
+    tabindex="0"
+  >
+    <table class="tabulka">
+      …
+    </table>
+  </div>
+</div>
+```
+
+```css
+.tabulka-blok {
+  container-type: inline-size;
+}
+.tabulka-napoveda {
+  display: none;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 12px;
+  font-family: var(--pismo-mono);
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--barva-text-slaba);
+}
+.tabulka-obal {
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scrollbar-width: thin;
+  scrollbar-color: var(--barva-text-slaba) var(--barva-linka);
+  background:
+    linear-gradient(to left, var(--barva-papir) 40%, rgb(251 250 246 / 0)) right center /
+      48px 100% no-repeat local,
+    linear-gradient(to left, var(--tabulka-stin), rgb(28 27 23 / 0)) right center /
+      var(--tabulka-stin-sirka) 100% no-repeat scroll,
+    var(--barva-papir);
+}
+.tabulka-obal:focus-visible {
+  outline: 2px solid var(--barva-zelena);
+  outline-offset: 4px;
+}
+@container (max-width: 61.25rem) {
+  /* 980 px = min-width tabulky */
+  .tabulka-napoveda {
+    display: flex;
+  }
+  .tabulka thead th:first-child,
+  .tabulka tbody th {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    width: 8.5rem;
+    min-width: 8.5rem;
+    padding-right: 12px;
+    background: var(--barva-papir);
+    box-shadow: inset -1px 0 0 var(--barva-linka);
+  }
+  .tabulka thead th:first-child + th,
+  .tabulka tbody th + td {
+    padding-left: 14px;
+  }
+}
+```
+
+Podmínky: buňky mají průhledné pozadí; první sloupec v `tbody` je `<th scope="row">`; na sekci
+s jiným pozadím použít custom property `--tabulka-pozadi` (default `--barva-papir`). Platí i pro
+tabulku na Teráriu na míru (§7.4). Přechod není stín pod prvkem → neporušuje zákaz stínů (§1).
+
+### Bod 3 — Fotky v Průvodci chovem (jeden zdroj = front matter článku)
+
+Do front matter každého článku: `foto`, `fotoAlt`, `fotoPopisek` (volitelný), `fotoPozice`
+(volitelný, `object-position`). Úvod, výpis rubriky i detail čtou fotku odtud; pole `foto`
+v `uvod.json → clanky` se zruší. `fotoPozice` přes `style="--foto-pozice: …"` (datová hodnota).
+**Pravidlo:** zobrazená šířka ≤ nativní šířka zdroje (malé fotky 650–680 px → v detailu jen
+šířka textového sloupce 70ch, ne přes celou šířku).
+
+**Výpis rubriky `/pruvodce-chovem/`:** karta `.row--clanek` jako na úvodu, náhled 240×135 (16:9).
+Název 24 px (displej, 600, `-0.02em`, lh 1.1), perex 16 px tlumeně. `alt=""` (odkaz nese název).
+Mřížka skupin `repeat(auto-fit, minmax(min(100%, 520px), 1fr)); gap: 48px 56px` (desktop 2 sloupce).
+Úzký sloupec (container < 34 rem): kompaktní náhled 112×84 (4:3), název 20 px, perex 15 px.
+Zvýrazněná karta „Je želva pro mě?" `.pruvodce-vyber`: text vlevo, fotka vpravo 16:9.
+
+```css
+.row--clanek .row__nazev {
+  font-family: var(--pismo-displej);
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+.row--clanek .row__perex {
+  font-size: 16px;
+  color: var(--barva-text-tlumena);
+}
+.clanek-skupina__seznam {
+  container-type: inline-size;
+}
+@container (max-width: 34rem) {
+  .row--clanek {
+    flex-wrap: nowrap;
+    gap: 16px;
+    padding: 16px 0;
+    align-items: flex-start;
+  }
+  .row--clanek img {
+    width: 112px;
+    height: 84px;
+  }
+  .row--clanek .row__text {
+    flex: 1 1 auto;
+  }
+  .row--clanek .row__nazev {
+    font-size: 20px;
+  }
+  .row--clanek .row__perex {
+    font-size: 15px;
+  }
+}
+```
+
+**Detail článku (`clanek.njk`)** — pořadí: drobečky → `.rule` → kicker → H1 → perex → čas čtení →
+**úvodní fotka** → V kostce → tělo. Úvodní fotka `figure.clanek-foto` max-width 70ch, 3:2, LCP
+(`fetchpriority="high"`, bez lazy, s `width`/`height`). Fotky v textu šířka sloupce bez ořezu;
+dvojice/trojice `.clanek-fotky` (grid, 4:3). V Markdownu čisté HTML, žádný shortcode.
+
+```css
+.clanek-foto {
+  margin: 32px 0 0;
+  max-width: 70ch;
+}
+.clanek-foto img,
+.clanek-telo figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: var(--barva-img-placeholder);
+}
+.clanek-foto img {
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  object-position: var(--foto-pozice, 50% 50%);
+}
+.clanek-foto figcaption,
+.clanek-telo figcaption {
+  margin-top: 10px;
+  font-size: 15px;
+  color: var(--barva-text-slaba);
+}
+.clanek-telo figure {
+  margin: 2rem 0;
+}
+.clanek-fotky {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  gap: 8px;
+  margin: 2rem 0;
+}
+.clanek-fotky figure {
+  margin: 0;
+}
+.clanek-fotky img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+```
+
+**Přiřazení fotek článkům** (zdroj: zadání 4.9; cesty relativně k `zelvycr.cz`, po TASK-008 lokální;
+alt/popisky doladí copywriter):
+
+| Článek              | Fotka                                                       | Pozn.                                             |
+| ------------------- | ----------------------------------------------------------- | ------------------------------------------------- |
+| Je želva pro mě?    | `/obrazky/zelvy/03.jpg`                                     | mláďata v trávě                                   |
+| Chov v teráriu      | `/obrazky/dum/01.jpg`                                       | terárium s lampou                                 |
+| Chov na zahradě     | `/obrazky/zahrada/05.jpg`                                   | výběhy                                            |
+| Krmení              | `/obrazky/dum/07.jpg`                                       | želvy s granulemi                                 |
+| Světlo a teplo      | `/obrazky/dum/05.jpg`                                       | výhřevná lampa                                    |
+| Voda a vlhkost      | `/obrazky/dum/14.jpg`                                       | na výšku, `fotoPozice: 50% 40%`                   |
+| Vitamíny a minerály | `/obrazky/zelvy/12.jpg`                                     | `[DOPLNIT]` lepší fotka                           |
+| Útlum               | `/foto/67403894_2288519957896930_1790857274869153792_n.jpg` | ze stránky Útlum                                  |
+| Zimování            | `/obrazky/zahrada/19.jpg`                                   | zimoviště                                         |
+| Velikost a růst     | `/foto/67908629_2305187359563523_1840570847010488320_n.jpg` | + 4 fotky jako `.clanek-fotky`                    |
+| Pohlaví             | `/foto/pohlavi/T_hermanni.JPG`                              | + 4 fotky jako `.clanek-fotky`                    |
+| Registrace CITES    | `/foto/foto18.jpg`                                          | doklad na výšku, `fotoPozice: 50% 15%`            |
+| Želví kuriozity     | `/obrazky/dum/12.jpg`                                       | **ne** deformace; citlivé fotky jen za „Zobrazit" |
+
+### Bod 4 — O nás: hlavní fotka a portréty
+
+**Záhlaví** = dvousloupcový grid (text 5/12, fotka 7/12, dole lícují). Hlavní fotka =
+**výběhy chovu** `/obrazky/zahrada/10.jpg` (4000×3000), `figure` s popiskem „Venkovní výběhy
+našeho chovu" a alt (nahradí dnešní `[DOPLNIT]`), LCP (`fetchpriority="high"`). `/miniatury/02.jpg`
+(120×160) se **nepoužije**. Portréty rodiny: obdélník **3:4** (ne kruh) jako v tmavé sekci úvodu,
+160 px; role mono olivově.
+
+```css
+.o-nas-uvod {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: 48px;
+  align-items: end;
+  padding-top: 28px;
+}
+.o-nas-uvod h1 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  margin: 18px 0 24px;
+}
+.o-nas-uvod p {
+  font-size: 20px;
+  color: var(--barva-text-tlumena);
+  margin: 0;
+  max-width: 30em;
+}
+.o-nas-foto {
+  margin: 0;
+}
+.o-nas-foto img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: var(--barva-img-placeholder);
+}
+.o-nas-foto figcaption {
+  margin-top: 10px;
+  font-size: 15px;
+  color: var(--barva-text-slaba);
+}
+@media (max-width: 47.99rem) {
+  .o-nas-uvod {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+.nas-tim {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 460px), 1fr));
+  gap: 48px;
+  margin-top: 32px;
+}
+.karta-osoby {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  gap: 24px;
+  padding-top: 24px;
+  border-top: 2px solid var(--barva-linka-silna);
+  align-items: start;
+}
+.karta-osoby__foto {
+  margin: 0;
+}
+.karta-osoby__foto img {
+  display: block;
+  width: 160px;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: 50% 30%;
+  background: var(--barva-img-placeholder);
+}
+.karta-osoby__jmeno {
+  font-size: 30px;
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+.karta-osoby__role {
+  font-family: var(--pismo-mono);
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--barva-zelena);
+  margin: 0 0 12px;
+}
+.karta-osoby > .btn {
+  grid-column: 2;
+  justify-self: start;
+}
+@media (max-width: 47.99rem) {
+  .karta-osoby {
+    grid-template-columns: 112px minmax(0, 1fr);
+    gap: 16px;
+  }
+  .karta-osoby__foto img {
+    width: 112px;
+  }
+  .karta-osoby__jmeno {
+    font-size: 24px;
+  }
+  .karta-osoby > .btn {
+    grid-column: 1 / -1;
+  }
+}
+```
+
+### Otevřené body pro klienta (assety — do backlogu/zadání)
+
+1. Portréty Jana a Jiřího ve vyšším rozlišení (ideálně ≥ 800×1067 px, 3:4, venku u chovu).
+2. Originál `/miniatury/02.jpg` v plném rozlišení (archivní snímek), pokud existuje.
+3. Lepší fotka k článku Vitamíny a minerály (sépiová kost, krmný vápník).
