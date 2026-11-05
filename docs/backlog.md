@@ -372,10 +372,10 @@ Souběžně běží copywriterské a designérské připomínky (mimo repo → p
 | TASK-036 | Responzivní menu: hamburger < ~1000 px (CSS-only) + CTA doprava při zalomení     | M    | High     | ⬜     |
 | TASK-037 | Responzivní patička: mobil zmenšit, odkazy do rozklikávacích sekcí               | M    | Medium   | ⬜     |
 | TASK-038 | O nás: opravit „šišaté" fotky (poměr/object-fit) + náhled galerie s proklikem    | M    | Medium   | ⬜     |
-| TASK-039 | Hero header homepage — nové řešení (pattern/blur) ⟵ čeká na designera            | S    | Medium   | ⬜     |
-| TASK-040 | Tabulka /zelvy-na-prodej/ — scroll affordance ⟵ čeká na designera                | S    | Medium   | ⬜     |
-| TASK-041 | Práce s fotkami v průvodci (výpis + detail článku) ⟵ čeká na designera           | M    | Medium   | ⬜     |
-| TASK-042 | O nás — velikost/umístění hlavní fotky ⟵ čeká na designera                       | S    | Low      | ⬜     |
+| TASK-039 | Hero header homepage — papírové sklo + oprava tlačítek (design-policy §8)        | S    | Medium   | ⬜     |
+| TASK-040 | Tabulka /zelvy-na-prodej/ — scroll affordance (design-policy §8)                 | S    | Medium   | ⬜     |
+| TASK-041 | Práce s fotkami v průvodci (výpis + detail článku) (design-policy §8)            | M    | Medium   | ⬜     |
+| TASK-042 | O nás — záhlaví (grid 5/7) + portréty 3:4 (design-policy §8)                     | S    | Low      | ⬜     |
 | TASK-044 | Startovací sady — oprava textu (překlep „już"→„už" + přejmenování nadpisu)       | XS   | High     | ⬜     |
 | TASK-046 | Propsat poslední copywriterovy úpravy z `docs/obsah/` do `src/` (odkazy + O nás) | S    | High     | ⬜     |
 | TASK-043 | Ověření Revize v1 (Pavel, produkce)                                              | S    | High     | ⬜     |
@@ -470,43 +470,83 @@ Souběžně běží copywriterské a designérské připomínky (mimo repo → p
 
 ---
 
-### TASK-039: Hero header homepage — nové řešení ⟵ čeká na designera
+### TASK-039: Hero header homepage — papírové sklo + oprava tlačítek
 
-**Size:** S · **Status:** ⬜ · **Priority:** Medium
-**Goal:** Hero header není příliš černý/agresivní.
-**Notes:** Designer rozhodne (tečkovaný polotransparentní patern / rozmazané polotransparentní
-pozadí), výsledek se zanese do `docs/design-policy.md` §3.3. Pak Claude Code implementuje.
-Blokováno do dodání designu.
+**Size:** S · **Status:** ⬜ · **Priority:** Medium · **Odblokováno** (design dodán)
+**Goal:** Hero panel není černý blok, ale světlé papírové sklo; tlačítka v souladu s policí.
+**Acceptance criteria:**
 
----
+- [ ] `.hero__panel` = papírové sklo dle `docs/design-policy.md` §8 (bod 1): tokeny `--hero-sklo-*`,
+      `backdrop-filter`, fallback `@supports`, na mobilu plný papír. Text tmavý, nahoře `.rule`.
+- [ ] Tlačítka: jantarové „Zavolat" (`js-tel-hero`) + tmavé `.btn--tma` „Vybrat želvu"; odstranit
+      `kick--tma` a `.hero__panel .btn--obrys { color: papír }`.
+- [ ] Kontrast dle §8 (krytí 85 % neměnit); bez JS; 360 px OK; brány zelené.
+      **Claude Code prompt:**
 
-### TASK-040: Tabulka /zelvy-na-prodej/ — scroll affordance ⟵ čeká na designera
-
-**Size:** S · **Status:** ⬜ · **Priority:** Medium
-**Goal:** Vodorovné posouvání tabulky vypadá záměrně a pozná se, že se s ní dá hnout.
-**Notes:** Designer navrhne vizuální affordance (fade/stín na kraji, hint „← posuňte →",
-sticky první sloupec…). Zanese se do design-policy §3.13; pak Claude Code implementuje.
-Blokováno do dodání designu.
+> Implementuj hero panel jako papírové sklo a oprav tlačítka přesně podle `docs/design-policy.md`
+> §8 (bod 1) a §3.3 — CSS je v §8. Reference: mockup `navrhy/B-pripominky-1-4.html`.
 
 ---
 
-### TASK-041: Práce s fotkami v průvodci ⟵ čeká na designera
+### TASK-040: Tabulka /zelvy-na-prodej/ — scroll affordance
 
-**Size:** M · **Status:** ⬜ · **Priority:** Medium
-**Goal:** Výpis na `/pruvodce-chovem/` i detail článku pracují s fotkami (jako hezký výpis na homepage).
-**Notes:** Designer navrhne jednotný foto-layout (náhledy ve výpisu rubriky + úvodní/inline
-fotka v článku), konzistentní s kartami článků na homepage. Zanese se do design-policy;
-Claude Code implementuje. Reálné fotky jsou grafický sprint (prozatím výplňové/hotlinkované).
-Blokováno do dodání designu.
+**Size:** S · **Status:** ⬜ · **Priority:** Medium · **Odblokováno** (design dodán)
+**Goal:** Pozná se, že porovnávací tabulka se posouvá, a vypadá to záměrně.
+**Acceptance criteria:**
+
+- [ ] Obal `.tabulka-blok` + nápověda „← Posuňte →" + lepivý 1. sloupec + okrajový přechod
+      (container query 61,25 rem) dle §8 (bod 2) a §3.13. Vše CSS, bez JS.
+- [ ] Buňky mají průhledné pozadí; 1. sloupec `tbody` je `<th scope="row">`.
+- [ ] Aplikovat i na tabulku na Teráriu na míru (§7.4). 360 px OK; brány zelené.
+      **Claude Code prompt:**
+
+> Implementuj scroll affordance porovnávací tabulky podle `docs/design-policy.md` §8 (bod 2)
+> a §3.13 — HTML obal, nápověda, lepivý sloupec, okrajový přechod (CSS v §8). Aplikuj i na
+> tabulku Terária na míru.
 
 ---
 
-### TASK-042: O nás — velikost/umístění hlavní fotky ⟵ čeká na designera
+### TASK-041: Práce s fotkami v Průvodci chovem (výpis + detail)
 
-**Size:** S · **Status:** ⬜ · **Priority:** Low
-**Goal:** Hlavní fotka na O nás je přiměřeně velká a dobře umístěná.
-**Notes:** Designer rozhodne velikost/umístění/treatment; zanese se do design-policy; pak
-Claude Code implementuje. (Deformaci řeší TASK-038.) Blokováno do dodání designu.
+**Size:** M · **Status:** ⬜ · **Priority:** Medium · **Odblokováno** (design dodán)
+**Goal:** Výpis rubriky i detail článku pracují s fotkami jako hezký výpis na homepage.
+**Acceptance criteria:**
+
+- [ ] Fotka článku se čte z **front matter** (`foto`, `fotoAlt`, `fotoPopisek`, `fotoPozice`);
+      pole `foto` v `uvod.json → clanky` zrušeno (jeden zdroj) — dle §8 (bod 3).
+- [ ] Výpis `/pruvodce-chovem/`: karty `.row--clanek` s náhledy, mřížka 520px, kompaktní náhled
+      112×84 v úzkém sloupci, zvýrazněná „Je želva pro mě?" — dle §8 a §3.5.
+- [ ] Detail článku: úvodní fotka 3:2 (LCP), fotky v textu, `.clanek-fotky`, pořadí dle §8/§7.5.
+- [ ] Přiřazení fotek dle tabulky v §8; pravidlo „zobrazená šířka ≤ nativní šířka". Reálné
+      optimalizované fotky řeší grafický sprint (TASK-008) — zatím hotlink dle tabulky.
+- [ ] Bez JS; 360 px OK; brány zelené.
+      **Claude Code prompt:**
+
+> Implementuj práci s fotkami v Průvodci chovem podle `docs/design-policy.md` §8 (bod 3), §3.5
+> a §7.5: fotka článku z front matter (jeden zdroj), výpis rubriky s náhledy + kompaktní náhled
+> v úzkém sloupci, detail s úvodní fotkou a `.clanek-fotky`. Přiřazení fotek z tabulky v §8;
+> zatím hotlink (lokální až po TASK-008). Alt texty doladí copywriter — prozatím ze zadání/tabulky.
+
+---
+
+### TASK-042: O nás — záhlaví (grid 5/7) + portréty 3:4
+
+**Size:** S · **Status:** ⬜ · **Priority:** Low · **Odblokováno** (design dodán)
+**Goal:** Hlavní fotka a portréty na O nás působí záměrně a vyváženě.
+**Acceptance criteria:**
+
+- [ ] Záhlaví `.o-nas-uvod` grid 5/7, dole lícující, hlavní fotka = výběhy `/obrazky/zahrada/10.jpg`
+      (`figure` + popisek + alt místo `[DOPLNIT]`), H1 `clamp`; mobil text + fotka pod ním — dle §8 (bod 4).
+- [ ] Portréty `.karta-osoby` obdélník 3:4 160 px, role mono olivově, tlačítko „Zavolat Jiřímu".
+- [ ] `/miniatury/02.jpg` se **nepoužije**. Deformaci (object-fit) obecně řeší TASK-038 — tady layout.
+- [ ] Alt texty nahradí `[DOPLNIT]` (koordinace s copywriterem). 360 px OK; brány zelené.
+      **Claude Code prompt:**
+
+> Implementuj záhlaví a portréty O nás podle `docs/design-policy.md` §8 (bod 4) a §7.5: grid 5/7
+> s fotkou výběhů, portréty 3:4 160 px, role mono. `/miniatury/02.jpg` nepoužívej.
+
+**Assety od klienta (viz §8 / grafický sprint):** lepší portréty Jana a Jiřího (≥ 800×1067 px),
+originál `/miniatury/02.jpg`, lepší fotka k článku Vitamíny a minerály.
 
 ---
 
