@@ -524,6 +524,50 @@ Claude Code implementuje. (Deformaci řeší TASK-038.) Blokováno do dodání d
 
 ---
 
+## 🌐 Go-live na subdoménu novy.zelvycr.cz
+
+### TASK-045: Nasazení na vlastní subdoménu novy.zelvycr.cz
+
+**Size:** S · **Status:** ⬜ · **Priority:** High
+**Goal:** Web běží na `https://novy.zelvycr.cz/` místo `pavel-bartos.github.io/zelvycr/`.
+
+**Acceptance criteria:**
+
+- [ ] V buildu je `CNAME` soubor (`src/static/CNAME` s obsahem `novy.zelvycr.cz`) — kopíruje se
+      do kořene `dist/`, aby Pages držely custom doménu i při deploy přes Actions.
+- [ ] **pathPrefix změněn na kořen `/`** — na custom doméně web běží v kořeni, ne v `/zelvycr/`.
+      V buildu nejsou žádné odkazy `/zelvycr/...` ani `//`; CSS i interní odkazy fungují z kořene.
+- [ ] `deploy.yml`: `PATH_PREFIX` pro custom doménu = `/` (nespoléhat naslepo na `base_path`,
+      ověřit/normalizovat, ať nevznikne `//`).
+- [ ] `noindex` **zůstává** (robots.txt + meta), dokud Pavel nerozhodne jinak (viz otevřená otázka).
+- [ ] Po nasazení: web na `https://novy.zelvycr.cz/` funguje přes HTTPS, žádné rozbité odkazy/CSS.
+- [ ] Brány zelené (vč. kontroly odkazů na buildu).
+
+**Claude Code prompt:**
+
+> Nasaď web na custom subdoménu `novy.zelvycr.cz`:
+>
+> 1. Přidej `CNAME` do buildu — `src/static/CNAME` s jediným řádkem `novy.zelvycr.cz`
+>    (kopíruje se do kořene `dist/`).
+> 2. Změň pathPrefix na kořen `/` — uprav `deploy.yml` tak, aby `PATH_PREFIX` byl `/`
+>    (ne `/zelvycr/`), a ověř, že build nemá žádné odkazy `/zelvycr/` ani `//`. Pozor na to,
+>    co vrací `actions/configure-pages` `base_path` u custom domény — výsledek nesmí být `//`.
+> 3. `noindex` nech být.
+>    Ověř build kontrolou odkazů a aktualizuj `CLAUDE.md` (sekce hosting: web běží na
+>    `novy.zelvycr.cz` v kořeni).
+
+**Notes:** Vyžaduje **akce Pavla** (DNS + GitHub Pages) — viz níž. pathPrefix je tu kritický:
+špatně = rozbité odkazy a CSS. Přesměrování starých `.html` adres (TASK-018) sem NEpatří — to
+se váže na ostrou doménu `www.zelvycr.cz`, ne na tuhle subdoménu.
+
+**Akce Pavla (sběr předem):**
+
+- **DNS** (u správce domény zelvycr.cz): přidat záznam **CNAME `novy` → `pavel-bartos.github.io`**.
+- **GitHub**: Settings → Pages → Custom domain → `novy.zelvycr.cz` → Save → počkat na DNS check
+  → zapnout **Enforce HTTPS**.
+
+---
+
 ## Backlog (Upcoming)
 
 | ID       | Task                                                                                                | Size | Priority | Status |
