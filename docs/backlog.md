@@ -365,7 +365,9 @@ chovatele jsou vědomě ponechaná jako placeholdery — nedolaďovat je v tomhl
 | -------- | ---------------------------------------------------------------------------------------------------------------- | ---- | -------- | ------ |
 | TASK-018 | Přesměrování 17 starých `.html` adres + kotvy `#6_x` (3.3)                                                       | M    | High     | ⬜     |
 | TASK-019 | SEO: sitemap, kanonické adresy, Open Graph, JSON-LD (8.3)                                                        | M    | Medium   | ⬜     |
-| TASK-020 | Měření bez cookies + události `click_tel` (8.3/5.5)                                                              | S    | Medium   | ⬜     |
+| TASK-031 | GTM kontejner + cookie consent (Consent Mode v2, základ) — plán Sprint 9                                         | M    | High     | ⬜     |
+| TASK-032 | GA4 + Google Ads + Meta Pixel přes GTM (základní, consent-gated, bez custom eventů) — plán Sprint 9              | M    | High     | ⬜     |
+| TASK-033 | Ověření měřicího sprintu (GTM Preview, consent chování) — plán Sprint 9                                          | S    | High     | ⬜     |
 | TASK-008 | Fotopipeline: self-hostované WebP obrázky místo hotlinků na zelvycr.cz                                           | M    | Medium   | ⏸️     |
 | TASK-022 | Doplnit `[DOPLNIT]` na detailu zelenavé: náročnost, text „O druhu", věta u T. h. boettgeri (podklady dodá Pavel) | S    | Medium   | ⬜     |
 
@@ -378,6 +380,37 @@ s rozměry a popisnými alt texty. Web pak nezávisí na starém hostingu a je r
 **Notes:** Odloženo rozhodnutím Pavla 2026-11-04 — hotlinky na zelvycr.cz zatím nevadí, fotopipeline
 řešit až v pozdějším sprintu. Fotky v plném rozlišení jsou otevřený bod S4 (přístup k FTP starého
 webu nebo manuální stažení). Než to půjde otevřít, Pavel dodá fotky nebo přístup k FTP.
+
+---
+
+### Plán — Sprint 9: Základní měření a reklamní pixely
+
+**Zahájit, až web poběží jako dočasná živá produkce** (Shoptet je výhledově měsíce daleko; do té
+doby je tenhle web ostrá produkce). **Rozsah vědomě základní, ne best-practice** — perfektní setup
+přijde za ~měsíc na Shoptetu. Nahrazuje původní TASK-020 (cookieless bez lišty); s GTM a reklamou
+jdeme jinou cestou.
+
+**TASK-031 — GTM kontejner + cookie consent (Consent Mode v2, základ):** Založit GTM kontejner,
+vložit snippet (head + noscript). Jednoduchá cookie lišta: přijmout / odmítnout stejně snadné,
+marketingové a analytické tagy se **nespustí před souhlasem**, Consent Mode v2 default „denied"
+(`ad_storage`, `analytics_storage`, `ad_user_data`, `ad_personalization`). Minimum nutné, aby web
+zjevně neporušoval zásadní pravidla; šedá zóna u jemností (granularita kategorií, dokonalé znění)
+přijatelná.
+
+**TASK-032 — Tagy přes GTM (základní, consent-gated):** GA4 (pageviews), Google Ads (základní tag /
+conversion linker pro remarketing a kampaně), Meta Pixel (base PageView). **Bez custom konverzních
+eventů.** Pozor: **Meta consent je oddělený od Google Consent Mode** — Pixel gatuj vlastní
+podmínkou na marketingový souhlas.
+
+**TASK-033 — Ověření (Pavel):** GTM Preview / Tag Assistant: před souhlasem se nespustí nic,
+po souhlasu tagy fungují; signály Consent Mode sedí; rychlá právní kontrola textu lišty (zadání 5.6).
+
+**Závislosti — sběr předem (dle pravidla „povolení seber najednou na začátku"):** ID účtů od
+Pavla/klienta — **GTM container ID, GA4 Measurement ID, Google Ads tag/conversion ID, Meta Pixel ID**.
+Bez nich jde struktura připravit s placeholdery, ale ne dokončit.
+
+**Volitelný levný přídavek:** jeden konverzní event „klik na telefon" (hooky `js-tel-*` už
+existují, je to hlavní KPI). Mimo základní rozsah — můžeme přidat, nebo nechat na Shoptet.
 
 ---
 

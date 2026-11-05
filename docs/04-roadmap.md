@@ -27,10 +27,14 @@ Roadmapa říká **co a proč**, backlog **jak**. Tenhle web je dočasný protot
 ## 🔵 Later — Nasazovací sprint (poslední před přepnutím domény)
 
 - **Sprint 8 — Připravenost ke spuštění.** Přesměrování 17 starých `.html` adres + kotvy
-  `#6_x`, analytika bez cookies s událostí `click_tel`, technické SEO (sitemap, kanonické
-  adresy, Open Graph, případně JSON-LD) a **těžké testy (Lighthouse/CWV, vizuální regrese)**
-  jako preflight. _Proč až nakonec:_ přesměrování a analytika se vážou na ostrou doménu, SEO
-  a výkon mají smysl až na hotovém obsahu a po zrušení `noindex`.
+  `#6_x`, technické SEO (sitemap, kanonické adresy, Open Graph, případně JSON-LD) a **těžké
+  testy (Lighthouse/CWV, vizuální regrese)** jako preflight. _Proč až nakonec:_ přesměrování
+  se váže na ostrou doménu, SEO a výkon mají smysl až na hotovém obsahu a po zrušení `noindex`.
+- **Sprint 9 — Základní měření a reklamní pixely.** GTM se základním nastavením, přes něj GA4,
+  Google Ads a Meta Pixel (bez custom eventů) + minimální cookie lišta s Consent Mode v2.
+  _Proč teď a ne dokonale:_ web pojede jako dočasná živá produkce (Shoptet je měsíce daleko),
+  takže potřebuje základ, ne best-practice — perfektní setup přijde na Shoptetu. Nahrazuje
+  původní cookieless plán (TASK-020). Detail: `docs/backlog.md`.
 - **Předání obsahu na Shoptet** — texty a HTML bloky jako podklad pro konečný web.
 
 ## ❌ Záměrně nezahrnuto (v prototypu)
