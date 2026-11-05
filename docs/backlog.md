@@ -1,6 +1,6 @@
 # Želvy ČR (zelvycr-web) — Backlog
 
-_Last updated: 2026-11-05 | Sprint: 4 🔵 Galerie (ověření) · detaily archivů v `docs/backlog-archive.md`_
+_Last updated: 2026-11-05 | Sprint: 5 🔵 Texty (zahájeno) · Sprint 4 čeká na ověření · archiv v `docs/backlog-archive.md`_
 
 Backlog píše Claude (šéf vývoje), implementaci dělá Claude Code. Každý kódovací task má
 **Claude Code prompt** a odvolává se na `docs/design-policy.md` (vzhled) a zadání v Claude
@@ -90,6 +90,126 @@ design-policy.md.
 > počkej na zelenou CI → **merge PR** (ne přímý push do main; viz CLAUDE.md).
 
 **Notes:** Manuální task pro uživatele, ne pro Claude Code.
+
+---
+
+## 🔵 Sprint 5 — Dotažení textového obsahu (zahájeno 2026-11-05)
+
+**Cíl sprintu:** Propsat finální texty copywritera z `docs/obsah/` (zdroj pravdy) do webu
+(`src/`). Po sprintu má web reálné texty místo `[DOPLNIT]` placeholderů. Odblokováno dodáním
+kompletních textů od copywritera.
+
+| ID       | Task                                                        | Size | Priority | Status |
+| -------- | ----------------------------------------------------------- | ---- | -------- | ------ |
+| TASK-025 | Propsat finální texty copywritera z `docs/obsah/` do `src/` | L    | Critical | ⬜     |
+| TASK-026 | Lokální ověření Sprintu 5                                   | S    | High     | ⬜     |
+
+---
+
+### TASK-025: Propsat finální texty copywritera z `docs/obsah/` do `src/`
+
+**Size:** L (4–6 h) · **Status:** ⬜ Pending · **Priority:** Critical — **první věc dneška**
+**Goal:** Web používá finální texty copywritera místo placeholderů: 13 článků má tělo, detail
+zelenavé je doplněný (kromě náročnosti) a drobné úpravy z revize jsou provedené.
+
+**Acceptance criteria:**
+
+- [ ] Všech 13 článků `src/pruvodce-chovem/<slug>.md` má tělo z `docs/obsah/pruvodce/<slug>.md`
+      (nahrazeno `[DOPLNIT – text článku]`); `cas_cteni` ze zdroje přeneseno do `casCteni`.
+- [ ] Značky boxů `::: v-kostce`, `::: z-naseho-chovu`, `::: rada-chovatele` převedeny na HTML
+      box komponenty podle `docs/design-policy.md`.
+- [ ] Detail zelenavé v `src/_data/detailyDruhu.json` (slug `zelva-zelenava`): `oDruhu`
+      a `formy[0].popis` naplněny z `docs/obsah/druhy/zelva-zelenava.md`; **`narocnost` zůstává
+      `[DOPLNIT]`** — čeká na potvrzení chovatele.
+- [ ] Úpravy z `docs/obsah/navrhy-uprav.md` provedené (alt texty bez číslování u zelenavé
+      galerie, oprava postřehu u žlutohnědé, 9 vs 10 druhů, „100+ odchovaných" na O nás,
+      náhradní texty prázdných stavů v Jak nakoupit a Kontaktech, portrétní alt texty).
+      U bodů `[KLIENT]` provést bezpečnou část, konečné potvrzení nechat na klientovi.
+- [ ] **Nevyplněno** (čeká na chovatele, viz `docs/obsah/kontrola-faktu/`): náročnost zelenavé,
+      dožití v „Je želva pro mě?", teplota zimoviště (3–6 vs 5–6 °C), potvrzení příloh CITES.
+      Pardálí a kloubnatá zůstávají `[KE KONTROLE KLIENTEM]`. Nic nedohledávat ani netipovat.
+- [ ] Interní odkazy přes `url` filtr; `tel:` odkazy s třídou `js-tel-<umístění>`; tlačítka
+      min. 44 × 44 px; alt texty česky a popisné; žádný vodorovný posun na 360 px; `noindex`
+      zapnutý; vzhled dle `docs/design-policy.md`.
+- [ ] `format:check` + `lint` + testy + `build` zelené; PR do `main` přes zelenou CI.
+
+**Claude Code prompt** (dodal copywriter, ověřeno šéfem vývoje — zdroje i cíle existují na `main`):
+
+> **ÚKOL:** Propsat finální texty copywritera z `docs/obsah/` do webu (`src/`).
+>
+> **KONTEXT:** Copywriter dodal finální texty do `docs/obsah/` (zdroj pravdy). Na webu ale
+> pořád nejsou: 13 článků má v `src/pruvodce-chovem/*.md` prázdné tělo (`[DOPLNIT – text
+článku]`) a detail zelenavé má v `src/_data/detailyDruhu.json` 3× `[DOPLNIT]`. Přenes texty
+> ze zdroje do `src/`. Přečti si napřed `docs/obsah/HANDOFF.md` (mapa implementace)
+> a `docs/obsah/README.md` (stylová příručka).
+>
+> **VLASTNICTVÍ (dle `CONTRIBUTING.md`):** Pracuj na větvi `feat/propsat-finalni-texty`,
+> PR do `main`, zelená CI. Píšeš do `src/`. `docs/obsah/` je copywriterův zdroj pravdy — čti
+> z něj, **needituj ho**. Interní odkazy vždy přes filtr `url`. Fakta nevymýšlej. `noindex`
+> nech zapnutý.
+>
+> **CO UDĚLAT:**
+>
+> 1. **13 článků průvodce** — vlož těla z `docs/obsah/pruvodce/<slug>.md` do
+>    `src/pruvodce-chovem/<slug>.md` (nahraď `[DOPLNIT – text článku]`). Zachovej zapojení
+>    hlavičky; z hlavičky zdroje přenes `cas_cteni` → `casCteni`. Značky boxů `::: v-kostce`,
+>    `::: z-naseho-chovu`, `::: rada-chovatele` převeď na HTML box komponenty podle
+>    `docs/design-policy.md`. Interní odkazy přes `url` filtr.
+>
+> 2. **Detail zelenavé** — z `docs/obsah/druhy/zelva-zelenava.md` naplň
+>    `src/_data/detailyDruhu.json`, slug `zelva-zelenava`: `oDruhu` (odstavce ze sekce
+>    „O druhu"), `formy[0].popis` (T. h. boettgeri = „Nejběžnější forma. Menší typy kolem
+>    12–15 cm, makedonské přes 25 cm."). `narocnost` NECH jako `[DOPLNIT]` — čeká na potvrzení
+>    chovatele (viz `kontrola-faktu/druhy.md`), nevyplňuj návrh natvrdo.
+>
+> 3. **Úpravy pracovních textů z revize** — proveď změny z `docs/obsah/navrhy-uprav.md`
+>    v příslušných `src` souborech (alt texty bez číslování u zelenavé galerie, oprava postřehu
+>    u žlutohnědé, 9 vs 10 druhů, „100+ odchovaných" na O nás, náhradní texty prázdných stavů
+>    v Jak nakoupit a Kontaktech, portrétní alt texty). U bodů označených `[KLIENT]` proveď
+>    bezpečnou část (např. odstraň číslování, použij znění ze zdroje) a konečné potvrzení nech
+>    na klientovi — neblokuj se tím.
+>
+> **CO NECHAT BÝT (čeká na chovatele — viz `docs/obsah/kontrola-faktu/`):** Nevyplňuj a nech
+> jako placeholder: náročnost zelenavé, dožití v „Je želva pro mě?", teplotu zimoviště (3–6 vs
+> 5–6 °C), potvrzení příloh CITES. Texty pardálí a kloubnaté nech se značkou
+> `[KE KONTROLE KLIENTEM]`. Nic z toho nedohledávej ani netipuj.
+>
+> **GUARDRAILY:** `tel:` odkazy s třídou `js-tel-<umístění>`; tlačítka min. 44 × 44 px; alt
+> texty česky a popisné; žádný vodorovný posun na 360 px; vzhled dle `design-policy`.
+>
+> **DEFINITION OF DONE:** Všech 13 článků má tělo, zelenavá doplněná (kromě náročnosti), úpravy
+> z revize provedené; `format:check` + `lint` + testy + `build` zelené; PR do `main` přes
+> zelenou CI.
+
+**Notes:** Zdroj `docs/obsah/` i cílové soubory (`src/pruvodce-chovem/*.md`,
+`src/_data/detailyDruhu.json`) jsou ověřeně na `main`. Task není blokovaný. Fakta čekající na
+chovatele jsou vědomě ponechaná jako placeholdery — nedolaďovat je v tomhle tasku.
+
+---
+
+### TASK-026: Lokální ověření Sprintu 5
+
+**Size:** S (20–40 min) · **Status:** ⬜ Pending · **Priority:** High
+**Goal:** Pavel odklikne, že web používá finální texty a placeholdery zbyly jen tam, kde se čeká na chovatele.
+
+**Jak spustit lokálně:**
+
+> `npm run dev` → projít `/pruvodce-chovem/` a pár článků, `/zelva-zelenava/`, O nás, Kontakt
+
+**Checklist k odkliknutí:**
+
+- [ ] Všech 13 článků má reálné tělo (žádné `[DOPLNIT – text článku]`), boxy se zobrazují správně.
+- [ ] Detail zelenavé má text „O druhu" a popis formy; náročnost zůstává placeholder.
+- [ ] Úpravy z revize jsou vidět (alt texty bez číslování, 9 druhů konzistentně, „100+ odchovaných").
+- [ ] Zbylé placeholdery jsou jen ty čekající na chovatele; pardálí/kloubnatá mají `[KE KONTROLE KLIENTEM]`.
+- [ ] Na 360 px žádný vodorovný posun; `tel:` odkazy fungují.
+- [ ] Regrese: ostatní stránky beze změny; build, lint, format:check a testy zelené.
+
+**Po odkliknutí:**
+
+> otevři PR z `feat/propsat-finalni-texty` → zelená CI → merge PR.
+
+**Notes:** Manuální task pro Pavla.
 
 ---
 
