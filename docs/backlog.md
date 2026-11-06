@@ -367,24 +367,24 @@ Souběžně běží copywriterské a designérské připomínky (mimo repo → p
 
 | ID       | Task                                                                             | Size | Priority | Status |
 | -------- | -------------------------------------------------------------------------------- | ---- | -------- | ------ |
-| TASK-034 | Navigace: Galerie do hlavního menu + v patičce přesun do sekce Informace         | S    | High     | ⬜     |
-| TASK-035 | Opravit duplicitní žluté CTA boxy — na stránce vždy jen jeden                    | S    | High     | ⬜     |
-| TASK-036 | Responzivní menu: hamburger < ~1000 px (CSS-only) + CTA doprava při zalomení     | M    | High     | ⬜     |
+| TASK-034 | Navigace: Galerie do hlavního menu + v patičce přesun do sekce Informace         | S    | High     | ✅     |
+| TASK-035 | Opravit duplicitní žluté CTA boxy — na stránce vždy jen jeden                    | S    | High     | ✅     |
+| TASK-036 | Responzivní menu: hamburger < ~1000 px (CSS-only) + CTA doprava při zalomení     | M    | High     | ✅     |
 | TASK-037 | Responzivní patička: mobil zmenšit, odkazy do rozklikávacích sekcí               | M    | Medium   | ⬜     |
 | TASK-038 | O nás: opravit „šišaté" fotky (poměr/object-fit) + náhled galerie s proklikem    | M    | Medium   | ⬜     |
-| TASK-039 | Hero header homepage — papírové sklo + oprava tlačítek (design-policy §8)        | S    | Medium   | ⬜     |
+| TASK-039 | Hero header homepage — papírové sklo + oprava tlačítek (design-policy §8)        | S    | Medium   | ✅     |
 | TASK-040 | Tabulka /zelvy-na-prodej/ — scroll affordance (design-policy §8)                 | S    | Medium   | ⬜     |
 | TASK-041 | Práce s fotkami v průvodci (výpis + detail článku) (design-policy §8)            | M    | Medium   | ⬜     |
 | TASK-042 | O nás — záhlaví (grid 5/7) + portréty 3:4 (design-policy §8)                     | S    | Low      | ⬜     |
-| TASK-044 | Startovací sady — oprava textu (překlep „już"→„už" + přejmenování nadpisu)       | XS   | High     | ⬜     |
-| TASK-046 | Propsat poslední copywriterovy úpravy z `docs/obsah/` do `src/` (odkazy + O nás) | S    | High     | ⬜     |
+| TASK-044 | Startovací sady — oprava textu (překlep „już"→„už" + přejmenování nadpisu)       | XS   | High     | ✅     |
+| TASK-046 | Propsat poslední copywriterovy úpravy z `docs/obsah/` do `src/` (odkazy + O nás) | S    | High     | ✅     |
 | TASK-043 | Ověření Revize v1 (Pavel, produkce)                                              | S    | High     | ⬜     |
 
 ---
 
 ### TASK-034: Navigace — Galerie do menu + patička do sekce Informace
 
-**Size:** S · **Status:** ⬜ · **Priority:** High
+**Size:** S · **Status:** ✅ Done (2026-11-06) · **Priority:** High
 **Goal:** Galerie je dostupná z hlavního menu; patička má logické sekce.
 **Acceptance criteria:**
 
@@ -400,7 +400,7 @@ Souběžně běží copywriterské a designérské připomínky (mimo repo → p
 
 ### TASK-035: Opravit duplicitní žluté CTA boxy
 
-**Size:** S · **Status:** ⬜ · **Priority:** High
+**Size:** S · **Status:** ✅ Done (2026-11-06) · **Priority:** High
 **Goal:** Na každé stránce je právě jeden závěrečný CTA pruh.
 **Acceptance criteria:**
 
@@ -418,7 +418,7 @@ Souběžně běží copywriterské a designérské připomínky (mimo repo → p
 
 ### TASK-036: Responzivní menu — hamburger + zarovnání CTA
 
-**Size:** M · **Status:** ⬜ · **Priority:** High
+**Size:** M · **Status:** ✅ Done (2026-11-06) · **Priority:** High
 **Goal:** Menu je na úzkých šířkách použitelné a nerozsype se.
 **Acceptance criteria:**
 
@@ -472,7 +472,7 @@ Souběžně běží copywriterské a designérské připomínky (mimo repo → p
 
 ### TASK-039: Hero header homepage — papírové sklo + oprava tlačítek
 
-**Size:** S · **Status:** ⬜ · **Priority:** Medium · **Odblokováno** (design dodán)
+**Size:** S · **Status:** ✅ Done (2026-11-06) · **Priority:** Medium
 **Goal:** Hero panel není černý blok, ale světlé papírové sklo; tlačítka v souladu s policí.
 **Acceptance criteria:**
 
@@ -552,7 +552,7 @@ originál `/miniatury/02.jpg`, lepší fotka k článku Vitamíny a minerály.
 
 ### TASK-044: Startovací sady — oprava textu (překlep + přejmenování)
 
-**Size:** XS · **Status:** ⬜ · **Priority:** High
+**Size:** XS · **Status:** ✅ Done (2026-11-06) · **Priority:** High
 **Goal:** Opravit překlep a přejmenovat hlavní sadu na stránce Startovací sady.
 **Acceptance criteria:**
 
@@ -571,7 +571,7 @@ originál `/miniatury/02.jpg`, lepší fotka k článku Vitamíny a minerály.
 
 ### TASK-046: Propsat poslední copywriterovy úpravy z `docs/obsah/` do `src/`
 
-**Size:** S · **Status:** ⬜ · **Priority:** High
+**Size:** S · **Status:** ✅ Done (2026-11-06) · **Priority:** High
 **Goal:** Živý web (`src/`) obsahuje copywriterovy úpravy z `docs/obsah/` — interní odkazy
 v článcích a vyřešené `[DOPLNIT]` na O nás.
 **Acceptance criteria:**
