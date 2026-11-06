@@ -6,6 +6,8 @@ permalink: /pruvodce-chovem/svetlo-a-teplo/
 skupinaKicker: Každodenní péče
 perex: Bez UVB a tepla se želva v teráriu neobejde. Vysvětlíme, co funguje a na čem se dá spálit.
 casCteni: 5 min
+foto: 'https://www.zelvycr.cz/obrazky/dum/05.jpg'
+fotoAlt: 'Výhřevná lampa nad želvou v teráriu'
 vKostce: |
   <ul>
     <li>V teráriu musí být výhřevná bodovka i UVB zářivka.</li>

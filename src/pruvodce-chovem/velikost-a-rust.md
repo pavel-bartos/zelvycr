@@ -6,6 +6,8 @@ permalink: /pruvodce-chovem/velikost-a-rust/
 skupinaKicker: Rok se želvou
 perex: 'Jak velká má želva v daném věku být? Odpověď zní: záleží. Univerzální tabulka velikosti neexistuje a nejdůležitější je zdraví.'
 casCteni: 4 min
+foto: 'https://www.zelvycr.cz/foto/67908629_2305187359563523_1840570847010488320_n.jpg'
+fotoAlt: 'Suchozemská želva — velikost a růst'
 vKostce: |
   <ul>
     <li>Žádná univerzální tabulka stáří × velikost × váha neexistuje.</li>

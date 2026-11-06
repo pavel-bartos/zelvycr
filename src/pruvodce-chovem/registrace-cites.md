@@ -6,6 +6,9 @@ permalink: /pruvodce-chovem/registrace-cites/
 skupinaKicker: Papíry a zajímavosti
 perex: Registrace CITES zní složitě, ale je jednoduchá a zdarma. Dostanete od nás doklady i předvyplněný formulář a zvládnete ji poštou.
 casCteni: 5 min
+foto: 'https://www.zelvycr.cz/foto/foto18.jpg'
+fotoAlt: 'Doklady CITES pro suchozemskou želvu'
+fotoPozice: '50% 15%'
 vKostce: |
   <ul>
     <li>Týká se želvy zelenavé, vroubené a žlutohnědé; stepní, pardálí a kloubnatá registraci nevyžadují.</li>
@@ -19,7 +22,7 @@ CITES je mezinárodní úmluva na ochranu ohrožených druhů. Pro vás jako nov
 
 ## Kterých želv se to týká
 
-Povinnou registraci mají **želva zelenavá, vroubená a žlutohnědá** (v EU příloha A). **Želva stepní, pardálí a kloubnatá** registraci nevyžadují (příloha B). [DOPLNIT: potvrdí klient — otevřený bod 13 zadání.]
+Povinnou registraci mají **želva zelenavá, vroubená a žlutohnědá** (v EU příloha A). **Želva stepní, pardálí a kloubnatá** registraci nevyžadují (příloha B).
 
 Čipovaná želva se registruje jednou a dál už s úřady nemáte starosti. Nečipovanou je potřeba čas od času doložit fotkou spodní části krunýře (plastronu), protože kresba se mění.
 

@@ -28,6 +28,10 @@
   --barva-linka-silna: #1c1b17;
   --barva-img-placeholder: #dcd3be;
 
+  /* tabulka — scroll affordance (§8 bod 2) */
+  --tabulka-stin: rgb(28 27 23 / 0.1);
+  --tabulka-stin-sirka: 48px;
+
   /* hero — papírové sklo (§8 bod 1) */
   --hero-sklo-bg: rgb(251 250 246 / 0.85);
   --hero-sklo-bg-zaloha: rgb(251 250 246 / 0.94);
@@ -1027,8 +1031,59 @@ details p {
 
 /* ---------- porovnávací tabulka ---------- */
 
+.tabulka-blok {
+  container-type: inline-size;
+}
+
+.tabulka-napoveda {
+  display: none;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 12px;
+  font-family: var(--pismo-mono);
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--barva-text-slaba);
+}
+
 .tabulka-obal {
   overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scrollbar-width: thin;
+  scrollbar-color: var(--barva-text-slaba) var(--barva-linka);
+  background:
+    linear-gradient(to left, var(--barva-papir) 40%, rgb(251 250 246 / 0)) right center /
+      48px 100% no-repeat local,
+    linear-gradient(to left, var(--tabulka-stin), rgb(28 27 23 / 0)) right center /
+      var(--tabulka-stin-sirka) 100% no-repeat scroll,
+    var(--barva-papir);
+}
+
+.tabulka-obal:focus-visible {
+  outline: 2px solid var(--barva-zelena);
+  outline-offset: 4px;
+}
+
+@container (max-width: 61.25rem) {
+  .tabulka-napoveda {
+    display: flex;
+  }
+  .tabulka thead th:first-child,
+  .tabulka tbody th {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    width: 8.5rem;
+    min-width: 8.5rem;
+    padding-right: 12px;
+    background: var(--barva-papir);
+    box-shadow: inset -1px 0 0 var(--barva-linka);
+  }
+  .tabulka thead th:first-child + th,
+  .tabulka tbody th + td {
+    padding-left: 14px;
+  }
 }
 
 .tabulka {
@@ -1724,7 +1779,50 @@ details p {
   color: var(--barva-text-slaba);
 }
 
-/* ---------- sticky „Zavolat“ (mobil) ---------- */
+/* patička — rozklikávací sekce na mobilu (TASK-037) */
+.paticka-sekce {
+  margin: 0;
+  padding: 0;
+}
+.paticka-sekce > summary {
+  list-style: none;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 8px;
+  cursor: default;
+  pointer-events: none;
+}
+.paticka-sekce > summary::-webkit-details-marker {
+  display: none;
+}
+@media (max-width: 47.99rem) {
+  .paticka-sekce {
+    border-top: 1px solid var(--barva-linka);
+  }
+  .paticka-sekce > summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0;
+    margin: 0;
+    cursor: pointer;
+    pointer-events: auto;
+  }
+  .paticka-sekce > summary::after {
+    content: '+';
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1;
+  }
+  .paticka-sekce[open] > summary::after {
+    content: '−';
+  }
+  .paticka-sekce > ul {
+    padding-bottom: 8px;
+  }
+}
+
+/* ---------- sticky „Zavolat” (mobil) ---------- */
 
 .sticky-zavolat {
   position: fixed;
@@ -2044,12 +2142,87 @@ details p {
   font-size: 1.5rem;
 }
 .clanek-skupina__seznam {
+  container-type: inline-size;
   list-style: none;
   padding: 0;
   margin: 0;
 }
 .clanek-skupina__seznam li {
   border-bottom: 1px solid var(--barva-linka);
+}
+
+/* fotka článku — detail (§8 bod 3) */
+.clanek-foto {
+  margin: 32px 0 0;
+  max-width: 70ch;
+}
+.clanek-foto img,
+.clanek-telo figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: var(--barva-img-placeholder);
+}
+.clanek-foto img {
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  object-position: var(--foto-pozice, 50% 50%);
+}
+.clanek-foto figcaption,
+.clanek-telo figcaption {
+  margin-top: 10px;
+  font-size: 15px;
+  color: var(--barva-text-slaba);
+}
+.clanek-telo figure {
+  margin: 2rem 0;
+}
+.clanek-fotky {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  gap: 8px;
+  margin: 2rem 0;
+}
+.clanek-fotky figure {
+  margin: 0;
+}
+.clanek-fotky img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+/* výpis rubriky — karta článku (§8 bod 3) */
+.row--clanek .row__nazev {
+  font-family: var(--pismo-displej);
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+.row--clanek .row__perex {
+  font-size: 16px;
+  color: var(--barva-text-tlumena);
+}
+@container (max-width: 34rem) {
+  .row--clanek {
+    flex-wrap: nowrap;
+    gap: 16px;
+    padding: 16px 0;
+    align-items: flex-start;
+  }
+  .row--clanek img {
+    width: 112px;
+    height: 84px;
+  }
+  .row--clanek .row__text {
+    flex: 1 1 auto;
+  }
+  .row--clanek .row__nazev {
+    font-size: 20px;
+  }
+  .row--clanek .row__perex {
+    font-size: 15px;
+  }
 }
 
 /* Jak nakoupit — způsoby předání */
@@ -2079,46 +2252,120 @@ details p {
   color: var(--barva-text-slaba);
 }
 
-/* O nás — fotka v headeru */
+/* O nás — záhlaví grid 5/7 (§8 bod 4) */
+.o-nas-uvod {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: 48px;
+  align-items: end;
+  padding-top: 28px;
+}
+.o-nas-uvod h1 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  margin: 18px 0 24px;
+}
+.o-nas-uvod > div > p {
+  font-size: 20px;
+  color: var(--barva-text-tlumena);
+  margin: 0;
+  max-width: 30em;
+}
+.o-nas-foto {
+  margin: 0;
+}
 .o-nas-foto img {
+  display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 4/3;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: var(--barva-img-placeholder);
+}
+.o-nas-foto figcaption {
+  margin-top: 10px;
+  font-size: 15px;
+  color: var(--barva-text-slaba);
+}
+@media (max-width: 47.99rem) {
+  .o-nas-uvod {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+/* O nás — náhled galerie */
+.o-nas-galerie {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 160px), 1fr));
+  gap: 8px;
+  margin: 24px 0 16px;
+}
+.o-nas-galerie__foto img {
+  display: block;
+  width: 100%;
+  height: 120px;
   object-fit: cover;
   background: var(--barva-img-placeholder);
 }
 
-/* O nás — karta osoby */
+/* O nás — karta osoby (§8 bod 4) */
 .nas-tim {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 460px), 1fr));
   gap: 48px;
   margin-top: 32px;
 }
 .karta-osoby {
-  display: flex;
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
   gap: 24px;
-  padding-block: 24px;
+  padding-top: 24px;
+  border-top: 2px solid var(--barva-linka-silna);
+  align-items: start;
+}
+.karta-osoby__foto {
+  margin: 0;
 }
 .karta-osoby__foto img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
+  display: block;
+  width: 160px;
+  height: auto;
+  aspect-ratio: 3 / 4;
   object-fit: cover;
+  object-position: 50% 30%;
   background: var(--barva-img-placeholder);
-  flex-shrink: 0;
 }
 .karta-osoby__jmeno {
-  font-size: 1.5rem;
-  margin-bottom: 4px;
+  font-size: 30px;
+  font-weight: 600;
+  margin: 0 0 8px;
 }
 .karta-osoby__role {
-  font-size: 0.875rem;
-  color: var(--barva-text-slaba);
-  font-weight: 600;
+  font-family: var(--pismo-mono);
+  font-size: 14px;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
-  margin-bottom: 12px;
+  color: var(--barva-zelena);
+  margin: 0 0 12px;
+}
+.karta-osoby > .btn {
+  grid-column: 2;
+  justify-self: start;
+}
+@media (max-width: 47.99rem) {
+  .karta-osoby {
+    grid-template-columns: 112px minmax(0, 1fr);
+    gap: 16px;
+  }
+  .karta-osoby__foto img {
+    width: 112px;
+  }
+  .karta-osoby__jmeno {
+    font-size: 24px;
+  }
+  .karta-osoby > .btn {
+    grid-column: 1 / -1;
+  }
 }
 
 /* Kontakt — hlavní kontakt */
@@ -2203,15 +2450,8 @@ details p {
   color: var(--barva-text-tlumena);
 }
 
-/* Mobilní overrides Sprint 3 */
+/* Mobilní overrides */
 @media (max-width: 48rem) {
-  .karta-osoby {
-    flex-direction: column;
-  }
-  .karta-osoby__foto img {
-    width: 80px;
-    height: 80px;
-  }
   .kontakt-fakturace__radek {
     grid-template-columns: 1fr;
     gap: 2px;

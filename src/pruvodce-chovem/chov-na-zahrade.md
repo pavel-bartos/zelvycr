@@ -6,6 +6,8 @@ permalink: /pruvodce-chovem/chov-na-zahrade/
 skupinaKicker: Než si želvu pořídíte
 perex: Zahrada je pro želvu nejpřirozenější prostředí — když je výběh správně zajištěný. Ukážeme, na co si dát pozor.
 casCteni: 6 min
+foto: 'https://www.zelvycr.cz/obrazky/zahrada/05.jpg'
+fotoAlt: 'Venkovní výběhy pro suchozemské želvy'
 vKostce: |
   <ul>
     <li>Volný chov na zahradě je z pohledu želvy nejlepší — sama si určuje svůj rytmus.</li>

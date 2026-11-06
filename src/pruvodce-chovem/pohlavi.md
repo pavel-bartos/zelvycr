@@ -6,6 +6,8 @@ permalink: /pruvodce-chovem/pohlavi/
 skupinaKicker: Rok se želvou
 perex: Samce od samice poznáte hlavně podle ocasu. U mláďat to ale ještě možné není — vysvětlíme proč.
 casCteni: 3 min
+foto: 'https://www.zelvycr.cz/foto/pohlavi/T_hermanni.JPG'
+fotoAlt: 'Rozlišení pohlaví suchozemských želv'
 vKostce: |
   <ul>
     <li>Hlavní vodítko: samci mají výrazně delší ocas než samice.</li>

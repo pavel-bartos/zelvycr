@@ -6,6 +6,8 @@ permalink: /pruvodce-chovem/je-zelva-pro-me/
 skupinaKicker: Než si želvu pořídíte
 perex: Želva není náročný mazlíček, ale má svoje potřeby. Tady zjistíte, jestli se k vám hodí – dřív než se rozhodnete.
 casCteni: 4 min
+foto: 'https://www.zelvycr.cz/obrazky/zelvy/03.jpg'
+fotoAlt: 'Mláďata suchozemských želv v trávě'
 vKostce: |
   <ul>
     <li>Želva je zvíře na desítky let — není to dárek na jednu sezónu.</li>
@@ -18,7 +20,7 @@ vKostce: |
 
 ## Želva je na celý život — a dlouhý
 
-Suchozemská želva se při dobré péči dožívá desítek let. [DOPLNIT: konkrétní údaj o dožití u želvy zelenavé — doloží Jiří z praxe, případně odborným zdrojem.] Než si ji pořídíte, počítejte s tím, že vás bude provázet řadu let a leckdy přejde i na další generaci v rodině. To je na želvě to hezké — ale je dobré to vědět předem.
+Suchozemská želva se při dobré péči dožívá desítek let – v zajetí běžně 60–70 let, výjimečně i přes sto; ve volné přírodě kolem třiceti. Než si ji pořídíte, počítejte s tím, že vás bude provázet řadu let a leckdy přejde i na další generaci v rodině. To je na želvě to hezké — ale je dobré to vědět předem.
 
 ## Co želva potřebuje
 

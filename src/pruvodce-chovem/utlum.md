@@ -6,6 +6,8 @@ permalink: /pruvodce-chovem/utlum/
 skupinaKicker: Rok se želvou
 perex: Když vaše želva v létě znenadání zpomalí, nemusí jít o nemoc. Často si jen říká o klid. Poznáte to podle několika příznaků.
 casCteni: 5 min
+foto: 'https://www.zelvycr.cz/foto/67403894_2288519957896930_1790857274869153792_n.jpg'
+fotoAlt: 'Suchozemská želva v letním útlumu'
 vKostce: |
   <ul>
     <li>Letní zpomalení bývá přirozený útlum (estivace), ne nemoc.</li>
