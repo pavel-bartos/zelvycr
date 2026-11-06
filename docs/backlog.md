@@ -726,10 +726,14 @@ existují, je to hlavní KPI). Mimo základní rozsah — můžeme přidat, nebo
 **Proč Vedos pro produkci:** `.htaccess` umí serverová **301** (Pages ne — povinné pro staré
 `.html` adresy), co-location s doménou a starým webem, Pavel to už platí.
 
+**Ověřeno 2026-11-06:** tarif **NOLIMIT** (3 aliasy, ∞ disk, DB 2 GB), **HTTPS zapnuté zdarma**,
+`www` + apex běží na hlavní doméně **bez placeného aliasu** (ověřeno na starém webu). Žádný
+add-on ani upgrade tieru netřeba — na migraci stačí jen FTP/SFTP účet pro deploy.
+
 **Akce Pavla (Vedos admin + DNS):**
 
-- Ověřit tarif (umí subdomény/docroot; **LowCost má 0 aliasů** → případně NoLimit) a zda je
-  **SFTP** (jinak FTPS). ([SFTP](https://kb.vedos.cz/en/wms-sftp/))
+- ~~Ověřit tarif~~ ✅ hotovo (NOLIMIT stačí). Zbývá ověřit, zda je **SFTP** dostupné (jinak
+  FTPS). ([SFTP](https://kb.vedos.cz/en/wms-sftp/))
 - Založit doménu/docroot; **DNS A/AAAA na Vedos** (zrušit CNAME na github.io); zapnout HTTPS
   (Let's Encrypt, subdoména = ruční setup).
 - Vytvořit FTP/SFTP účet; credentials uložit do **GitHub Secrets**.
@@ -742,6 +746,13 @@ existují, je to hlavní KPI). Mimo základní rozsah — můžeme přidat, nebo
       (navazuje na TASK-018).
 - [ ] `noindex`: při skutečném go-live produkce se řeší zrušení (samostatné rozhodnutí Pavla).
 - [ ] Ověřit: web na cílové doméně přes HTTPS, žádné rozbité odkazy/CSS.
+
+**Cutover bez výpadku:** nový web nasadit do **vedlejší složky** (nebo staging subdomény) na
+**témže** Vedos hostingu, kde běží starý; ověřit; pak jen **přehodit docroot** hlavní domény na
+novou složku. Protože oba weby jsou na stejném serveru, je to změna konfigurace, **ne DNS** —
+near-instant, bez propagace, bez výpadku, a snadný rollback (docroot zpět). V ten moment se
+zapnou 301 v `.htaccess` a řeší se zrušení `noindex`. (Tohle je hlavní důvod, proč produkci na
+Vedos — s Pages by šlo jen přes DNS flip s propagačním oknem.)
 
 **Notes:** Rozhodnuto 2026-11-05 — preview na Pages, Vedos až před produkcí. Váže se na TASK-018
 (přesměrování) a na rozhodnutí o zrušení `noindex`.
