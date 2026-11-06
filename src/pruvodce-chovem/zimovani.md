@@ -38,7 +38,7 @@ Je složitější, protože napodobujeme to, co venku proběhne samo:
 2. Zajistěte **skutečný pokles teplot přes noc.**
 3. Na konci října nebo v listopadu **přestaňte svítit** a přesuňte želvu do chladné místnosti (kolem 15 °C). Aktivita klesá.
 4. **Méně krmte** a několikrát želvu vykoupejte, aby si vyprázdnila střeva.
-5. Polospící želvu přesuňte do chladu kolem **3–6 °C**. [DOPLNIT: starý web uvádí u tohoto kroku 5–6 °C, u zimování z výběhu 3–6 °C. Potvrdí Jiří jednotnou teplotu zimoviště — teplota, kde chyba ublíží zvířeti.]
+5. Polospící želvu přesuňte do chladu kolem **5 °C** (bezpečně 4–6 °C).
 
 Spánek u menších želv trvá přibližně **dva měsíce.** Na jaře probouzíte obráceným postupem: postupně oteplujete, pak začnete krátce svítit a přidáváte potravu.
 

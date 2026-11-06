@@ -19,7 +19,7 @@ CITES je mezinárodní úmluva na ochranu ohrožených druhů. Pro vás jako nov
 
 ## Kterých želv se to týká
 
-Povinnou registraci mají **želva zelenavá, vroubená a žlutohnědá** (v EU příloha A). **Želva stepní, pardálí a kloubnatá** registraci nevyžadují (příloha B). [DOPLNIT: potvrdí klient — otevřený bod 13 zadání.]
+Povinnou registraci mají **želva zelenavá, vroubená a žlutohnědá** (v EU příloha A). **Želva stepní, pardálí a kloubnatá** registraci nevyžadují (příloha B).
 
 Čipovaná želva se registruje jednou a dál už s úřady nemáte starosti. Nečipovanou je potřeba čas od času doložit fotkou spodní části krunýře (plastronu), protože kresba se mění.
 
