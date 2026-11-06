@@ -9,12 +9,15 @@ description: Suchozemské želvy z vlastního odchovu, 45 let a dvě generace zk
   <img class="hero__foto" src="{{ uvod.hero.foto }}" alt="{{ uvod.hero.alt }}" width="1600" height="680" fetchpriority="high">
   <div class="wrap hero__panel-obal">
     <div class="hero__panel">
-      <div class="kick kick--tma">{{ uvod.hero.kicker }}</div>
+      <div class="kick">{{ uvod.hero.kicker }}</div>
       <h1 class="disp">{{ uvod.hero.nadpis }}</h1>
       <p>{{ uvod.hero.perex }}</p>
       <div class="hero__tlacitka">
-        <a class="btn btn--tel" href="#vyber">Vybrat želvu</a>
-        <a class="btn btn--obrys js-tel-hero" href="tel:{{ site.telefon | telHref }}">Zavolat {{ site.telefon }}</a>
+        <a class="btn btn--tel js-tel-hero" href="tel:{{ site.telefon | telHref }}">
+          {% include "partials/ikona-tel.njk" %}
+          Zavolat {{ site.telefon }}
+        </a>
+        <a class="btn btn--tma" href="#vyber">Vybrat želvu</a>
       </div>
     </div>
   </div>

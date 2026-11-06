@@ -4,7 +4,15 @@
       <img src="{{ '/assets/img/logo/logo-haltuf-symbol-cerne-v2.svg' | url }}" alt="" width="64" height="48">
       <span>{{ site.nazev }}<span class="logo__tecka">.</span></span>
     </a>
-    <nav class="menu" aria-label="Hlavní navigace">
+    <input type="checkbox" id="menu-cb" class="menu-cb" aria-hidden="true">
+    <label for="menu-cb" class="menu-btn" aria-label="Otevřít nebo zavřít navigaci">
+      <svg class="menu-btn__svg" width="22" height="16" viewBox="0 0 22 16" aria-hidden="true" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="0" width="22" height="2.5" rx="1" fill="currentColor"/>
+        <rect x="0" y="6.75" width="22" height="2.5" rx="1" fill="currentColor"/>
+        <rect x="0" y="13.5" width="22" height="2.5" rx="1" fill="currentColor"/>
+      </svg>
+    </label>
+    <nav class="menu" id="hlavni-nav" aria-label="Hlavní navigace">
       <ul>
         {% for polozka in navigace %}
           <li>
