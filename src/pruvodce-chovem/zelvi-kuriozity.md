@@ -27,7 +27,7 @@ Některé nálezy — vývojové vady a nevyvinutá mláďata — ukazujeme jen 
 
 ## Chov je každý den jiný
 
-Právě tyhle drobnosti dělají chov tím, čím je. Víc o našem chovu a jeho zázemí najdete na stránce [O nás]({{ '/o-nas/' | url }}).
+Právě tyhle drobnosti dělají chov tím, čím je. Víc o našem chovu a jeho zázemí najdete na stránce [O nás]({{ '/o-nas/' | url }}). A jestli uvažujete o vlastní želvě, prohlédněte si [naše druhy na prodej]({{ '/zelvy-na-prodej/' | url }}).
 
 <!-- Citlivé fotky (deformace, nevyvinutá mláďata) povinně za rozklikávací „Zobrazit" (zadání 4.9, 7.1). Cesty: /foto/kuriozity/. -->
 <!-- Sjednoceno: „za 30 let chovu" z původního webu → „za desítky let chovu" (praxe = 45 let). -->

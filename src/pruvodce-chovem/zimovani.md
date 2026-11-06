@@ -48,4 +48,4 @@ Největší problém zimování i probouzení je **uspěchání.** Když želva 
 
 ## Poradíme vám
 
-Zimujete poprvé? Zavolejte — projdeme to podle toho, jestli máte želvu venku, nebo v teráriu.
+Pro venkovní chov se hodí [odrostlejší, už zimované zvíře]({{ '/zelvy-na-prodej/' | url }}). Zimujete poprvé? Zavolejte — projdeme to podle toho, jestli máte želvu venku, nebo v teráriu.

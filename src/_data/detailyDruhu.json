@@ -4,23 +4,23 @@
     "galerie": [
       {
         "foto": "https://www.zelvycr.cz/foto/foto4.jpg",
-        "alt": "Želva zelenavá z našeho chovu, fotografie 1 z 5"
+        "alt": "Dospělá želva zelenavá z našeho chovu"
       },
       {
         "foto": "https://www.zelvycr.cz/foto/foto20.jpg",
-        "alt": "Želva zelenavá z našeho chovu, fotografie 2 z 5"
+        "alt": "Krunýř želvy zelenavé shora — žlutohnědá kresba"
       },
       {
         "foto": "https://www.zelvycr.cz/foto/foto8.jpg",
-        "alt": "Želva zelenavá z našeho chovu, fotografie 3 z 5"
+        "alt": "Mládě želvy zelenavé v trávě"
       },
       {
         "foto": "https://www.zelvycr.cz/foto/foto21.jpg",
-        "alt": "Želva zelenavá z našeho chovu, fotografie 4 z 5"
+        "alt": "Želva zelenavá při krmení"
       },
       {
         "foto": "https://www.zelvycr.cz/foto/pohlavi/T_hermanni.JPG",
-        "alt": "Želva zelenavá z našeho chovu, fotografie 5 z 5"
+        "alt": "Spodní část krunýře (plastron) — rozlišení pohlaví"
       }
     ],
     "narocnost": "[DOPLNIT: náročnost chovu]",
@@ -96,7 +96,7 @@
       "Jedním z nejnápadnějších znaků tohoto druhu je silná fixace na člověka — žlutohnědé si pamatují svého chovatele a aktivně vyhledávají kontakt. Z toho důvodu patří k nejoblíbenějším druhům u zkušenějších chovatelů.",
       "Africké populace nejsou přizpůsobeny na zimování v Evropě a pro venkovní chov jsou problematické — vyžadují celoroční přístup do temperovaného prostoru."
     ],
-    "postrehChovatele": "Žlutohnědé nás poznávají. Stačí přijít ke výběhu a hned přibíhají — to je na želvách pořád překvapivé.",
+    "postrehChovatele": "Žlutohnědé si pamatují lidi. Samci bývají až dotěrní — přízeň si u nich udržíte kontaktem. To je mezi želvami výjimečné.",
     "formy": [
       {
         "nazev": "Testudo graeca",

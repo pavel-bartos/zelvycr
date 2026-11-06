@@ -3,6 +3,7 @@
   { "nazev": "Startovací sady", "url": "/startovaci-sady/" },
   { "nazev": "Příslušenství", "url": "/prislusenstvi/" },
   { "nazev": "Průvodce chovem", "url": "/pruvodce-chovem/" },
+  { "nazev": "Galerie", "url": "/galerie/" },
   { "nazev": "Jak nakoupit", "url": "/jak-nakoupit/" },
   { "nazev": "O nás", "url": "/o-nas/" }
 ]
