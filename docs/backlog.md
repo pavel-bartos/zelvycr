@@ -669,6 +669,7 @@ se váže na ostrou doménu `www.zelvycr.cz`, ne na tuhle subdoménu.
 | -------- | --------------------------------------------------------------------------------------------------- | ---- | -------- | ------ |
 | TASK-018 | Přesměrování 17 starých `.html` adres + kotvy `#6_x` (3.3)                                          | M    | High     | ⬜     |
 | TASK-019 | SEO: sitemap, kanonické adresy, Open Graph, JSON-LD (8.3)                                           | M    | Medium   | ⬜     |
+| TASK-047 | Migrace hostingu na Vedos před finálním nasazením (FTP/SFTP deploy + `.htaccess` 301)               | M    | High     | ⬜     |
 | TASK-031 | GTM kontejner + cookie consent (Consent Mode v2, základ) — plán Sprint 9                            | M    | High     | ⬜     |
 | TASK-032 | GA4 + Google Ads + Meta Pixel přes GTM (základní, consent-gated, bez custom eventů) — plán Sprint 9 | M    | High     | ⬜     |
 | TASK-033 | Ověření měřicího sprintu (GTM Preview, consent chování) — plán Sprint 9                             | S    | High     | ⬜     |
@@ -714,6 +715,36 @@ Bez nich jde struktura připravit s placeholdery, ale ne dokončit.
 
 **Volitelný levný přídavek:** jeden konverzní event „klik na telefon" (hooky `js-tel-*` už
 existují, je to hlavní KPI). Mimo základní rozsah — můžeme přidat, nebo nechat na Shoptet.
+
+---
+
+### TASK-047: Migrace hostingu na Vedos před finálním nasazením
+
+**Size:** M · **Status:** ⬜ · **Priority:** High · **plán — až před produkcí**
+**Goal:** Než nový web nahradí starý na produkční doméně, přesunout hosting z GitHub Pages na
+**Vedos** (kde běží starý web i doména). Preview do té doby zůstává na GitHub Pages (TASK-045).
+**Proč Vedos pro produkci:** `.htaccess` umí serverová **301** (Pages ne — povinné pro staré
+`.html` adresy), co-location s doménou a starým webem, Pavel to už platí.
+
+**Akce Pavla (Vedos admin + DNS):**
+
+- Ověřit tarif (umí subdomény/docroot; **LowCost má 0 aliasů** → případně NoLimit) a zda je
+  **SFTP** (jinak FTPS). ([SFTP](https://kb.vedos.cz/en/wms-sftp/))
+- Založit doménu/docroot; **DNS A/AAAA na Vedos** (zrušit CNAME na github.io); zapnout HTTPS
+  (Let's Encrypt, subdoména = ruční setup).
+- Vytvořit FTP/SFTP účet; credentials uložit do **GitHub Secrets**.
+
+**Dev (Claude Code):**
+
+- [ ] GitHub Actions: build (`pathPrefix=/`) → nahrát `dist/` přes **FTPS/SFTP** (ne plaintext FTP)
+      z CI; nahradí Pages deploy pro tento web.
+- [ ] `.htaccess`: 17× 301 přesměrování starých `.html` adres + `www`/`http` sjednocení
+      (navazuje na TASK-018).
+- [ ] `noindex`: při skutečném go-live produkce se řeší zrušení (samostatné rozhodnutí Pavla).
+- [ ] Ověřit: web na cílové doméně přes HTTPS, žádné rozbité odkazy/CSS.
+
+**Notes:** Rozhodnuto 2026-11-05 — preview na Pages, Vedos až před produkcí. Váže se na TASK-018
+(přesměrování) a na rozhodnutí o zrušení `noindex`.
 
 ---
 
