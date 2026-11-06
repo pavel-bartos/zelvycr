@@ -28,6 +28,11 @@
   --barva-linka-silna: #1c1b17;
   --barva-img-placeholder: #dcd3be;
 
+  /* hero — papírové sklo (§8 bod 1) */
+  --hero-sklo-bg: rgb(251 250 246 / 0.85);
+  --hero-sklo-bg-zaloha: rgb(251 250 246 / 0.94);
+  --hero-sklo-filtr: blur(16px) saturate(1.15);
+
   /* dostupnost */
   --badge-skladem-bg: #dde8c6;
   --badge-skladem-text: #2e4a12;
@@ -299,34 +304,40 @@ a:hover {
 .hero__panel {
   max-width: 660px;
   padding: 44px 44px 40px;
-  background: var(--barva-tma);
-  color: var(--barva-papir);
+  background: var(--hero-sklo-bg);
+  -webkit-backdrop-filter: var(--hero-sklo-filtr);
+  backdrop-filter: var(--hero-sklo-filtr);
+  border-top: 2px solid var(--barva-linka-silna);
+  color: var(--barva-text);
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .hero__panel {
+    background: var(--hero-sklo-bg-zaloha);
+  }
 }
 
 .hero__panel .kick {
   margin-bottom: 18px;
+  color: var(--barva-zelena);
 }
 
 .hero__panel h1 {
   margin: 0 0 22px;
   font-size: 64px;
-  color: var(--barva-papir);
+  color: var(--barva-text);
 }
 
 .hero__panel p {
   margin: 0 0 30px;
   font-size: 20px;
-  color: var(--barva-text-na-tme);
+  color: var(--barva-text-tlumena);
 }
 
 .hero__tlacitka {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-}
-
-.hero__panel .btn--obrys {
-  color: var(--barva-papir);
 }
 
 /* ---------- lišta důvěry ---------- */
@@ -834,12 +845,12 @@ summary::-webkit-details-marker {
   display: none;
 }
 
-summary::after {
+.faq summary::after {
   content: '↓';
   color: var(--barva-zelena);
 }
 
-details[open] summary::after {
+.faq details[open] summary::after {
   content: '↑';
 }
 
@@ -1463,6 +1474,11 @@ details p {
 
 /* ---------- hlavička ---------- */
 
+.hlavicka {
+  position: relative;
+  z-index: 10;
+}
+
 .hlavicka__obsah {
   display: flex;
   flex-wrap: wrap;
@@ -1470,6 +1486,91 @@ details p {
   justify-content: space-between;
   gap: 16px 32px;
   padding-block: 22px;
+}
+
+/* Hamburger menu — checkbox hack, CSS-only, bez JS (§3.2, §5) */
+
+/* Checkbox vždy skrytý */
+.menu-cb {
+  display: none;
+}
+
+/* Desktop ≥ 62.5 rem (1000 px): hamburger label skrytý, nav vždy viditelný */
+@media (min-width: 62.5rem) {
+  .menu-btn {
+    display: none;
+  }
+
+  .menu {
+    flex: 1; /* nav zabere střední prostor ve flex řadě */
+  }
+}
+
+/* Mobil < 62.5 rem (1000 px): hamburger */
+@media (max-width: 62.49rem) {
+  .hlavicka__obsah {
+    flex-wrap: nowrap;
+    gap: 12px;
+  }
+
+  /* pořadí: logo | Zavolat (auto margin) | hamburger */
+  .btn--hlavicka {
+    order: 2;
+    margin-left: auto;
+    flex-shrink: 0;
+    font-size: 15px;
+    padding: 0 16px;
+  }
+
+  .menu-btn {
+    order: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 8px;
+    cursor: pointer;
+    color: var(--barva-text);
+    flex-shrink: 0;
+  }
+
+  /* Nav skrytý dokud checkbox není zaškrtnutý */
+  .menu {
+    display: none;
+  }
+
+  /* Nav viditelný jako dropdown při zaškrtnutém checkboxu */
+  .menu-cb:checked ~ .menu {
+    display: block;
+    position: absolute;
+    inset-inline: 0;
+    top: 100%;
+    z-index: 100;
+    background: var(--barva-papir);
+    padding: 16px var(--gutter) 24px;
+    border-top: 1px solid var(--barva-linka);
+    box-shadow: 0 8px 24px rgb(28 27 23 / 0.08);
+  }
+
+  .menu ul {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .menu li {
+    border-bottom: 1px solid var(--barva-linka);
+  }
+
+  .menu li:last-child {
+    border-bottom: 0;
+  }
+
+  .menu a {
+    display: block;
+    padding-block: 12px;
+    min-height: 44px;
+  }
 }
 
 .logo {
@@ -1703,6 +1804,10 @@ details p {
   .hero__panel {
     max-width: none;
     padding: 32px var(--gutter);
+    background: var(--barva-papir);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border-top: 0;
   }
 
   .hero__panel h1 {
