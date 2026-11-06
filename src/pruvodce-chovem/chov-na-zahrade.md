@@ -11,7 +11,7 @@ vKostce: |
     <li>Volný chov na zahradě je z pohledu želvy nejlepší — sama si určuje svůj rytmus.</li>
     <li>Výběh musí být dokonale oplocený; plot zapusťte desítky centimetrů do země.</li>
     <li>Pozor na jímky, bazény a kanály — pro želvu jsou smrtelně nebezpečné.</li>
-    <li>Na zahradu doporučujeme odrostlejší zvíře, nejlépe už několikrát zimované.</li>
+    <li>Na zahradu doporučujeme <a href="{{ '/zelvy-na-prodej/' | url }}">odrostlejší zvíře</a>, nejlépe už několikrát zimované.</li>
   </ul>
 ---
 

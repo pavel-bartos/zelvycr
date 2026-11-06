@@ -21,7 +21,7 @@ Kolik má moje želva v tomhle věku měřit? Je to nevděčná otázka a kolem 
 
 ## Kdy zpozornět
 
-To neznamená růst nehlídat. Pokud zaznamenáte nečekané změny nebo želva prakticky neroste, zkuste nejdřív vylepšit její prostředí — [teplo a UVB]({{ '/pruvodce-chovem/svetlo-a-teplo/' | url }}), [vlhkost]({{ '/pruvodce-chovem/voda-a-vlhkost/' | url }}), [stravu]({{ '/pruvodce-chovem/krmeni/' | url }}). A poraďte se s chovatelem, od kterého želvu máte — ten zná podmínky, ze kterých vzešla.
+To neznamená růst nehlídat. Pokud zaznamenáte nečekané změny nebo želva prakticky neroste, zkuste nejdřív vylepšit její prostředí a [vybavení]({{ '/prislusenstvi/' | url }}) — [teplo a UVB]({{ '/pruvodce-chovem/svetlo-a-teplo/' | url }}), [vlhkost]({{ '/pruvodce-chovem/voda-a-vlhkost/' | url }}), [stravu]({{ '/pruvodce-chovem/krmeni/' | url }}). A poraďte se s chovatelem, od kterého želvu máte — ten zná podmínky, ze kterých vzešla.
 
 <aside class="box-chov">
 <div class="kick">Z našeho chovu</div>

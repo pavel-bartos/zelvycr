@@ -34,7 +34,7 @@ Po úhynu zvířete se želva z evidence zase odhlásí.
 
 ## Pomůžeme vám s tím
 
-Nevíte si s formulářem rady? Zavolejte — provedeme vás tím. S doklady od nás je to otázka pár minut.
+Nevíte si s formulářem rady? Zavolejte — provedeme vás tím. S doklady od nás je to otázka pár minut. Vybíráte si [želvu, která registraci podléhá]({{ '/zelvy-na-prodej/' | url }})? Všechno potřebné dostanete rovnou s ní.
 
 <!-- Fotky dokladů jako galerie s popisky (žlutý papír přední/zadní, registrační list přední/zadní, příloha s fotkou); vzor vyplněného formuláře ke stažení jako PDF. Cesty: /foto/foto15–19.jpg, /foto/citesDoc.png (zadání 4.9). -->
 <!-- Vypuštěn údaj „175 smluvních stran" ze starého webu — neověřený, dle zadání 4.9. -->
