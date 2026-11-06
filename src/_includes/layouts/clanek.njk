@@ -24,13 +24,15 @@ layout: layouts/base.njk
     </div>
   </header>
 
-  {# 2 — V kostce #}
+  {# 2 — V kostce (zobrazí se jen když článek vKostce definuje) #}
+  {% if vKostce %}
   <section class="wrap sekce">
     <aside class="box-v-kostce">
       <div class="kick">V kostce</div>
-      {{ vKostce | safe if vKostce else '<p>[DOPLNIT – klíčové body tohoto článku]</p>' | safe }}
+      {{ vKostce | safe }}
     </aside>
   </section>
+  {% endif %}
 
   {# 3 — Tělo článku #}
   <section class="wrap clanek-telo">
