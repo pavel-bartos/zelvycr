@@ -1,6 +1,6 @@
 name: Deploy na Vedos (novy.zelvycr.cz)
 
-# Nasazuje dist/ na Vedos hosting do složky www/novy/ přes FTPS.
+# Nasazuje dist/ na Vedos hosting do složky www/domains/novy.zelvycr.cz/ přes FTPS.
 # Triggered při každém push do main — paralelně s Pages deployem.
 # pathPrefix=/ protože novy.zelvycr.cz běží v kořeni domény.
 #
@@ -42,5 +42,5 @@ jobs:
           username: ${{ secrets.VEDOS_USER }}
           password: ${{ secrets.VEDOS_PASS }}
           local-dir: ./dist/
-          server-dir: /www/novy/
+          server-dir: /www/domains/novy.zelvycr.cz/
           protocol: ftps
