@@ -1,6 +1,6 @@
 name: Deploy na Vedos (novy.zelvycr.cz)
 
-# Nasazuje dist/ na Vedos hosting do složky www/novy/ přes FTPS.
+# Nasazuje dist/ na Vedos hosting do složky www/domains/novy.zelvycr.cz/ přes FTPS.
 # Triggered při každém push do main — paralelně s Pages deployem.
 # pathPrefix=/ protože novy.zelvycr.cz běží v kořeni domény.
 #
@@ -35,12 +35,18 @@ jobs:
         run: npm run build
         env:
           PATH_PREFIX: /
-      - name: Deploy na Vedos přes FTPS
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.1
-        with:
-          server: ${{ secrets.VEDOS_HOST }}
-          username: ${{ secrets.VEDOS_USER }}
-          password: ${{ secrets.VEDOS_PASS }}
-          local-dir: ./dist/
-          server-dir: /www/novy/
-          protocol: ftps
+      - name: Instalace lftp
+        run: sudo apt-get install -y -q lftp
+      - name: Deploy na Vedos přes FTPS (lftp)
+        env:
+          VEDOS_HOST: ${{ secrets.VEDOS_HOST }}
+          VEDOS_USER: ${{ secrets.VEDOS_USER }}
+          VEDOS_PASS: ${{ secrets.VEDOS_PASS }}
+        run: |
+          lftp -u "$VEDOS_USER","$VEDOS_PASS" -e "
+            set ftp:ssl-force true;
+            set ftp:ssl-protect-data true;
+            set ssl:verify-certificate false;
+            mirror --reverse --delete --parallel=4 ./dist/ /www/domains/novy.zelvycr.cz/;
+            bye
+          " ftp://$VEDOS_HOST
