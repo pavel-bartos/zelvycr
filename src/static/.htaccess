@@ -1,0 +1,6 @@
+Options -Indexes
+
+# http → https (Vedos má Let's Encrypt zdarma)
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
