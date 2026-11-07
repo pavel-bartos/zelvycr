@@ -1,0 +1,46 @@
+name: Deploy na Vedos (novy.zelvycr.cz)
+
+# Nasazuje dist/ na Vedos hosting do složky www/novy/ přes FTPS.
+# Triggered při každém push do main — paralelně s Pages deployem.
+# pathPrefix=/ protože novy.zelvycr.cz běží v kořeni domény.
+#
+# Potřebné GitHub Secrets:
+#   VEDOS_HOST  — adresa FTP serveru (tvar 123456.w78.wedos.net)
+#   VEDOS_USER  — login FTP účtu (tvar w123456)
+#   VEDOS_PASS  — heslo FTP účtu
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: vedos-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+      - run: npm ci
+      - name: Build (pathPrefix=/ pro custom doménu)
+        run: npm run build
+        env:
+          PATH_PREFIX: /
+      - name: Deploy na Vedos přes FTPS
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.1
+        with:
+          server: ${{ secrets.VEDOS_HOST }}
+          username: ${{ secrets.VEDOS_USER }}
+          password: ${{ secrets.VEDOS_PASS }}
+          local-dir: ./dist/
+          server-dir: /www/novy/
+          protocol: ftps
