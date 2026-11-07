@@ -1,6 +1,6 @@
 # Želvy ČR (zelvycr-web) — Backlog
 
-_Last updated: 2026-11-07 | Sprint: 6 🔵 Testovací brána (aktuální) · Sprint 5 🔵 Texty (souběžně) · Sprinty 1–4 ✅ · archiv v `docs/backlog-archive.md`_
+_Last updated: 2026-11-07 | Sprint: 6 🔵 Testovací brána (aktuální — PR #33) · Sprint 5 🔵 Texty (souběžně) · Sprinty 1–4 ✅ · archiv v `docs/backlog-archive.md`_
 
 Backlog píše Claude (šéf vývoje), implementaci dělá Claude Code. Každý kódovací task má
 **Claude Code prompt** a odvolává se na `docs/design-policy.md` (vzhled) a zadání v Claude
@@ -108,16 +108,16 @@ sem NEpatří — ty jsou v nasazovacím sprintu (preflight)._
 
 | ID       | Task                                                               | Size | Priority | Status |
 | -------- | ------------------------------------------------------------------ | ---- | -------- | ------ |
-| TASK-027 | CI architektura: rychlá brána + strukturální (path filtr) + `gate` | M    | High     | ⬜     |
-| TASK-028 | Strukturální testy: Playwright e2e smoke + responzivita 360 px     | L    | High     | ⬜     |
-| TASK-029 | Přístupnost (axe-core) + kontrola odkazů a alt textů               | M    | Medium   | ⬜     |
+| TASK-027 | CI architektura: rychlá brána + strukturální (path filtr) + `gate` | M    | High     | 🔵     |
+| TASK-028 | Strukturální testy: Playwright e2e smoke + responzivita 360 px     | L    | High     | 🔵     |
+| TASK-029 | Přístupnost (axe-core) + kontrola odkazů a alt textů               | M    | Medium   | 🔵     |
 | TASK-030 | Lokální ověření Sprintu 6                                          | S    | High     | ⬜     |
 
 ---
 
 ### TASK-027: CI architektura — rychlá brána + strukturální (path filtr) + agregační `gate`
 
-**Size:** M (2–4 h) · **Status:** ⬜ Pending · **Priority:** High
+**Size:** M (2–4 h) · **Status:** 🔵 In Progress · **PR:** #33 · **Priority:** High
 **Goal:** CI pouští těžké testy jen tam, kde dávají smysl, a merge se nikdy nezasekne na
 přeskočeném required checku.
 
@@ -154,7 +154,7 @@ nebude existovat, a merge se zablokuje. Naveď Pavla v okamžiku, kdy PR půjde 
 
 ### TASK-028: Strukturální testy — Playwright e2e smoke + responzivita 360 px
 
-**Size:** L (4–6 h) · **Status:** ⬜ Pending · **Priority:** High
+**Size:** L (4–6 h) · **Status:** 🔵 In Progress · **PR:** #33 · **Priority:** High
 **Goal:** Automaticky ověřit, že se web načítá, ovládací prvky fungují a nic se neláme na mobilu.
 
 **Acceptance criteria:**
@@ -186,7 +186,7 @@ nebude existovat, a merge se zablokuje. Naveď Pavla v okamžiku, kdy PR půjde 
 
 ### TASK-029: Přístupnost (axe-core) + kontrola odkazů a alt textů
 
-**Size:** M (3–4 h) · **Status:** ⬜ Pending · **Priority:** Medium
+**Size:** M (3–4 h) · **Status:** 🔵 In Progress · **PR:** #33 · **Priority:** Medium
 **Goal:** Automaticky hlídat WCAG 2.2 AA a rozbité odkazy — i u obsahových PR tu levnou část.
 
 **Acceptance criteria:**

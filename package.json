@@ -13,10 +13,15 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "check:links": "node scripts/check-links.js",
+    "check:alt": "node scripts/check-alt.js"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
+    "@axe-core/playwright": "^4.14.0",
+    "@playwright/test": "^1.65.0",
     "eslint": "^9.0.0",
     "globals": "^15.0.0",
     "prettier": "^3.3.0",

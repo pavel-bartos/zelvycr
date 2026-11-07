@@ -1,5 +1,15 @@
 name: CI
 
+# Mapa cest → vrstva testů
+# ─────────────────────────────────────────────────────────────────────────────
+# rychla-brana (vždy):   format:check · lint · vitest · build · check:links · check:alt
+# strukturalni (kód*):   Playwright e2e smoke · responzivita 360px · axe-core a11y
+# gate (vždy):           agregační job — jediný required status check v branch protection
+#
+# * kód = změna v src/_includes/**, src/assets/**, **/*.njk, lib/**, eleventy.config.js,
+#         src/_data/**, .github/workflows/**   |   override: štítek `run-full-suite`
+# ─────────────────────────────────────────────────────────────────────────────
+
 on:
   push:
     branches: [main]
@@ -9,7 +19,8 @@ permissions:
   contents: read
 
 jobs:
-  check:
+  # ── 1. Rychlá brána (vždy) ───────────────────────────────────────────────
+  rychla-brana:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -22,3 +33,60 @@ jobs:
       - run: npm run lint
       - run: npm test
       - run: npm run build
+      - run: npm run check:links
+      - run: npm run check:alt
+
+  # ── 2. Detekce změn (helper pro strukturální job) ─────────────────────────
+  detekce-zmen:
+    runs-on: ubuntu-latest
+    outputs:
+      kod: ${{ steps.filter.outputs.kod }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dorny/paths-filter@v3
+        id: filter
+        with:
+          filters: |
+            kod:
+              - 'src/_includes/**'
+              - 'src/assets/**'
+              - '**/*.njk'
+              - 'lib/**'
+              - 'eleventy.config.js'
+              - 'src/_data/**'
+              - '.github/workflows/**'
+
+  # ── 3. Strukturální testy (jen při změně kódu nebo štítku run-full-suite) ─
+  strukturalni:
+    needs: [detekce-zmen]
+    if: >
+      needs.detekce-zmen.outputs.kod == 'true' ||
+      contains(github.event.pull_request.labels.*.name, 'run-full-suite')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+      - run: npm ci
+      - run: npm run build
+      - name: Playwright — instalace Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Playwright — e2e + a11y testy
+        run: npm run test:e2e
+
+  # ── 4. Gate — agregační job, jediný required status check ─────────────────
+  gate:
+    needs: [rychla-brana, strukturalni]
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Kontrola výsledku
+        run: |
+          if [ "${{ needs.rychla-brana.result }}" = "failure" ] || \
+             [ "${{ needs.strukturalni.result }}" = "failure" ]; then
+            echo "SELHALO: rychla-brana=${{ needs.rychla-brana.result }}, strukturalni=${{ needs.strukturalni.result }}"
+            exit 1
+          fi
+          echo "OK: rychla-brana=${{ needs.rychla-brana.result }}, strukturalni=${{ needs.strukturalni.result }}"
