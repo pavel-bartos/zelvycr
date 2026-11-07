@@ -53,6 +53,27 @@ git push -u origin <prefix>/<nazev>           # → PR → zelená CI → merge
 - **Před přepnutím větve commitni nebo `git stash`** — nikdy nepřepínej s rozpracovaným stromem.
 - Po mergi: `git switch main && git pull --rebase`, pak novou větev na další task.
 
+## CI — mapa cest → vrstva testů
+
+`.github/workflows/ci.yml` má tři joby:
+
+| Job            | Kdy běží                                                  | Co testuje                                                      |
+| -------------- | --------------------------------------------------------- | --------------------------------------------------------------- |
+| `rychla-brana` | vždy                                                      | format, lint, vitest, build, kontrola odkazů, kontrola alt      |
+| `strukturalni` | jen při změně kódu (viz níž) nebo štítku `run-full-suite` | Playwright e2e smoke, responzivita 360px, axe-core a11y         |
+| `gate`         | vždy                                                      | agregace — jediný **required status check** v branch protection |
+
+**Kódové cesty** (spouštějí `strukturalni`):
+`src/_includes/**` · `src/assets/**` · `**/*.njk` · `lib/**` · `eleventy.config.js` ·
+`src/_data/**` · `.github/workflows/**`
+
+Čistě obsahový PR (jen `docs/`, `src/pruvodce-chovem/*.md`) `strukturalni` přeskočí —
+`gate` přesto projde (skipped ≠ failed). Štítek **`run-full-suite`** vynutí `strukturalni`
+i na takovém PR.
+
+> **⚠️ Akce po první instalaci:** V GitHub Settings → Rules → ruleset → Require status checks
+> přepni required check z `check` na `gate`. Bez toho merge PR zamrzne.
+
 ## Když přesto nastane konflikt
 
 - **Divergovaný `main` v lokálním klonu:** commitni/stashni rozpracované, pak `git pull --rebase`.
