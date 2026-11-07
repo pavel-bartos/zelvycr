@@ -4,6 +4,7 @@ import {
   jinePolozky,
   kc,
   podleSlugu,
+  prevNextClanek,
   rozpetiKc,
   telHref,
 } from '../lib/filtry.js';
@@ -58,5 +59,37 @@ describe('jinePolozky', () => {
   });
   it('ve výchozím stavu vrátí tři položky', () => {
     expect(jinePolozky(pole, 'd')).toHaveLength(3);
+  });
+});
+
+describe('prevNextClanek', () => {
+  const poradi = [
+    { slug: 'prvni', title: 'První', foto: '/a.jpg', popisek: 'Popis A' },
+    { slug: 'druhy', title: 'Druhý', foto: '/b.jpg', popisek: 'Popis B' },
+    { slug: 'treti', title: 'Třetí', foto: '/c.jpg', popisek: 'Popis C' },
+  ];
+
+  it('vrátí prev i next pro prostřední článek', () => {
+    const result = prevNextClanek('druhy', poradi);
+    expect(result.prev.slug).toBe('prvni');
+    expect(result.next.slug).toBe('treti');
+  });
+
+  it('první článek nemá prev', () => {
+    const result = prevNextClanek('prvni', poradi);
+    expect(result.prev).toBeNull();
+    expect(result.next.slug).toBe('druhy');
+  });
+
+  it('poslední článek nemá next', () => {
+    const result = prevNextClanek('treti', poradi);
+    expect(result.prev.slug).toBe('druhy');
+    expect(result.next).toBeNull();
+  });
+
+  it('neznámý slug vrátí null/null', () => {
+    const result = prevNextClanek('neexistuje', poradi);
+    expect(result.prev).toBeNull();
+    expect(result.next).toBeNull();
   });
 });

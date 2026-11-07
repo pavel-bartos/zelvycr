@@ -1,6 +1,7 @@
 dist/
 node_modules/
 package-lock.json
+test-results/
 
 # Nunjucks: prettier nemá parser pro {% %} a rozbil by řídicí bloky.
 # Šablony formátuj ručně.

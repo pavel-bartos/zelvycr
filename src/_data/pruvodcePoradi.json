@@ -1,0 +1,80 @@
+[
+  {
+    "slug": "je-zelva-pro-me",
+    "title": "Je želva pro mě?",
+    "foto": "https://www.zelvycr.cz/obrazky/zelvy/03.jpg",
+    "popisek": "Výhody a nároky chovu — než se rozhodnete."
+  },
+  {
+    "slug": "chov-v-terariu",
+    "title": "Chov v teráriu",
+    "foto": "https://www.zelvycr.cz/obrazky/dum/01.jpg",
+    "popisek": "Teploty, substrát a denní rytmus v teráriu."
+  },
+  {
+    "slug": "chov-na-zahrade",
+    "title": "Chov na zahradě",
+    "foto": "https://www.zelvycr.cz/obrazky/zahrada/05.jpg",
+    "popisek": "Výběh, oplocení a bouda pro venkovní chov."
+  },
+  {
+    "slug": "krmeni",
+    "title": "Krmení",
+    "foto": "https://www.zelvycr.cz/obrazky/dum/07.jpg",
+    "popisek": "Co jí suchozemská želva a čemu se vyhnout."
+  },
+  {
+    "slug": "svetlo-a-teplo",
+    "title": "Světlo a teplo",
+    "foto": "https://www.zelvycr.cz/obrazky/dum/05.jpg",
+    "popisek": "UVB záření a výhřevná bodovka — proč jsou klíčové."
+  },
+  {
+    "slug": "voda-a-vlhkost",
+    "title": "Voda a vlhkost",
+    "foto": "https://www.zelvycr.cz/obrazky/dum/14.jpg",
+    "popisek": "Koupání mláďat a správná vlhkost v teráriu."
+  },
+  {
+    "slug": "vitaminy-a-mineraly",
+    "title": "Vitamíny a minerály",
+    "foto": "https://www.zelvycr.cz/obrazky/zelvy/12.jpg",
+    "popisek": "Vápník a vitamíny — jak a kdy je doplňovat."
+  },
+  {
+    "slug": "utlum",
+    "title": "Útlum",
+    "foto": "https://www.zelvycr.cz/foto/67403894_2288519957896930_1790857274869153792_n.jpg",
+    "popisek": "Letní zpomalení — normální jev nebo zdravotní problém?"
+  },
+  {
+    "slug": "zimovani",
+    "title": "Zimování",
+    "foto": "https://www.zelvycr.cz/obrazky/zahrada/19.jpg",
+    "popisek": "Dva postupy přípravy na zimní spánek krok za krokem."
+  },
+  {
+    "slug": "velikost-a-rust",
+    "title": "Velikost a růst",
+    "foto": "https://www.zelvycr.cz/foto/67908629_2305187359563523_1840570847010488320_n.jpg",
+    "popisek": "Jak rychle roste zdravá želva a co sledovat."
+  },
+  {
+    "slug": "pohlavi",
+    "title": "Pohlaví",
+    "foto": "https://www.zelvycr.cz/foto/pohlavi/T_hermanni.JPG",
+    "popisek": "Jak poznat samce a samici."
+  },
+  {
+    "slug": "registrace-cites",
+    "title": "Registrace CITES",
+    "foto": "https://www.zelvycr.cz/foto/foto18.jpg",
+    "popisek": "Postup ve 4 krocích, zdarma, lhůta 30 dní."
+  },
+  {
+    "slug": "zelvi-kuriozity",
+    "title": "Želví kuriozity",
+    "foto": "https://www.zelvycr.cz/obrazky/dum/12.jpg",
+    "popisek": "Zajímavosti z 45 let chovu rodiny Haltufových."
+  }
+]
