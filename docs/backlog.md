@@ -670,6 +670,7 @@ se váže na ostrou doménu `www.zelvycr.cz`, ne na tuhle subdoménu.
 | TASK-018 | Přesměrování 17 starých `.html` adres + kotvy `#6_x` (3.3)                                          | M    | High     | ⬜     |
 | TASK-019 | SEO: sitemap, kanonické adresy, Open Graph, JSON-LD (8.3)                                           | M    | Medium   | ⬜     |
 | TASK-047 | Migrace hostingu na Vedos před finálním nasazením (FTP/SFTP deploy + `.htaccess` 301)               | M    | High     | ⬜     |
+| TASK-048 | Listování mezi články průvodce (tutorial prev/next)                                                 | M    | High     | ⬜     |
 | TASK-031 | GTM kontejner + cookie consent (Consent Mode v2, základ) — plán Sprint 9                            | M    | High     | ⬜     |
 | TASK-032 | GA4 + Google Ads + Meta Pixel přes GTM (základní, consent-gated, bez custom eventů) — plán Sprint 9 | M    | High     | ⬜     |
 | TASK-033 | Ověření měřicího sprintu (GTM Preview, consent chování) — plán Sprint 9                             | S    | High     | ⬜     |
@@ -715,6 +716,48 @@ Bez nich jde struktura připravit s placeholdery, ale ne dokončit.
 
 **Volitelný levný přídavek:** jeden konverzní event „klik na telefon" (hooky `js-tel-*` už
 existují, je to hlavní KPI). Mimo základní rozsah — můžeme přidat, nebo nechat na Shoptet.
+
+---
+
+### TASK-048: Listování mezi články průvodce (tutorial prev/next)
+
+**Size:** M · **Status:** ⬜ · **Priority:** High
+**Goal:** Průvodce chovem jde číst jako tutoriál — z článku se dá plynule přejít na předchozí
+/ následující.
+
+**Acceptance criteria:**
+
+- [ ] **Pořadí článků** (tutorial sekvence) je definované jako **jeden zdroj pravdy v datech**
+      (např. `poradi` ve front matter nebo pole v `src/_data/`), ze kterého čte **i výpis
+      rubriky, i prev/next** — ať se nikdy nerozejdou. Pořadí viz níže.
+- [ ] **Nahoře v článku** (`clanek.njk`): **jemné, čistě hypertextové** prev/next — vlevo
+      „← {název předchozího}", vpravo „{název následujícího} →". Nenápadné (malé, light),
+      **ne velké tlačítko**. Zobrazí se jen ten směr, který existuje.
+- [ ] **Dole pod článkem**: malý **rozcestník = dvě karty článků** (`.row--clanek` dle
+      design-policy §8) s popiskem „Předchozí článek" / „Další článek". Jen ty, které existují.
+- [ ] Konce sekvence graceful: první (Je želva pro mě?) nemá předchozí, poslední
+      (Želví kuriozity) nemá následující.
+- [ ] Bez JS (jen odkazy), interní odkazy přes `url` filtr, 360 px bez posunu, vzhled dle
+      design-policy (doplnit pravidlo prev/next do §7.5). Brány zelené.
+
+**Pořadí (tutorial, dle zadání 4.7 — namapuj na skutečné soubory v `src/pruvodce-chovem/`):**
+
+1. Je želva pro mě? · 2. Chov v teráriu · 3. Chov na zahradě · 4. Krmení · 5. Světlo a teplo ·
+2. Voda a vlhkost · 7. Vitamíny a minerály · 8. Útlum · 9. Zimování · 10. Velikost a růst ·
+3. Pohlaví · 12. Registrace CITES · 13. Želví kuriozity
+
+**Claude Code prompt:**
+
+> Přidej do článku průvodce (`src/pruvodce-chovem/clanek.njk`) listování prev/next. Nejdřív
+> zaveď **pořadí článků** jako jeden zdroj pravdy v datech (pořadí v TASK-048, namapuj na
+> skutečné slugy v `src/pruvodce-chovem/`) a nech z něj číst i výpis rubriky i prev/next.
+> Nahoře jemné hypertextové „← {předchozí}" / „{následující} →" (nenápadné, ne tlačítko),
+> dole malý rozcestník dvou karet `.row--clanek` (dle design-policy §8) „Předchozí článek" /
+> „Další článek". Konce graceful, bez JS, odkazy přes `url`. Doplň pravidlo prev/next do
+> `docs/design-policy.md` §7.5.
+
+**Notes:** Obsahově nezávislé — jde udělat hned (nezávisí na finálních textech ani fotkách).
+Prev/next je čistě strukturní; v Shoptetu by se stejné odkazy udržovaly ručně, tady z dat.
 
 ---
 
