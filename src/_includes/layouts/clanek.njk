@@ -1,6 +1,7 @@
 ---
 layout: layouts/base.njk
 ---
+{% set _nav = page.fileSlug | prevNextClanek(pruvodcePoradi) %}
 <article class="clanek">
 
   {# 1 — Hlavička #}
@@ -10,6 +11,19 @@ layout: layouts/base.njk
       <a href="{{ '/pruvodce-chovem/' | url }}">Průvodce chovem</a> <span aria-hidden="true">›</span>
       <span aria-current="page">{{ title }}</span>
     </nav>
+
+    {# Jemná prev/next navigace — viditelná jen v průvodci #}
+    {% if _nav.prev or _nav.next %}
+    <nav class="clanek-tutorial-nav" aria-label="Listování průvodcem">
+      {% if _nav.prev %}
+        <a class="clanek-tutorial-nav__prev" href="{{ ('/pruvodce-chovem/' + _nav.prev.slug + '/') | url }}">← {{ _nav.prev.title }}</a>
+      {% endif %}
+      {% if _nav.next %}
+        <a class="clanek-tutorial-nav__next" href="{{ ('/pruvodce-chovem/' + _nav.next.slug + '/') | url }}">{{ _nav.next.title }} →</a>
+      {% endif %}
+    </nav>
+    {% endif %}
+
     <div class="rule clanek-hlavicka__obsah">
       {% if skupinaKicker %}
         <div class="kick">{{ skupinaKicker }}</div>
@@ -48,5 +62,37 @@ layout: layouts/base.njk
   <section class="wrap clanek-telo">
     {{ content | safe }}
   </section>
+
+  {# 5 — Rozcestník prev/next (dole pod článkem) #}
+  {% if _nav.prev or _nav.next %}
+  <nav class="wrap clanek-tutorial-rozcestnik" aria-label="Další a předchozí článek průvodce">
+    <div class="clanek-tutorial-rozcestnik__karty">
+      {% if _nav.prev %}
+      <div class="clanek-tutorial-rozcestnik__polozka">
+        <span class="clanek-tutorial-rozcestnik__label">Předchozí článek</span>
+        <a class="row row--clanek" href="{{ ('/pruvodce-chovem/' + _nav.prev.slug + '/') | url }}">
+          <img src="{{ _nav.prev.foto }}" alt="" width="240" height="135" loading="lazy">
+          <div class="row__text">
+            <strong class="row__nazev">{{ _nav.prev.title }}</strong>
+            <span class="row__perex">{{ _nav.prev.popisek }}</span>
+          </div>
+        </a>
+      </div>
+      {% endif %}
+      {% if _nav.next %}
+      <div class="clanek-tutorial-rozcestnik__polozka">
+        <span class="clanek-tutorial-rozcestnik__label">Další článek</span>
+        <a class="row row--clanek" href="{{ ('/pruvodce-chovem/' + _nav.next.slug + '/') | url }}">
+          <img src="{{ _nav.next.foto }}" alt="" width="240" height="135" loading="lazy">
+          <div class="row__text">
+            <strong class="row__nazev">{{ _nav.next.title }}</strong>
+            <span class="row__perex">{{ _nav.next.popisek }}</span>
+          </div>
+        </a>
+      </div>
+      {% endif %}
+    </div>
+  </nav>
+  {% endif %}
 
 </article>

@@ -3,6 +3,7 @@ import {
   jinePolozky,
   kc,
   podleSlugu,
+  prevNextClanek,
   rozpetiKc,
   telHref,
 } from './lib/filtry.js';
@@ -25,6 +26,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter('rozpetiKc', rozpetiKc);
   eleventyConfig.addFilter('podleSlugu', podleSlugu);
   eleventyConfig.addFilter('jinePolozky', jinePolozky);
+  eleventyConfig.addFilter('prevNextClanek', prevNextClanek);
 
   return {
     pathPrefix: process.env.PATH_PREFIX || '/',

@@ -2,6 +2,7 @@
 node_modules/
 dist/
 .cache/
+test-results/
 
 # secrets — nikdy necommitovat
 .env

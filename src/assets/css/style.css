@@ -2076,6 +2076,51 @@ details p {
 .clanek-hlavicka__obsah {
   padding-top: 24px;
 }
+
+/* Jemná prev/next navigace nahoře v článku průvodce */
+.clanek-tutorial-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding-block: 12px 0;
+  font-size: 0.8125rem;
+  font-weight: 300;
+  color: var(--barva-text-tlumena);
+}
+.clanek-tutorial-nav__prev,
+.clanek-tutorial-nav__next {
+  color: var(--barva-text-tlumena);
+  text-decoration: none;
+}
+.clanek-tutorial-nav__prev:hover,
+.clanek-tutorial-nav__next:hover {
+  color: var(--barva-text);
+  text-decoration: underline;
+}
+.clanek-tutorial-nav__next {
+  margin-left: auto;
+}
+
+/* Rozcestník prev/next dole pod článkem */
+.clanek-tutorial-rozcestnik {
+  padding-block: 56px;
+  border-top: 1px solid var(--barva-linka);
+  margin-top: 56px;
+}
+.clanek-tutorial-rozcestnik__karty {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  gap: 24px;
+}
+.clanek-tutorial-rozcestnik__label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--barva-text-slaba);
+  margin-bottom: 12px;
+}
 .clanek-perex {
   font-size: 1.25rem;
   color: var(--barva-text-tlumena);

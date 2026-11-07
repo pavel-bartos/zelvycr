@@ -417,6 +417,18 @@ s H1, perex (`clanek-perex`, 20 px, tlumeně), čas čtení (`clanek-meta`, 14 p
 `.box-v-kostce` (zelená levá linka 4 px, olivový kicker „V kostce", seznam 3–5 odrážek —
 stejný styl jako `.box-chov`). Tělo `.clanek-telo` (max-width `70ch`). Závěrečné CTA přes partial.
 
+**Prev/next navigace průvodce (TASK-048):** Pořadí článků jako jeden zdroj pravdy v
+`src/_data/pruvodcePoradi.json` (array `{slug, title, foto, popisek}`). Filtr `prevNextClanek`
+v `lib/filtry.js` vrátí `{prev, next}`.
+
+- **Nahoře v hlavičce** (`.clanek-tutorial-nav`): flex, `justify-content: space-between`.
+  Jemné hypertextové odkazy — 13 px, `font-weight: 300`, barva `--barva-text-tlumena`. Hover:
+  tmavá barva + podtržení. `← {název}` vlevo, `{název} →` vpravo; zobrazí se jen směry, které existují.
+- **Dole pod tělem** (`.clanek-tutorial-rozcestnik`): odděleno `border-top` + `padding-block: 56px`.
+  Grid `repeat(auto-fit, minmax(min(100%, 300px), 1fr))`. Každá strana má label (`.clanek-tutorial-rozcestnik__label`:
+  12 px, `font-weight: 700`, uppercase, `--barva-text-slaba`) a pod ním karta `.row.row--clanek` (§3.5) s fotkou 240×135.
+- Bez JS. Interní odkazy přes `url` filtr. Konce sekvence graceful (první nemá prev, poslední nemá next).
+
 **Průvodce chovem — rozcestník (`/pruvodce-chovem/`):** Zvýrazněná karta „Je želva pro mě?"
 (`.pruvodce-vyber`, světlá plocha, `.rule` nahoře). Čtyři skupiny v `.pruvodce-skupiny`
 (grid `auto-fit, minmax(300px, 1fr)`). Každá skupina `.clanek-skupina` má `.rule` s H3 a `.clanek-skupina__seznam`
