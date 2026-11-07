@@ -1,6 +1,6 @@
 # Želvy ČR (zelvycr-web) — Backlog
 
-_Last updated: 2026-11-07 | Sprint: 6 🔵 Testovací brána (aktuální) · Sprint 5 🔵 Texty (souběžně) · Sprinty 1–4 ✅ · archiv v `docs/backlog-archive.md`_
+_Last updated: 2026-11-07 | Sprint: 6 ✅ Testovací brána · Sprint 5 ✅ Texty · Sprinty 1–4 ✅ · archiv v `docs/backlog-archive.md`_
 
 Backlog píše Claude (šéf vývoje), implementaci dělá Claude Code. Každý kódovací task má
 **Claude Code prompt** a odvolává se na `docs/design-policy.md` (vzhled) a zadání v Claude
@@ -111,7 +111,7 @@ sem NEpatří — ty jsou v nasazovacím sprintu (preflight)._
 | TASK-027 | CI architektura: rychlá brána + strukturální (path filtr) + `gate` | M    | High     | ✅     |
 | TASK-028 | Strukturální testy: Playwright e2e smoke + responzivita 360 px     | L    | High     | ✅     |
 | TASK-029 | Přístupnost (axe-core) + kontrola odkazů a alt textů               | M    | Medium   | ✅     |
-| TASK-030 | Lokální ověření Sprintu 6                                          | S    | High     | ⬜     |
+| TASK-030 | Lokální ověření Sprintu 6                                          | S    | High     | ✅     |
 
 ---
 
@@ -213,7 +213,7 @@ rozbít odkaz nebo zapomenout alt, a tohle to chytne levně bez e2e.
 
 ### TASK-030: Lokální ověření Sprintu 6
 
-**Size:** S (30–60 min) · **Status:** ⬜ Pending · **Priority:** High
+**Size:** S (30–60 min) · **Status:** ✅ Done (2026-11-07) · **Priority:** High
 **Goal:** Pavel ověří, že brána funguje: obsahový PR neběží strukturální testy, kódový ano,
 `gate` správně hlídá merge.
 
@@ -247,14 +247,14 @@ kompletních textů od copywritera.
 
 | ID       | Task                                                        | Size | Priority | Status |
 | -------- | ----------------------------------------------------------- | ---- | -------- | ------ |
-| TASK-025 | Propsat finální texty copywritera z `docs/obsah/` do `src/` | L    | Critical | ⬜     |
-| TASK-026 | Lokální ověření Sprintu 5                                   | S    | High     | ⬜     |
+| TASK-025 | Propsat finální texty copywritera z `docs/obsah/` do `src/` | L    | Critical | ✅     |
+| TASK-026 | Lokální ověření Sprintu 5                                   | S    | High     | ✅     |
 
 ---
 
 ### TASK-025: Propsat finální texty copywritera z `docs/obsah/` do `src/`
 
-**Size:** L (4–6 h) · **Status:** ⬜ Pending · **Priority:** Critical — **první věc dneška**
+**Size:** L (4–6 h) · **Status:** ✅ Done (2026-11-07) · **PR:** #32 · **Priority:** Critical
 **Goal:** Web používá finální texty copywritera místo placeholderů: 13 článků má tělo, detail
 zelenavé je doplněný (kromě náročnosti) a drobné úpravy z revize jsou provedené.
 
@@ -335,7 +335,7 @@ chovatele jsou vědomě ponechaná jako placeholdery — nedolaďovat je v tomhl
 
 ### TASK-026: Lokální ověření Sprintu 5
 
-**Size:** S (20–40 min) · **Status:** ⬜ Pending · **Priority:** High
+**Size:** S (20–40 min) · **Status:** ✅ Done (2026-11-07) · **Priority:** High
 **Goal:** Pavel odklikne, že web používá finální texty a placeholdery zbyly jen tam, kde se čeká na chovatele.
 
 **Jak spustit lokálně:**
@@ -378,7 +378,7 @@ Souběžně běží copywriterské a designérské připomínky (mimo repo → p
 | TASK-042 | O nás — záhlaví (grid 5/7) + portréty 3:4 (design-policy §8)                     | S    | Low      | ✅     |
 | TASK-044 | Startovací sady — oprava textu (překlep „już"→„už" + přejmenování nadpisu)       | XS   | High     | ✅     |
 | TASK-046 | Propsat poslední copywriterovy úpravy z `docs/obsah/` do `src/` (odkazy + O nás) | S    | High     | ✅     |
-| TASK-043 | Ověření Revize v1 (Pavel, produkce)                                              | S    | High     | ⬜     |
+| TASK-043 | Ověření Revize v1 (Pavel, produkce)                                              | S    | High     | ✅     |
 
 ---
 
@@ -603,7 +603,7 @@ velikost-a-rust,zelvi-kuriozity,zimovani}.md` přenes nově přidaný interní o
 
 ### TASK-043: Ověření Revize v1
 
-**Size:** S · **Status:** ⬜ · **Priority:** High
+**Size:** S · **Status:** ✅ Done (2026-11-07) · **Priority:** High
 **Goal:** Pavel na produkci odklikne, že připomínky jsou vyřešené.
 **Checklist k odkliknutí:**
 
