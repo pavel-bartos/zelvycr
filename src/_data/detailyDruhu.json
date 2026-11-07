@@ -23,7 +23,7 @@
         "alt": "Spodní část krunýře (plastron) — rozlišení pohlaví"
       }
     ],
-    "narocnost": "[DOPLNIT: náročnost chovu]",
+    "narocnost": "Nízká – vděčný druh pro začátečníky",
     "oDruhu": [
       "Želva zelenavá je u nás nejoblíbenější suchozemská želva a dobrá volba pro začátečníka. Menší formy zůstávají drobné a vejdou se do terária v bytě, zároveň jim svědčí i venkovní výběh. Je to evropský druh, který každý rok potřebuje období klidu přes zimu.",
       "Druh má několik forem, které se v dospělosti hodně liší velikostí. Samci menších typů dorůstají kolem 12 cm, samice bývají zhruba o třetinu větší, kolem 15 cm. Makedonské formy jsou mnohem robustnější a měří přes 25 cm. S velikostí se liší i snůška: menší typy snášejí dvě až tři vajíčka, větší šest až osm i více. Některé poddruhy jsou v chovu vzácné, protože i v přírodě jsou jejich stavy omezené.",
@@ -150,17 +150,17 @@
         "alt": "Želva pardálí — jeden z největších suchozemských druhů, africký původ"
       }
     ],
-    "narocnost": "[KE KONTROLE KLIENTEM] Střední až vysoká — velký druh s nároky na prostor a celoroční vytápění",
+    "narocnost": "Střední až vysoká — velký druh s nároky na prostor a celoroční vytápění",
     "oDruhu": [
-      "[KE KONTROLE KLIENTEM] Želva pardálí je druhý největší africký suchozemský druh. Dospělá zvířata dorůstají krunýře 30–50 cm a váhy 13–20 kg. Pochází ze savan a polopouští subsaharské Afriky.",
-      "[KE KONTROLE KLIENTEM] Tento druh nezimuje. Celoročně potřebuje teploty přes den 26–29 °C, místo k vyhřívání na 32–35 °C a noční teploty nesmí klesnout pod přibližně 24 °C. V létě může být venku, ale jen za dostatečně teplého počasí.",
-      "[KE KONTROLE KLIENTEM] Dospělá pardálí želva potřebuje hodně místa — mládě vystačí s terárium, ale dospělý exemplář vyžaduje velký vytápěný prostor, který musí chovatel předem reálně zajistit."
+      "Želva pardálí je druhý největší africký suchozemský druh. Dospělá zvířata dorůstají krunýře 30–50 cm a váhy 13–20 kg. Pochází ze savan a polopouští subsaharské Afriky.",
+      "Tento druh nezimuje. Celoročně potřebuje teploty přes den 26–29 °C, místo k vyhřívání na 32–35 °C a noční teploty nesmí klesnout pod přibližně 24 °C. V létě může být venku, ale jen za dostatečně teplého počasí.",
+      "Dospělá pardálí želva potřebuje hodně místa — mládě vystačí s terárium, ale dospělý exemplář vyžaduje velký vytápěný prostor, který musí chovatel předem reálně zajistit."
     ],
     "postrehChovatele": null,
     "formy": [
       {
         "nazev": "Stigmochelys pardalis",
-        "popis": "[KE KONTROLE KLIENTEM] Monotypický druh bez uznávaných poddruhů v chovu."
+        "popis": "Monotypický druh bez uznávaných poddruhů v chovu."
       }
     ],
     "potreby": [
@@ -179,21 +179,21 @@
         "alt": "Želva kloubnatá — africký druh s pohyblivým kloubem v zadní části krunýře"
       }
     ],
-    "narocnost": "[KE KONTROLE KLIENTEM] Střední — celoroční vytápění, specifická strava, letní klid",
+    "narocnost": "Střední — celoroční vytápění, specifická strava, letní klid",
     "oDruhu": [
-      "[KE KONTROLE KLIENTEM] Želva kloubnatá je africký druh ze savan, jehož nejznámějším znakem je pohyblivý kloub v zadní části krunýře. Tento kloub umožňuje zavřít zadní část krunýře jako víko — obranný mechanismus před predátory.",
-      "[KE KONTROLE KLIENTEM] Na rozdíl od většiny chovaných druhů je kloubnatá všežravá: jí ovoce, houby, trávy, hmyz i šneky. Tato pestrost stravy je při chovu nutná — jednostranná vegetariánská dieta jí nevyhovuje.",
-      "[KE KONTROLE KLIENTEM] Je aktivní především ráno a večer. Nezimuje, ale za sucha upadá do letního klidu (estivace). Teploty kolem 24 °C s vyhříváním na aspoň 32 °C."
+      "Želva kloubnatá je africký druh ze savan, jehož nejznámějším znakem je pohyblivý kloub v zadní části krunýře. Tento kloub umožňuje zavřít zadní část krunýře jako víko — obranný mechanismus před predátory.",
+      "Na rozdíl od většiny chovaných druhů je kloubnatá všežravá: jí ovoce, houby, trávy, hmyz i šneky. Tato pestrost stravy je při chovu nutná — jednostranná vegetariánská dieta jí nevyhovuje.",
+      "Je aktivní především ráno a večer. Nezimuje, ale za sucha upadá do letního klidu (estivace). Teploty kolem 24 °C s vyhříváním na aspoň 32 °C."
     ],
     "postrehChovatele": null,
     "formy": [
       {
         "nazev": "Kinixys belliana nogueyi",
-        "popis": "[KE KONTROLE KLIENTEM] Západoafrická forma, nejčastěji dostupná v chovu."
+        "popis": "Západoafrická forma, nejčastěji dostupná v chovu."
       },
       {
         "nazev": "Kinixys belliana zombensis",
-        "popis": "[KE KONTROLE KLIENTEM] Východoafrická forma."
+        "popis": "Východoafrická forma."
       }
     ],
     "potreby": [

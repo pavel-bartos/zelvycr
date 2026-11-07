@@ -6,6 +6,8 @@ permalink: /pruvodce-chovem/vitaminy-a-mineraly/
 skupinaKicker: Každodenní péče
 perex: Vápník a minerály jsou pro zdravý krunýř nezbytné. Ukážeme jednoduchý postup, který se nám osvědčil roky.
 casCteni: 5 min
+foto: 'https://www.zelvycr.cz/obrazky/zelvy/12.jpg'
+fotoAlt: 'Vitamíny a minerály pro suchozemské želvy'
 vKostce: |
   <ul>
     <li>Dvakrát týdně jemně posypte potravu minerálním doplňkem.</li>

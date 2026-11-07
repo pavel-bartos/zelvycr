@@ -6,6 +6,9 @@ permalink: /pruvodce-chovem/voda-a-vlhkost/
 skupinaKicker: Každodenní péče
 perex: Nedostatek vlhkosti je jednou z nejčastějších příčin problémů v teráriu. Poradíme, jak to napravit.
 casCteni: 5 min
+foto: 'https://www.zelvycr.cz/obrazky/dum/14.jpg'
+fotoAlt: 'Koupel suchozemské želvy'
+fotoPozice: '50% 40%'
 vKostce: |
   <ul>
     <li>Nejčastější chyba v teráriu: málo vzdušné vlhkosti a horké noci.</li>

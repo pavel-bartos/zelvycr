@@ -6,6 +6,8 @@ permalink: /pruvodce-chovem/krmeni/
 skupinaKicker: Každodenní péče
 perex: Želvy jsou na stravu méně náročné, než se zdá. Větší chybou bývá přehnaná péče než strádání.
 casCteni: 6 min
+foto: 'https://www.zelvycr.cz/obrazky/dum/07.jpg'
+fotoAlt: 'Krmení suchozemských želv'
 vKostce: |
   <ul>
     <li>Základ je pestrá rostlinná strava — tráva, lupení, květy, méně ovoce a zeleniny.</li>

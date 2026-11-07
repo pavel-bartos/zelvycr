@@ -6,6 +6,8 @@ permalink: /pruvodce-chovem/zimovani/
 skupinaKicker: Rok se želvou
 perex: Zimní klid je pro evropské želvy přirozený. Ukážeme dva postupy — z venkovního výběhu i z terária — krok za krokem.
 casCteni: 6 min
+foto: 'https://www.zelvycr.cz/obrazky/zahrada/19.jpg'
+fotoAlt: 'Zimoviště pro suchozemské želvy'
 vKostce: |
   <ul>
     <li>Evropské druhy potřebují každý rok období klidu; africké druhy nezimují.</li>
@@ -38,7 +40,7 @@ Je složitější, protože napodobujeme to, co venku proběhne samo:
 2. Zajistěte **skutečný pokles teplot přes noc.**
 3. Na konci října nebo v listopadu **přestaňte svítit** a přesuňte želvu do chladné místnosti (kolem 15 °C). Aktivita klesá.
 4. **Méně krmte** a několikrát želvu vykoupejte, aby si vyprázdnila střeva.
-5. Polospící želvu přesuňte do chladu kolem **3–6 °C**. [DOPLNIT: starý web uvádí u tohoto kroku 5–6 °C, u zimování z výběhu 3–6 °C. Potvrdí Jiří jednotnou teplotu zimoviště — teplota, kde chyba ublíží zvířeti.]
+5. Polospící želvu přesuňte do chladu kolem **5 °C** (bezpečně 4–6 °C).
 
 Spánek u menších želv trvá přibližně **dva měsíce.** Na jaře probouzíte obráceným postupem: postupně oteplujete, pak začnete krátce svítit a přidáváte potravu.
 

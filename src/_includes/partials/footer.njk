@@ -9,25 +9,30 @@
           Chov: {{ site.kontakt.chov }}
         </p>
       </div>
-      <div>
-        <h2 class="paticka__nadpis">Nabídka</h2>
+      <details class="paticka-sekce">
+        <summary class="paticka__nadpis">Nabídka</summary>
         <ul>
           {% for p in paticka.nabidka %}<li><a href="{{ p.url | url }}">{{ p.nazev }}</a></li>{% endfor %}
         </ul>
-      </div>
-      <div>
-        <h2 class="paticka__nadpis">Průvodce chovem</h2>
+      </details>
+      <details class="paticka-sekce">
+        <summary class="paticka__nadpis">Průvodce chovem</summary>
         <ul>
           {% for p in paticka.pruvodce %}<li><a href="{{ p.url | url }}">{{ p.nazev }}</a></li>{% endfor %}
         </ul>
-      </div>
-      <div>
-        <h2 class="paticka__nadpis">Informace</h2>
+      </details>
+      <details class="paticka-sekce">
+        <summary class="paticka__nadpis">Informace</summary>
         <ul>
           {% for p in paticka.informace %}<li><a href="{{ p.url | url }}">{{ p.nazev }}</a></li>{% endfor %}
         </ul>
-      </div>
+      </details>
     </div>
+    <script>
+      if (window.matchMedia('(min-width: 48rem)').matches) {
+        document.querySelectorAll('.paticka-sekce').forEach(function(d) { d.open = true; });
+      }
+    </script>
     <p class="paticka__legal">
       {{ site.firma.jmeno }}, {{ site.firma.adresa }} · IČO {{ site.firma.ico }} · zapsán v živnostenském rejstříku, {{ site.firma.zivnostenskyUrad }}
     </p>

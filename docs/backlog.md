@@ -1,6 +1,6 @@
 # Želvy ČR (zelvycr-web) — Backlog
 
-_Last updated: 2026-11-05 | Sprint: 6 🔵 Testovací brána (aktuální) · Sprint 5 🔵 Texty (souběžně) · Sprinty 1–4 ✅ · archiv v `docs/backlog-archive.md`_
+_Last updated: 2026-11-07 | Sprint: 6 🔵 Testovací brána (aktuální) · Sprint 5 🔵 Texty (souběžně) · Sprinty 1–4 ✅ · archiv v `docs/backlog-archive.md`_
 
 Backlog píše Claude (šéf vývoje), implementaci dělá Claude Code. Každý kódovací task má
 **Claude Code prompt** a odvolává se na `docs/design-policy.md` (vzhled) a zadání v Claude
@@ -370,12 +370,12 @@ Souběžně běží copywriterské a designérské připomínky (mimo repo → p
 | TASK-034 | Navigace: Galerie do hlavního menu + v patičce přesun do sekce Informace         | S    | High     | ✅     |
 | TASK-035 | Opravit duplicitní žluté CTA boxy — na stránce vždy jen jeden                    | S    | High     | ✅     |
 | TASK-036 | Responzivní menu: hamburger < ~1000 px (CSS-only) + CTA doprava při zalomení     | M    | High     | ✅     |
-| TASK-037 | Responzivní patička: mobil zmenšit, odkazy do rozklikávacích sekcí               | M    | Medium   | ⬜     |
-| TASK-038 | O nás: opravit „šišaté" fotky (poměr/object-fit) + náhled galerie s proklikem    | M    | Medium   | ⬜     |
+| TASK-037 | Responzivní patička: mobil zmenšit, odkazy do rozklikávacích sekcí               | M    | Medium   | ✅     |
+| TASK-038 | O nás: opravit „šišaté" fotky (poměr/object-fit) + náhled galerie s proklikem    | M    | Medium   | ✅     |
 | TASK-039 | Hero header homepage — papírové sklo + oprava tlačítek (design-policy §8)        | S    | Medium   | ✅     |
-| TASK-040 | Tabulka /zelvy-na-prodej/ — scroll affordance (design-policy §8)                 | S    | Medium   | ⬜     |
-| TASK-041 | Práce s fotkami v průvodci (výpis + detail článku) (design-policy §8)            | M    | Medium   | ⬜     |
-| TASK-042 | O nás — záhlaví (grid 5/7) + portréty 3:4 (design-policy §8)                     | S    | Low      | ⬜     |
+| TASK-040 | Tabulka /zelvy-na-prodej/ — scroll affordance (design-policy §8)                 | S    | Medium   | ✅     |
+| TASK-041 | Práce s fotkami v průvodci (výpis + detail článku) (design-policy §8)            | M    | Medium   | ✅     |
+| TASK-042 | O nás — záhlaví (grid 5/7) + portréty 3:4 (design-policy §8)                     | S    | Low      | ✅     |
 | TASK-044 | Startovací sady — oprava textu (překlep „już"→„už" + přejmenování nadpisu)       | XS   | High     | ✅     |
 | TASK-046 | Propsat poslední copywriterovy úpravy z `docs/obsah/` do `src/` (odkazy + O nás) | S    | High     | ✅     |
 | TASK-043 | Ověření Revize v1 (Pavel, produkce)                                              | S    | High     | ⬜     |
@@ -437,7 +437,7 @@ Souběžně běží copywriterské a designérské připomínky (mimo repo → p
 
 ### TASK-037: Responzivní patička — rozklikávací sekce na mobilu
 
-**Size:** M · **Status:** ⬜ · **Priority:** Medium
+**Size:** M · **Status:** ✅ Done (2026-11-07) · **PR:** #32 · **Priority:** Medium
 **Goal:** Patička na mobilu nezabírá celou obrazovku.
 **Acceptance criteria:**
 
@@ -453,7 +453,7 @@ Souběžně běží copywriterské a designérské připomínky (mimo repo → p
 
 ### TASK-038: O nás — šišaté fotky + náhled galerie
 
-**Size:** M · **Status:** ⬜ · **Priority:** Medium
+**Size:** M · **Status:** ✅ Done (2026-11-07) · **PR:** #32 · **Priority:** Medium
 **Goal:** Fotky na O nás nejsou deformované a stránka vede do galerie.
 **Acceptance criteria:**
 
@@ -490,7 +490,7 @@ Souběžně běží copywriterské a designérské připomínky (mimo repo → p
 
 ### TASK-040: Tabulka /zelvy-na-prodej/ — scroll affordance
 
-**Size:** S · **Status:** ⬜ · **Priority:** Medium · **Odblokováno** (design dodán)
+**Size:** S · **Status:** ✅ Done (2026-11-07) · **PR:** #32 · **Priority:** Medium · **Odblokováno** (design dodán)
 **Goal:** Pozná se, že porovnávací tabulka se posouvá, a vypadá to záměrně.
 **Acceptance criteria:**
 
@@ -508,7 +508,7 @@ Souběžně běží copywriterské a designérské připomínky (mimo repo → p
 
 ### TASK-041: Práce s fotkami v Průvodci chovem (výpis + detail)
 
-**Size:** M · **Status:** ⬜ · **Priority:** Medium · **Odblokováno** (design dodán)
+**Size:** M · **Status:** ✅ Done (2026-11-07) · **PR:** #32 · **Priority:** Medium · **Odblokováno** (design dodán)
 **Goal:** Výpis rubriky i detail článku pracují s fotkami jako hezký výpis na homepage.
 **Acceptance criteria:**
 
@@ -531,7 +531,7 @@ Souběžně běží copywriterské a designérské připomínky (mimo repo → p
 
 ### TASK-042: O nás — záhlaví (grid 5/7) + portréty 3:4
 
-**Size:** S · **Status:** ⬜ · **Priority:** Low · **Odblokováno** (design dodán)
+**Size:** S · **Status:** ✅ Done (2026-11-07) · **PR:** #32 · **Priority:** Low · **Odblokováno** (design dodán)
 **Goal:** Hlavní fotka a portréty na O nás působí záměrně a vyváženě.
 **Acceptance criteria:**
 

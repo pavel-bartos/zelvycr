@@ -11,15 +11,16 @@ permalink: /o-nas/
     <a href="{{ '/' | url }}">Úvod</a> <span aria-hidden="true">›</span>
     <span aria-current="page">O nás</span>
   </nav>
-  <div class="rule strana-uvod__obsah">
-    <div class="strana-uvod__text">
+  <div class="o-nas-uvod">
+    <div>
       <div class="kick">Rodinný chov</div>
       <h1 class="disp">Rodinný chov želv už 45 let</h1>
       <p>Chov želv u nás začal před 45 lety a dnes ho vedou už dvě generace rodiny Haltufových. Z malého chovu se stal jeden z největších soukromých chovů suchozemských želv v Evropě.</p>
     </div>
-    <div class="o-nas-foto">
-      <img src="https://www.zelvycr.cz/miniatury/02.jpg" alt="Venkovní výběh našeho chovu želv" width="480" height="360" loading="lazy">
-    </div>
+    <figure class="o-nas-foto">
+      <img src="https://www.zelvycr.cz/obrazky/zahrada/10.jpg" alt="Venkovní výběhy našeho chovu suchozemských želv" width="800" height="600" fetchpriority="high">
+      <figcaption>Venkovní výběhy našeho chovu</figcaption>
+    </figure>
   </div>
 </section>
 
@@ -55,22 +56,22 @@ permalink: /o-nas/
   <h2 class="disp sekce__h2">Rodina za chovem</h2>
   <div class="nas-tim">
 
-    <article class="karta-osoby rule">
-      <div class="karta-osoby__foto">
-        <img src="https://www.zelvycr.cz/foto/foto1.jpg" alt="Jan Haltuf starší, zakladatel chovu" width="200" height="200" loading="lazy">
-      </div>
-      <div class="karta-osoby__info">
+    <article class="karta-osoby">
+      <figure class="karta-osoby__foto">
+        <img src="https://www.zelvycr.cz/foto/foto1.jpg" alt="Jan Haltuf starší, zakladatel chovu" width="160" height="213" loading="lazy">
+      </figure>
+      <div>
         <h3 class="disp karta-osoby__jmeno">Jan Haltuf st.</h3>
         <p class="karta-osoby__role">Zakladatel chovu, poradce</p>
         <p>Chov suchozemských želv začal před 45 lety. Jan je zakladatelem jednoho z největších soukromých chovů v Evropě a dnes radí.</p>
       </div>
     </article>
 
-    <article class="karta-osoby rule">
-      <div class="karta-osoby__foto">
-        <img src="https://www.zelvycr.cz/foto/jirka.jpg" alt="Jiří Haltuf, druhá generace chovu" width="200" height="200" loading="lazy">
-      </div>
-      <div class="karta-osoby__info">
+    <article class="karta-osoby">
+      <figure class="karta-osoby__foto">
+        <img src="https://www.zelvycr.cz/foto/jirka.jpg" alt="Jiří Haltuf, druhá generace chovu" width="160" height="213" loading="lazy">
+      </figure>
+      <div>
         <h3 class="disp karta-osoby__jmeno">Jiří Haltuf</h3>
         <p class="karta-osoby__role">Prodej v ČR i zahraničí</p>
         <p>Jiří přebral štafetu od otce a dnes zajišťuje prodej po celé republice i do zahraničí. Volejte přímo jemu.</p>
@@ -89,7 +90,16 @@ permalink: /o-nas/
   <div class="kick">03 — Náš chov</div>
   <h2 class="disp sekce__h2">Jak u nás želvy žijí</h2>
   <p>Želvy u nás žijí ve venkovních výbězích, zimují v našich podmínkách a mláďata se líhnou v líhni. Prodáváme jen zvířata odchovaná v českém klimatu — ne importy ze zahraničí.</p>
-  <p class="text-tlumena">Fotky zázemí chovu — výběhy, bouda, zimoviště a líheň: <a href="{{ '/galerie/' | url }}">Galerie →</a></p>
+  <div class="o-nas-galerie">
+    {% for kat in galerie.kategorie | slice(0, 4) %}
+      {% if kat.fotky[0] %}
+        <a href="{{ '/galerie/' | url }}" class="o-nas-galerie__foto" tabindex="-1" aria-hidden="true">
+          <img src="{{ kat.fotky[0].nahled }}" alt="{{ kat.fotky[0].alt }}" width="240" height="160" loading="lazy">
+        </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+  <p class="text-tlumena"><a href="{{ '/galerie/' | url }}">Všechny fotky v galerii →</a></p>
 </section>
 
 {# 5 — Pro obchodníky #}

@@ -24,7 +24,17 @@ layout: layouts/base.njk
     </div>
   </header>
 
-  {# 2 — V kostce (zobrazí se jen když článek vKostce definuje) #}
+  {# 2 — Úvodní fotka (zobrazí se jen když článek foto definuje) #}
+  {% if foto %}
+  <div class="wrap">
+    <figure class="clanek-foto"{% if fotoPozice %} style="--foto-pozice: {{ fotoPozice }}"{% endif %}>
+      <img src="{{ foto }}" alt="{{ fotoAlt }}" width="800" height="533" fetchpriority="high">
+      {% if fotoPopisek %}<figcaption>{{ fotoPopisek }}</figcaption>{% endif %}
+    </figure>
+  </div>
+  {% endif %}
+
+  {# 3 — V kostce (zobrazí se jen když článek vKostce definuje) #}
   {% if vKostce %}
   <section class="wrap sekce">
     <aside class="box-v-kostce">
@@ -34,7 +44,7 @@ layout: layouts/base.njk
   </section>
   {% endif %}
 
-  {# 3 — Tělo článku #}
+  {# 4 — Tělo článku #}
   <section class="wrap clanek-telo">
     {{ content | safe }}
   </section>

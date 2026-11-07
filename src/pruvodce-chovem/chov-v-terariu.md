@@ -6,6 +6,8 @@ permalink: /pruvodce-chovem/chov-v-terariu/
 skupinaKicker: Než si želvu pořídíte
 perex: Správné terárium je základ zdravého chovu. Poradíme s velikostí, teplotami, substrátem i denním rytmem.
 casCteni: 6 min
+foto: 'https://www.zelvycr.cz/obrazky/dum/01.jpg'
+fotoAlt: 'Terárium pro suchozemské želvy s osvětlením'
 vKostce: |
   <ul>
     <li>Pro první roky terárium nejméně 80 × 40 × 40 cm, pro starší želvu 100–120 cm.</li>

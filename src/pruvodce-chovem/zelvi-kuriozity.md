@@ -6,6 +6,8 @@ permalink: /pruvodce-chovem/zelvi-kuriozity/
 skupinaKicker: Papíry a zajímavosti
 perex: Za desítky let chovu jsme viděli leccos neobvyklého. Pár zajímavostí jsme sem dali — s respektem ke zvířatům.
 casCteni: 3 min
+foto: 'https://www.zelvycr.cz/obrazky/dum/12.jpg'
+fotoAlt: 'Mláďata suchozemských želv'
 ---
 
 Za desítky let chovu projdou rukama tisíce vajec a mláďat — a občas se objeví něco neobvyklého. Nejsou to senzace, spíš připomínka, jak pestrá příroda je. Pár takových momentů jsme zachytili:
